@@ -20,4 +20,3 @@ function tabs (ui) {
     //this.className = ui.tabs + ' block';
     event.currentTarget.className = ui.tabs + " block";
 }
-//syntax: <element onclick="tabs({tabs: all tablinks, targetElement: //the element of target, tabcontent://all targets"></element>
