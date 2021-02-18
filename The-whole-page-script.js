@@ -2,13 +2,8 @@
 function tabs (ui) {
     
     var tablinks = document.getElementsByClassName(ui.tabs), tabcontent = document.getElementById(ui.targetElement), i, alltabs = document.getElementsByClassName(ui.tabcontent), icon = document.getElementById('icon')    ;
-    try {
-        icon.href = event.currentTarget.childNodes[0].src;
-        document.title = ui.targetElement;
-    }
-    catch {
-        console.log("no svg")
-    }
+    icon.href = event.currentTarget.childNodes[0].src;
+    document.title = ui.targetElement;
     for (i = 0; i < tablinks.length;i++) {
         tablinks[i].className = ui.tabs + " none";
         
