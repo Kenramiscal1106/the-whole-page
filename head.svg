@@ -1,3 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24">
-    <text x="12" y="12" fill='red'></text>
+    <text x="50%" y="50%" fill='red' font-size="50%">this is ridiculous</text>
 </svg>
