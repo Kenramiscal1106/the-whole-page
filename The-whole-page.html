@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="The-whole-page-style.css">
+    <link rel="shortcut icon" href="images.svg" type="image/x-icon" id="icon">
+</head>
+<body>
+    <div class="tablinks" id="html">
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'introduction'})" id="default"><img src="home.svg" alt="">
+            introduction
+        </button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'Paragraphs'})"><img src="Pilcrow.svg" alt="">
+            Paragraph</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'images'})"><img src="images.svg" alt="">
+            Images</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'table'})"><img src="table.svg" alt="">
+            Table</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'blocks'})"><img src="block.svg" alt="">
+            Blocks</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'class'})"><img src="class.svg" alt="">
+            Class</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'id'})"><img src="hashtag.svg" alt="">
+            Id</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'iframe'})"><img src="frame.svg" alt="">
+            Iframe</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'js'})">Javascript</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'head'})"></button>
+    </div>
+    <div class="tabs" id="HTML">
+        <div class="tabcontent" id="introduction">
+            <button onclick="document.body.classList.toggle('dark')">dark theme</button>
+            <h1>HTML Introduction</h1>
+			<hr>
+			<h2>What is HTML?</h2>
+			<p>HTML is the standard markup language for creating Web pages.</p>
+			<ul>
+				<li>HTML stands for <b>H</b>yper <b>T</b>ext <b>M</b>arkup <b>L</b>anguage</li>
+				<li>HTML describes the structure of a Web page</li>
+				<li>HTML consists of a series of elements</li>
+				<li>HTML elements tell the browser how to display the content</li>
+				<li>HTML elements are represented by tags</li>
+				<li>HTML tags label pieces of content such as "heading", "paragraph", "table", and so on</li>
+				<li>Browsers do not display the HTML tags, but use them to render the content of the page</li>
+			</ul>
+			<h2>HTML Tags</h2>
+			<p>HTML tags are element names surrounded by angle brackets</p>
+			<ul>
+				<li>HTML tags normally come <b>in pairs</b> like .p. and ./p.</li>
+				<li>The first tage in a pair is the <b>start tag</b>, the second tag is the <b>end tag</b></li>
+				<li>The end tag is written like the start tag, but with a <b>forward slash</b> inserted before the tag name</li>
+			</ul>
+			<hr>
+			<h2>The <span><</span>!DOCTYPE html> Declaration</h2>
+			<p>The <b><span><</span>!DOCTYPE html></b> declaration represents the document type, and helps browsers to display web pages correctly.</p>
+			<p>It must only appear once, at the top of the page (before any HTML tags).</p>
+			<p>The <b><span><</span>!DOCTYPE></b> declaration is not case sensitive.</p>
+			<p>The <b><span><</span>!DOCTYPE html></b> declaration for HTML5 is:</p>
+			<h3><span><</span>!DOCTYPE html></h3>
+        </div>
+        <div class="tabcontent" id="Paragraphs">
+            <h1>HTML Paragraphs</h1>
+            <hr>
+            <p>The HTML <span><</span>p> element defines a <b>paragraph</b>:</p>
+            <p><b>Note:</b> Browsers automatically add some white space (a margin) before and after a paragraph.</p>
+            <hr>
+            <h2>HTML Display</h2>
+            <p>You cannot be sure how HTML will be displayed.</p>
+            <p>Large or small screens, and resized windows will create different results.</p>
+            <p>With HTML, you cannot change the output by adding extra lines or extra spaces in your HTML code.</p>
+            <p>The browser will remove any extra spaces and extra lines when the page is displayed.</p>
+            <hr>
+            <h2>Don't Forget the End Tag</h2>
+            <p>Most browsers will display HTML correctly even if you forget the end tag:</p>
+            <p><b>Note:</b> Dropping the end tag can produce unexpected results or errors.</p>
+            <hr>
+            <h2>HTML Line Breaks</h2> 
+            <p>The HTML <span><</span>br> element defines a <b>line break</b></p>
+            <p>This <br>is <br>commonly <br>used <br>in a poem</p>
+            <p>The <span><</span>br> tag is an empty tag, which means that it has no end tag.</p>
+            <h2>The Poem Problem</h2>
+            <p>This poem will display on a single line:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag">
+                            <span class="bracket"><</span><span class="tagname">p</span><span class="bracket">></span>
+                        </span>
+                    </div>
+                    <div class="innerHTML">
+                        <div class="codeline">My Bonnie lies over the ocean</div>
+                        <div class="codeline"><br></div>
+                        <div class="codeline">My Bonnie lies over the sea</div>
+                        <div class="codeline"><br></div>
+                        <div class="codeline">My Bonnie lies over the ocean</div>
+                        <div class="codeline"><br></div>
+                        <div class="codeline">Oh, bring back my Bonnie to me.</div>
+                    </div>
+                    <div class="codeline">
+                        <span class="tag">
+                            <span class="bracket"><<span>/</span></span><span class="tagname">p</span><span class="bracket">></span>
+                        </span>
+                    </div>
+                </div>
+                <p>Result:</p>
+                <p>
+                My Bonnie lies over the ocean.
+
+                My Bonnie lies over the sea.
+
+                My Bonnie lies over the ocean.
+
+                Oh, bring back my Bonnie to me.
+                </p>
+            </div>
+            
+            <hr>
+            <h2>The HTML <span class="elemhigh"><span><</span>pre></span> Element</h2>
+            <p>The HTML <span class="elemhigh"><span><</span>pre></span> element defines preformatted text.</p>
+            <p>The text inside a <span class="elemhigh"><span><</span>pre></span> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:</p>
+            <div class="example">
+                <h3>Example</h3>                
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag"><span class="bracket"><</span><span class="tagname">pre</span><span class="bracket">></span></span>
+                    </div>
+                    <div class="innerHTML">
+                        <div class="codeline">This preserves the line and spaces</div>
+                        <div class="codeline"><br></div>
+                        <div class="codeline">As shown on the diagram</div>
+                        <div class="codeline"><br></div>
+                        <div class="codeline">Used for poem</div>
+                        <div class="codeline"><br></div>
+                        <div class="codeline">copies the same format that is typed</div>
+                        
+                    </div>
+                    <div class="codeline">
+                        <span class="tag"><span class="bracket"><span><</span>/</span><span class="tagname">pre</span><span class="bracket">></span></span>
+                    </div>
+
+                </div>
+                <p>Result:</p>
+                <pre>
+                This preserves the line and spaces
+        
+                As shown on the diagram
+        
+                Used for poem
+        
+                copies the same format that is typed
+                </pre>     
+            </div>
+
+            <hr>
+            <h1>HTML Styles</h1>
+            <p>HTML can be styled into anything the publisher wants at a specified command</p>
+            <hr>
+            <h2>Style Attribute</h2>
+            <p>The <b>style</b> attribute can be used to edit the appearance of the element</p>
+            <h3>The background-color</h3>
+            <p>The <span class="attrhigh">background-color</span> style property can change the background color of an element:</p>
+            <div class="example">
+                <h4>Example</h4>background-color:red;
+                <div class="code">
+                    <div class="codeline">
+                        <span class="bracket"><</span><span class="tagname">p</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:red;"</span><span class="bracket">></span>The color can be applied to the body;background color
+                        <span class="bracket"><span><</span>/</span><span class="tagname">p</span><span class="bracket">></span>
+                    </div>
+                </div>
+                <p>Result:</p>
+                <p style="background-color:red;">The color can be applied to the body;background color</p>
+            </div>
+            
+            <h3>The color</h3>
+            <p>The <span class="attrhigh"><b>color</b></span> style property is used to change the color of the font:</p>
+            <div class="example">
+                <h4>Example</h4>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="bracket"><</span><span class="tagname">p</span>
+                        <span class="attribute">style</span>=<span class="attrvalue">"color:red;border:1px solid black;"</span>
+                        <span class="bracket">></span>The text color<span class="bracket"><<span>/</span></span><span class="tagname">p</span><span class="bracket">></span>
+                    </div>
+                </div>
+                <p style="color:red;border:1px solid black;">The text color</p>
+            </div>
+            
+            <h3>The font-size</h3>
+            <p>The <span class="attrhigh"><b>font-size</b></span> style property is used to change the size of the text:</p>
+            <div class="example">
+                <h4>Example</h4>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag">
+                            <span class="bracket"><</span><span class="tagname">p</span> <span class="attribute">style</span>=<span class="attrvalue">"font-size:20px;border:1px solid black;"</span><span class="bracket">></span>
+                        </span>The font size
+                        <span class="tag">
+                            <span class="bracket"><<span>/</span></span><span class="tagname">p</span><span class="bracket">></span>
+                        </span>
+                    </div>
+                </div>
+                <p>Result:</p>
+                <p style="font-size:20px;border:1px solid black;">The font size</p>
+            </div>
+            
+            <h3>The font-family</h3>
+            <p>The <span class="attrhigh"><b>font-family</b></span> is used to change the font style of the text:</p>
+            <div class="example">
+                <h4>Example</h4>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag">
+                            <span class="bracket"><</span><span class="tagname">p</span> <span class="attribute">style</span>=<span class="attrvalue">"font-family:monospace;border:1px solid black;"</span>
+                        </span>The font style<span class="tag">
+                            <span class="bracket"><<span>/</span></span><span class="tagname">p</span><span class="bracket">></span>
+                        </span>
+                    </div>
+                </div>
+                <p>Result:</p>
+                <p style="font-family:monospace;border:1px solid black;">The font style</p>
+            </div>
+            
+            <h3>The text-align</h3>
+            <p>The <span class="attrhigh"><b>text-align</b></span> is used to change the alignment of the text:</p>
+            <div class="example">
+                <h4>Example</h4>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag">
+                            <span class="bracket"><</span><span class="tagname">p</span> <span class="attribute">style</span>=<span class="attrvalue">"text-align:center;border:1px solid black;"</span><span class="bracket">></span>
+                            Centered alignment
+                            <span class="bracket"><<span>/</span></span><span class="tagname">p</span><span class="bracket">></span>
+                        </span>
+                    </div>
+                </div>
+                <p style="text-align:center;border:1px solid black;">Centered alignment</p>
+            </div>
+            <p>That is only some of the properties that the <span class="attrhigh">CSS</span> (Cascading Style Sheet) has. There are a lot of other properties that CSS has to make your website beautiful.</p>
+            <p>Note:</p>
+            <ol>
+                <li>Use the style attribute for styling HTML elements</li>
+                <li>Use background-color for background color</li>
+                <li>Use color for text colors</li>
+                <li>Use font-family for text fonts</li>
+                <li>Use font-size for text sizes</li>
+                <li>Use text-align for text alignment</li>
+            </ol>
+            <hr>
+            <h1>HTML formatting element</h1>
+            <pre>
+            <b> - Bold text </b>
+            <strong> - Important text </strong>
+            <i> - Italic text </i>
+            <em> - Emphasized text </em>
+             <mark> - Marked text </mark>
+            <small> - Small text </small>
+            <del> - Deleted text </del>
+            <ins><!--This is a comment--> - Inserted text </ins>
+            s-<sub><!--This is a comment--> Subscript text </sub>
+            s-<sup><!--This is a comment--> Superscript text </sup>
+            </pre>
+            <hr>
+            <h2>The <span class="elemhigh"><span><</span>b></span> formatting element</h2>
+            <p>The <span class="elemhigh"><span><</span>b></span> formatting element can make the element bold.</p>
+            <div class="example">
+                <h4>Example</h4>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag"><span class="bracket"><</span><span class="tagname">b</span><span class="bracket">></span>This text is bold<span class="bracket"><<span>/</span></span><span class="tagname">b</span><span class="bracket">></span></span>
+                    </div>
+                </div>
+                <p>Result:</p>
+                <p><b>This text is bold</b></p>
+            </div>
+            <hr>
+            <h2>The <span class="elemhigh"><span><</span>strong></span> formatting element</h2>
+            <p>The <span class="elemhigh"><span><</span>strong></span> formatting element is like the <span class="elemhigh"><span><</span>b></span> element but it has a more semantic meaning than the <span class="elemhigh"><span><</span>b></span> element.</p>
+            <div class="example">
+                <h4>Example</h4>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag">
+                            <span class="bracket"><</span><span class="tagname">strong</span><span class="bracket">></span>This text is strong<span class="bracket"><<span>/</span></span><span class="tagname">strong</span><span class="bracket">></span>
+                        </span>
+                    </div>
+                </div>
+                <p>Result:</p>
+                <strong>This text is strong</strong>    
+            </div>
+            <hr>
+            <h2>The <span class="elemhigh"><span><</span>i></span> formatting element</h2>
+            <p>The <span class="elemhigh"><span><</span>i></span> formatting element can make the element style diagonal.</p>
+            <div class="example">
+                <h4>Example</h4>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag">
+                            <span class="bracket"><</span><span class="tagname">i</span><span class="bracket">></span>This text is italic<span class="bracket"><<span>/</span></span><span class="tagname">i</span><span class="bracket">></span>
+                        </span>
+                    </div>
+                </div>
+                <p>Result:</p>
+                <i>This text is italic</i>
+            </div>
+            <hr>
+            <h2>The <span class="elemhigh"><span><</span>em></span> formatting element</h2>
+            <p>The <span class="elemhigh"><span><</span>em></span> is like the <span class="elemhigh"><span><</span>i></span> element but it has a more semantic meaning thatn the <span class="elemhigh"><span><</span>i></span> element.</p>
+            <hr>
+            <h2>The <span class="elemhigh"><span><</span>mark></span> formatting element</h2>
+            <p>The <span class="elemhigh"><span><</span>mark></span> formatting element puts a highlight on the text.</p>
+            <div class="example">
+                <h4>Example</h4>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag"><span class="bracket"><</span><span class="tagname">mark</span><span class="bracket">></span>This text is marked<span class="bracket"><<span>/</span></span><span class="tagname">mark</span><span class="bracket">></span></span>
+                    </div>
+                </div>
+                <p>Result:</p>
+                <mark>This text is marked</mark>
+            </div>
+            <hr>
+            <h2>The <span class="elemhigh"><span><</span>small></span> formatting element</h2>
+            <p>The <span class="elemhigh"><span><</span>small></span> formatting element makes the text smaller relative to the default font size</p>
+            <div class="example">
+                <h4>Example</h4>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag"><span class="bracket"><</span><span class="tagname">small</span><span class="bracket">></span>This text is small<span class="bracket"><<span>/</span></span><span class="tagname">small</span><span class="bracket">></span></span>
+                    </div>
+                </div>
+                <p>Result:</p>
+                <small>This text is small</small>
+            </div>
+            <hr>
+            <h2>The <span class="elemhigh"><span><</span>del></span> formatting element</h2>
+            <p>The <span class="elemhigh"><span><</span>del></span> formatting element puts a line in the middle of the text.</p>
+            <div class="example">
+                <h4>Example</h4>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag"><span class="bracket"><</span><span class="tagname">del</span><span class="bracket">></span>This is a deleted text<span class="bracket"><<span>/</span></span><span class="tagname">del</span><span class="bracket">></span></span>
+                    </div>
+                </div>
+                <p>Result:</p>
+                <del>This is a deleted text</del>
+            </div>
+            <hr>
+            <h2>The <span class="elemhigh"><span><</span>ins></span> formatting element</h2>
+            <p>The <span class="elemhigh"><span><</span>ins></span> formatting element underlines the element</p>
+            <div class="example">
+                <h4>Example</h4>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag">
+                            <span class="bracket"><</span><span class="tagname">ins</span><span class="bracket">></span>This is inserted<span class="bracket"><<span>/</span></span><span class="tagname">ins</span><span class="bracket">></span>
+                        </span>
+                    </div>
+                </div>
+                <p>Result:</p>
+                <ins>This is inserted</ins>
+            </div>
+            <hr>
+            <h2>The <span class="elemhigh"><span><</span>sub></span> formatting element</h2>
+            <p>The <span class="elemhigh"><span><</span>sub></span> formatting element formats the word in subscript</p>
+            <div class="example">
+                <h4>Example</h4>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag">  
+                            <span class="bracket"><</span><span class="tagname">p</span><span class="bracket">></span>This is <span class="bracket"><</span><span class="tagname">sub</span><span class="bracket">></span>subscripted<span class="bracket"><span><</span>/</span><span class="tagname">sub</span><span class="bracket">></span><span class="bracket"><<span>/</span></span><span class="tagname">p</span><span class="bracket">></span>
+                        </span>
+                    </div>
+                </div>
+                <p>Result:</p>
+                <p>This is <sub>subscripted</sub></p>
+            </div>
+            <hr>
+            <h2>The <span class="elemhigh"><span><</span>sup></span> formatting element</h2>
+            <p>The <span class="elemhigh"><span><</span>sup></span> formatting element formats the word in superscript</p>
+            <div class="example">
+                <h4>Example</h4>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag">  
+                            <span class="bracket"><</span><span class="tagname">p</span><span class="bracket">></span>This is <span class="bracket"><</span><span class="tagname">sup</span><span class="bracket">></span>superscripted<span class="bracket"><span><</span>/</span><span class="tagname">sup</span><span class="bracket">></span><span class="bracket"><<span>/</span></span><span class="tagname">p</span><span class="bracket">></span>
+                        </span>
+                    </div>
+                </div>
+                <p>Result:</p>
+                <p>This is <sup>superscripted</sup></p>
+            </div>
+            <hr>
+
+            <p style="font-size:200%"><q>This will help you to create and code the website you want</q></p>	
+            <p>The <abbr title="La Consolacion College Tanauan">LCCT</abbr> was founded in 1949</p>
+            <bdo dir="rtl">This line will be written from right to left</bdo>
+        </div>
+        <div class="tabcontent" id="images">
+            <h1>HTML Images</h1>
+			<p>Images can improve the design and the appearance of a web page. You can add images to your website by simply adding the <span class="elemhigh"><span><</span>img></span></p>
+			<hr>
+			<h2>Syntax</h2>
+			<div class="example">
+                <div class="code">
+                    <div class="codeline"><span><</span>img src=<i>image path</i> alt=<i>alternate text</i>></div>
+                </div>
+				
+			</div>
+			<div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="tag"><span class="bracket"><</span><span class="tagname">img</span> <span class="attribute">src</span>=<span class="attrvalue">"img_5terre.jpg"</span> <span class="attribute">alt</span>=<span class="attrvalue">"Terre"</span><span class="bracket">></span></span>
+                    </div>
+                </div>
+				<p>Result</p>
+				<img src="img_5terre.jpg" alt="Terre">
+				<p>Note: the <b>alt</b> attribute only works if the image can not be fetched, replaced, unavailable, or the URL does not exist.</p>
+			</div>
+        </div>
+        <div class="tabcontent" id="table">
+            <h1>HTML Tables</h1>
+            <hr>
+            <h2>Defining an HTML Table</h2>
+            <p>An HTML table is defined with the <span class="elemhigh"><span><</span>table></span> tag.</p>
+            <p>Each table row is defined with the <span class="elemhigh"><span><</span>tr></span> tag. A table header is defined with the <span class="elemhigh"><span><</span>th></span> tag. By default, table headings are bold and centered. A table data/cell is defined with the <span class="elemhigh"><span><</span>td></span> tag.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <table>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Age</th>
+                    </tr>
+                    <tr>
+                        <td>Ken</td>
+                        <td>Ramiscal</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>Kylie</td>
+                        <td>Ramiscal</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>34</td>
+                    </tr>
+                </table>
+            </div>
+            <p><b>Note:</b> The <span class="elemhigh"><span><</span>td></span> elements are the data containers of the table. <br>They contain all sorts of HTML elements; text, images, lists, other tables,etc.</p>
+            <hr>
+            <h2>HTML Table - Adding a Border</h2>
+            <p>If you do not specify a border for the table, it will be displayed without borders.</p>
+            <p>A border is set using the CSS <span class="attrhigh">border</span> property</p>
+            <div class="example">
+                <h3>Example</h3>
+                <ul>
+                    <li><span class="maroon">table, th, td</span> {<br> <span class="red">border</span>: <span class="blue">1px solid black</span>;<br> }</li>
+                </ul>
+                <p>result:</p>
+                <table second>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Age</th>
+                    </tr>
+                    <tr>
+                        <td>Ken</td>
+                        <td>Ramiscal</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>Kylie</td>
+                        <td>Ramiscal</td>
+                        <td>8</td>
+                    </tr>
+                </table>
+            </div>
+            <p>Remember to define borders for both the table and the table cells.</p>
+            <hr>
+            <h2>HTML Table - Collapse Borders</h2>
+            <p>If you want to collapse into one border, add the CSS <span class="attrhigh">border-collapse</span> property:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <ul>
+                    <li><span class="maroon">table, th, td</span> {<br> <span class="red">border</span>: <span class="blue">1px solid black</span>;<br> <span class="red">border-collapse</span>: <span class="blue">collapse</span>; <br>}</li>
+                </ul>
+                <p>result:</p>
+                <table third>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Age</th>
+                    </tr>
+                    <tr>
+                        <td>Ken</td>
+                        <td>Ramiscal</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>Kylie</td>
+                        <td>Ramiscal</td>
+                        <td>8</td>
+                    </tr>
+                </table>
+            </div>
+            <h2>HTML Table - Adding Cell Padding</h2>
+            <p>Cell padding specifies the space between the cell content and its border.</p>
+            <p>If you do not specify a padding, the table cells will be displayed without padding.</p>
+            <p>To set the padding, use the CSS <span class="attrhigh">padding</span> property:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <ul>
+                    <li><span class="maroon">th, td</span> {<br> <span class="red">padding</span>: <span class="blue">15px</span>;<br>}</li>
+                </ul>
+                <p>result:</p>
+                <table fourth>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Age</th>
+                    </tr>
+                    <tr>
+                        <td>Ken</td>
+                        <td>Ramiscal</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>Kylie</td>
+                        <td>Ramiscal</td>
+                        <td>8</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tabcontent" id="blocks">
+            <h1>HTML Block and Inline Elements</h1>
+            <hr>
+            <p>Every HTML element has a default display value depending on what type of element it is></p>
+            <p>The two display values are: block and inline</p>
+            <hr>
+            <h2>Block-level Elements</h2>
+            <p>A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can)></p>
+            <div style="background-color:royalblue;border:1px solid green;">This .div. element is a block-level element></div>
+            <p>Block level elements in HTML:</p>
+            <ul>
+                <li><span><</span>adress></li>
+                <li><span><</span>canvas></li>
+                <li><span><</span>dt></li>
+                <li><span><</span>footer></li>
+                <li><span><</span>hr></li>
+                <li><span><</span>noscript></li>
+                <li><span><</span>section></li>
+                <li><span><</span>video></li>
+            </ul>
+            <ul>
+                <li><span><</span>article></li>
+                <li><span><</span>dd></li>
+                <li><span><</span>fieldset></li>
+                <li><span><</span>form></li>
+                <li><span><</span>li></li>
+                <li><span><</span>ol></li>
+                <li><span><</span>table></li>
+            </ul>
+            <ul>
+                <li><span><</span>aside></li>
+                <li><span><</span>div></li>
+                <li><span><</span>figcaption></li>
+                <li><span><</span>h1> - <span><</span>h6></li>
+                <li><span><</span>main></li>
+                <li><span><</span>p></li>
+                <li><span><</span>tfoot></li>
+            </ul>
+            <ul>
+                <li><span><</span>blockquote></li>
+                <li><span><</span>dl></li>
+                <li><span><</span>figure></li>
+                <li><span><</span>header></li>
+                <li><span><</span>nav></li>
+                <li><span><</span>pre></li>
+                <li><span><</span>ul></li>
+            </ul>
+            <hr>
+            <h2>Inline Element</h2>
+            <hr>
+            <p>An inline element does not start on a new line and only takes up as much width as necessary></p>
+            <p>This is <span style="border:1px solid blue">an inline .span. element inside</span> a paragraph></p>
+            <p>Inline elements in HTML:</p>
+            <ul>
+                <li><span><</span>a></li>
+                <li><span><</span>abbr></li>
+                <li><span><</span>acronym></li>
+                <li><span><</span>b></li>
+                <li><span><</span>bdo></li>
+                <li><span><</span>big></li>
+                <li><span><</span>br></li>
+                <li><span><</span>button></li>
+                <li><span><</span>em></li>
+                <li><span><</span>i></li>
+                <li><span><</span>img></li>
+                <li><span><</span>input></li>
+                <li><span><</span>kbd></li>
+                <li><span><</span>label></li>
+                <li><span><</span>map></li>
+                <li><span><</span>object></li>
+                <li><span><</span>output></li>
+                <li><span><</span>q></li>
+                <li><span><</span>samp></li>
+                <li><span><</span>script></li>
+                <li><span><</span>select></li>
+                <li><span><</span>small></li>
+                <li><span><</span>span></li>
+                <li><span><</span>strong></li>
+                <li><span><</span>sub></li>
+                <li><span><</span>sup></li>
+                <li><span><</span>textarea></li>
+                <li><span><</span>time></li>
+                <li><span><</span>tt></li>
+                <li><span><</span>var></li>
+            </ul>
+            <hr>
+            <h2>The <span><</span>div> Element</h2>
+            <p>The <span class="elemhigh"><span><</span>div></span> element is often used as a container for other HTML elements</p>
+            <p>The <span class="elemhigh"><span><</span>div></span> element has no required attributes, but <span class="attrhigh">style</span>, <span class="attrhigh">class</span> and <span class="attrhigh">id</span> are common</p>
+            <p>When used together with CSS, the <span class="elemhigh"><span><</span>div></span> element can be used to style blocks of content:</p>
+            <hr>
+            <h2>The <span><</span>span> Element</h2>
+            <p>The <span class="elemhigh"><span><</span>span></span> element is often used as a container for some text</p>
+            <p>When used together with CSS, the <span class="elemhigh"><span><</span>span></span> element can be used to style parts of the text:</p>
+            <hr>
+            <h2>HTML Grouping tags</h2>
+            <table class="summary">
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><span><</span>div></td>
+                    <td>Defines a section in a document (block)</td>
+                </tr>
+                <tr>
+                    <td><span><</span>span></td>
+                    <td>Defines a section in a document (inline)</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tabcontent" id="class">
+            <h1>HTML The class Attribute</h1>
+			<h2>Using The class Attribute</h2>
+			<p>The HTML class Attribute is used to define equal styles 
+			for elements with the same class name.</p>
+			<p>So, all HTML elements with the same class attribute will get the same style.</p>
+			<p>Here we have three <span class="elemhigh"><span><</span>div></span> elements that point to the same class name:
+			<div cities>
+	  		<h2>London</h2>
+	  		<p>London is the capital of England.</p>
+			</div>
+
+			<div cities>
+  			<h2>Paris</h2>
+  			<p>Paris is the capital of France.</p>
+			</div>
+
+			<div cities>
+  			<h2>Tokyo</h2>
+  			<p>Tokyo is the capital of Japan.</p>
+			</div>
+			<h2>Using the class Attribute on Inline Elements<h2>
+			<p>The HTML class Attribute can also be used on inline elements:</p>
+			<h3>My <span class="important">Important</span> Heading</h3>
+			<p>This is some <span class="important">important</span> text.</p>
+			<h2>Select Elements With a Specific Class</h2>
+			<p>In CSS, to select elements with a specific class, 
+			write a period (.) character, followed by the name of the class:</p>
+			<h1 class="city">London</h1>
+			<p>The capital of England</p>
+			<h1 class="city">Paris</h1>
+			<p>The capital of France</p>
+			<h1 class="city">Tokyo</h1>
+			<p>The capital of Japan</p>
+			<h1>Multiple Classes</h1>
+			<div class="example">
+				<h1 class="city1 main2">London</h1>
+				<p>The capital of England</p>
+				<h1 class="city">Paris</h1>
+				<p>The capital of France</p>
+				<h1 class="main2 important">Tokyo</h1>
+				<p>The capital of Japan</p>
+			</div>
+			<p>Note: you must not put a number after the dot when specifying class name. Class name always starts with letters.</p>
+        </div>
+        <div class="tabcontent" id="id">
+            <h1>The id attribute</h1>
+			<h2>Using the id attribute</h2>
+			<p>The id attribute specifies a unique id for an 
+			HTML element (the value must be unique within the HTML document).</p>
+			<p>The id value can be used by CSS and JavaScript 
+			to perform certain tasks for the element with the specific id value.</p>
+			<p>In CSS, to select an element with a specific 
+			id, write a hash (#) character, followed by the id of the element:</p>
+			<h3 id="idheader">Example</h3>
+			<h2>Difference Between Class and ID</h2>
+			<p>An HTML element can only have one unique id that belongs to that 
+			single element, while a class name can be used by multiple elements:</p>
+	
+			<!-- A unique element -->
+			<h3 id="idheader">I am different</h3>
+
+			<!-- multiple similar elements -->
+			<h3 class="classes">We're the same</h3>
+			<h3 class="classes">We're the same</h3>
+			<h3 class="classes">We're the same</h3>
+			<h3 class="classes">We're the same</h3>
+			<h3 class="classes">We're the same</h3>
+			<h2>Bookmarks with id and links</h2>
+			<h3>This is an example of bookmarks</h3>
+			<p><a href="#C4">Jump to Chapter 4</a></p>
+			<p><a href="#C10">Jump to Chapter 10</a></p>
+	
+			<h2>Chapter 1</h2>
+			<p>This chapter explains ba bla bla</p>
+	
+			<h2>Chapter 2</h2>	
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 3</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2 id="C4">Chapter 4</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 5</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 6</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 7</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 8</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 9</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2 id="C10">Chapter 10</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 11</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 12</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 13</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 14</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 15</h2>
+			<p>This chapter explains ba bla bla</p>
+			
+			<h2>Chapter 16</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 17</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 18</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 19</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 20</h2>
+			<p>This chapter explains ba bla bla</p>
+	
+			<h2>Chapter 21</h2>
+			<p>This chapter explains ba bla bla</p>
+
+			<h2>Chapter 22</h2>
+			<p>This chapter explains ba bla bla</p>
+	
+			<h2>Chapter 23</h2>
+			<p>This chapter explains ba bla bla</p>
+        </div>
+        <div class="tabcontent" id="iframe">
+            <h1>HTML Iframes</h1>
+			<p>An iframe is used to display a web page within a web page.</p>
+			<h2>Iframe syntax</h2>
+ 			<p>An HTML iframe is defined with the "<b>iframe</b>" tag:</p>
+			<p>The src attribute specifies the URL(web address) of the inline frame page.</p>
+			<h2>Setting height and width</h2>
+			<p>Use the height and width attribute to specify the size of the iframe.
+			<br>Or you can use CSS to set the height and width of the iframe</p>
+			<!-- This is the example of the Iframe using height and width attribute -->
+			<iframe src="The-whole-page.html" height="400" width="600"></iframe>
+			<!-- This is the example of the Iframe using inline height and width attribute -->
+			<iframe src="The-whole-page.html" style="height:400px;width:600px"></iframe>
+			<h2>Iframe-Remove the border</h2>
+			<p>By default, an iframe has a border around it.</p>
+			<p>To remove the border, add the style attribute and use the CSS border property:</p>
+			<p>With CSS, you can also change the size, style and color of the iframe's border:</p>
+			<!-- This is an example using the id attribute -->
+			<h2>Iframe-Target for a link</h2>
+			<p>An iframe can be used as the target frame for a link.</p>
+			<p>The target attribute of the link must refer to the name attribute of the iframe:</p>
+        </div>
+        <div class="tabcontent" id="js">
+            <h1>HTML JavaScript</h1>
+			<p>JavaScript makes HTML pages more dynamic and interactive.</p>
+			<h2>The HTML "<b>script</b>" Tag</h2>
+			<p>The "<em>script</em>" tag is used to define a client-side script(javascript)</p>
+			<p>The script element either contains script statements, or it points 
+			to an external script file through the src attribute.</p>
+			<p>Common uses for JavaScript are image manipulation, 
+			form validation, and dynamic changes of content.</p>
+			<p>To select an HTML element, JavaScript most often uses the document.getElementById() method.</p>
+			<p>This JavaScript example writes "Hello JavaScript!" into an HTML element with:</p>
+			<h2>This is an example of a command in JavaScript</h2>
+			<p><span id="change-letter">Normal</span></p>   
+        </div>
+        <div class="tabcontent" id="head">
+            <h1>HTML head</h1>
+        
+            <h2>The HTML <span><</span>head> Element</h2>
+        
+            <p>The <span><</span>head> element is a container for metadata 
+            (data about data) and is placed between the <span><</span>html></span> 
+            tag and the <span><</span>body></span> tag.</p>
+        
+            <p>HTML metadata is data about the HTML document. Metadata is not displayed.</p>
+        
+            <p>Metadata typically define the document title, character set, styles, scripts, and other meta information.</p>
+        
+            <p>The following tags describe metadata:<span><</span>title>/span>, 
+            <span><</span>style></span>, <span><</span>meta></span>, <span><</span>link></span>, <span style="color:red">"<strong>script</strong>"</span>
+            , and <span><</span>base></span>.
+        
+            <h2>The HTML <span><</span>title></span> Element</h2>
+        
+            <p>The <span><</span>title></span> element defines the title of the document, and is required in all HTML documents.</p>
+        
+            <p>The <span><</span>title></span> element:</p>
+        
+            <ul style="list-style-type:square">
+                <li>defines a title in the browser tab</li>
+                <li>provides a title for the page when it is added to favorites</li>
+                <li>displays a title for the page in the search engine results</li>
+            </ul>
+        
+            <p>A simple HTML document:</p>
+        
+            <h2>The HTML <span><</span>style></span></h2>
+            <div class="example">
+                <h4>Example</h4>
+                <div class="codeline">
+                    <span><</span>head>
+                </div>
+                <div class="codeline">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span><</span>style>
+                </div>
+            </div>
+            <p>The <span><</span>style></span> element is used to define style information for a single HTML page;(CSS)</p>
+
+            <h2>The HTML <span><</span>link></span> Element</h2>
+
+            <p>The <span><</span>link></span> element is used to link to external style sheets:</p>
+
+            <h2>The HTML <span><</span>meta></span> Element</h2>
+        
+            <p>The <span><</span>meta></span> element is used to specify which character set is used, page description,
+            <br> keywords, author and other metadata.
+        
+            <p>Metadata is used by browsers (how to display content), by search engines(keywords), and other web services.</p>
+
+            <h3>Define the character set used:</h3>
+
+            <p>charset</p>
+
+            <h3>Define a description of your web page</h3>
+
+            <p>name="description" content="website tutorial</p>
+
+            <h3>Define keywords for search engines</h3>
+
+            <p>name="keywords" content="HTML, CSS, XML, JavaScript"</p>
+
+            <h3>Define the author of the page:</h3>
+        
+            <p>name="author" content="Ken Ramiscal"</p>
+        
+            <h3>Refresh document every 30 seconds:</h3>
+        
+            <p>http-equiv="refresh" content="30"</p>
+
+            <h2>The HTML <span><</span>script></span> Element</h2>
+
+            <p>The <span><</span>script></span> element is used to define client-side JavaScripts.</p>
+
+            <p>The JavaScript writes "Hello JavaScript!" into an HTML element with id="demo"</p>
+
+            <h2>The HTML <span><</span>base></span> Element</h2>
+
+            <p>The <span><</span>base></span> element specifies the base URL and base target for all relative URLs in a 
+            <br>page:</p>
+        
+            <h2>Omitting <span><</span>html></span>, <span><</span>head></span> and <span><</span>body></span>?</h2>
+
+            <p>According to the HTML5 standard; the <span><</span>html></span>, the <span><</span>body></span>, and the <span><</span>head></span> tag can be 
+            <br>ommited.</p>
+        </div>
+    </div>
+    <div class="tabs" id="head">
+        <h1>HTML head</h1>
+	
+		<h2>The HTML <span><</span>head> Element</h2>
+	
+		<p>The <span><</span>head> element is a container for metadata 
+		(data about data) and is placed between the <span><</span>html></span> 
+		tag and the <span><</span>body></span> tag.</p>
+	
+		<p>HTML metadata is data about the HTML document. Metadata is not displayed.</p>
+	
+		<p>Metadata typically define the document title, character set, styles, scripts, and other meta information.</p>
+	
+		<p>The following tags describe metadata:<span><</span>title>/span>, 
+		<span><</span>style></span>, <span><</span>meta></span>, <span><</span>link></span>, <span style="color:red">"<strong>script</strong>"</span>
+		, and <span><</span>base></span>.
+	
+		<h2>The HTML <span><</span>title></span> Element</h2>
+	
+		<p>The <span><</span>title></span> element defines the title of the document, and is required in all HTML documents.</p>
+	
+		<p>The <span><</span>title></span> element:</p>
+	
+		<ul style="list-style-type:square">
+			<li>defines a title in the browser tab</li>
+			<li>provides a title for the page when it is added to favorites</li>
+			<li>displays a title for the page in the search engine results</li>
+		</ul>
+	
+		<p>A simple HTML document:</p>
+	
+		<h2>The HTML <span><</span>style></span></h2>
+		<div class="example">
+			<h4>Example</h4>
+			<div class="codeline">
+				<span><</span>head>
+			</div>
+			<div class="codeline">
+				&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>style>
+			</div>
+		</div>
+		<p>The <span><</span>style></span> element is used to define style information for a single HTML page;(CSS)</p>
+
+		<h2>The HTML <span><</span>link></span> Element</h2>
+
+		<p>The <span><</span>link></span> element is used to link to external style sheets:</p>
+
+		<h2>The HTML <span><</span>meta></span> Element</h2>
+	
+		<p>The <span><</span>meta></span> element is used to specify which character set is used, page description,
+		<br> keywords, author and other metadata.
+	
+		<p>Metadata is used by browsers (how to display content), by search engines(keywords), and other web services.</p>
+
+		<h3>Define the character set used:</h3>
+
+		<p>charset</p>
+
+		<h3>Define a description of your web page</h3>
+
+		<p>name="description" content="website tutorial</p>
+
+		<h3>Define keywords for search engines</h3>
+
+		<p>name="keywords" content="HTML, CSS, XML, JavaScript"</p>
+
+		<h3>Define the author of the page:</h3>
+	
+		<p>name="author" content="Ken Ramiscal"</p>
+	
+		<h3>Refresh document every 30 seconds:</h3>
+	
+		<p>http-equiv="refresh" content="30"</p>
+
+		<h2>The HTML <span><</span>script></span> Element</h2>
+
+		<p>The <span><</span>script></span> element is used to define client-side JavaScripts.</p>
+
+		<p>The JavaScript writes "Hello JavaScript!" into an HTML element with id="demo"</p>
+
+		<h2>The HTML <span><</span>base></span> Element</h2>
+
+		<p>The <span><</span>base></span> element specifies the base URL and base target for all relative URLs in a 
+		<br>page:</p>
+	
+		<h2>Omitting <span><</span>html></span>, <span><</span>head></span> and <span><</span>body></span>?</h2>
+
+		<p>According to the HTML5 standard; the <span><</span>html></span>, the <span><</span>body></span>, and the <span><</span>head></span> tag can be 
+		<br>ommited.</p>
+    </div>
+
+    </div>
+    <div class="tabs" id="JS">
+
+    </div>
+    <script src="The-whole-page-script.js"></script>
+    <script>
+        document.getElementById("default").click();
+    </script>
+</body>
+</html>

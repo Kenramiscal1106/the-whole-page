@@ -1,6 +1,5 @@
 
 function tabs (ui) {
-    
     var tablinks = document.getElementsByClassName(ui.tabs), tabcontent = document.getElementById(ui.targetElement), i, alltabs = document.getElementsByClassName(ui.tabcontent), icon = document.getElementById('icon')    ;
     icon.href = event.currentTarget.childNodes[0].src;
     document.title = ui.targetElement;
