@@ -830,7 +830,7 @@
         </div>
         <div class="tabcontent" id="head">
             <h1>HTML head</h1>
-        
+	
             <h2>The HTML <span><</span>head> Element</h2>
         
             <p>The <span><</span>head> element is a container for metadata 
@@ -862,38 +862,50 @@
             <h2>The HTML <span><</span>style></span></h2>
             <div class="example">
                 <h4>Example</h4>
-                <div class="codeline">
-                    <span><</span>head>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="bracket"><</span><span class="tagname">head</span><span class="bracket">></span>
+                    </div>
+                    <div class="codeline second-level">
+                        <span class="bracket"><</span><span class="tagname">style</span><span class="bracket">></span>
+                    </div>
+                    <div class="codeline third-level"><span class="class">.home</span> {</div>
+                    <div class="codeline fourth-level"><span class="property">display</span>:<span class="p-value">block</span>;</div>
+                    <div class="codeline third-level">}</div>
+                    <div class="codeline second-level">
+                        <span class="bracket"><span><</span>/</span><span class="tagname">style</span><span class="bracket">></span>
+                    </div>
+                    <div class="codeline">
+                        <span class="bracket"><span><</span>/</span><span class="tagname">head</span><span class="bracket">></span>
+                    </div>
                 </div>
-                <div class="codeline">
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span><</span>style>
-                </div>
+    
             </div>
             <p>The <span><</span>style></span> element is used to define style information for a single HTML page;(CSS)</p>
-
+    
             <h2>The HTML <span><</span>link></span> Element</h2>
-
+    
             <p>The <span><</span>link></span> element is used to link to external style sheets:</p>
-
+    
             <h2>The HTML <span><</span>meta></span> Element</h2>
         
             <p>The <span><</span>meta></span> element is used to specify which character set is used, page description,
             <br> keywords, author and other metadata.
         
             <p>Metadata is used by browsers (how to display content), by search engines(keywords), and other web services.</p>
-
+    
             <h3>Define the character set used:</h3>
-
+    
             <p>charset</p>
-
+    
             <h3>Define a description of your web page</h3>
-
+    
             <p>name="description" content="website tutorial</p>
-
+    
             <h3>Define keywords for search engines</h3>
-
+    
             <p>name="keywords" content="HTML, CSS, XML, JavaScript"</p>
-
+    
             <h3>Define the author of the page:</h3>
         
             <p>name="author" content="Ken Ramiscal"</p>
@@ -901,124 +913,23 @@
             <h3>Refresh document every 30 seconds:</h3>
         
             <p>http-equiv="refresh" content="30"</p>
-
+    
             <h2>The HTML <span><</span>script></span> Element</h2>
-
+    
             <p>The <span><</span>script></span> element is used to define client-side JavaScripts.</p>
-
+    
             <p>The JavaScript writes "Hello JavaScript!" into an HTML element with id="demo"</p>
-
+    
             <h2>The HTML <span><</span>base></span> Element</h2>
-
+    
             <p>The <span><</span>base></span> element specifies the base URL and base target for all relative URLs in a 
             <br>page:</p>
         
             <h2>Omitting <span><</span>html></span>, <span><</span>head></span> and <span><</span>body></span>?</h2>
-
+    
             <p>According to the HTML5 standard; the <span><</span>html></span>, the <span><</span>body></span>, and the <span><</span>head></span> tag can be 
             <br>ommited.</p>
         </div>
-    </div>
-    <div class="tabs" id="head">
-        <h1>HTML head</h1>
-	
-		<h2>The HTML <span><</span>head> Element</h2>
-	
-		<p>The <span><</span>head> element is a container for metadata 
-		(data about data) and is placed between the <span><</span>html></span> 
-		tag and the <span><</span>body></span> tag.</p>
-	
-		<p>HTML metadata is data about the HTML document. Metadata is not displayed.</p>
-	
-		<p>Metadata typically define the document title, character set, styles, scripts, and other meta information.</p>
-	
-		<p>The following tags describe metadata:<span><</span>title>/span>, 
-		<span><</span>style></span>, <span><</span>meta></span>, <span><</span>link></span>, <span style="color:red">"<strong>script</strong>"</span>
-		, and <span><</span>base></span>.
-	
-		<h2>The HTML <span><</span>title></span> Element</h2>
-	
-		<p>The <span><</span>title></span> element defines the title of the document, and is required in all HTML documents.</p>
-	
-		<p>The <span><</span>title></span> element:</p>
-	
-		<ul style="list-style-type:square">
-			<li>defines a title in the browser tab</li>
-			<li>provides a title for the page when it is added to favorites</li>
-			<li>displays a title for the page in the search engine results</li>
-		</ul>
-	
-		<p>A simple HTML document:</p>
-	
-		<h2>The HTML <span><</span>style></span></h2>
-		<div class="example">
-			<h4>Example</h4>
-			<div class="code">
-                <div class="codeline">
-                    <span class="bracket"><</span><span class="tagname">head</span><span class="bracket">></span>
-                </div>
-                <div class="codeline second-level">
-                    <span class="bracket"><</span><span class="tagname">style</span><span class="bracket">></span>
-                </div>
-                <div class="codeline third-level"><span class="class">.home</span>
-                </div>
-                <div class="codeline second-level">
-                    <span class="bracket"><span><</span>/</span><span class="tagname">style</span><span class="bracket">></span>
-                </div>
-                <div class="codeline">
-                    <span class="bracket"><span><</span>/</span><span class="tagname">head</span><span class="bracket">></span>
-                </div>
-            </div>
-
-		</div>
-		<p>The <span><</span>style></span> element is used to define style information for a single HTML page;(CSS)</p>
-
-		<h2>The HTML <span><</span>link></span> Element</h2>
-
-		<p>The <span><</span>link></span> element is used to link to external style sheets:</p>
-
-		<h2>The HTML <span><</span>meta></span> Element</h2>
-	
-		<p>The <span><</span>meta></span> element is used to specify which character set is used, page description,
-		<br> keywords, author and other metadata.
-	
-		<p>Metadata is used by browsers (how to display content), by search engines(keywords), and other web services.</p>
-
-		<h3>Define the character set used:</h3>
-
-		<p>charset</p>
-
-		<h3>Define a description of your web page</h3>
-
-		<p>name="description" content="website tutorial</p>
-
-		<h3>Define keywords for search engines</h3>
-
-		<p>name="keywords" content="HTML, CSS, XML, JavaScript"</p>
-
-		<h3>Define the author of the page:</h3>
-	
-		<p>name="author" content="Ken Ramiscal"</p>
-	
-		<h3>Refresh document every 30 seconds:</h3>
-	
-		<p>http-equiv="refresh" content="30"</p>
-
-		<h2>The HTML <span><</span>script></span> Element</h2>
-
-		<p>The <span><</span>script></span> element is used to define client-side JavaScripts.</p>
-
-		<p>The JavaScript writes "Hello JavaScript!" into an HTML element with id="demo"</p>
-
-		<h2>The HTML <span><</span>base></span> Element</h2>
-
-		<p>The <span><</span>base></span> element specifies the base URL and base target for all relative URLs in a 
-		<br>page:</p>
-	
-		<h2>Omitting <span><</span>html></span>, <span><</span>head></span> and <span><</span>body></span>?</h2>
-
-		<p>According to the HTML5 standard; the <span><</span>html></span>, the <span><</span>body></span>, and the <span><</span>head></span> tag can be 
-		<br>ommited.</p>
     </div>
 
     </div>
