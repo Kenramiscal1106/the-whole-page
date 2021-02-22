@@ -864,22 +864,38 @@
                 <h4>Example</h4>
                 <div class="code">
                     <div class="codeline">
+                        <span class="bracket"><</span><span class="tagname">html</span><span class="bracket">></span>
+                    </div>
+                    <div class="codeline second-level">
                         <span class="bracket"><</span><span class="tagname">head</span><span class="bracket">></span>
                     </div>
-                    <div class="codeline second-level">
+                    <div class="codeline third-level">
                         <span class="bracket"><</span><span class="tagname">style</span><span class="bracket">></span>
                     </div>
-                    <div class="codeline third-level"><span class="class">.home</span> {</div>
-                    <div class="codeline fourth-level"><span class="property">display</span>:<span class="p-value">block</span>;</div>
-                    <div class="codeline third-level">}</div>
-                    <div class="codeline second-level">
+                    <div class="codeline fourth-level"><span class="class">.home</span> {</div>
+                    <div class="codeline fifth-level"><span class="property">color</span>:<span class="p-value">blue</span>;</div>
+                    <div class="codeline fourth-level">}</div>
+                    <div class="codeline third-level">
                         <span class="bracket"><span><</span>/</span><span class="tagname">style</span><span class="bracket">></span>
                     </div>
-                    <div class="codeline">
+                    <div class="codeline second-level">
                         <span class="bracket"><span><</span>/</span><span class="tagname">head</span><span class="bracket">></span>
                     </div>
+                    <div class="codeline second-level">
+                        <span class="bracket"><</span><span class="tagname">body</span><span class="bracket">></span>
+                    </div>
+                    <div class="codeline third-level">
+                        <span class="bracket"><</span><span class="tagname">p</span> <span class="attribute">class</span>=<span class="attrvalue">"home"</span><span class="bracket">></span>Hello, world<span class="bracket"><span><</span>/</span><span class="tagname">p</span><span class="bracket">></span>
+                    </div>
+                    <div class="codeline second-level">
+                        <span class="bracket"><<span>/</span></span><span class="tagname">body</span><span class="bracket">></span>
+                    </div>
+                    <div class="codeline">
+                        <span class="bracket"><<span>/</span></span><span class="tagname">html</span><span class="bracket">></span>
+                    </div>
                 </div>
-    
+                <p>Result:</p>
+                <p style="color:blue">Hello, world</p>
             </div>
             <p>The <span><</span>style></span> element is used to define style information for a single HTML page;(CSS)</p>
     
