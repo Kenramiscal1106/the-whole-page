@@ -418,7 +418,7 @@
                     </div>
                 </div>
 				<p>Result</p>
-				<img src="img_5terre.jpg" alt="Terre">
+				<!-- <img src="img_5terre.jpg" alt="Terre"> -->
 				<p>Note: the <b>alt</b> attribute only works if the image can not be fetched, replaced, unavailable, or the URL does not exist.</p>
 			</div>
         </div>
@@ -958,8 +958,16 @@
     </div>
     <script src="The-whole-page-script.js"></script>
     <script>
+        var lasttab = getcookie("lasttab")
         document.getElementById("default").click();
-        document.cookie = {name:"Ken", adress:"ff"}
+        document.cookie = 'name="Ken"; expires=Thu, 23 Feb 2021 17:00:00 UTC';   
+        document.cookie = 'age="13';
+        document.cookie = 'object={new:"idk"}'
+        function getCookie() {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+        }
+        console.log("hello")
     </script>
 </body>
 </html>
