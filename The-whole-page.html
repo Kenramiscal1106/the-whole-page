@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -959,15 +961,14 @@
     <script src="The-whole-page-script.js"></script>
     <script>
         var lasttab = getcookie("lasttab")
-        document.getElementById("default").click();
+        if (lasttab) {
+            document.getElementById("default").click()
+        }
+        else {
+        }
         document.cookie = 'name="Ken"; expires=Thu, 23 Feb 2021 17:00:00 UTC';   
         document.cookie = 'age="13';
         document.cookie = 'object={new:"idk"}'
-        function getCookie() {
-            var name = cname + "=";
-            var decodedCookie = decodeURIComponent(document.cookie);
-        }
-        console.log("hello")
     </script>
 </body>
 </html>

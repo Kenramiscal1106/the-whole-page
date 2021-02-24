@@ -21,7 +21,13 @@ function tabs (ui) {
     //this.className = ui.tabs + ' block';
     event.currentTarget.className = ui.tabs + " block";
 }
-
+/* function getAllTablinks() {
+    var links = document.getElementsByClassName('HTMLlink');
+    for (var i=0;i < links.length;i++) {
+        console.log(links[i].onclick)
+    }
+} */
+getAllTablinks()
 function getcookie(cname) {
     var name = cname + "=", decodedCookie = decodeURIComponent(document.cookie), ca = decodedCookie.split(";");
     for (var i = 0; i < ca.length; i++) {
@@ -31,7 +37,7 @@ function getcookie(cname) {
         }
         if (c.indexOf(name) == 0) {
             return c.substring(name.length,c.length);
-        }
+        }        
     }
     return "";
 }
