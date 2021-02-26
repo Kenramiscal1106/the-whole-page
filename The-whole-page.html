@@ -14,23 +14,26 @@
         <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'introduction'})" id="default"><img src="home.svg" alt="">
             introduction
         </button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'Paragraphs'})"><img src="Pilcrow.svg" alt="">
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'paragraphs'})" id="paragraphstab"><img src="Pilcrow.svg" alt="">
             Paragraph</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'images'})"><img src="images.svg" alt="">
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'images'})" id="imagestab"><img src="images.svg" alt="">
             Images</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'table'})"><img src="table.svg" alt="">
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'table'})" id="tabletab"><img src="table.svg" alt="">
             Table</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'blocks'})"><img src="block.svg" alt="">
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'blocks'})" id="blockstab"><img src="block.svg" alt="">
             Blocks</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'class'})"><img src="class.svg" alt="">
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'class'})" id="classtab"><img src="class.svg" alt="">
             Class</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'id'})"><img src="hashtag.svg" alt="">
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'id'})" id="idtab"><img src="hashtag.svg" alt="">
             Id</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'iframe'})"><img src="frame.svg" alt="">
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'iframe'})" id="iframetab"><img src="frame.svg" alt="">
             Iframe</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'js'})">Javascript</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'head'})"><img src="head.svg" alt="">
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'js'})" id="jstab">Javascript</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'head'})" id="headtab"><img src="head.svg" alt="">
             Head</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'layout'})" id="layouttab">Layout</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'computer-code'})" id="computer-codetab">Computer code</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'semantics'})" id="semanticstab">Semantics</button>
     </div>
     <div class="tabs" id="HTML">
         <div class="tabcontent" id="introduction">
@@ -63,7 +66,7 @@
 			<p>The <b><span><</span>!DOCTYPE html></b> declaration for HTML5 is:</p>
 			<h3><span><</span>!DOCTYPE html></h3>
         </div>
-        <div class="tabcontent" id="Paragraphs">
+        <div class="tabcontent" id="paragraphs">
             <h1>HTML Paragraphs</h1>
             <hr>
             <p>The HTML <span><</span>p> element defines a <b>paragraph</b>:</p>
@@ -952,6 +955,106 @@
             <p>According to the HTML5 standard; the <span class="elemhigh"><span class="elemhigh"><span><</span>></span></span></span>, the <span class="elemhigh"><span class="elemhigh"><span><</span>></sheadpan></span></span></span>, and the <span class="elemhigh"><span><</span>body></span></span> tag can be 
             <br>ommited.</p>
         </div>
+        <div class="tabcontent" id="layout">
+            <h1>HTML Layouts</h1>
+            <h2>There are HTML Layout Elements:</h2>
+            <p>Websites often display content in multiple columns(like a magazine or newspaper)</p>
+            <p>HTML offers several semantic elements that define the different parts of a web page</p>
+            <ul style="list-style-type:square">
+                <li><span class="elemhigh"><span><</span>header></span> - Defines a header for a document or a section</li>
+                <li><span class="elemhigh"><span><</span>nav></span> - Defines a container for navigation links</li>
+                <li><span class="elemhigh"><span><</span>section></span> - Defines a section in a document</li>
+                <li><span class="elemhigh"><span><</span>article></span>- Defines an independent self-contained article</li>
+                <li><span class="elemhigh"><span><</span>aside></span> - Defines content aside from the content(like a sidebar)</li>
+                <li><span class="elemhigh"><span><</span>footer></span> - Defines a footer for a document or a section</li>
+                <li><span class="elemhigh"><span><</span>details></span> - Defines additional details</li>
+                <li><span class="elemhigh"><span><</span>summary></span>- Defines a heading for the <span class="elemhigh"><span><</span>details></span> element</li>
+            </ul>
+            <h2>HTML Layout Techniques</h2>
+            <p>There are five different ways to create multicolumn layouts. Each way has its pros and cons:</p>
+            <ul style="list-style-type:circle">
+                <li>HTML Tables(not recommended)</li>
+                <li>CSS float property</li>
+                <li>CSS flexbox</li>
+                <li>CSS framework</li>
+                <li>CSS grid</li>
+            </ul>
+            <h2>Which One to Choose?</h2>
+            <h3>HTML tables</h3>
+            <p>The "table" element was not designed to be a layout tool! The purpose of the "table" element is to display tabular data. So, do not use tables for your page layout! They will bring a mess into your code. And imagine how hard it will be to redesign your site after a couple of months.</p>
+            <h3>CSS Frameworks</h3>
+            <p>If you want to create your layout fast, you can use a framework, like <a href="https://www.w3schools.com/w3css/default.asp">w3.CSS</a> or 
+            <a href="https://www.w3schools.com/bootstrap/default.asp">Bootstrap</a>
+            <h3>CSS Floats</h3>
+            <p>It is common to do entire web layouts using the CSS float property. 
+            Float is easy to learn - you just need to remember how the float and clear properties work. Disadvantages: 
+            Floating elements are tied to the document flow, which may harm the flexibility. Learn more about float in our
+            <a href="https://www.w3schools.com/css/css_float.asp">CSS Float and Clear</a> chapter</p>
+            <h3>CSS Flexbox</h3>
+            <p>Flexbox is a new layout mode in CSS3.</p>
+            <p>Use of flexbox ensures that elements behave predictably when the page layout must 
+            <br>accommodate different screen sizes and different display devices. Disadvantages: Does not 
+            <br>work in IE10 and earlier.</p>
+            <p>Learn more about flexbox in our <a href="https://www.w3schools.com/css/css3_flexbox.asp">CSS Flexbox</a> chapter</p>
+            <h3>CSS Grid view</h3>	
+            <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns,
+            <br> making it easier to design web pages without having to use floats and positioning.</p>
+        </div>
+        <div class="tabcontent" id="computer-code">
+            <h1>HTML Computercode</h1>
+            <h2>HTML <span class="elemhigh"><span><</span>kbd></span> For Keyboard Input</h2>
+            <p>The HTML <span class="elemhigh"><span><</span>kbd></span> element represent user input, like keyboard input or voice commands.</p>
+            <p>Text surrounded by <span class="elemhigh"><span><</span>kbd></span> tags is typically displayed in a monospace font:</p>
+            <h3>Example:</h3>
+            <p>Save the document by pressing <kbd>Crtl + S</kbd></p>
+            <h2>HTML <span class="elemhigh"><span><</span>samp></span> For Program Output</h2>
+            <p>The HTML <span class="elemhigh"><span><</span>samp></span> element represents output from a program or computing system.</p>
+            <p>Text surrounded by <span class="elemhigh"><span><</span>samp></span> tags is typically displayed in a monospace font:</p>
+            <h3>Example:</h3>
+            <p>If you input wrong value, the program will return <samp>Error!</samp></p>
+            <h2>HTML <span class="elemhigh"><span><</span>code></span> For Computer code </h2>
+            <p>The HTML <span class="elemhigh"><span><</span>code></span> element defines a fragment of computer code.</p>
+            <p>Text surrounded by <span class="elemhigh"><span><</span>code></span> tags is typically displayed in a monospace font:</p>
+            <h3>Example</h3>
+            <code>
+            x = 5;
+            y = 6;
+            z = 4;
+            </code>
+            <p>Notice that the code doesn't preserve extra whitespace and line-breaks.</p>
+            <p>To fix this, you can put the <span class="elemhigh"><span><</span>code></span> element inside a <span class="elemhigh"><span><</span>pre></span> element:</p>
+            <pre>
+                <code>
+                x = 5;
+                y = 6;
+                z = 4;
+                </code>
+            </pre>
+            <h2>HTML <span class="elemhigh"><span><</span>var></span> For Variables</h2>
+            <p>The HTML <span class="elemhigh"><span><</span>var></span> element defines a variable.</p>
+            <p>The variable could be a variable in a mathematical expression or a variable in 
+            <br>programming context</p>
+            <div class="example">
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">p</span><span class="bracket">></span>
+                        Einstein wrote: 
+                        <span class="bracket"><</span><span class="tagname">var</span><span class="bracket">></span>E<span class="bracket"><span><</span>/</span><span class="tagname">var</span><span class="bracket">></span>
+                        = <span class="bracket"><</span><span class="tagname">var</span><span class="bracket">></span>mc<span class="bracket"><span><</span>/</span><span class="tagname">var</span><span class="bracket">></span></div>
+                </div>
+            </div>
+            <h3>Example:</h3>
+            <p>Einstein wrote: <var>E</var> = <var>mc</var><sup>2</sup>.</p>
+        </div>
+        <div class="tabcontent" id="semantics">
+            <h1>HTML5 Semantic Elements</h1>
+            <hr>
+            <p>Semantics is the study of the meanings of words and phrases in a language.</p>
+            <p>Semantic elements = elements with a meaning</p>
+            <hr>
+            <h2>What are Semantic Elements</h2>
+            <p>A semantic eleent clearly describes its meaning to both the browser and the developer.</p>
+            <p>Examples of <b>non-semantic</b> elements: <span class="elemhigh"><span><</span>div></span> and <span class="elemhigh"><span><</span>span></span></p>
+        </div>
     </div>
 
     </div>
@@ -960,11 +1063,18 @@
     </div>
     <script src="The-whole-page-script.js"></script>
     <script>
-        var lasttab = getcookie("lasttab")
-        if (lasttab) {
-            document.getElementById("default").click()
+        try{
+            var lasttab = getcookie("lasttab"), lastTabId = lasttab + "tab"
+        }
+        catch {
+            ("no cookie")
+        }
+        if (lasttab && lastTabId != "introductiontab") {
+            document.getElementById(lastTabId).click();
         }
         else {
+            // document.getElementById();
+            document.getElementById("default").click()
         }
         document.cookie = 'name="Ken"; expires=Thu, 23 Feb 2021 17:00:00 UTC';   
         document.cookie = 'age="13';
