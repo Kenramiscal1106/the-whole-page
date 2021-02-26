@@ -8,7 +8,7 @@ function tabs (ui) {
         document.title = ui.targetElement;        
     }
     catch {
-        alert("no icon (mandatory)")
+        alert("no icon/text (mandatory)")
     }
     for (i = 0; i < tablinks.length;i++) {
         tablinks[i].className = ui.tabs + " none";
@@ -26,8 +26,8 @@ function tabs (ui) {
     for (var i=0;i < links.length;i++) {
         console.log(links[i].onclick)
     }
-} */
-getAllTablinks()
+}
+getAllTablinks() */
 function getcookie(cname) {
     var name = cname + "=", decodedCookie = decodeURIComponent(document.cookie), ca = decodedCookie.split(";");
     for (var i = 0; i < ca.length; i++) {
@@ -36,8 +36,8 @@ function getcookie(cname) {
             c = c.substring(1);
         }
         if (c.indexOf(name) == 0) {
-            return c.substring(name.length,c.length);
-        }        
+            return c.substring(name.length + 1,c.length - 1);
+        }           
     }
     return "";
 }
