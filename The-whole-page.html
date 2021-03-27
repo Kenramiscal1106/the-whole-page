@@ -34,7 +34,8 @@
         <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'layout'})" id="layouttab"><img src="layout.svg" alt=""/>Layout</button>
         <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'computer-code'})" id="computer-codetab"><img src="computer.svg" alt=""/>Computer code</button>
         <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'semantics'})" id="semanticstab"><img src="semantics.svg" alt=""/>Semantics</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'responsive'})" id="responsivetab">Responsive</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'responsive'})" id="responsivetab"><img src="semantics.svg" alt="">Responsive</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'style-guide'})"id="style-guidetab"><img src="semantics.svg" alt="">Style Guide</button>
     </div>
     <div class="tabs" id="HTML">
         <div class="tabcontent" id="introduction">
@@ -521,9 +522,12 @@
             <p>If you want to collapse into one border, add the CSS <span class="attrhigh">border-collapse</span> property:</p>
             <div class="example">
                 <h3>Example</h3>
-                <ul>
-                    <li><span class="maroon">table, th, td</span> {<br> <span class="red">border</span>: <span class="blue">1px solid black</span>;<br> <span class="red">border-collapse</span>: <span class="blue">collapse</span>; <br>}</li>
-                </ul>
+                <div class="code">
+                    <div class="codeline"><span class="class">table</span>, <span class="class">th</span>, <span class="class">td</span> {</div>
+                    <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">1px solid black</span>;</div>
+                    <div class="codeline second-level"><span class="property">border-collapse</span>:<span class="p-value">collapse</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
                 <p>result:</p>
                 <table third>
                     <tr>
@@ -549,9 +553,11 @@
             <p>To set the padding, use the CSS <span class="attrhigh">padding</span> property:</p>
             <div class="example">
                 <h3>Example</h3>
-                <ul>
-                    <li><span class="maroon">th, td</span> {<br> <span class="red">padding</span>: <span class="blue">15px</span>;<br>}</li>
-                </ul>
+                <div class="code">
+                    <div class="codeline"><span class="class">th</span>, <span class="class">td</span> {</div>
+                    <div class="codeline second-level"><span class="property">padding</span>:<span class="p-value">15px</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
                 <p>result:</p>
                 <table fourth>
                     <tr>
@@ -1087,11 +1093,11 @@
                 <h3>Example</h3>
                 <div class="code">
                     <div class="codeline">
-                        <span class="bracket"><</span><span class="tagname">img</span> <span class="attribute">src</span>=<span class="attrvalue">"background.jpg"</span> <span class="attribute">style</span>=<span class="attrvalue">"<b>max-width:100%;</b>height:auto;"</span></span><span class="bracket">/></span>
+                        <span class="bracket"><</span><span class="tagname">img</span> <span class="attribute">src</span>=<span class="attrvalue">"img5_terre.jpg"</span> <span class="attribute">style</span>=<span class="attrvalue">"<b>max-width:100%;</b>height:auto;"</span></span><span class="bracket">/></span>
                     </div>
                 </div>
                 <p>Result:</p>
-                <img src="../HTML, CSS, JS/background.jpg" alt="" style="max-width:100%;height:auto">
+                <img src="static-images/img_5terre.jpg" alt="" style="width:100%;height:auto">
             </div>
             <hr>
             <h2>Show Different Images Depending on Browser Width</h2>
@@ -1155,6 +1161,155 @@
                 <p>Result:</p>
                 <a href="media-queries.html">Click this link</a>                
             </div>
+        </div>
+        <div class="tabcontent" id="style-guide">
+            <h1>HTML Style Guide and Coding Conventions</h1>
+            <hr>
+            <p>A consistent, clean, and tidy HTML code makes it easier for other to read and understand your code.</p>
+            <p>Here are some guidelines and tipes for creating good HTML code.</p>
+            <hr>
+            <h2>Always Declare Document Type</h2>
+            <p>Always declare the document type as the first line in your document.</p>
+            <p>The correct document type for HTML is:</p>
+            <div class="example">
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><span><</span>!</span><span class="tagname">DOCTYPE html</span><span class="bracket">></span></div>
+                </div>
+            </div>
+            <hr>
+            <p>HTML allows mixing uppercase and lowercase letters in element names.</p>
+            <p>However, we recommend using lowercase element names, because:</p>
+            <ul>
+                <li>Mixing uppercase and lowercase names look bad</li>
+                <li>Developers normally use lowercase names</li>
+                <li>Lowercase looks cleaner</li>
+                <li>Lowercase is easier to write</li>
+            </ul>
+            <div class="example">
+                <h3>Good:</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">body</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">p</span><span class="bracket">></span>This is a paragraph. <span class="bracket"><span><</span>/</span><span class="tagname">p</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><span><</span>/</span><span class="tagname">body</span><span class="bracket">></span></div>
+                </div>
+            </div>
+            <div class="example">
+                <h3>Bad:</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">BODY</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">P</span><span class="bracket">></span>This is a paragraph. <span class="bracket"><span><</span>/</span><span class="tagname">P</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><span><</span>/</span><span class="tagname">BODY</span><span class="bracket">></span></div>
+                </div>
+            </div>
+            <hr>
+            <h2>Close All HTML Elements</h2>
+            <p>In HTML, you do not have to close all elements( for example the <span class="elemhigh"><span><</span>p></span> element).</p>
+            <p>However, we strongly recommend closing all HTML elements, like this:</p>
+            <div class="example">
+                <h3>Good:</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">section</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">p</span><span class="bracket">></span>This is a paragraph.<span class="bracket"><span><</span></span><span class="tagname">/p</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">p</span><span class="bracket">></span>This is a paragraph.<span class="bracket"><span><</span></span><span class="tagname">/p</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">/section</span><span class="bracket">></span></div>
+                </div>
+            </div>
+            <div class="example">
+                <h3>Bad:</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">section</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">p</span><span class="bracket">></span>This is a paragraph.</div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">p</span><span class="bracket">></span>This is a paragraph.</div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">/section</span><span class="bracket">></span></div>
+                </div>
+            </div>
+            <hr>
+            <h2>Use Lowercase Attribute Names</h2>
+            <p>HTML allows mixing uppercase and lowercase letters in attribute names.</p>
+            <p>However, we recommend using lowercase attribute names, because:</p>
+            <ul>
+                <li>Mixing uppercase and lowercase names look bad</li>
+                <li>Developers normally use lowercase names</li>
+                <li>Lowercase look cleaner</li>
+                <li>Lowercase are easier to write</li>
+            </ul>
+            <div class="example">
+                <h3>Good:</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">a</span> <span class="attribute">href</span>=<span class="attrvalue">"https://facebook.com/"</span><span class="bracket">></span>Visit our HTML tutorial<span class="bracket"><</span><span class="tagname">/a</span><span class="bracket">></span></div>
+                </div>
+            </div>
+            <div class="example">
+                <h3>Bad:</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">a</span> <span class="attribute">HREF</span>=<span class="attrvalue">"https://facebook.com/"</span><span class="bracket">></span>Visit our HTML tutorial<span class="bracket"><</span><span class="tagname">/a</span><span class="bracket">></span></div>
+                </div>
+            </div>
+            <hr>
+            <h2>Always Quote Attribute Values</h2>
+            <p>HTML allows attribute values without quotes.</p>
+            <p>However, we recommend quoting attribute values, because:</p>
+            <ul>
+                <li>Developers normally quote attribute values</li>
+                <li>Quoted values are easier to read</li>
+                <li>You MUST use quotes if the value contains spaces</li>
+            </ul>
+            <hr>
+            <h2>Always Specify alt, width, and height for Images</h2>
+            <p>Always specify the <span class="attrhigh">alt</span> attribute for images. This attribute is important if the image for some reason cannot be displayed.</p>
+            <p>Also, always define the <span class="attrihigh">widht</span> and <span class="attrihigh">height</span> of images. This reduces flickering, because the browser can reserve space for the image before loading.</p>
+            <hr>
+            <h2>Spaces and Equal Signs</h2>
+            <p>HTML allows spaces around equal signs. But space-less is easeier to read and groups entities better together</p>
+            <hr>
+            <h2>Avoid Long Code Lines</h2>
+            <p>When using an HTML editor, it is NOT convinient to scroll right and left to read the HTML code.</p>
+            <p>Try to avoid too long code lines.</p>
+            <hr>
+            <h2>Blank Lines and Indentation</h2>
+            <p>Do not add blank lines, spaces, or indentations without a reason.</p>
+            <p>For readability, add blank lines to separate large or logical code blocks.</p>
+            <p>For readability, add two spaces of indentation. Do not use the tab key</p>
+            <hr>
+            <h2>Never Skip the <span><</span>title> Element</h2>
+            <p>The<span class="elemhigh"><span><</span>title></span> element is required in HTML.</p>
+            <p>The contents of a page title is very important for search engine optimization (SEO)! The page title is used by search engine algorithms to decide the order when listing pages in search results.</p>
+            <p>The <span class="elemhigh"><span><</span>title></span> element:</p>
+            <ul>
+                <li>defines a title in the browser toolbar</li>
+                <li>provides a title for the page when it is added to favorites</li>
+                <li>displays a title for the page in search-engine results</li>
+            </ul>
+            <p>So, try to make the title as accurate and meaningful as possible while being short.</p>
+            <h2>Ommiting <span><</span>html> and <span><</span>body>?</h2>
+            <p>An HTML page will validate without the <span class="elemhigh"><span><</span>html></span> and <span class="elemhigh"><span><</span>body></span> tags!</p>
+            <p>However, we strongly recommend to always add the <span class="elemhigh"><span><</span>html></span><span class="elemhigh"><span><</span>body></span></p>
+            <p>Ommiting <span class="elemhigh"><span><</span>body></span> can produce errors in older browsers.</p>
+            <p>Ommiting <span class="elemhigh"><span><</span>html></span> and <span class="elemhigh"><span><</span>body></span> can also crash DOM and XML software.</p>
+            <hr>
+            <h2>Ommiting <span><</span>head>?</h2>
+            <p>The HTML <span><</span>head> tag can also be ommited.</p>
+            <p>Browsers will add all elements before <span class="elemhigh"><span><</span>body></span>, to a default <span class="elemhigh"><span><</span>head></span> element.</p>
+            <p>However, we recommend using the <span class="elemhigh"><span><</span>head></span> tag.</p>
+            <hr>
+            <h2>Close Empty HTML Elements?</h2>
+            <p>In HTML, it is optional to close empty elements.</p>
+            <p>If you expect XML/XHTML software to access your page, keep the closing slash (/), because it is required in XML and XHTML.</p>
+            <hr>
+            <h2>Add the lang Attribute</h2>
+            <p>You should always include the <span class="attrhigh">lang</span> attribute inside the <span class="elemhigh"><span><</span>html></span> tag, to declare the alnguage of the Web page. This is meant to assist search engines and browsers.</p>
+            <hr>
+            <h2>Meta Data</h2>
+            <p>To ensure proper interpretation and correct search engine indexing, both the language and the character encoding <span class="elemhigh"><span><</span>meta charset="charset"></span> should be defined as early as possible in an HTML document.</p>
+            <hr>
+            <h2>Setting the Viewport</h2>
+            <p>The viewport is the user's visible area of a web page. It varies with the device - it will be smaller on a mobile phone than on a computer screen.</p>
+            <p>You should include the following <span class="elemhigh"><span><</span>meta></span> element in all your web pages.</p>
+            <p></p>
+            <p><span class="attrhigh"></span></p>
+            <p><span class="attrhigh"></span></p>
+            <p></p>
+            <p></p>
         </div>
     </div>
 
