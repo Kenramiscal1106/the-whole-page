@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing:border-box;
+        }
+        .left, .right {
+            width:20%;
+            background-color: blue;
+        }
+        .main {
+            width:60%;
+            background-color: red;
+        }
+        .left, .right, .main {
+            float:left;
+            height:500px;
+        }
+        @media screen and (max-width:800px) {
+            .left, .main, .right {
+                width:100%;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="main"></div>
+    <div class="right"></div>
+</body>
+</html>

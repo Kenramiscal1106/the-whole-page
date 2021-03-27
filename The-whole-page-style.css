@@ -19,7 +19,7 @@ body:not(body.dark):not(body.matrix) {
     --css-class:rgb(0, 2, 133);
     --css-id:rgb(87, 133, 0);
     --css-property: rgb(93, 0, 136);
-    --css-property-value: rgb(162, 255, 119);
+    --css-property-value: rgb(0, 238, 255);
 }
 body.matrix {
     --theme-blue:#004cff;
@@ -74,7 +74,7 @@ body.dark {
 body.dark, body.dark .code{
     color:white;
 }
-body.dark, body.dark .code, body.matrix, body.matrix .code {
+:is(body.dark, body.matrix), :is(body.dark, body.matrix) .code {
     background-color: black;
 }
 html, body {margin:0;padding:0;height:100%;}

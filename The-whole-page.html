@@ -34,6 +34,7 @@
         <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'layout'})" id="layouttab"><img src="layout.svg" alt=""/>Layout</button>
         <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'computer-code'})" id="computer-codetab"><img src="computer.svg" alt=""/>Computer code</button>
         <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'semantics'})" id="semanticstab"><img src="semantics.svg" alt=""/>Semantics</button>
+        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'responsive'})" id="responsivetab">Responsive</button>
     </div>
     <div class="tabs" id="HTML">
         <div class="tabcontent" id="introduction">
@@ -1055,6 +1056,105 @@
             <h2>What are Semantic Elements</h2>
             <p>A semantic eleent clearly describes its meaning to both the browser and the developer.</p>
             <p>Examples of <b>non-semantic</b> elements: <span class="elemhigh"><span><</span>div></span> and <span class="elemhigh"><span><</span>span></span></p>
+        </div>
+        <div class="tabcontent" id="responsive">
+            <h1>HTML Responsive Web Design</h1>
+            <hr>
+            <p>Responsive web design is about creating web pages that look good on all devices!</p>
+            <p>A responsive web design will automatically adjust for different screen sizes and viewports.</p>
+            <hr>
+            <h2>What is Responsive Web Design?</h2>
+            <p>Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge, a website, to make it look good on all devices (desktops, tablets, and phones):</p>
+            <hr>
+            <h2>Setting The Viewport</h2>
+            <p>To create a responsive website, add the following <span class="elemhigh"><span><</span>meta></span> tag to all your web pages:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="bracket"><</span><span class="tagname">meta</span> <span class="attribute">name</span>=<span class="attrvalue">"viewport"</span> <span class="attribute">content</span>=<span class="attrvalue">"width=device-width, initial-scale=1.0"</span><span class="bracket">/></span>
+                    </div>
+                </div>
+            </div>
+            <p>This will set the viewport of your page, which will give the browser instructions on how to control the page's dimensions and scaling.</p>
+            <p><b>Tip</b>: If you are browsing this page on a phone or a tablet, you can click on the two links about to see the difference.</p>
+            <hr>
+            <h2>Responsive Images</h2>
+            <p>Respoinsive images are images that scale nicely to fit any browser size.</p>
+            <h3>Using the width Property</h3>
+            <p>If the CSS <span class="attrhigh">width</span> property is set to 100%, the image will be responsive and scale up and down:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline">
+                        <span class="bracket"><</span><span class="tagname">img</span> <span class="attribute">src</span>=<span class="attrvalue">"background.jpg"</span> <span class="attribute">style</span>=<span class="attrvalue">"<b>max-width:100%;</b>height:auto;"</span></span><span class="bracket">/></span>
+                    </div>
+                </div>
+                <p>Result:</p>
+                <img src="../HTML, CSS, JS/background.jpg" alt="" style="max-width:100%;height:auto">
+            </div>
+            <hr>
+            <h2>Show Different Images Depending on Browser Width</h2>
+            <p>The HTML <span class="elemhigh"><span><</span>picture></span> element allows you to define different images for different browser window sizes.</p>
+            <p>Resize the browser window to see how the image below change depending on the width</p>
+            <div class="example">
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">picture</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">source</span> <span class="attribute">srcset</span>=<span class="attrvalue">img_5terre.jpg</span> <span class="attribute">media</span>=<span class="attrvalue">" (max-width: 600px)"</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">source</span> <span class="attribute">srcset</span>=<span class="attrvalue">img_forest.jpg</span> <span class="attribute">media</span>=<span class="attrvalue">"(max-width: 1500px)"</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">source</span> <span class="attribute">srcset</span>=<span class="attrvalue">img_mountains.jpg</span> <span class="attribute">media</span>=<span class="attrvalue">"(max-width:400px)</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">img</span> <span class="attribute">src</span>=<span class="attrvalue">img_mountains.jpg</span> <span class="attribute">alt</span>=<span class="attrvalue">"mountains"</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><span><</span>/</span><span class="tagname">picture</span><span class="bracket">></span></div>
+                </div>
+                Result:
+                <picture>
+                    <source srcset="static-images/img_5terre.jpg" media="(max-width: 600px)">
+                    <source srcset="static-images/img_forest.jpg" media="(max-width: 1500px)">
+                    <source srcset="static-images/img_mountains.jpg" media="(max-width:400px)">
+                    <img src="static-images/img_mountains.jpg" alt="Flowers">
+                </picture>
+            </div>
+            <hr>
+            <h2>Responsive Text Size</h2>
+            <p>The text size can be set with a "vw" unit, which means the viewport width".</p>
+            <p>That way the text size will follow the size of the browser window:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">h1</span> <span class="attribute">style</span>=<span class="attrvalue"><b>font-size:10vw"</b></span><span class="bracket">></span>Hello World<span class="bracket"><span><</span>/</span><span class="tagname">h1</span><span class="bracket">></span></div>
+                    
+                </div>
+                <p>Result:</p>
+                <h1 style="font-size:10vw">Hello World</h1>
+            </div>
+            <p>Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.</p>
+            <hr>
+            <h2>Media Queries</h2>
+            <p>In addition to resize text and images, itis also comon to use media queries in responsive web pages.</p>
+            <p>With media queries, you can define completely different styles for different browser sizes.</p>
+            <p>Example: resize the browser window to see that the three div elemenet below will display horizontally on large screens and stacked vertically on small screens:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">style</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="class">.left</span>, <span class="class">.right</span> {</div>
+                    <div class="codeline third-level"><span class="property">float</span>:<span class="p-value">left</span>;</div>
+                    <div class="codeline third-level"><span class="property">width</span>:<span class="p-value">20%</span>;</div>
+                    <div class="codeline second-level">}</div>
+                    <div class="codeline second-level"><span class="class">.main</span> {</div>
+                    <div class="codeline third-level"><span class="property">float</span>:<span class="p-value">left</span>;</div>
+                    <div class="codeline third-level"><span class="property">width</span>:<span class="p-value">60%</span>;</div>
+                    <div class="codeline second-level">}</div>
+                    <div class="codeline second-level"><span class="class">@media screen and (max-width:800px)</span> {</div>
+                    <div class="codeline third-level"><span class="class">.left</span>, <span class="class">.main</span>, <span class="class">.right</span> {</div>
+                    <div class="codeline fourth-level"><span class="property">width</span>:<span class="p-value">100%</span>;</div>
+                    <div class="codeline third-level">}</div>
+                    <div class="codeline second-level">}</div>
+                    <div class="codeline"><span class="bracket"><span><</span>/</span><span class="tagname">style</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <a href="media-queries.html">Click this link</a>                
+            </div>
         </div>
     </div>
 
