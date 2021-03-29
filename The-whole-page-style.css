@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 body:not(body.dark):not(body.matrix) {
     --theme-blue:#00acff;
     --theme-html:#ff6600;
     --theme-dark-html: #da5700;
     --theme-darker-html:#a83500;
     --theme-dark-css:dodgerblue;
+    --theme-darker-css:#004cff;
     --theme-js:yellow;
     --theme-dark-js:#aa0;
     --sideBarWidth:200px;
@@ -86,11 +87,11 @@ html, body, body * {transition:background-color 0.3s, color 0.3s;}
     border:1px solid black;
     transform:scale(1.1);
 }*/
-#HTML hr {
+#html hr {
     border:none;
     border-top:3px solid var(--theme-html);
 }
-#CSS hr {
+#css hr {
     border:none;
     border-top:3px solid var(--theme-dark-css);
 }
@@ -121,9 +122,14 @@ html, body, body * {transition:background-color 0.3s, color 0.3s;}
     width:var(--sideBarWidth);
     height:var(--full);
     box-shadow:1px 0 10px 1px #acacac;
-    background-color: var(--theme-html);
+    overflow:auto;
 }
-/*all the child of tablinks class*/.tablinks > * {
+.tablinks::-webkit-scrollbar {width:10px;}
+.tablinks::-webkit-scrollbar-track {background:#ddd;border-radius:2px;}
+.tablinks::-webkit-scrollbar-thumb {background:#aaa;}
+.tablinks::-webkit-scrollbar-thumb:hover {background:#777;}
+.tablinks::-webkit-scrollbar-thumb:active {background:#444;}
+/* all the child of tablinks class.tablinks > * {
     display:block;  
     width:100%;
     text-align:left;
@@ -132,18 +138,45 @@ html, body, body * {transition:background-color 0.3s, color 0.3s;}
     border:none;
     background-color:inherit;
     border-radius:0;
+} */
+.tablinks > #htmltab {
+    width:100%;
+    background-color:var(--theme-html);
+}
+.tablinks > #csstab {
+    width:100%;
+    background-color:var(--theme-blue);
+}
+:is(#htmltab, #csstab) > * {
+    display:block;  
+    width:100%;
+    text-align:left;
+    padding:10px 10px 10px 30px;
+    outline:none;
+    border:none;
+    background-color:inherit;
+    border-radius:0;    
+}
+#htmltab > *:hover {
+    background-color:var(--theme-dark-html);
+}
+#csstab > *:hover {
+    background-color:var(--theme-dark-css);
 }
 button {cursor:pointer;}
 .tablinks > *:hover:not(.block) {
     background-color:var(--theme-dark-html);
 }
-.block {
+div#htmltab > .block {
     background-color:var(--theme-darker-html);
+}
+div#csstab > .block {
+    background-color:var(--theme-darker-css);
 }
 .HTMLlink {
     position:relative;
 }
-.HTMLlink > svg, .HTMLlink > img {
+.link > svg, .link > img {
     width:20px;
     height:20px;
     position:absolute;
@@ -152,7 +185,9 @@ button {cursor:pointer;}
 }
 /* The sample code of the page */
 /* The code container of the sample code*/
-.code {background:white;border-left:6px solid var(--theme-html);padding:3px 6px;font-family:monospace!important;}
+body:not(body.dark, body.matrix) .tabcontent  .code {background:white;padding:3px 6px;font-family:monospace!important;}
+#css .code {border-left:6px solid var(--theme-blue);}
+#html .code {border-left:6px solid var(--theme-html);}
 /* The lines of the code */
 .codeline *, .codeline {font-family:monospace;}
 /* The attribute of the element */
