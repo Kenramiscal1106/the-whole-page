@@ -2,7 +2,10 @@
 /* */
 function tabs (ui) {
     document.cookie = "lasttab =" + "'" + ui.targetElement + "'";
-    var tablinks = document.getElementsByClassName(ui.tabs), tabcontent = document.getElementById(ui.targetElement), i, alltabs = document.getElementsByClassName(ui.tabcontent), icon = document.getElementById('icon')    ;
+    var tablinks = document.getElementsByClassName(ui.tabs), 
+    tabcontent = document.getElementById(ui.targetElement), i, 
+    alltabs = document.getElementsByClassName(ui.tabcontent), 
+    icon = document.getElementById('icon')    ;
     try {
         icon.href = event.currentTarget.childNodes[0].src;
         document.title = ui.targetElement;        
@@ -21,13 +24,6 @@ function tabs (ui) {
     //this.className = ui.tabs + ' block';
     event.currentTarget.className = ui.tabs + " block";
 }
-/* function getAllTablinks() {
-    var links = document.getElementsByClassName('HTMLlink');
-    for (var i=0;i < links.length;i++) {
-        console.log(links[i].onclick)
-    }
-}
-getAllTablinks() */
 function getcookie(cname) {
     var name = cname + "=", decodedCookie = decodeURIComponent(document.cookie), ca = decodedCookie.split(";");
     for (var i = 0; i < ca.length; i++) {
@@ -41,3 +37,23 @@ function getcookie(cname) {
     }
     return "";
 }
+var themebutton = document.getElementById("settings");
+themebutton.style.transform = "rotate(45deg)"
+themebutton.addEventListener('click', function() {
+    if (themebutton.style.transform == "rotate(45deg)") {
+        themebutton.style.transform = "rotate(135deg)"
+        document.body.className = "blue";
+    }
+    else if (themebutton.style.transform == "rotate(135deg)") {
+        themebutton.style.transform = "rotate(225deg)"
+        document.body.className = "matrix";
+    }
+    else if (themebutton.style.transform == "rotate(225deg)") {
+        themebutton.style.transform = "rotate(315deg)"
+        document.body.className = "dark";
+    }
+    else if (themebutton.style.transform == "rotate(315deg)") {
+        themebutton.style.transform = "rotate(45deg)"
+        document.body.className = null;
+    }
+})

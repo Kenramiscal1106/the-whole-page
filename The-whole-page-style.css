@@ -22,32 +22,14 @@ body:not(body.dark):not(body.matrix) {
     --css-property: rgb(93, 0, 136);
     --css-property-value: rgb(0, 238, 255);
 }
-body.matrix {
-    --theme-blue:#004cff;
-    --theme-html:#0f0;
-    --theme-dark-html:#7f0;
-    --theme-darker-html:#af0;
-    --theme-dark-css:#000;
-    --theme-js:yellow;
-    --theme-dark-js:#aa0;
-    --sideBarWidth:200px;
-    --full:100%;
-    --transparent-border:1px solid transparent;
-    --example-background:#0a0;
-    --transparent-border:1px solid transparent;
-    --example-background:#222222;
-    --color:white;
-    --attribute:rgb(207, 0, 0);
-    --attribute-value:rgb(0, 212, 0);
-    --bracket:rgb(74, 74, 255);
-    --tagname:#f55;
-    --css-class:rgb(128, 130, 255);
-    --css-id:rgb(166, 255, 0);
-    --css-property: rgb(174, 0, 255);
-    --css-property-value: rgb(162, 255, 119);
-    color:var(--theme-html);
+:root {
+    --plain:white;
+    --matrix:#0f0;
+    --dark:#000;
+    --miliseconds:0.3s;
 }
-body.dark {
+
+body.dark, body.matrix {
     --theme-blue:#004cff;
     --theme-html:#da5700;
     --theme-dark-html:#a83500;
@@ -69,6 +51,9 @@ body.dark {
     --css-property: rgb(174, 0, 255);
     --css-property-value: rgb(162, 255, 119);
 }
+body.matrix {
+    color:#0f0;
+}
 /* body.solarrize { 
 
 }*/
@@ -79,7 +64,7 @@ body.dark, body.dark .code{
     background-color: black;
 }
 html, body {margin:0;padding:0;height:100%;}
-html, body, body * {transition:background-color 0.3s, color 0.3s;}
+html, body, body * {transition:background-color var(--miliseconds), color var(--miliseconds);}
 *:not(pre) {font-family: "Open sans", sans-serif;box-sizing:border-box;}
 
 /*hover of the child of tablinks class.tablinks > *:hover, .block {
@@ -164,9 +149,6 @@ html, body, body * {transition:background-color 0.3s, color 0.3s;}
     background-color:var(--theme-dark-css);
 }
 button {cursor:pointer;}
-.tablinks > *:hover:not(.block) {
-    background-color:var(--theme-dark-html);
-}
 div#htmltab > .block {
     background-color:var(--theme-darker-html);
 }
@@ -188,6 +170,7 @@ div#csstab > .block {
 body:not(body.dark, body.matrix) .tabcontent  .code {background:white;padding:3px 6px;font-family:monospace!important;}
 #css .code {border-left:6px solid var(--theme-blue);}
 #html .code {border-left:6px solid var(--theme-html);}
+.code {padding-left:2px;}
 /* The lines of the code */
 .codeline *, .codeline {font-family:monospace;}
 /* The attribute of the element */
@@ -255,3 +238,28 @@ div[cities] {background-color:black;color:white;margin:20px;padding:20px;}
 .city1 {color:#ffbb00;}
 .main2 {border:1px solid black;}
 .city {color:var(--theme-blue);}
+#settings {
+    padding:0;
+    line-height:0;
+    border:none;
+    width:30px;
+    height:30px;
+    outline:none;
+    transition: transform var(--miliseconds) linear;
+}
+#settings >svg {
+    height:100%;
+    width:100%;
+}
+svg g > path:nth-child(3) {
+    fill:var(--plain);
+}
+svg g > path:nth-child(2) {
+    fill:var(--dark);
+}
+svg g > path:nth-child(4) {
+    fill:var(--matrix);
+}
+svg g > path:nth-child(1) {
+    fill:var(--theme-blue);
+}

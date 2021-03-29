@@ -10,37 +10,59 @@
     <link rel="shortcut icon" href="images.svg" type="image/x-icon" id="icon">
 </head>
 <body>
-    <div class="tablinks" id="html">
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'introduction'})" id="default"><img src="home.svg" alt=""/>
-            introduction
+    <div class="tablinks">
+        <button id="settings">
+            <svg viewbox="0 0 24 24">
+                <g>
+                    <path stroke="black" stroke-width="5%" d="M12 12 V21 L3 12 z"/>
+                    <path stroke="black" stroke-width="5%" d="M12 12 H21 L12 3 z"/>
+                    <path stroke="black" stroke-width="5%"d="M12 12 V3 L3 12 z"/>
+                    <path stroke="black" stroke-width="5%" d="M12 12 V21 L21 12 z"/>
+                </g>
+            </svg>
         </button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'paragraphs'})" id="paragraphstab"><img src="Pilcrow.svg" alt=""/>
-            Paragraph</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'images'})" id="imagestab"><img src="images.svg" alt=""/>
-            Images</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'table'})" id="tabletab"><img src="table.svg" alt=""/>
-            Table</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'blocks'})" id="blockstab"><img src="block.svg" alt=""/>
-            Blocks</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'class'})" id="classtab"><img src="class.svg" alt=""/>
-            Class</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'id'})" id="idtab"><img src="hashtag.svg" alt=""/>
-            Id</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'iframe'})" id="iframetab"><img src="frame.svg" alt=""/>
-            Iframe</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'js'})" id="jstab"><img src="semantics.svg" alt="">Javascript</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'head'})" id="headtab"><img src="semantics.svg" alt=""/>
-            Head</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'layout'})" id="layouttab"><img src="layout.svg" alt=""/>Layout</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'computer-code'})" id="computer-codetab"><img src="computer.svg" alt=""/>Computer code</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'semantics'})" id="semanticstab"><img src="semantics.svg" alt=""/>Semantics</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'responsive'})" id="responsivetab"><img src="semantics.svg" alt="">Responsive</button>
-        <button class="HTMLlink" onclick="tabs({tabs:'HTMLlink', tabcontent:'tabcontent', targetElement:'style-guide'})"id="style-guidetab"><img src="semantics.svg" alt="">Style Guide</button>
+        <div id="htmltab">
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'introduction'})" id="default"><img src="home.svg" alt=""/>
+                introduction
+            </button>
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'paragraphs'})" id="paragraphstab"><img src="Pilcrow.svg" alt=""/>
+                Paragraph</button>
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'images'})" id="imagestab"><img src="images.svg" alt=""/>
+                Images</button>
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'table'})" id="tabletab"><img src="table.svg" alt=""/>
+                Table</button>
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'blocks'})" id="blockstab"><img src="block.svg" alt=""/>
+                Blocks</button>
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'class'})" id="classtab"><img src="class.svg" alt=""/>
+                Class</button>
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'id'})" id="idtab"><img src="hashtag.svg" alt=""/>
+                Id</button>
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'iframe'})" id="iframetab"><img src="frame.svg" alt=""/>
+                Iframe</button>
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'js'})" id="jstab"><img src="semantics.svg" alt="">Javascript</button>
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'head'})" id="headtab"><img src="semantics.svg" alt=""/>
+                Head</button>
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'layout'})" id="layouttab"><img src="layout.svg" alt=""/>Layout</button>
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'computer-code'})" id="computer-codetab"><img src="computer.svg" alt=""/>Computer code</button>
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'semantics'})" id="semanticstab"><img src="semantics.svg" alt=""/>Semantics</button>
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'responsive'})" id="responsivetab"><img src="semantics.svg" alt="">Responsive</button>
+            <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'style-guide'})"id="style-guidetab"><img src="semantics.svg" alt="">Style Guide</button>    
+        </div>
+        <div id="csstab">
+            <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-introduction'})" id="css-introductiontab"><img src="home.svg" alt="">CSS Introduction</button>
+            <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'syntax'})" id="syntaxtab"><img src="semantics.svg" alt="">CSS Syntax</button>
+            <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'selectors'})" id="selectorstab">CSS selectors</button>
+            <button class="CSSlink link">home</button>
+            <button class="CSSlink link">home</button>
+            <button class="CSSlink link">home</button>
+            <button class="CSSlink link">home</button>
+            <button class="CSSlink link">home</button>
+            <button class="CSSlink link">home</button>
+            <button class="CSSlink link">home</button>
+        </div>
     </div>
-    <div class="tabs" id="HTML">
+    <div class="tabs" id="html">
         <div class="tabcontent" id="introduction">
-            <button onclick="document.body.classList.toggle('dark')">dark theme</button>
-            <button onclick="document.body.classList.toggle('matrix')">Matrix theme </button>
             <h1>HTML Introduction</h1>
 			<hr>
 			<h2>What is HTML?</h2>
@@ -494,9 +516,11 @@
             <p>A border is set using the CSS <span class="attrhigh">border</span> property</p>
             <div class="example">
                 <h3>Example</h3>
-                <ul>
-                    <li><span class="maroon">table, th, td</span> {<br> <span class="red">border</span>: <span class="blue">1px solid black</span>;<br> }</li>
-                </ul>
+                <div class="code">
+                    <div class="codeline"><span class="class">table</span>,<span class="class">th</span>, <span class="class">td</span> {</div>
+                    <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">1px solid black</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
                 <p>result:</p>
                 <table second>
                     <tr>
@@ -1310,6 +1334,193 @@
             <p><span class="attrhigh"></span></p>
             <p></p>
             <p></p>
+        </div>
+    </div>
+    <div class="tabs" id="css">
+        <div class="tabcontent" id="css-introduction">
+            <h1>CSS Tutorial</h1>
+            <p>CSS is the language we use to style HTML document.</p>
+            <p>CSS describes how HTML elements should look like.</p>
+            <p>This reference will show you CSS from basic to advanced</p>
+            <hr>
+            <h2>Examples in Each Chapter</h2>
+            <p>This CSS reference contains hundreds of CSS examples</p>
+            <div class="example">
+                <div class="code">
+                    <div class="codeline"><span class="class">body</span> {</div>
+                    <div class="codeline second-level"><span class="property">background-color</span>:<span class="p-value">lightblue</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline">&nbsp;</div>
+                    <div class="codeline"><span class="class">h1</span> {</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">white</span>;</div>
+                    <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">center</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline">&nbsp;</div>
+                    <div class="codeline"><span class="class">p</span> {</div>
+                    <div class="codeline second-level"><span class="property">font-family</span>:<span class="p-value">sans-serif</span>;</div>
+                    <div class="codeline second-level"><span class="property">font-size</span>:<span class="p-value">20px</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <a href="first-css-example.html">Click to view the example</a>
+            </div>
+            <h2>What is CSS?</h2>
+            <ul>
+                <li>CSS stands for Cascading Style Sheets</li>
+                <li>CSS descrives how HTML elements are to be displayed on screen, paper, or in other media</li>
+                <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once.</li>
+                <li>External stylesheets are stored in CSS files</li>
+            </ul>
+            <hr>
+            <h2>Why Use CSS?</h2>
+            <p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
+            <hr>
+            <h2>CSS Solved a Big Problem</h2>
+            <p>HTML was NEVER intended to contain tags for formatting a web page!</p>
+            <p>HTML was created to deescribe the content of a web page, like:</p>
+            <p><span><</span>h1>This is a heading<span><span><</span>/</span>h1></p>
+            <p><span><</span>p>This is a paragraph.<span><span><</span>/</span>p></p>
+            <p>When tags like <span><</span>font>, and collor attributes were added to the HTML 3.2 specification, it started a night mare for web developers. Development of large webistes, where fonts and color information were added to every single page, became a long and expensive process.</p>
+            <p>To solve this problem, the World Wide Web Consortium (W3C) created CSS.</p>
+            <p>CSS removed style formatting from the HTML page!</p>
+            <hr>
+            <h2>CSS Saves a Lot of Work!</h2>
+            <p>The style definitions are normally saved in external .css files.</p>
+            <p>With an external stylesheet file, you can change the look of an entire website by changing just one file!</p>
+        </div>
+        <div class="tabcontent" id="syntax">
+            <h1>CSS Syntax</h1>
+            <hr>
+            <p>A CSS rule consists of a selector and a declaration block.</p>
+            <hr>
+            <h2>CSS Syntax</h2>
+            <img src="static-images/selector.gif" alt="selector">
+            <p>The selector points to the HTML element you want to style</p>
+            <p>The declaration block contains one or more declarations separated by semicolons.</p>
+            <p>Each declaration includes CSS property name and a value, separataed by a colon.</p>
+            <p>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="class">p</span> {</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">center</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <p style="color:red;text-align:center;">This is a paragraph</p>
+            </div>
+            <h4>Example Explained</h4>
+            <ul>
+                <li><span class="attrhigh">p</span> is a selector in CSS (it points to the HTML element you want to style: <span><</span>p>).</li>
+                <li><span class="attrhigh">color</span> is a property, and <span class="attrhigh">red</span> is the property value</li>
+                <li><span class="attrhigh">text-align</span> is a property, and <span class="attrhigh">center</span> is the property value</li>
+            </ul>
+            <p>You will learn much mre about CSS selectors and CSS properties in the following chapters!</p>
+        </div>
+        <div class="tabcontent" id="selectors">
+            <h1>CSS Selectors</h1>
+            <hr>
+            <p>A CSS selector selects the HTML element(s) you want to style.</p>
+            <hr>
+            <h2>CSS Selectors</h2>
+            <p>CSS selectors are used to "find" (or select) the HTML element you want to style. </p>
+            <p>We can divide CSS selectors into five categories:</p>
+            <ul>
+                <li>Simple selectors (select elements based on name, id, class)</li>
+                <li>Combinator selectors (select elements based on a specific relationship between them</li>
+                <li>Pseudo-class selectors (select elements on a certain state</li>
+                <li>Pseudo-elements selectors (select and style a part of an element</li>
+                <li>Attribute selectors (select elements based on an attribute or attribute value</li>
+            </ul>
+            <p>This page will explain the most basic CSS selectors</p>
+            <hr>
+            <h2>The CSS element Selector</h2>
+            <p></p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>Here, all <span><</span>p> elements on the page will be center-aligned, with a red text color:</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">p</span> {</div>
+                    <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">center</span>;</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result</p>
+                <p style="text-align:center;color:red;">Every paragraph will be affected by the style.</p>
+                <p style="text-align:center;color:red;">Me too!</p>
+                <p style="text-align:center;color:red;">And me!</p>
+            </div>
+            <hr>
+            <h2>The CSS id Selector</h2>
+            <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+            <p>The id of an element is unique within a page, so the id elector is used to select one unique element!</p>
+            <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>The CSS rule below will be applied to the HTML element with id="para1"</p>
+                <div class="code">
+                    <div class="codeline"><span class="id">#para1</span> {</div>
+                    <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">center</span>;</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <p>We are the same</p>
+                <p style="text-align:center;color:red;">I am different</p>
+                <p>I am the same too</p>
+            </div>
+            <p><b>Note:</b> An id name cannot start with a number</p>
+            <hr>
+            <h2>The CSS class Selector</h2>
+            <p>The class selector selects HTML elements with a specific class attribute.</p>
+            <p>To select elements with a specific class, write a period (.) character, followed by the class name.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>In this example all HTML elements with class="center" will be red and center-aligned:</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">.center</span></div>
+                    <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">center</span>;</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <p style="text-align:center;color:red;">I am class="center"</p>
+                <p style="text-align:center;color:red;">I am class="center"</p>
+                <p>I am unstyled</p>
+            </div>
+            <p>You can also specify that only specific HTML elements should be affected by class.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>In this example only <span><</span>p> elements with class="center" will be red and center-aligned:</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">p.center</span> {</div>
+                    <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">center</span>;</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <p style="text-align:center;color:red;">I am paragraph with class="center"</p>
+                <p style="text-align:center;color:red;">I am paragraph with class="center"</p>
+                <h4>I am h4 with class="center"</h4>
+                <h3>I am h3 with class="center"</h3>
+            </div>
+            <p>HTML elements can also refer to more than one class.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>In this example the <span><</span>p> element will be styled according to class="center" and to class="large":</p>
+                <div class="code"><div class="codeline"><span class="bracket"><</span><span class="tagname">p</span> <span class="attribute">class</span>=<span class="attrvalue">"center large"</span><span class="bracket">></span>This paragraph refers to two classes<span class="bracket"><</span><span class="tagname">/p</span><span class="bracket">></span></div></div>
+                <p>CSS styling</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">p.center</span> {</div>
+                    <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">center</span>;</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline"><span class="class">p.large</span> {</div>
+                    <div class="codeline second-level"><span class="property">font-size</span>:<span class="p-value">20px</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+            </div>
         </div>
     </div>
 
