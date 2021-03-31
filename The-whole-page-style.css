@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 body:not(body.dark):not(body.matrix) {
     --theme-blue:#00acff;
     --theme-html:#ff6600;
@@ -11,7 +12,8 @@ body:not(body.dark):not(body.matrix) {
     --sideBarWidth:200px;
     --full:100%;
     --transparent-border:1px solid transparent;
-    --example-background:#fff4ec;
+    --example-back-html:#fff4ec;
+    --example-back-css:#e7f7ff;
     --color:black;
     --attribute:maroon;
     --attribute-value:green;
@@ -27,6 +29,7 @@ body:not(body.dark):not(body.matrix) {
     --matrix:#0f0;
     --dark:#000;
     --miliseconds:0.3s;
+    --note-shadow:#6200ff;  
 }
 
 body.dark, body.matrix {
@@ -40,7 +43,8 @@ body.dark, body.matrix {
     --sideBarWidth:200px;
     --full:100%;
     --transparent-border:1px solid transparent;
-    --example-background:#222222;
+    --example-back-html:#222222;
+    --example-back-css:var(--example-back-html);
     --color:white;
     --attribute:rgb(207, 0, 0);
     --attribute-value:rgb(0, 212, 0);
@@ -66,6 +70,7 @@ body.dark, body.dark .code{
 html, body {margin:0;padding:0;height:100%;}
 html, body, body * {transition:background-color var(--miliseconds), color var(--miliseconds);}
 *:not(pre) {font-family: "Open sans", sans-serif;box-sizing:border-box;}
+.note {border:1px solid var(--color);padding:5px 3px;box-shadow: 2px 2px 4px 0 var(--note-shadow);}
 
 /*hover of the child of tablinks class.tablinks > *:hover, .block {
     border:1px solid transparent;
@@ -84,11 +89,9 @@ html, body, body * {transition:background-color var(--miliseconds), color var(--
     border:none;
     border-top:3px solid var(--theme-js);
 }
-.example {
-    padding: 0.5em 1em;
-    margin: 1em 0;
-    background-color: var(--example-background);
-}
+:is(#html, #css) .example{padding: 1.2em;margin: 1em 0;}
+#html .example {background-color: var(--example-back-html);}
+#css .example {background-color: var(--example-back-css);}
 /**/.tabcontent{
     padding-bottom:2em;
 }
@@ -167,20 +170,22 @@ div#csstab > .block {
 }
 /* The sample code of the page */
 /* The code container of the sample code*/
-body:not(body.dark, body.matrix) .tabcontent  .code {background:white;padding:3px 6px;font-family:monospace!important;}
+body:not(body.dark, body.matrix) .tabcontent  .code {background:white;}
 #css .code {border-left:6px solid var(--theme-blue);}
 #html .code {border-left:6px solid var(--theme-html);}
-.code {padding-left:2px;}
+.code {padding:3px 6px;}
 /* The lines of the code */
-.codeline *, .codeline {font-family:monospace;}
+.codeline *, .codeline {font-family:"Roboto Mono", monospace;}
 /* The attribute of the element */
 .attribute, .attrhigh {color:var(--attribute);}
+.attrhigh {text-shadow: 0 0 2px var(--attribute);}
 /* The value of the attribute */
 .attrvalue {color:var(--attribute-value);}
 /* The brackets of the element */
 .bracket {color:var(--bracket);}
 /* The tagname of the element*/
 .tagname, .elemhigh  {color: #f00;}
+.elemhigh {text-shadow: 0 0 2px #f00;}
 /* The innerHTML of the tag*/
 .innerHTML {padding-left:1em;color:var(--color);}
 /* The class of the html */

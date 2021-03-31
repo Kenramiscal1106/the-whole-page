@@ -52,7 +52,7 @@
             <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-introduction'})" id="css-introductiontab"><img src="home.svg" alt="">CSS Introduction</button>
             <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'syntax'})" id="syntaxtab"><img src="semantics.svg" alt="">CSS Syntax</button>
             <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'selectors'})" id="selectorstab">CSS selectors</button>
-            <button class="CSSlink link">home</button>
+            <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-howto'})" id="css-howtotab">CSS How to</button>
             <button class="CSSlink link">home</button>
             <button class="CSSlink link">home</button>
             <button class="CSSlink link">home</button>
@@ -79,7 +79,7 @@
 			<h2>HTML Tags</h2>
 			<p>HTML tags are element names surrounded by angle brackets</p>
 			<ul>
-				<li>HTML tags normally come <b>in pairs</b> like .p. and ./p.</li>
+				<li>HTML tags normally come <b>in pairs</b> like <span><</span>p> and <span><</span>/p></li>
 				<li>The first tage in a pair is the <b>start tag</b>, the second tag is the <b>end tag</b></li>
 				<li>The end tag is written like the start tag, but with a <b>forward slash</b> inserted before the tag name</li>
 			</ul>
@@ -95,7 +95,7 @@
             <h1>HTML Paragraphs</h1>
             <hr>
             <p>The HTML <span><</span>p> element defines a <b>paragraph</b>:</p>
-            <p><b>Note:</b> Browsers automatically add some white space (a margin) before and after a paragraph.</p>
+            <p class="note"><b>Note:</b> Browsers automatically add some white space (a margin) before and after a paragraph.</p>
             <hr>
             <h2>HTML Display</h2>
             <p>You cannot be sure how HTML will be displayed.</p>
@@ -105,12 +105,12 @@
             <hr>
             <h2>Don't Forget the End Tag</h2>
             <p>Most browsers will display HTML correctly even if you forget the end tag:</p>
-            <p><b>Note:</b> Dropping the end tag can produce unexpected results or errors.</p>
+            <p class="note"><b>Note:</b> Dropping the end tag can produce unexpected results or errors.</p>
             <hr>
             <h2>HTML Line Breaks</h2> 
-            <p>The HTML <span><</span>br> element defines a <b>line break</b></p>
+            <p>The HTML <span class="elemhigh"><span><</span>br></span> element defines a <b>line break</b></p>
             <p>This <br>is <br>commonly <br>used <br>in a poem</p>
-            <p>The <span><</span>br> tag is an empty tag, which means that it has no end tag.</p>
+            <p>The <span class="elemhigh"><span><</span>br></span> tag is an empty tag, which means that it has no end tag.</p>
             <h2>The Poem Problem</h2>
             <p>This poem will display on a single line:</p>
             <div class="example">
@@ -449,7 +449,7 @@
                 </div>
 				<p>Result</p>
 				<!-- <img src="img_5terre.jpg" alt="Terre"> -->
-				<p>Note: the <b>alt</b> attribute only works if the image can not be fetched, replaced, unavailable, or the URL does not exist.</p>
+				<p class="note">Note: the <b>alt</b> attribute only works if the image can not be fetched, replaced, unavailable, or the URL does not exist.</p>
 			</div>
         </div>
         <div class="tabcontent" id="table">
@@ -509,7 +509,7 @@
                     </tr>
                 </table>
             </div>
-            <p><b>Note:</b> The <span class="elemhigh"><span><</span>td></span> elements are the data containers of the table. <br>They contain all sorts of HTML elements; text, images, lists, other tables,etc.</p>
+            <p class="note"><b>Note:</b> The <span class="elemhigh"><span><</span>td></span> elements are the data containers of the table. <br>They contain all sorts of HTML elements; text, images, lists, other tables,etc.</p>
             <hr>
             <h2>HTML Table - Adding a Border</h2>
             <p>If you do not specify a border for the table, it will be displayed without borders.</p>
@@ -756,7 +756,7 @@
 				<h1 class="main2 important">Tokyo</h1>
 				<p>The capital of Japan</p>
 			</div>
-			<p>Note: you must not put a number after the dot when specifying class name. Class name always starts with letters.</p>
+			<p class="note">Note: you must not put a number after the dot when specifying class name. Class name always starts with letters.</p>
         </div>
         <div class="tabcontent" id="id">
             <h1>The id attribute</h1>
@@ -1470,7 +1470,7 @@
                 <p style="text-align:center;color:red;">I am different</p>
                 <p>I am the same too</p>
             </div>
-            <p><b>Note:</b> An id name cannot start with a number</p>
+            <p class="note"><b>Note:</b> An id name cannot start with a number</p>
             <hr>
             <h2>The CSS class Selector</h2>
             <p>The class selector selects HTML elements with a specific class attribute.</p>
@@ -1520,7 +1520,273 @@
                     <div class="codeline second-level"><span class="property">font-size</span>:<span class="p-value">20px</span>;</div>
                     <div class="codeline">}</div>
                 </div>
+                <p>Result:</p>
+                <p style="text-align:center;color:red;">I am centered and color red</p>
+                <p style="text-align:center;color:red;font-size:20px;">I am centered, color red and large</p>
+                <p style="text-align:center;color:red;">I am centered and color red</p>
+                <p style="text-align:center;color:red;">I am centered and color red</p>
             </div>
+            <p class="note"><b>Note:</b> A class name cannot start with a number!</p>
+            <hr>
+            <h2>The CSS Universal Selector</h2>
+            <p>The universal selector (*) selects all HTML elements on the page.</p>
+            <div class="example">
+                <div class="code">
+                    <div class="codeline"><span class="class">*</span> {</div>
+                    <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">center</span>;</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">blue</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <h2 style="text-align: center;color:blue;">I am affected</h2>
+                <p style="text-align: center;color:blue;">I am affected</p>
+                <p style="text-align: center;color:blue;">I am affected</p>
+                <p style="text-align: center;color:blue;">I am affected </p>
+                <h3 style="text-align:center;color:blue;">I am affected</h3>
+                <h4 style="text-align:center;color:blue;">I am affected</h4>
+                <h5 style="text-align:center;color:blue;">I am affected</h5>
+                <h6 style="text-align:center;color:blue;">I am affected</h6>
+            </div>
+            <hr>
+            <h2>The CSS Grouping Selector</h2>
+            <p>The grouping selector selects all the HTML element with the same style definitions.</p>
+            <p>Look at the following CSS code (the h1, h2, and p elements have the same style declarations):</p>
+            <div class="example">
+                <div class="code">
+                    <div class="codeline"><span class="class">h1</span> {</div>
+                    <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">center</span>;</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline">&nbsp;</div>
+                    <div class="codeline"><span class="class">h2</span> {</div>
+                    <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">center</span>;</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline">&nbsp;</div>
+                    <div class="codeline"><span class="class"></span></div>
+                    <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">center</span>;</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                
+            </div>
+            <p>It will be better to group the selectors, to minimize the length of the code</p>
+            <p>To group selectors, separate each selector with a comma.</p>
+            <div class="example">
+                <div class="code">
+                    <div class="codeline"><span class="class">h1</span>, <span class="class">h2</span>, <span class="class">p</span> {</div>
+                    <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">center</span>;</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <h1 style="text-align:center;color:red;">I am center aligned and color red.</h1>
+                <h2 style="text-align:center;color:red;">I am center aligned and color red.</h2>
+                <p style="text-align:center;color:red;">I am center aligned and color red.</p>
+            </div>
+            <hr>
+            <table class="summary">
+                <tr>
+                    <th>Selector</th>
+                    <th>Example</th>
+                    <th>Example description</th>
+                </tr>
+                <tr>
+                    <td><i>#id</i></td>
+                    <td>#firstname</td>
+                    <td>Selects the element with id="firstname"</td>
+                </tr>
+                <tr>
+                    <td><i>.class</i></td>
+                    <td>.intro</td>
+                    <td>Selects all elements with class="intro"</td>
+                </tr>
+                <tr>
+                    <td><i>element.class</i></td>
+                    <td>p.intro</td>
+                    <td>Selects only <span><</span>p> elements ith class="intro"</td>
+                </tr>
+                <tr>
+                    <td><i>element</i></td>
+                    <td>p</td>
+                    <td>Selects all <span><</span>p> elements</td>
+                </tr>
+                <tr>
+                    <td><i>*</i></td>
+                    <td>*</td>
+                    <td>Selects all elements</td>
+                </tr>
+                <tr>
+                    <td><i>element, element, ...</i></td>
+                    <td>div, p</td>
+                    <td>Selects all <span><</span>div> elements and all <span><</span>p> elements</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tabcontent" id="css-howto">
+            <h1>How To Add CSS </h1>
+            <hr>
+            <p>When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.</p>
+            <hr>
+            <h2>Three Ways to Insert CSS</h2>
+            <p>There are three way of inserting a style sheet:</p>
+            <ul>
+                <li>External CSS</li>
+                <li>Internal CSS</li>
+                <li>Inline </li>
+            </ul>
+            <hr>
+            <h2>External CSS</h2>
+            <p>With an external style sheet, you can change the look of an entire website by changing just one file!</p>
+            <p>Each HTML page must include a reference to the external style sheet file inside the <span><</span>link></p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>External styles are defined within the <span><</span>link> element, inside the <span><</span>head> section of an HTML page:</p>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">!DOCTYPE html</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">html</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">head</span><span class="bracket">></span></div>
+                    <div class="codeline third-level"><span class="bracket"><</span><span class="tagname">link</span> <span class="property">rel</span>=<span class="p-value">"stylesheet"</span> <span class="property">href</span>=<span class="p-value">"mystyle.css"</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">/head</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">body</span><span class="bracket">></span></div>
+                    <div class="codeline third-level"><span class="bracket"><</span><span class="tagname">h1</span><span class="bracket">></span>This is a heading.<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span></div>
+                    <div class="codeline third-level"><span class="bracket"><</span><span class="tagname">p</span><span class="bracket">></span>This is a paragraph.<span class="bracket"><</span><span class="tagname">/p</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">/body</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">/html</span><span class="bracket">></span></div>
+                </div>
+                <p>An external style sheet can be written in any text editor, and must be saved with a .css file</p>
+                <p>The external .css file should not contain any HTML tags</p>
+                <p>Here is how the "mystyle.css" file looks:</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">body</span> {</div>
+                    <div class="codeline second-level"><span class="property">background-color</span>:<span class="p-value">lightblue</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline"><span class="class">h1</span> {</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">navy</span>;</div>
+                    <div class="codeline second-level"><span class="property">margin-left</span>:<span class="p-value">20px</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div style="background-color: lightblue;">
+                    <h1 style="color:navy;margin-left:20px;">This is a heading</h1>
+                    <p>This  is a paragraph</p>
+                </div>
+            </div>
+            <p class="note"><b>Note</b>: Do not add a space between the property value and the unit (such as <span class="attrhigh">margin-left:20 px</span>). The correct way is: <span class="attrhigh">margin-left:20px;</span></p>
+            <hr>
+            <h2>Internal CSS </h2>
+            <p>An internal style sheet may be used if one single HTML has a unique style.</p>
+            <p>The internal style is defined inside the <span><</span>style> element, inside the head section.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>Internal styles are defined within the <span><</span>style> element, inside the <span><</span>head> section of an HTML page:</p>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">!DOCTYPE html</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">html</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">head</span><span class="bracket">></span></div>
+                    <div class="codeline third-level"><span class="bracket"><</span><span class="tagname">style</span><span class="bracket">></span></div>
+                    <div class="codeline fourth-level"><span class="class">body</span> {</div>
+                    <div class="codeline fifth-level"><span class="property">background-color</span>:<span class="p-value">linen</span>;</div>
+                    <div class="codeline fourth-level">}</div>
+                    <div class="codeline fourth-level"><span class="class">h1</span> {</div>
+                    <div class="codeline fifth-level"><span class="property">color</span>:<span class="p-value">maroon</span>;</div>
+                    <div class="codeline fifth-level"><span class="property">margin-left</span>:<span class="p-value">40px</span>;</div>
+                    <div class="codeline fourth-level">}</div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">/head</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">body</span><span class="bracket">></span></div>
+                    <div class="codeline third-level"><span class="bracket"><</span><span class="tagname">h1</span><span class="bracket">></span>This is a heading.<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span></div>
+                    <div class="codeline third-level"><span class="bracket"><</span><span class="tagname">p</span><span class="bracket">></span>This is a paragraph.<span class="bracket"><</span><span class="tagname">/p</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">/body</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">/html</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <div style="background-color:linen">
+                    <h1 style="color:maroon;margin-left:40px;">This is a heading</h1>
+                    <p>This is a paragraph</p>
+                </div>
+            </div>
+            <hr>
+            <h2>Inline CSS</h2>
+            <p>An inline style may be used to apply a unique style for a single element.</p>
+            <p>To use inline styles, add the style attribute to the relevant eleent. The style attribute can contain any CSS property.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>Inline styles are defined within the "style" attribute of the relevant element:</p>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">!DOCTYPE html</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">html</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">body</span><span class="bracket">></span></div>
+                    <div class="codeline third-level"><span class="bracket"><</span><span class="tagname">h1</span> <span class="attribute">style</span>=<span class="attrvalue">"color:blue;text-align:center;"</span><span class="bracket">></span>This is a heading.<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span></div>
+                    <div class="codeline third-level"><span class="bracket"><</span><span class="tagname">p</span> <span class="attribute">style</span>=<span class="attrvalue">"color:red;"</span><span class="bracket">></span>This is a paragraph<span class="bracket"><</span><span class="tagname">/p</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">/body</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">/html</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <h1 style="color:blue;text-align:center;">This is a heading.</h1>
+                <p style="color:red;">This is a paragraph</p>
+            </div>
+            <p class="note"><b>Tip:</b> An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.</p>
+            <hr>
+            <h2>Multiple Style Sheets</h2>
+            <p>If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used.</p>
+            <div class="example">
+                <p>assume that an <b>external style sheet</b> has the following style for the <span><</span>h1> element:</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">h1</span> {</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">navy</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+            </div>
+            <div class="example">
+                <p>Then, assume that an <b>internal style sheet</b> also has the following style for the <span><</span>h1> element:</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">h1</span> {</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">orange</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+            </div>
+            <div class="example">
+                <h3>Example</h3>
+                <p>If the internal style is defined <b>after</b> the link to the external style sheet, the <span><</span>h1> elements will be "orange":</p>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">head</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">link</span> <span class="attribute">rel</span>=<span class="attrvalue">"stylesheet"</span> <span class="attribute">type</span>=<span class="attrvalue">"text/css"</span> <span class="attribute">href</span>=<span class="attrvalue">"mystyle.css"</span><span class="bracket">/></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">style</span><span class="bracket">></span></div>
+                    <div class="codeline third-level"><span class="class">h1</span> {</div>
+                    <div class="codeline fourth-level"><span class="property">color</span>:<span class="p-value">orange</span>;</div>
+                    <div class="codeline third-level">}</div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">/style</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">/head</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <h1 style="color:orange;">I am orange</h1>
+            </div>
+            <div class="example">
+                <h3>Example</h3>
+                <p>However, if the internal style is defined <b>before</b> the link to the external style sheet, the <span><</span>h1> elements will be "navy":</p>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">head</span><span class="bracket">></span></div>
+                    <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">style</span><span class="bracket">></span></div>
+                    <div class="codeline third-level"><span class="class">h1</span> {</div>
+                        <div class="codeline fourth-level"><span class="property">color</span>:<span class="p-value">orange</span>;</div>
+                        <div class="codeline third-level">}</div>
+                        <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">/style</span><span class="bracket">></span></div>
+                        <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">link</span> <span class="attribute">rel</span>=<span class="attrvalue">"stylesheet"</span> <span class="attribute">type</span>=<span class="attrvalue">"text/css"</span> <span class="attribute">href</span>=<span class="attrvalue">"mystyle.css"</span><span class="bracket">/></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">/head</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <h1 style="color:navy;">I am navy</h1>
+            </div>
+            <hr>
+            <h2>Cascading Order</h2>
+            <p>What style will be used when there is more than one style specified for an HTML element?</p>
+            <p>All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:</p>
+            <ul>
+                <li>Inline style (inside an HTML element)</li>
+                <li>External and internal style sheets (in the head section)</li>
+                <li>Browser default</li>
+            </ul>
+            <p>So, an inline style has the highest priority, and will override external and internal styles and browser defaults.</p>
         </div>
     </div>
 
@@ -1534,7 +1800,7 @@
             var lasttab = getcookie("lasttab"), lastTabId = lasttab + "tab"
         }
         catch {
-            ("no cookie")
+            alert("no existing cookie")
         }
         if (lasttab && lastTabId != "introductiontab") {
             document.getElementById(lastTabId).click();

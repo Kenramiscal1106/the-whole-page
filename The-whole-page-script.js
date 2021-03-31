@@ -1,5 +1,4 @@
 
-/* */
 function tabs (ui) {
     document.cookie = "lasttab =" + "'" + ui.targetElement + "'";
     var tablinks = document.getElementsByClassName(ui.tabs), 
@@ -39,21 +38,41 @@ function getcookie(cname) {
 }
 var themebutton = document.getElementById("settings");
 themebutton.style.transform = "rotate(45deg)"
-themebutton.addEventListener('click', function() {
-    if (themebutton.style.transform == "rotate(45deg)") {
+function setRaC() {
+    if (document.body.className == "") {
         themebutton.style.transform = "rotate(135deg)"
         document.body.className = "blue";
     }
-    else if (themebutton.style.transform == "rotate(135deg)") {
+    else if (document.body.className == "blue") {
         themebutton.style.transform = "rotate(225deg)"
         document.body.className = "matrix";
     }
-    else if (themebutton.style.transform == "rotate(225deg)") {
+    else if (document.body.className == "matrix") {
         themebutton.style.transform = "rotate(315deg)"
         document.body.className = "dark";
     }
-    else if (themebutton.style.transform == "rotate(315deg)") {
+    else if (document.body.className == "dark") {
         themebutton.style.transform = "rotate(45deg)"
-        document.body.className = null;
+        document.body.className = "";
     }
+}
+themebutton.addEventListener('click', function() {
+    setRaC()
+    document.cookie = "theme =" + "'" + document.body.className + "'";
+    console.log({
+        classNameOfBody:document.body.className,
+        transform: themebutton.style.transform
+    })
 })
+var lasttheme = getcookie("theme")
+switch(lasttheme) {
+    case "dark":
+        document.body.className = "dark";
+        break;
+    case "matrix":
+        document.body.className = "matrix";
+        break;
+    case "blue":
+        document.body.className = "blue";
+        break;
+}
