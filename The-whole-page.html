@@ -53,8 +53,8 @@
             <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'syntax'})" id="syntaxtab"><img src="semantics.svg" alt="">CSS Syntax</button>
             <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'selectors'})" id="selectorstab">CSS selectors</button>
             <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-howto'})" id="css-howtotab">CSS How to</button>
-            <button class="CSSlink link">home</button>
-            <button class="CSSlink link">home</button>
+            <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'comments'})" id="commentstab">CSS Comments</button>
+            <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'colors'})" id="colorstab">CSS Colors</button>
             <button class="CSSlink link">home</button>
             <button class="CSSlink link">home</button>
             <button class="CSSlink link">home</button>
@@ -137,15 +137,17 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <p>
-                My Bonnie lies over the ocean.
-
-                My Bonnie lies over the sea.
-
-                My Bonnie lies over the ocean.
-
-                Oh, bring back my Bonnie to me.
-                </p>
+                <div class="result">
+                    <p>
+                    My Bonnie lies over the ocean.
+    
+                    My Bonnie lies over the sea.
+    
+                    My Bonnie lies over the ocean.
+    
+                    Oh, bring back my Bonnie to me.
+                    </p>
+                </div>
             </div>
             
             <hr>
@@ -174,15 +176,17 @@
 
                 </div>
                 <p>Result:</p>
-                <pre>
-                This preserves the line and spaces
-        
-                As shown on the diagram
-        
-                Used for poem
-        
-                copies the same format that is typed
-                </pre>     
+                <div class="result">
+                    <pre>
+                    This preserves the line and spaces
+            
+                    As shown on the diagram
+            
+                    Used for poem
+            
+                    copies the same format that is typed
+                    </pre>     
+                </div>
             </div>
 
             <hr>
@@ -202,7 +206,9 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <p style="background-color:red;">The color can be applied to the body;background color</p>
+                <div class="result">
+                    <p style="background-color:red;">The color can be applied to the body;background color</p>
+                </div>
             </div>
             
             <h3>The color</h3>
@@ -234,7 +240,10 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <p style="font-size:20px;border:1px solid black;">The font size</p>
+                <div class="result">
+
+                    <p style="font-size:20px;border:1px solid black;">The font size</p>
+                </div>
             </div>
             
             <h3>The font-family</h3>
@@ -251,7 +260,10 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <p style="font-family:monospace;border:1px solid black;">The font style</p>
+                <div class="result">
+
+                    <p style="font-family:monospace;border:1px solid black;">The font style</p>
+                </div>
             </div>
             
             <h3>The text-align</h3>
@@ -304,7 +316,10 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <p><b>This text is bold</b></p>
+                <div class="result">
+
+                    <p><b>This text is bold</b></p>
+                </div>
             </div>
             <hr>
             <h2>The <span class="elemhigh"><span><</span>strong></span> formatting element</h2>
@@ -319,7 +334,10 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <strong>This text is strong</strong>    
+                <div class="result">
+
+                    <strong>This text is strong</strong>    
+                </div>
             </div>
             <hr>
             <h2>The <span class="elemhigh"><span><</span>i></span> formatting element</h2>
@@ -334,7 +352,10 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <i>This text is italic</i>
+                <div class="result">
+
+                    <i>This text is italic</i>
+                </div>
             </div>
             <hr>
             <h2>The <span class="elemhigh"><span><</span>em></span> formatting element</h2>
@@ -350,7 +371,10 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <mark>This text is marked</mark>
+                <div class="result">
+
+                    <mark>This text is marked</mark>
+                </div>
             </div>
             <hr>
             <h2>The <span class="elemhigh"><span><</span>small></span> formatting element</h2>
@@ -363,7 +387,10 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <small>This text is small</small>
+                <div class="result">
+
+                    <small>This text is small</small>
+                </div>
             </div>
             <hr>
             <h2>The <span class="elemhigh"><span><</span>del></span> formatting element</h2>
@@ -376,7 +403,10 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <del>This is a deleted text</del>
+                <div class="result">
+
+                    <del>This is a deleted text</del>
+                </div>
             </div>
             <hr>
             <h2>The <span class="elemhigh"><span><</span>ins></span> formatting element</h2>
@@ -391,7 +421,10 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <ins>This is inserted</ins>
+                <div class="result">
+
+                    <ins>This is inserted</ins>
+                </div>
             </div>
             <hr>
             <h2>The <span class="elemhigh"><span><</span>sub></span> formatting element</h2>
@@ -406,7 +439,10 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <p>This is <sub>subscripted</sub></p>
+                <div class="result">
+
+                    <p>This is <sub>subscripted</sub></p>
+                </div>
             </div>
             <hr>
             <h2>The <span class="elemhigh"><span><</span>sup></span> formatting element</h2>
@@ -421,7 +457,10 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <p>This is <sup>superscripted</sup></p>
+                <div class="result">
+
+                    <p>This is <sup>superscripted</sup></p>
+                </div>
             </div>
             <hr>
 
@@ -486,28 +525,31 @@
 
                 </div>
                 <p>Result:</p>
-                <table>
-                    <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Age</th>
-                    </tr>
-                    <tr>
-                        <td>Ken</td>
-                        <td>Ramiscal</td>
-                        <td>13</td>
-                    </tr>
-                    <tr>
-                        <td>Kylie</td>
-                        <td>Ramiscal</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>34</td>
-                    </tr>
-                </table>
+                <div class="result">
+
+                    <table>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Age</th>
+                        </tr>
+                        <tr>
+                            <td>Ken</td>
+                            <td>Ramiscal</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>Kylie</td>
+                            <td>Ramiscal</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>34</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <p class="note"><b>Note:</b> The <span class="elemhigh"><span><</span>td></span> elements are the data containers of the table. <br>They contain all sorts of HTML elements; text, images, lists, other tables,etc.</p>
             <hr>
@@ -522,23 +564,26 @@
                     <div class="codeline">}</div>
                 </div>
                 <p>result:</p>
-                <table second>
-                    <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Age</th>
-                    </tr>
-                    <tr>
-                        <td>Ken</td>
-                        <td>Ramiscal</td>
-                        <td>13</td>
-                    </tr>
-                    <tr>
-                        <td>Kylie</td>
-                        <td>Ramiscal</td>
-                        <td>8</td>
-                    </tr>
-                </table>
+                <div class="result">
+
+                    <table second>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Age</th>
+                        </tr>
+                        <tr>
+                            <td>Ken</td>
+                            <td>Ramiscal</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>Kylie</td>
+                            <td>Ramiscal</td>
+                            <td>8</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <p>Remember to define borders for both the table and the table cells.</p>
             <hr>
@@ -553,23 +598,26 @@
                     <div class="codeline">}</div>
                 </div>
                 <p>result:</p>
-                <table third>
-                    <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Age</th>
-                    </tr>
-                    <tr>
-                        <td>Ken</td>
-                        <td>Ramiscal</td>
-                        <td>13</td>
-                    </tr>
-                    <tr>
-                        <td>Kylie</td>
-                        <td>Ramiscal</td>
-                        <td>8</td>
-                    </tr>
-                </table>
+                <div class="result">
+
+                    <table third>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Age</th>
+                        </tr>
+                        <tr>
+                            <td>Ken</td>
+                            <td>Ramiscal</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>Kylie</td>
+                            <td>Ramiscal</td>
+                            <td>8</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <h2>HTML Table - Adding Cell Padding</h2>
             <p>Cell padding specifies the space between the cell content and its border.</p>
@@ -583,23 +631,26 @@
                     <div class="codeline">}</div>
                 </div>
                 <p>result:</p>
-                <table fourth>
-                    <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Age</th>
-                    </tr>
-                    <tr>
-                        <td>Ken</td>
-                        <td>Ramiscal</td>
-                        <td>13</td>
-                    </tr>
-                    <tr>
-                        <td>Kylie</td>
-                        <td>Ramiscal</td>
-                        <td>8</td>
-                    </tr>
-                </table>
+                <div class="result">
+
+                    <table fourth>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Age</th>
+                        </tr>
+                        <tr>
+                            <td>Ken</td>
+                            <td>Ramiscal</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>Kylie</td>
+                            <td>Ramiscal</td>
+                            <td>8</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="tabcontent" id="blocks">
@@ -958,7 +1009,10 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <p style="color:blue">Hello, world</p>
+                <div class="result">
+
+                    <p style="color:blue">Hello, world</p>
+                </div>
             </div>
             <p>The <span class="elemhigh"><span><</span>style></span></span> element is used to define style information for a single HTML page;(CSS)</p>
             <h2>The HTML <span class="elemhigh"><span><</span>link></span></span> Element</h2>
@@ -1121,7 +1175,10 @@
                     </div>
                 </div>
                 <p>Result:</p>
-                <img src="static-images/img_5terre.jpg" alt="" style="width:100%;height:auto">
+                <div class="result">
+
+                    <img src="static-images/img_5terre.jpg" alt="" style="width:100%;height:auto">
+                </div>
             </div>
             <hr>
             <h2>Show Different Images Depending on Browser Width</h2>
@@ -1155,7 +1212,10 @@
                     
                 </div>
                 <p>Result:</p>
-                <h1 style="font-size:10vw">Hello World</h1>
+                <div class="result">
+
+                    <h1 style="font-size:10vw">Hello World</h1>
+                </div>
             </div>
             <p>Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.</p>
             <hr>
@@ -1408,7 +1468,10 @@
                     <div class="codeline">}</div>
                 </div>
                 <p>Result:</p>
-                <p style="color:red;text-align:center;">This is a paragraph</p>
+                <div class="result">
+
+                    <p style="color:red;text-align:center;">This is a paragraph</p>
+                </div>
             </div>
             <h4>Example Explained</h4>
             <ul>
@@ -1466,9 +1529,11 @@
                     <div class="codeline">}</div>
                 </div>
                 <p>Result:</p>
-                <p>We are the same</p>
-                <p style="text-align:center;color:red;">I am different</p>
-                <p>I am the same too</p>
+                <div class="result">
+                    <p>We are the same</p>
+                    <p style="text-align:center;color:red;">I am different</p>
+                    <p>I am the same too</p>
+                </div>
             </div>
             <p class="note"><b>Note:</b> An id name cannot start with a number</p>
             <hr>
@@ -1485,9 +1550,11 @@
                     <div class="codeline">}</div>
                 </div>
                 <p>Result:</p>
-                <p style="text-align:center;color:red;">I am class="center"</p>
-                <p style="text-align:center;color:red;">I am class="center"</p>
-                <p>I am unstyled</p>
+                <div class="result">
+                    <p style="text-align:center;color:red;">I am class="center"</p>
+                    <p style="text-align:center;color:red;">I am class="center"</p>
+                    <p>I am unstyled</p>
+                </div>
             </div>
             <p>You can also specify that only specific HTML elements should be affected by class.</p>
             <div class="example">
@@ -1500,10 +1567,13 @@
                     <div class="codeline">}</div>
                 </div>
                 <p>Result:</p>
-                <p style="text-align:center;color:red;">I am paragraph with class="center"</p>
-                <p style="text-align:center;color:red;">I am paragraph with class="center"</p>
-                <h4>I am h4 with class="center"</h4>
-                <h3>I am h3 with class="center"</h3>
+                <div class="result">
+                    <p style="text-align:center;color:red;">I am paragraph with class="center"</p>
+                    <p style="text-align:center;color:red;">I am paragraph with class="center"</p>
+                    <h4>I am h4 with class="center"</h4>
+                    <h3>I am h3 with class="center"</h3>
+                </div>
+                    
             </div>
             <p>HTML elements can also refer to more than one class.</p>
             <div class="example">
@@ -1521,10 +1591,13 @@
                     <div class="codeline">}</div>
                 </div>
                 <p>Result:</p>
-                <p style="text-align:center;color:red;">I am centered and color red</p>
-                <p style="text-align:center;color:red;font-size:20px;">I am centered, color red and large</p>
-                <p style="text-align:center;color:red;">I am centered and color red</p>
-                <p style="text-align:center;color:red;">I am centered and color red</p>
+                <div class="result">
+                    <p style="text-align:center;color:red;">I am centered and color red</p>
+                    <p style="text-align:center;color:red;font-size:20px;">I am centered, color red and large</p>
+                    <p style="text-align:center;color:red;">I am centered and color red</p>
+                    <p style="text-align:center;color:red;">I am centered and color red</p>
+                </div>
+
             </div>
             <p class="note"><b>Note:</b> A class name cannot start with a number!</p>
             <hr>
@@ -1538,14 +1611,17 @@
                     <div class="codeline">}</div>
                 </div>
                 <p>Result:</p>
-                <h2 style="text-align: center;color:blue;">I am affected</h2>
-                <p style="text-align: center;color:blue;">I am affected</p>
-                <p style="text-align: center;color:blue;">I am affected</p>
-                <p style="text-align: center;color:blue;">I am affected </p>
-                <h3 style="text-align:center;color:blue;">I am affected</h3>
-                <h4 style="text-align:center;color:blue;">I am affected</h4>
-                <h5 style="text-align:center;color:blue;">I am affected</h5>
-                <h6 style="text-align:center;color:blue;">I am affected</h6>
+                <div class="result">
+                    <h2 style="text-align: center;color:blue;">I am affected</h2>
+                    <p style="text-align: center;color:blue;">I am affected</p>
+                    <p style="text-align: center;color:blue;">I am affected</p>
+                    <p style="text-align: center;color:blue;">I am affected </p>
+                    <h3 style="text-align:center;color:blue;">I am affected</h3>
+                    <h4 style="text-align:center;color:blue;">I am affected</h4>
+                    <h5 style="text-align:center;color:blue;">I am affected</h5>
+                    <h6 style="text-align:center;color:blue;">I am affected</h6>
+                </div>
+
             </div>
             <hr>
             <h2>The CSS Grouping Selector</h2>
@@ -1580,9 +1656,12 @@
                     <div class="codeline">}</div>
                 </div>
                 <p>Result:</p>
-                <h1 style="text-align:center;color:red;">I am center aligned and color red.</h1>
-                <h2 style="text-align:center;color:red;">I am center aligned and color red.</h2>
-                <p style="text-align:center;color:red;">I am center aligned and color red.</p>
+                <div class="result">
+                    <h1 style="text-align:center;color:red;">I am center aligned and color red.</h1>
+                    <h2 style="text-align:center;color:red;">I am center aligned and color red.</h2>
+                    <p style="text-align:center;color:red;">I am center aligned and color red.</p>
+                </div>
+
             </div>
             <hr>
             <table class="summary">
@@ -1667,7 +1746,7 @@
                     <div class="codeline">}</div>
                 </div>
                 <p>Result:</p>
-                <div style="background-color: lightblue;">
+                <div style="background-color: lightblue;" class="result">
                     <h1 style="color:navy;margin-left:20px;">This is a heading</h1>
                     <p>This  is a paragraph</p>
                 </div>
@@ -1700,7 +1779,7 @@
                     <div class="codeline"><span class="bracket"><</span><span class="tagname">/html</span><span class="bracket">></span></div>
                 </div>
                 <p>Result:</p>
-                <div style="background-color:linen">
+                <div style="background-color:linen" class="result">
                     <h1 style="color:maroon;margin-left:40px;">This is a heading</h1>
                     <p>This is a paragraph</p>
                 </div>
@@ -1722,8 +1801,11 @@
                     <div class="codeline"><span class="bracket"><</span><span class="tagname">/html</span><span class="bracket">></span></div>
                 </div>
                 <p>Result:</p>
-                <h1 style="color:blue;text-align:center;">This is a heading.</h1>
-                <p style="color:red;">This is a paragraph</p>
+                <div class="result">
+                    <h1 style="color:blue;text-align:center;">This is a heading.</h1>
+                    <p style="color:red;">This is a paragraph</p>
+                </div>
+
             </div>
             <p class="note"><b>Tip:</b> An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.</p>
             <hr>
@@ -1759,7 +1841,10 @@
                     <div class="codeline"><span class="bracket"><</span><span class="tagname">/head</span><span class="bracket">></span></div>
                 </div>
                 <p>Result:</p>
-                <h1 style="color:orange;">I am orange</h1>
+                <div class="result">
+                    <h1 style="color:orange;">I am orange</h1>
+                </div>
+
             </div>
             <div class="example">
                 <h3>Example</h3>
@@ -1775,7 +1860,10 @@
                     <div class="codeline"><span class="bracket"><</span><span class="tagname">/head</span><span class="bracket">></span></div>
                 </div>
                 <p>Result:</p>
-                <h1 style="color:navy;">I am navy</h1>
+                <div class="result">
+                    <h1 style="color:navy;">I am navy</h1>
+                </div>
+
             </div>
             <hr>
             <h2>Cascading Order</h2>
@@ -1788,6 +1876,227 @@
             </ul>
             <p>So, an inline style has the highest priority, and will override external and internal styles and browser defaults.</p>
         </div>
+        <div class="tabcontent" id="comments">
+            <h1>CSS Comments</h1>
+            <p>CSS Comments are the comments that describe your code.</p>
+            <p>CSS comments are not included in the styling reference of your .css file.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>This is an example of a comment in CSS:</p>
+                <div class="code">
+                    <div class="codeline"><span class="attrvalue">/* This is a single-line comment */</span></div>
+                    <div class="codeline"><span class="class">p</span> {</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+            </div>
+        </div>
+        <div class="tabcontent" id="colors">
+            <h1>CSS Colors</h1>
+            <hr>
+            <p>Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.</p>
+            <hr>
+            <h2>CSS Color Names</h2>
+            <p>In CSS, a color can be specified by using a predefined color name:</p>
+            <p style="background-color: tomato;">Tomato</p>
+            <p style="background-color: orange;">Orange</p>
+            <p style="background-color: dodgerblue;">Dodgerblue</p>
+            <p style="background-color: mediumseagreen;">MediumSeaGreen</p>
+            <p style="background-color: gray;">Gray</p>
+            <hr>
+            <h2>CSS Background Color</h2>
+            <p>You can set the background color for HTML elements:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code"><div class="codeline"><span class="bracket"><</span><span class="tagname">h1</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:DodgerBlue;"</span><span class="bracket">></span>Hello, World<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span></div>
+                <div class="codeline"><span class="bracket"><</span><span class="tagname">p</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:Tomato;"</span><span class="bracket">></span>Lorem ipsum...<span class="bracket"><</span><span class="tagname">/p</span><span class="bracket">></span></div></div>
+                <p>Result:</p>
+                <div class="result">
+                    <h1 style="background-color:DodgerBlue;">Hello, World</h1>
+                    <p style="background-color:Tomato;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, a ratione! Ea, corporis maiores quo incidunt culpa non reiciendis id quos enim fuga assumenda! Cupiditate aliquid deleniti eos sit mollitia.</p>
+                </div>
+
+            </div>
+            <hr>
+            <h2>CSS Text Color</h2>
+            <p>You can set the color of text:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">h1</span> <span class="attribute">style</span>=<span class="attrvalue">"color:Tomato"</span><span class="bracket">></span>Hello World<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">p</span> <span class="attribute">style</span>=<span class="attrvalue">"color:dodgerblue;"</span><span class="bracket">></span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime est accusantium, sint quisquam commodi mollitia ipsa nisi perferendis enim libero dolorum minus culpa provident, voluptas magnam ipsum in tempore iste!<span class="bracket"><</span><span class="tagname">/p</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">p</span> <span class="attribute">style</span>=<span class="attrvalue">"color:MediumSeaGreen;"</span><span class="bracket">></span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime est accusantium, sint quisquam commodi mollitia ipsa nisi perferendis enim libero dolorum minus culpa provident, voluptas magnam ipsum in tempore iste!<span class="bracket"><</span><span class="tagname">/p</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <h1 style="color:Tomato">Hello World</h1>
+                    <p style="color:dodgerblue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime est accusantium, sint quisquam commodi mollitia ipsa nisi perferendis enim libero dolorum minus culpa provident, voluptas magnam ipsum in tempore iste!</p>
+                    <p style="color:MediumSeaGreen;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime est accusantium, sint quisquam commodi mollitia ipsa nisi perferendis enim libero dolorum minus culpa provident, voluptas magnam ipsum in tempore iste!</p>
+                </div>
+
+            </div>
+            <hr>
+            <h2>CSS Border Color</h2>
+            <p>You can set the color of the borders:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">h1</span> <span class="attribute">style</span>=<span class="attrvalue">"border: 2px solid Tomato;"</span><span class="bracket">></span>Hello World<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">h1</span> <span class="attribute">style</span>=<span class="attrvalue">"border: 2px solid DodgerBlue;"</span><span class="bracket">></span>Hello World<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">h1</span> <span class="attribute">style</span>=<span class="attrvalue">"border: 2px solid Violet;"</span><span class="bracket">></span>Hello World<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <h1 style="border: 2px solid Tomato;">Hello World</h1>
+                    <h1 style="border: 2px solid DodgerBlue;">Hello World</h1>
+                    <h1 style="border: 2px solid Violet;">Hello World</h1>                
+                </div>
+
+            </div>
+            <hr>
+            <h2>CSS Color Values</h2>
+            <div class="example">
+                <p></p>
+                <p></p> 
+                <div class="code">
+                    <div class="codeline"><span class="attrvalue"><span><</span>!-- In CSS, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values: --></span></div>
+                    <div class="codeline"><span class="attrvalue"><span><</span>!-- Same as color name "Tomato": --></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">h1</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgb(255, 99, 71);"</span><span class="bracket">></span>rgb(255, 99, 71)<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">h1</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:#ff6347;"</span><span class="bracket">></span>#ff6347<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">h1</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(9, 100%, 64%);"</span><span class="bracket">></span>hsl(9, 100%, 64%)<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="attrvalue"><span><</span>!-- Same as color name "Tomato", but 50% transparent: --></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">h1</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgba(255, 99, 71, 0.5);"</span><span class="bracket">></span>rgba(255, 99, 71, 0.5)<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">h1</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsla(9, 100%, 64%, 0.5);"</span><span class="bracket">></span>hsla(9, 100%, 64%)<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <!-- In CSS, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values: -->
+                    <!-- Same as color name "Tomato": -->
+                    <h1 style="background-color:rgb(255, 99, 71);">rgb(255, 99, 71)</h1>
+                    <h1 style="background-color:#ff6347;">#ff6347</h1>
+                    <h1 style="background-color:hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</h1>
+                    <!-- Same as color name "Tomato", but 50% transparent: -->
+                    <h1 style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</h1>
+                    <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%)</h1>
+                </div>
+
+            </div>
+            <hr>
+            <hr>
+            <h1>CSS RGB Colors</h1>
+            <hr>
+            <p>An RBA color value represents RED, GREEN, and BLUE light sources.</p>
+            <hr>
+            <h2>RGB Value</h2>
+            <p>In CSS, a color can be specified as an RGB value, using this formula:</p>
+            <p><strong>rgb(red, green, blue)</strong></p>
+            <p>Each parameter (red, green, and blue) defines the intensity of the color between 0 and 255.</p>
+            <p>For example, rgb(255, 0, 0) is displayed as red, because red is set to its highest value (255) and the others are set to 0.</p>
+            <p>To display black, set all color parameters to 0, like this: rgb(0, 0, 0).</p>
+            <p>To display white, set all color parameters to 255, like this: rgb(255, 255, 255).</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgb(255, 0, 0);"</span><span class="bracket">></span>rgb(255, 0, 0)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgb(0, 0, 255);"</span><span class="bracket">></span>rgb(0, 0, 255)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgb(60, 179, 113);"</span><span class="bracket">></span>rgb(60, 179, 113)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgb(238, 130, 238);"</span><span class="bracket">></span>rgb(238, 130, 238)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgb(255, 165, 0);"</span><span class="bracket">></span>rgb(255, 165, 0)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgb(106, 90, 205);"</span><span class="bracket">></span>rgb(106, 90, 205)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <div style="background-color:rgb(255, 0, 0);">rgb(255, 0, 0)</div>
+                    <div style="background-color:rgb(0, 0, 255);">rgb(0, 0, 255)</div>
+                    <div style="background-color:rgb(60, 179, 113);">rgb(60, 179, 113)</div>
+                    <div style="background-color:rgb(238, 130, 238);">rgb(238, 130, 238)</div>
+                    <div style="background-color:rgb(255, 165, 0);">rgb(255, 165, 0)</div>
+                    <div style="background-color:rgb(106, 90, 205);">rgb(106, 90, 205)</div>
+                </div>
+
+            </div>
+            <p>shades of gray are often deined using equal values for all the 3 light sources:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgb(0, 0, 0)"</span><span class="bracket">></span>rgb(0, 0, 0)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgb(60, 60, 60)"</span><span class="bracket">></span>rgb(60, 60, 60)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgb(120, 120, 120)"</span><span class="bracket">></span>rgb(120, 120, 120)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgb(180, 180, 180)"</span><span class="bracket">></span>rgb(180, 180, 180)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgb(240, 240, 240)"</span><span class="bracket">></span>rgb(240, 240, 240)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgb(255, 255, 255)"</span><span class="bracket">></span>rgb(255, 255, 255)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <div style="background-color:rgb(0, 0, 0);color:white;">rgb(0, 0, 0)</div>
+                    <div style="background-color:rgb(60, 60, 60);color:white;">rgb(60, 60, 60)</div>
+                    <div style="background-color:rgb(120, 120, 120);">rgb(120, 120, 120)</div>
+                    <div style="background-color:rgb(180, 180, 180);">rgb(180, 180, 180)</div>
+                    <div style="background-color:rgb(240, 240, 240);">rgb(240, 240, 240)</div>
+                    <div style="background-color:rgb(255, 255, 255);">rgb(255, 255, 255)</div>
+                </div>
+
+            </div>
+            <hr>
+            <h2>RGBA Value</h2>
+            <p>RGBA color values are an extension of RGB color values with an alpha channel - which specifiesd the opacity for a color.</p>
+            <p>An RGBA color value is specified with:</p>
+            <p><strong>rgba(red, green, blue, alpha)</strong></p>
+            <p>The alpha parameter is anumber between 0 and 1.0 (not transparent at all)</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgba(255, 99, 71, 0);"</span><span class="bracket">></span>rgba(255, 99, 71, 0)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgba(255, 99, 71, 0.2);"</span><span class="bracket">></span>rgba(255, 99, 71, 0.2)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgba(255, 99, 71, 0.4);"</span><span class="bracket">></span>rgba(255, 99, 71, 0.4)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgba(255, 99, 71, 0.6);"</span><span class="bracket">></span>rgba(255, 99, 71, 0.6)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgba(255, 99, 71, 0.8);"</span><span class="bracket">></span>rgba(255, 99, 71, 0.8)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:rgba(255, 99, 71, 1);"</span><span class="bracket">></span>rgba(255, 99, 71, 1)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <div style="background-color:rgba(255, 99, 71, 0);">rgba(255, 99, 71, 0)</div>
+                    <div style="background-color:rgba(255, 99, 71, 0.2);">rgba(255, 99, 71, 0.2)</div>
+                    <div style="background-color:rgba(255, 99, 71, 0.4);">rgba(255, 99, 71, 0.4)</div>
+                    <div style="background-color:rgba(255, 99, 71, 0.6);">rgba(255, 99, 71, 0.6)</div>
+                    <div style="background-color:rgba(255, 99, 71, 0.8);">rgba(255, 99, 71, 0.8)</div>
+                    <div style="background-color:rgba(255, 99, 71, 1);">rgba(255, 99, 71, 1)</div>
+                </div>
+            </div>
+            <hr>
+            <hr>
+            <h1>CSS HEX Color</h1>
+            <hr>
+            <p>A hexadecimal color is specified with: #RRGGBB, where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color.</p>
+            <hr>
+            <h2>HEX Value</h2>
+            <p>In CSS, a color can be specified using a hexadecimal value in the form</p>
+            <p><b>#rrggbb</b></p>
+            <p>Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal 0-255).</p>
+            <p>For example, #ff0000 is displayed as red, because red is set to its highest value (ff) and the and the others are set to the lowest value (00).</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:#ff0000;"</span><span class="bracket">></span>#ff0000<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:#0000ff;"</span><span class="bracket">></span>#0000ff<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:#3cb371;"</span><span class="bracket">></span>#3cb371<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:#ee82ee;"</span><span class="bracket">></span>#ee82ee<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:#ffa500;"</span><span class="bracket">></span>#ffa500<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:#6a5acd;"</span><span class="bracket">></span>#6a5acd<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <div style="background-color:#ff0000;">#ff0000</div>
+                    <div style="background-color:#0000ff;">#0000ff</div>
+                    <div style="background-color:#3cb371;">#3cb371</div>
+                    <div style="background-color:#ee82ee;">#ee82ee</div>
+                    <div style="background-color:#ffa500;">#ffa500</div>
+                    <div style="background-color:#6a5acd;">#6a5acd</div>
+                </div>
+            </div>
+        </div>
+        
+            
     </div>
 
     </div>

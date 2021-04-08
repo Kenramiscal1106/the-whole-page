@@ -90,6 +90,7 @@ html, body, body * {transition:background-color var(--miliseconds), color var(--
     border-top:3px solid var(--theme-js);
 }
 :is(#html, #css) .example{padding: 1.2em;margin: 1em 0;}
+.example > * {margin:0.6em 0; }
 #html .example {background-color: var(--example-back-html);}
 #css .example {background-color: var(--example-back-css);}
 /**/.tabcontent{
@@ -99,7 +100,7 @@ html, body, body * {transition:background-color var(--miliseconds), color var(--
     margin-left:var(--sideBarWidth);
     padding:0 10px;
 }
-.tabs h1:first-child {
+.tabcontent > h1:first-child {
     margin-block-start:0;
 }
 
