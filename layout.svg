@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24">
     <path stroke="black" stroke-width="1" d="M0 0 V24"/>
-    <path stroke="black" stroke-width="1" d="M7.5 4 V20"/>
-    <path stroke="black" stroke-width="1" d="M16.5 4 V20"/>
+    <path stroke="black" stroke-width="1" d="M6 4 V20"/>
+    <path stroke="black" stroke-width="1" d="M18 4 V20"/>
     <path stroke="black" stroke-width="1" d="M24 0 V24"/>
     <path stroke="black" stroke-width="1" d="M0 0 H24"/>
     <path stroke="black" stroke-width="1" d="M0 4 H24"/>

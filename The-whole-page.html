@@ -55,7 +55,7 @@
             <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-howto'})" id="css-howtotab">CSS How to</button>
             <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'comments'})" id="commentstab">CSS Comments</button>
             <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'colors'})" id="colorstab">CSS Colors</button>
-            <button class="CSSlink link">home</button>
+            <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'backgrounds'})" id="backgroundstab">CSS Backgrounds</button>
             <button class="CSSlink link">home</button>
             <button class="CSSlink link">home</button>
             <button class="CSSlink link">home</button>
@@ -2094,8 +2094,518 @@
                     <div style="background-color:#6a5acd;">#6a5acd</div>
                 </div>
             </div>
+            <p>Shades of gray are often defined using equal values for all the 3 light sources:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:#000000"</span><span class="bracket">></span>#000000<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:#3c3c3c"</span><span class="bracket">></span>#3c3c3c<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:#787878"</span><span class="bracket">></span>#787878<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:#b4b4b4"</span><span class="bracket">></span>#b4b4b4<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:#f0f0f0"</span><span class="bracket">></span>#f0f0f0<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:#ffffff"</span><span class="bracket">></span>#ffffff<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <div style="background-color:#000000;color:white;">#000000</div>
+                    <div style="background-color:#3c3c3c;color:white;">#3c3c3c</div>
+                    <div style="background-color:#787878">#787878</div>
+                    <div style="background-color:#b4b4b4">#b4b4b4</div>
+                    <div style="background-color:#f0f0f0">#f0f0f0</div>
+                    <div style="background-color:#ffffff">#ffffff</div>
+                </div>
+            </div>
+            <hr>
+            <h2>3 Digit HEX Value</h2>
+            <p>Sometimes you will see a 3-digit hex code in the CSS source.</p>
+            <p>The 3-digit hex code is a shorthand for some 6-digit hex codes.</p>
+            <p>The 3-digit hex code has the following form:</p>
+            <p><strong>#rgb</strong></p>
+            <p>The 3-digit hex code can only be used when both the values (RR, GG, and BB) are the same for each components. So, if we have #ff00cc, it can be written like this: #f0c.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="class">body</span> {</div>
+                    <div class="codeline second-level" ><span class="property">background-color</span>:<span class="p-value">#fc9</span> <span class="attrvalue">/* same as #ffcc99 */</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline"></div>
+                    <div class="codeline"><span class="class">h1</span> {</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">#f0f</span>; <span class="attrvalue">/* same as #ff00ff */</span></div>
+                    <div class="codeline">}</div>
+                    <div class="codeline"></div>
+                    <div class="codeline"><span class="class">p</span> {</div>
+                    <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">#b58</span>; <span class="attrvalue">/* same as #bb5588 */</span></div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result" style="background-color:#fc9;">
+                    <h1 style="color:#f0f">CSS 3-digit HEX code</h1>
+                    <p style="color:#b58">I am a paragraph</h1>
+                </div>
+            </div>
+            <hr>
+            <hr>
+            <h1>CSS HSL Colors</h1>
+            <hr>
+            <p>HSL stands for hue, saturation, and lightness.</p>
+            <hr>
+            <h2>HSL Value</h2>
+            <p>In CSS, a color can be specified using hue, saturation, and lightness (HSL) in the form:</p>
+            <p><strong>hsl(<i>hue</i>, <i>saturation</i>, <i>lightness</i>)</strong></p>
+            <p>Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.</p>
+            <p>Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.</p>
+            <p>Lightness is also a percentage, 0% is black, 50% is neither light or dark, 100% is white</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(0, 100%, 50%);"</span><span class="bracket">></span>hsl(0, 100%, 50%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(240, 100%, 50%);"</span><span class="bracket">></span>hsl(240, 100%, 50%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(147, 50%, 47%);"</span><span class="bracket">></span>hsl(147, 50%, 47%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(300, 76%, 72%);"</span><span class="bracket">></span>hsl(300, 76%, 72%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(39, 100%, 50%);"</span><span class="bracket">></span>hsl(39, 100%, 50%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(248, 53%, 58%);"</span><span class="bracket">></span>hsl(248, 53%, 58%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <div style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</div>
+                    <div style="background-color:hsl(240, 100%, 50%);">hsl(240, 100%, 50%)</div>
+                    <div style="background-color:hsl(147, 50%, 47%);">hsl(147, 50%, 47%)</div>
+                    <div style="background-color:hsl(300, 76%, 72%);">hsl(300, 76%, 72%)</div>
+                    <div style="background-color:hsl(39, 100%, 50%);">hsl(39, 100%, 50%)</div>
+                    <div style="background-color:hsl(248, 53%, 58%);">hsl(248, 53%, 58%)</div>
+                </div>
+            </div>
+            <h3>Saturation</h3>
+            <p>Saturation can be described as the intensity of a color.</p>
+            <p>100% is pure color, no shades of gray</p>
+            <p>50% is 50% gray, but you can still see the color.</p>
+            <p>0% is completely gray, you can no longer see the color.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(0, 100%, 50%)"</span><span class="bracket">></span>hsl(0, 100%, 50%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(0, 80%, 50%)"</span><span class="bracket">></span>hsl(0, 80%, 50%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(0, 60%, 50%)"</span><span class="bracket">></span>hsl(0, 60%, 50%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(0, 40%, 50%)"</span><span class="bracket">></span>hsl(0, 40%, 50%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(0, 20%, 50%)"</span><span class="bracket">></span>hsl(0, 20%, 50%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(0, 0%, 50%)"</span><span class="bracket">></span>hsl(0, 0%, 50%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <div style="background-color:hsl(0, 100%, 50%)">hsl(0, 100%, 50%)</div>
+                    <div style="background-color:hsl(0, 80%, 50%)">hsl(0, 80%, 50%)</div>
+                    <div style="background-color:hsl(0, 60%, 50%)">hsl(0, 60%, 50%)</div>
+                    <div style="background-color:hsl(0, 40%, 50%)">hsl(0, 40%, 50%)</div>
+                    <div style="background-color:hsl(0, 20%, 50%)">hsl(0, 20%, 50%)</div>
+                    <div style="background-color:hsl(0, 0%, 50%)">hsl(0, 0%, 50%)</div>
+                </div>
+            </div>
+            <hr>
+            <h2>Lightness</h2>
+            <p>The lightness of a color can be described as how much light you want to give the color, where 0% means no light (black), 50% means 50% light (neither dark nor light) 100% means full lightness (white).</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(0, 100%, 0%)"</span><span class="bracket">></span>hsl(0, 100%, 0%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(0, 100%, 25%)"</span><span class="bracket">></span>hsl(0, 100%, 25%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(0, 100%, 50%)"</span><span class="bracket">></span>hsl(0, 100%, 50%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(0, 100%, 75%)"</span><span class="bracket">></span>hsl(0, 100%, 75%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(0, 100%, 90%)"</span><span class="bracket">></span>hsl(0, 100%, 90%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                    <div class="codeline"><span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">style</span>=<span class="attrvalue">"background-color:hsl(0, 100%, 100%)"</span><span class="bracket">></span>hsl(0, 100%, 100%)<span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <div style="background-color:hsl(0, 100%, 0%);color:white;">hsl(0, 100%, 0%)</div>
+                    <div style="background-color:hsl(0, 100%, 25%);color:white;">hsl(0, 100%, 25%)</div>
+                    <div style="background-color:hsl(0, 100%, 50%)">hsl(0, 100%, 50%)</div>
+                    <div style="background-color:hsl(0, 100%, 75%)">hsl(0, 100%, 75%)</div>
+                    <div style="background-color:hsl(0, 100%, 90%)">hsl(0, 100%, 90%)</div>
+                    <div style="background-color:hsl(0, 100%, 100%)">hsl(0, 100%, 100%)</div>
+                </div>
+            </div>
+            <hr>
+            <p>Shades of gray are often defined by setting the hue and saturation to 0, and adjust the lightness from 0% to 100% to get darker/lighter shades</p>
+            <hr>
+            <h2>HSLA Value</h2>
+            <p>HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity for a color.</p>
+            <p>An HSLA color value is specified with:</p>
+            <p><strong>hsla(hue, saturation, lightness, alpha)</strong></p>
+            <p>The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all):</p>
         </div>
-        
+        <div class="tabcontent" id="backgrounds">
+            <h1>CSS Backgrounds</h1>
+            <hr>
+            <p>The CSS background properties are used to add background effects for elements.</p>
+            <hr>
+            <p>In these chapters, you will learn about the following CSS background properties:</p>
+            <ul>
+                <li><span class="attrhigh">background-color</span></li>
+                <li><span class="attrhigh">background-image</span></li>
+                <li><span class="attrhigh">background-repeat</span></li>
+                <li><span class="attrhigh">background-attatchhment</span></li>
+                <li><span class="attrhigh">background-position</span></li>
+                <li><span class="attrhigh">background</span> (shorthand property)</li>
+            </ul>
+            <hr>
+            <h2>CSS background-color</h2>
+            <p>The <span class="attrhigh">background-color</span> property specifies the background color of an element</p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>The background color of a page is set like this:</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">body</span> {</div>
+                    <div class="codeline second-level"><span class="property">background-color</span>:<span class="p-value">lightblue</span>;</div>
+                    <div class="codeline">{</div>
+                </div>
+                <p>Result:</p>
+                <div class="result" style="background-color: lightblue;">
+                    <p>This is a paragraph</p>
+                </div>
+                
+            </div>
+            <p>With CSS, a color is most often specified by:</p>
+            <ul>
+                <li>a valid color name - like "red"</li>
+                <li>a HEX value - like "#ff0000"</li>
+                <li>an RGB value - like "rgb(255,0,0)"</li>
+            </ul>
+            <p>You can also set the background color of all other elements:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="class">h1</span> {</div>
+                    <div class="codeline second-level"><span class="property">background-color</span>:<span class="p-value">green</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline">&nbsp;</div>
+                    <div class="codeline"><span class="class">div</span> {</div>
+                    <div class="codeline second-level"><span class="property">background-color</span>:<span class="p-value">lightblue</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline">&nbsp;</div>
+                    <div class="codeline"><span class="class">p</span> {</div>
+                    <div class="codeline second-level"><span class="property">background-color</span>:<span class="p-value">yellow</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <h1 style="background-color: green;">This is a heading</h1>
+                    <p style="background: lightblue;">This is a paragraph</p>
+                    <div style="background-color: yellow;">This is a div</div>
+                </div>
+            </div>
+            <hr>
+            <h2>Opacity / Transparency</h2>
+            <p>The <span class="p-high">opacity</span> property specifies the opacity/transparency of an element. It can take a vaue from 0.0 - 1.0. The lower value, the more transparent:</p>
+            <div style="background: #00acff;opacity:1">opacity 1</div>
+            <div style="background: #00acff;opacity:0.6">opacity 0.6</div>
+            <div style="background: #00acff;opacity:0.3">opacity 0.3</div>
+            <div style="background: #00acff;opacity:0.1">opacity 0.1</div>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="class">div</span> {</div>
+                    <div class="codeline second-level"><span class="property">background-color</span>:<span class="p-value">#00acff</span>;</div>
+                    <div class="codeline second-level"><span class="property">opacity</span>:<span class="p-value">0.3</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <div style="background-color:#00acff;opacity:.3;">opacity 0.3 </div>
+                </div>  
+            </div>
+            <p class="note">
+                <b>Note:</b> When using the <span class="p-high">opacity</span> property to add transparency to the background of an element, all of its child elements inherit the same transparency. This can make the text inside a fully transparent element hard to read.
+            </p>
+            <hr>
+            <h2>Transparency using RGBA</h2>
+            <p>If you do not want to apply opacity to child element, like in our example above, use <b>RGBA</b> color values. The following exmaple sets the opacity for the background color and not the text:</p>
+            <div style="background-color: rgba(0, 172, 255, 1);">100% opacity</div>
+            <div style="background-color: rgba(0, 172, 255, 0.6);">60% opacity</div>
+            <div style="background-color: rgba(0, 172, 255, 0.3);">30% opacity</div>
+            <div style="background-color: rgba(0, 172, 255, 0.1);">10% opacity</div>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="class">div</span> {</div>
+                    <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">rgba(0, 128, 0, 0.3)</span>;<span class="attrvalue">/* Green background with 30% opacity */</span></div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <div style="background: rgba(0, 172, 255S, 0.3);">rgba(0, 126, 0, 0.3)</div>
+                </div>
+            </div>
+            <h1>CSS Background Image</h1>
+            <hr>
+            <h2>CSS background-image</h2>
+            <p><span class="p-high">background-image</span></p>
+            <p>By default, the image is repeated so it covers the entire element.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>SEt the background image for a page:</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">body</span></div>
+                    <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">url(table.svg)</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result" style="background-image: url(table.svg);">
+                    <p style="background-color: rgba(255, 255, 255, 0.8);">This is a paragraph</p>
+                </div>
+            </div>
+            <div class="example">
+                <h3>Example</h3>
+                <p>This example shows a bad combination of text and background image. The text is hardly readable:</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">body</span> {</div>
+                    <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">url("home.svg")</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result" style="background-image: url(home.svg);">
+                    <p>This is a paragraph</p>
+                </div>
+            </div>
+            <p class="note"><b>Note:</b> When using a background image, use an image that does not disturb the text.</p>
+            <p>The background image can also be set for specific elements, like the <span><</span>p> element:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="class">p</span> {</div>
+                    <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">url(img_5terre.jpg)</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <p style="background-image:url(static-images/img_5terre.jpg);">This is a paragraph</p>
+                    <p style="background-image:url(static-images/img_5terre.jpg);">This is a paragraph</p>
+                    <p style="background-image:url(static-images/img_5terre.jpg);">This is a paragraph</p>
+                    <p style="background-image:url(static-images/img_5terre.jpg);">This is a paragraph</p>
+                </div>
+            </div>
+            <hr>
+            <h1>CSS Background Repeat</h1>
+            <hr>
+            <h2>CSS background-repeat</h2>
+            <p>By default, the <span class="p-high">background-image</span> property repeats an image both horizontally and vertically.</p>
+            <p>Some images should be repeated only horizontally or vertically, or they will look strange, like this:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="class">body</span></div>
+                    <div class="codeline second-level"><span class="property">background-image</span><span class="p-value">url("gradient_bg.png")</span></div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result" style="background-image: url(static-images/gradient\ bg.png);">
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <div>this is a strange....</div>
+                </div>
+            </div>
+            <p>If the image above is repeated only horizontally (<span class="p-high">background-repeat: repeat-x;</span>), the background will look better:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="class">body</span> {</div>
+                    <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">url("gradient_bg.png")</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">repeat-x</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result" style="background-image:url(static-images/gradient\ bg.png);background-repeat: repeat-x;">
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <div>this is a strange....</div>
+                </div>
+            </div>
+            <p class="note"><b>Tip:</b> To repeat an image vertically, set <span class="p-high">background-repeat:repeat-y;</span></p>
+            <hr>
+            <h2>CSS background-repeat:no-repeat</h2>
+            <p>Showing the background image only once is also specified by the <span class="p-high">background-repeat</span> property:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>Show the background image only once:</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">body</span> {</div>
+                    <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">url("img_5terre.png")</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">no-repeat</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result" style="background-image:url(static-images/img_5terre.jpg);height:300px;color:white;background-repeat:no-repeat;">
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                </div>
+            </div>
+            <p>In the example above, the background image is placed in the same place as the text. We want to change the position of the image, so that it does not disturb the text too much.</p>
+            <hr>
+            <h1>CSS background-position</h1>
+            <p>The <span class="p-high">background-position</span> property is used to specify the position of the background image.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>Position the background image in the top-right corner</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">body</span> {</div>
+                    <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">url("img_5terre.png")</span>;   </div>
+                    <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">no-repeat</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-position</span>:<span class="p-value">right top</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result" style="background:url(static-images/img_5terre.jpg) no-repeat right top; color:gray;">
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                    <p>This is a paragraph</p>
+                </div>
+            </div>
+            <hr>
+            <h1>CSS Background Attatchment</h1>
+            <hr>
+            <h2>CSS backgroud-attatchment</h2>
+            <p><span class="p-high">background-attatchment</span></p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>Specify that the background image should scroll with the rest of the page:</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">body</span></div>
+                    <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">url("img_5terre.jpg")</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">no-repeat</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-position</span>:<span class="p-value">right top</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-attatchment</span>:<span class="p-value">scroll</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result" style="background:url('static-images/img_5terre.jpg') no-repeat right top scroll;">
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                </div>
+            </div>
+            <div class="example">
+                <h3>Example</h3>
+                <p>Specify that the background image should be fixed</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">body</span></div>
+                    <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">url("img_5terre.jpg")</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">no-repeat</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-position</span>:<span class="p-value">right top</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-attatchment</span>:<span class="p-value">fixed</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result" style="background:url('static-images/img_5terre.jpg') no-repeat fixed bottom right;">
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                </div>
+            </div>
+            <hr>
+            <h1>CSS Background-size</h1>
+            <div class="example">
+                <h3>Example</h3>
+                <p>Specify the size of a background-image with "auto":</p>
+                <div class="code">
+                    <div class="codeline"><span class="id">#example1</span></div>
+                    <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">url("img_5terre.jpg")</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">no-repeat</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-size</span>:<span class="p-value">auto</span>;<span class="attrvalue">/* </span></div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result" style="background:url('static-images/img_5terre.jpg') no-repeat;background-size: auto;">
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                </div>
+            </div>
+            <hr>
+            <h1>Background (shorthand)</h1>
+            <p>To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.</p>
+            <p>Instead of writing:</p>
+            <div class="example">
+                <div class="code">
+                    <div class="codeline"><span class="class">body</span> {</div>
+                    <div class="codeline second-level"><span class="property">background-color</span>:<span class="p-value">#ffffff</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">url("img_5terre.jpg")</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">no-repeat</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-position</span>:<span class="p-value">right top</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+            </div>
+            <p>You can use the shorthand property <span class="p-high">background</span>:</p>
+            <div class="example">
+                <div class="code">
+                    <div class="codeline"><span class="class">body</span> {</div>
+                    <div class="codeline second-level"><span class="property">background</span>;<span class="p-value">#ffffff url("img_5terre.jpg) no-repeat right top</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result" style="background: #ffffff url('static-images/img_5terre.jpg') no-repeat right top;">
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                    <p>This is a paragraph.</p>
+                </div>
+            </div>
+            <p>When using the shorthand property the order of the property values is:</p>
+            <ul>
+                <li><span class="p-high">background-color</span></li>
+                <li><span class="p-high">background-image</span></li>
+                <li><span class="p-high">background-repeat</span></li>
+                <li><span class="p-high">background-position</span></li>
+                <li><span class="p-high">background-position</span></li>
+            </ul>
+            <p class="note"><b>Note:</b> It does not matter if one of the property values are missing.</p>
+        </div>
             
     </div>
 
