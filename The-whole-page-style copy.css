@@ -33,6 +33,10 @@ body:not(body.dark):not(body.matrix) {
     --note-shadow:#6200ff;  
     font-size:15px;
 }
+html, body {
+    width:100%;
+    height:100%;
+}
 h1 {font-size:calc(1em * 2.5);}
 h2 {font-size:calc(1em * 2);}
 h3 {font-size:calc(1em * 1.6);}
@@ -80,8 +84,9 @@ body.dark, body.dark .code{
 html, body {margin:0;padding:0;height:100%;}
 html, body, body * {transition:background-color var(--miliseconds), color var(--miliseconds);}
 *:not(pre) {font-family: "Open sans", sans-serif;box-sizing:border-box;}
-.note {border:1px solid var(--color);padding:5px 3px;box-shadow: 2px 2px 4px 0 var(--note-shadow);margin:10px 0;}
-
+.note {border:1px solid var(--color);padding:5px 3px;}
+#css .note {box-shadow: 2px 2px 4px 0 var(--theme-dark-css);}
+#html .note {box-shadow:2px 2px 4px 0 var(--theme-dark-html);}
 /*hover of the child of tablinks class.tablinks > *:hover, .block {
     border:1px solid transparent;
     border:1px solid black;
@@ -103,15 +108,9 @@ html, body, body * {transition:background-color var(--miliseconds), color var(--
 .example > * {margin:0.6em 0; }
 #html .example {background-color: var(--example-back-html);}
 #css .example {background-color: var(--example-back-css);}
-/**/.tabcontent{
-    padding-bottom:2em;
-}
-.tabs {
-    padding:0 10px;
-}
-.tabcontent > h1:first-child {
-    margin-block-start:0;
-}
+/**/.tabcontent{padding-bottom:2em;}
+.tabs {padding:0 10px;}
+.tabcontent > h1:first-child {margin-block-start:0;}
 
 /* The side bar of the website*/
 .tablinks {
@@ -207,59 +206,46 @@ body:not(body.dark, body.matrix) .tabcontent  .code {background:white;}
 /* The innerHTML of the tag*/
 .innerHTML {padding-left:1em;color:var(--color);}
 /* The class of the html */
-.class {
-    color:var(--css-class);
-}
-.id {
-    color:var(--css-id);
-}
-.property, .p-high {
-    color:var(--css-property);
-}
+.class {color:var(--css-class);}
+.id {color:var(--css-id);}
+.property, .p-high {color:var(--css-property);}
 .p-value {color:var(--css-property-value);}
 .p-high {text-shadow:0 0 2px var(--css-property);}
-.codeline.second-level {
-    padding-left:calc(1em * 2);
-}
-.codeline.third-level {
-    padding-left:calc(1em * 4);
-}
-.codeline.fourth-level {
-    padding-left:calc(1em * 6);
-}
-.codeline.fifth-level {
-    padding-left:calc(1em * 8);
-}
+.codeline.second-level {padding-left:calc(1em * 2);}
+.codeline.third-level {padding-left:calc(1em * 4);}
+.codeline.fourth-level {padding-left:calc(1em * 6);}
+.codeline.fifth-level {padding-left:calc(1em * 8);}
+tab {flex:1 0 0;}
 /* The example element of the page */
-table {
-    width:100%;
-}
-[second], [second] th, [second] td {
-    border:1px solid black;
-}
-[third], [third] th, [third] td {
-    border:1px solid black;
-    border-collapse:collapse;
-}
-[fourth], [fourth] th, [fourth] td {
-    border:1px solid black;
-    border-collapse:collapse;
-}
-[fourth] th, [fourth] td {
-    padding:15px;
-}
-
-table.summary {border:1px solid #ccc;font-family:Verdana;
-    margin:20px auto;width:95%;font-size: 15px;}
-table.summary tr:nth-child(even) {background-color:rgb(235, 232, 232);}
-table.summary tr {border:1px solid rgb(185, 185, 185);text-align:left;}
-table.summary tr, table.summary {border-collapse:collapse;}
-table.summary th, table.summary td {padding:8px;}
+table {width:100%;}
+[second], [second] th, [second] td {border:1px solid black;}
+[third], [third] th, [third] td {border:1px solid black;border-collapse:collapse;}
+[fourth], [fourth] th, [fourth] td {border:1px solid black;border-collapse:collapse;}
+[fourth] th, [fourth] td {padding:15px;}
 div[cities] {background-color:black;color:white;margin:20px;padding:20px;}
 .important {color:red;}
 .city1 {color:#ffbb00;}
 .main2 {border:1px solid black;}
 .city {color:var(--theme-blue);}
+/* Styling of summary table of each chapters */
+table.summary {
+    border:1px solid #ccc;
+    font-family:Verdana;
+    margin:20px auto;
+    width:95%;
+    font-size: 15px;
+}
+@media screen and (max-width:426px) {
+    body {font-size:17px;}
+    .content {flex-wrap: wrap;}
+    .tablinks {flex:1 0 425px;height:50%;}
+    .tab {flex:1 0 425px;}
+}
+table.summary tr:nth-child(even) {background-color:rgb(235, 232, 232);}
+table.summary tr {border:1px solid rgb(185, 185, 185);text-align:left;}
+table.summary tr, table.summary {border-collapse:collapse;}
+table.summary th, table.summary td {padding:8px;}
+
 #settings {
     padding:0;
     line-height:0;
@@ -269,22 +255,11 @@ div[cities] {background-color:black;color:white;margin:20px;padding:20px;}
     outline:none;
     transition: transform var(--miliseconds) linear;
 }
-#settings >svg {
-    height:100%;
-    width:100%;
-}
-svg g > path:nth-child(3) {
-    fill:var(--plain);
-}
-svg g > path:nth-child(2) {
-    fill:var(--dark);
-}
-svg g > path:nth-child(4) {
-    fill:var(--matrix);
-}
-svg g > path:nth-child(1) {
-    fill:var(--theme-blue);
-}
+#settings >svg {height:100%;width:100%;}
+svg g > path:nth-child(3) {fill:var(--plain);}
+svg g > path:nth-child(2) {fill:var(--dark);}
+svg g > path:nth-child(4) {fill:var(--matrix);}
+svg g > path:nth-child(1) {fill:var(--theme-blue);}
 .result {
     padding:3px;
     background-color:var(--background);

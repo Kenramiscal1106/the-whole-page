@@ -62,7 +62,7 @@
                 <button class="CSSlink link">home</button>
             </div>
         </div>
-        <div style="flex:1 0 0;">
+        <div class="tab">
             <div class="tabs" id="html">
                 <div class="tabcontent" id="introduction">
                     <h1>HTML Introduction</h1>
@@ -2297,6 +2297,7 @@
                         <li><span class="p-high">background-repeat</span></li>
                         <li><span class="p-high">background-attatchhment</span></li>
                         <li><span class="p-high">background-position</span></li>
+                        <li><span class="p-high">background-size</span></li>
                         <li><span class="p-high">background</span> (shorthand property)</li>
                     </ul>
                     <hr>
@@ -2654,10 +2655,63 @@
                         <li><span class="p-high">background-color</span></li>
                         <li><span class="p-high">background-image</span></li>
                         <li><span class="p-high">background-repeat</span></li>
-                        <li><span class="p-high">background-position</span></li>
+                        <li><span class="p-high">background-attatchment</span></li>
                         <li><span class="p-high">background-position</span></li>
                     </ul>
-                    <p class="note"><b>Note:</b> It does not matter if one of the property values are missing.</p>
+                    <p class="note"><b>Note:</b> It does not matter if one of the property values are missing. I recommend to use background-size separately to avoid errors.</p>
+                    <hr>
+                    <table class="summary">
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Values</th>
+                        </tr>
+                        <tr>
+                            <td>background (shorthand property)</td>
+                            <td>Sets all the background properties in one declaration</td>
+                            <td>(background-color) (background-image) (background-repeat) (background-attachment) (background-position)</td>
+                        </tr>
+                        <tr>
+                            <td>background-attachment</td>
+                            <td>Sets whether a background image is fixed or scrolls with the rest of the page</td>
+                            <td>(fixed / scroll)</td>
+                        </tr>
+                        <tr>
+                            <td>background-clip</td>
+                            <td>Specifies the painting area of the background</td>
+                            <td>(border-box / padding-box / content-box)</td>
+                        </tr>
+                        <tr>
+                            <td>background-color</td>
+                            <td>Sets the background-color of an element.</td>
+                            <td>(HEX / HSLA / HSL / RGB / RGBA / HEXA / 3-digit-HEX / valid color name)</td>
+                        </tr>
+                        <tr>
+                            <td>background-image</td>
+                            <td>Sets the background image of an element</td>
+                            <td>(url(<i>link</i>) / linear-gradient(<i>angle, color1, color2, n</i>) / repeating-linear-gradient() / radial-gradient() / repeating-radial-gradient())</td>
+                        </tr>
+                        <tr>
+                            <td>background-origin</td>
+                            <td>Specifies where the background image(s) is/are positioned</td>
+                            <td>(padding-box / border-box / content-box)</td>
+                        </tr>
+                        <tr>
+                            <td>background-position</td>
+                            <td>Sets the starting position of a background image</td>
+                            <td>((left/right) (top/center/bottom) / (center) (top/bottom) / (center) / x% y% / xpos ypos)</td>
+                        </tr>
+                        <tr>
+                            <td>background-repeat</td>
+                            <td>Sets how a background image will be repeated</td>
+                            <td>(repeat / no-repeat / repeat-x / repeat-y)</td>
+                        </tr>
+                        <tr>
+                            <td>background-size</td>
+                            <td>Specifies the size of the background image(s)</td>
+                            <td>(cover / contain / auto / <i>width-size</i> <i>height-size</i> / <i>width percentage</i> <i>height percentage</i>)  </td>
+                        </tr>
+                    </table>
                 </div>
                     
             </div>
