@@ -235,6 +235,7 @@ table.summary {
     width:95%;
     font-size: 15px;
 }
+.tab {flex:1 0 0;}
 @media screen and (max-width:426px) {
     body {font-size:17px;}
     .content {flex-wrap: wrap;}

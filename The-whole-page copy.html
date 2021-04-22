@@ -57,7 +57,7 @@
                 <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'comments'})" id="commentstab">CSS Comments</button>
                 <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'colors'})" id="colorstab">CSS Colors</button>
                 <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'backgrounds'})" id="backgroundstab">CSS Backgrounds</button>
-                <button class="CSSlink link">home</button>
+                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'borders'})" id="borderstab">CSS Borders</button>
                 <button class="CSSlink link">home</button>
                 <button class="CSSlink link">home</button>
             </div>
@@ -2713,7 +2713,340 @@
                         </tr>
                     </table>
                 </div>
-                    
+                <div class="tabcontent" id="borders">
+                    <h1>CSS Borders</h1>
+                    <hr>
+                    <p>The CSS border properties allow you to specify the style, width, and color of an element's border.</p>
+                    <hr>
+                    <p style="padding:12px;border:1px solid black;">I have borders on all sides.</p>
+                    <p style="padding:12px;border-bottom:1px solid red;">I have a red bottom border.</p>
+                    <p style="padding:12px;border:1px solid gray;border-radius:10px;">I have rounded borders.</p>
+                    <p style="padding:12px;border-left:3px solid var(--theme-darker-css);background-color:var(--theme-blue);">I have a blue left border.</p>
+                    <hr>
+                    <h2>CSS Border Style</h2>
+                    <p><span class="p-high">border-style</span></p>
+                    <p>The following values are allowed:</p>
+                    <ul>
+                        <li><span class="p-high">dotted</span> - Defines a dotted border</li>
+                        <li><span class="p-high">dashed</span> - Defines a dashed border</li>
+                        <li><span class="p-high">solid</span> - Defines a solid border</li>
+                        <li><span class="p-high">double</span> - Defines a double border</li>
+                        <li><span class="p-high">groove</span> - Defines a 3d grooved border. The effect depends on the border-color value.</li>
+                        <li><span class="p-high">ridge</span> - Defines a 3d ridged border. Also depends on the border-color value.</li>
+                        <li><span class="p-high">inset</span> - Defines a 3d inset border. Also depends on the border-color value.</li>
+                        <li><span class="p-high">outset</span> - Defines a 3d outset border. Also depends on the border-color value.</li>
+                        <li><span class="p-high">none</span> - Defines no border</li>
+                        <li><span class="p-high">hidden</span> - Defines a hidden border</li>
+                    </ul>
+                    <p>The <span class="p-high">border-style</span> property can have from one to four values (for the top border, right border, bottom border, and the left border).</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <p>Demonstration of different border styles.</p>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p.dotted</span> {<span class="property">border-style</span>:<span class="p-value">dotted</span>;}</div>
+                            <div class="codeline"><span class="class">p.dashed</span> {<span class="property">border-style</span>:<span class="p-value">dashed</span>;}</div>
+                            <div class="codeline"><span class="class">p.solid</span> {<span class="property">border-style</span>:<span class="p-value">solid</span>;}</div>
+                            <div class="codeline"><span class="class">p.double</span> {<span class="property">border-style</span>:<span class="p-value">double</span>;}</div>
+                            <div class="codeline"><span class="class">p.groove</span> {<span class="property">border-style</span>:<span class="p-value">groove</span>;}</div>
+                            <div class="codeline"><span class="class">p.ridge</span> {<span class="property">border-style</span>:<span class="p-value">ridge</span>;}</div>
+                            <div class="codeline"><span class="class">p.inset</span> {<span class="property">border-style</span>:<span class="p-value">inset</span>;}</div>
+                            <div class="codeline"><span class="class">p.outset</span> {<span class="property">border-style</span>:<span class="p-value">outset</span>;}</div>
+                            <div class="codeline"><span class="class">p.none</span> {<span class="property">border-style</span>:<span class="p-value">none</span>;}</div>
+                            <div class="codeline"><span class="class">p.hidden</span> {<span class="property">border-style</span>:<span class="p-value">hidden</span>;}</div>
+                            <div class="codeline"><span class="class">p.mix</span> {<span class="property">border-style</span>:<span class="p-value">dotted dashed solid double</span>;}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="border:3px dotted black;">A dotted border.</p>
+                            <p style="border:3px dashed black;">A dashed border.</p>
+                            <p style="border:3px solid black;">A solid border</p>
+                            <p style="border:3px double black;">A double border</p>
+                            <p style="border:3px groove #aaa;">A grooved border.</p>
+                            <p style="border:3px ridge #aaa;">A ridged border.</p>
+                            <p style="border:3px inset #aaa;">An inset border.</p>
+                            <p style="border:3px outset #aaa;">An outset border.</p>
+                            <p style="border:3px none black;">No border.</p>
+                            <p style="border:3px hidden black;">A hidden border.</p>
+                            <p style="border:3px black;border-style:dotted dashed solid double;">A mixed border.</p>
+                        </div>
+                    </div>
+                    <p class="note"><b>Note:</b> None of the OTHER CSS border properties (which you will learn more about in the next chapters) will have ANY effect unless the <span class="p-high">border-style</span> property is set!</p>
+                    <hr>
+                    <h2>CSS Border Width</h2>
+                    <p><span class="p-high">border-width</span> property specifies the width of the four borders.</p>
+                    <p>The width can be set as a specific size (in px, pt, cm, em, etc) or by using one the three pre-defined values: thin, medium, or thick:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <p>Demonstration of the different border widths:</p>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p.one</span> {</div>
+                            <div class="codeline second-level"><span class="property">border-style</span>:<span class="p-value">solid</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-width</span>:<span class="p-value">5px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">p.two</span> {</div>
+                            <div class="codeline second-level"><span class="property">border-style</span>:<span class="p-value">solid</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-width</span>:<span class="p-value">medium</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">p.three</span> {</div>
+                            <div class="codeline second-level"><span class="property">border-style</span>:<span class="p-value">dotted</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-width</span>:<span class="p-value">thick</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">p.four</span> {</div>
+                            <div class="codeline second-level"><span class="property">border-style</span>:<span class="p-value">dotted</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-width</span>:<span class="p-value">2px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="padding:12px;border-style:solid;border-width:5px;">5px border-width</p>
+                            <p style="padding:12px;border-style:solid;border-width:medium;">medium border-width</p>
+                            <p style="padding:12px;border-style:dotted;border-width:thick;">thick border-width</p>
+                            <p style="padding:12px;border-style:dotted;border-width:2px ;">2px border-width</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Specific Side Widths</h2>
+                    <p>The <span class="p-high">border-width</span> property can have from one to four values (for the top border, right border, bottom border, and the left border):</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p.one</span></div>
+                            <div class="codeline second-level"><span class="property">border-style</span>:<span class="p-value">solid</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-width</span>:<span class="p-value">5px 20px </span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">p.two</span></div>
+                            <div class="codeline second-level"><span class="property">border-style</span>:<span class="p-value">solid</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-width</span>:<span class="p-value">20px 5px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">p.three</span></div>
+                            <div class="codeline second-level"><span class="property">border-style</span>:<span class="p-value">solid</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-width</span>:<span class="p-value">25px 10px 4px 35px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="border-style:solid;border-width:5px 20px">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, neque.</p>
+                            <p style="border-style:solid;border-width:20px 5px">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, neque.</p>
+                            <p style="border-style:solid;border-width:25px 10px 4px 35px">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, neque.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>CSS Border Color</h2>
+                    <p><span class="p-high">border-color</span></p>
+                    <p>The color can be set by:</p>
+                    <ul>
+                        <li>name - specify a color name, like "red"</li>
+                        <li>HEX - specify a HEX values, like "#ff0000"</li>
+                        <li>RGB - specify a RGB value, like "rgb(255, 0, 0)"</li>
+                        <li>HSL - specify a HSL value, like "hsl(0, 100%, 50%)"</li>
+                        <li>transparent</li>
+                    </ul>
+                    <p><b>Note:</b> If <span class="p-high">border-color</span> is not set, it inherits the color of the element.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <p>Demonstration of the different border colors:</p>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p.one</span></div>
+                            <div class="codeline second-level"><span class="property">border-style</span>:<span class="p-value">solid</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-color</span>:<span class="p-value">red</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-width</span>:<span class="p-value">3px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">p.two</span></div>
+                            <div class="codeline second-level"><span class="property">border-style</span>:<span class="p-value">solid</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-color</span>:<span class="p-value">green</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-width</span>:<span class="p-value">3px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">p.three</span></div>
+                            <div class="codeline second-level"><span class="property">border-style</span>:<span class="p-value">dotted</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-color</span>:<span class="p-value">blue</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-width</span>:<span class="p-value">3px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="border-style:solid;border-color:red;border-width:3px;padding:12px 6px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, culpa!</p>
+                            <p style="border-style:solid;border-color:green;border-width:3px;padding:12px 6px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, culpa!</p>
+                            <p style="border-style:dotted;border-color:blue;border-width:3px;padding:12px 6px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, culpa!</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Specific Side Colors</h2>
+                    <p>The<span class="p-high">border-color</span> property can have from one to four values (for the top border, right border, bottom border, and the left border).</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p.one</span></div>
+                            <div class="codeline second-level"><span class="property">border-style</span>:<span class="p-value">solid</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-color</span>:<span class="p-value">red green blue yellow;</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="border-style: solid;border-color:red green blue yellow;padding:12px 6px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, impedit?</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>CSS Border - Shorthand Property</h2>
+                    <p>Like you saw in the previous page, there are many properties to consider when dealing with borders.</p>
+                    <p>To shorten the code, it is also possible to specify all the individual border properties in one property.</p>
+                    <p>The <span class="p-high">border</span> property is a shorthand property for the following individual border properties:</p>
+                    <ul>
+                        <li><span class="p-high">border-width</span> (required)</li>
+                        <li><span class="p-high">border-style</span> (required)</li>
+                        <li><span class="p-high">border-color</span></li>
+                    </ul>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p</span> {</div>
+                            <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">5px solid red</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="border:5px solid red;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, vel!</p>
+                        </div>
+                    </div>
+                    <p>You can also specify all the individual border properties for just one side:</p>
+                    <div class="example">
+                        <h3>Bottom Border</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p</span></div>
+                            <div class="codeline second-level"><span class="property">border-left</span>:<span class="p-value">6px solid red</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-color</span>:<span class="p-value">lightgrey</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="background-color: lightgrey;border-left: 6px solid red;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, commodi.</p>
+                        </div>
+                    </div>
+                    <div class="example">
+                        <h3>Bottom Border</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p</span></div>
+                            <div class="codeline second-level"><span class="property">border-bottom</span>:<span class="p-value">6px solid red</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-color</span>:<span class="p-value">lightgrey</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="background-color: lightgrey;border-bottom: 6px solid red;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, commodi.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>CSS Rounded Borders</h2>
+                    <p>The <span class="p-high">border-radius</span> property is used to add rounded borders to an element:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p</span></div>
+                            <div class="codeline second-level"><span class="property">border</span><span class="p-value">2px solid red</span></div>
+                            <div class="codeline second-level"><span class="property">border-radius</span><span class="p-value">5px</span></div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="border:2px solid red;border-radius:5px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, debitis.</p>
+                        </div>
+                    </div>
+                    <table class="summary">
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>border</td>
+                            <td>Sets all the border properties in one declaration</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom</td>
+                            <td>Sets all the bottom border properties in one declaration</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-color</td>
+                            <td>Sets the color of the bottom border</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-style</td>
+                            <td>Sets the style of the bottom border</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-width</td>
+                            <td>Sets the width of the bottom border</td>
+                        </tr>
+                        <tr>
+                            <td>border-color</td>
+                            <td>Sets the color of the four borders</td>
+                        </tr>
+                        <tr>
+                            <td>border-left</td>
+                            <td>Sets all the left border properties in one declaration</td>
+                        </tr>
+                        <tr>
+                            <td>border-left-color</td>
+                            <td>Sets the color of the left border</td>
+                        </tr>
+                        <tr>
+                            <td>border-left-style</td>
+                            <td>Sets the style of the left border</td>
+                        </tr>
+                        <tr>
+                            <td>border-left-width</td>
+                            <td>Sets the width of the left border</td>
+                        </tr>
+                        <tr>
+                            <td>border-radius</td>
+                            <td>Sets all the four border-*-radius properties for rounded corners</td>
+                        </tr>
+                        <tr>
+                            <td>border-right</td>
+                            <td>Sets all the right border properties in one declaration</td>
+                        </tr>
+                        <tr>
+                            <td>border-right-color</td>
+                            <td>Sets the color of the right border</td>
+                        </tr>
+                        <tr>
+                            <td>border-right-style</td>
+                            <td>Sets the style of the right border</td>
+                        </tr>
+                        <tr>
+                            <td>border-right-width</td>
+                            <td>Sets the width of the right border</td>
+                        </tr>
+                        <tr>
+                            <td>border-style</td>
+                            <td>Sets the style of the four borders</td>
+                        </tr>
+                        <tr>
+                            <td>border-top</td>
+                            <td>Sets all the top border properties in one declaration</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-color</td>
+                            <td>Sets the color of the top border</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-width</td>
+                            <td>Sets the width of the top border</td>
+                        </tr>
+                        <tr>
+                            <td>border-width</td>
+                            <td>Sets the width of the four borders</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
         </div>
