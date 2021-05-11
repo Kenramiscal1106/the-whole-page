@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-body:not(body.dark):not(body.matrix) {
+body:not(body.dark){
     --theme-blue:#00acff;
     --theme-html:#ff6600;
     --theme-dark-html: #da5700;
@@ -36,6 +36,8 @@ body:not(body.dark):not(body.matrix) {
 html, body {
     width:100%;
     height:100%;
+    padding:0;
+    margin:0;
 }
 h1 {font-size:calc(1em * 2.5);}
 h2 {font-size:calc(1em * 2);}
@@ -44,7 +46,7 @@ h4 {font-size:calc(1em * 1.3);}
 h5 {font-size:calc(1em * 1.1);}
 h6 {font-size:calc(1em);}
 h1, h2, h3, h4, h5, h6 {margin:10px 0;}
-body.dark, body.matrix {
+body.dark{
     --theme-blue:#004cff;
     --theme-html:#da5700;
     --theme-dark-html:#a83500;
@@ -69,22 +71,16 @@ body.dark, body.matrix {
     --css-property-value: rgb(162, 255, 119);
     --background:black;
 }
-body.matrix {
-    color:#0f0;
-}
 /* body.solarrize { 
 
 }*/
 body.dark, body.dark .code{
     color:white;
-}
-:is(body.dark, body.matrix), :is(body.dark, body.matrix) .code {
     background-color: black;
 }
-html, body {margin:0;padding:0;height:100%;}
 html, body, body * {transition:background-color var(--miliseconds), color var(--miliseconds);}
 *:not(pre) {font-family: "Open sans", sans-serif;box-sizing:border-box;}
-.note {border:1px solid var(--color);padding:5px 3px;}
+.note {border:1px solid var(--color);padding:3px 6px;}
 #css .note {box-shadow: 2px 2px 4px 0 var(--theme-dark-css);}
 #html .note {box-shadow:2px 2px 4px 0 var(--theme-dark-html);}
 /*hover of the child of tablinks class.tablinks > *:hover, .block {
@@ -122,7 +118,7 @@ html, body, body * {transition:background-color var(--miliseconds), color var(--
 }
 .content {display:flex;width:var(--full);height:var(--full);}
 .content > * {overflow:auto;}
-.tablinks::-webkit-scrollbar {width:10px;}
+.tablinks::-webkit-scrollbar {width:5px;}
 .tablinks::-webkit-scrollbar-track {background:#ddd;border-radius:2px;}
 .tablinks::-webkit-scrollbar-thumb {background:#aaa;}
 .tablinks::-webkit-scrollbar-thumb:hover {background:#777;}
@@ -187,12 +183,17 @@ div#csstab > .block {
 }
 /* The sample code of the page */
 /* The code container of the sample code*/
-body:not(body.dark, body.matrix) .tabcontent  .code {background:white;}
-#css .code {border-left:6px solid var(--theme-blue);}
-#html .code {border-left:6px solid var(--theme-html);}
-.code {padding:3px 6px;}
+body:not(body.dark) .tabcontent  .code {background:white;}
+/* width of the border and ::before element (.codeline) */
+
+#css .code {border-left:var(--width) solid var(--theme-blue);}
+#html .code {border-left:var(--width) solid var(--theme-html);}
+.code {--width:1.375rem;padding:0.25rem 0.5rem;counter-reset:links code;}
 /* The lines of the code */
 .codeline *, .codeline {font-family:"Roboto Mono", monospace;}
+.codeline {counter-increment: code;position:relative;}
+.codeline:hover {outline:1px solid var(--color);}
+.codeline::before {content:counter(code);position: absolute;top: 0;left: -1.875rem;width:var(--width);text-align:center;}
 /* The attribute of the element */
 .attribute, .attrhigh {color:var(--attribute);}
 .attrhigh {text-shadow: 0 0 2px var(--attribute);}
@@ -211,10 +212,11 @@ body:not(body.dark, body.matrix) .tabcontent  .code {background:white;}
 .property, .p-high {color:var(--css-property);}
 .p-value {color:var(--css-property-value);}
 .p-high {text-shadow:0 0 2px var(--css-property);}
-.codeline.second-level {padding-left:calc(1em * 2);}
-.codeline.third-level {padding-left:calc(1em * 4);}
-.codeline.fourth-level {padding-left:calc(1em * 6);}
-.codeline.fifth-level {padding-left:calc(1em * 8);}
+
+.codeline.second-level {padding-left:2rem;}
+.codeline.third-level {padding-left:4rem;}
+.codeline.fourth-level {padding-left:6rem;}
+.codeline.fifth-level {padding-left:8rem;}
 tab {flex:1 0 0;}
 /* The example element of the page */
 table {width:100%;}
@@ -239,8 +241,11 @@ table.summary {
 @media screen and (max-width:426px) {
     body {font-size:17px;}
     .content {flex-wrap: wrap;}
-    .tablinks {flex:1 0 425px;height:50%;}
-    .tab {flex:1 0 425px;}
+    .tablinks {flex:1 0 425px;height:max-content;display:flex;}
+    .tab {flex:1 0 425px;overflow-x:auto;}
+    :is(#csstab, #htmltab) {display:flex;width:max-content!important;height:inherit;}
+    :is(#csstab, #htmltab) > *{width:inherit;margin:0 6px;}
+    .link > img, .link > svg {top:initial!important;}
 }
 table.summary tr:nth-child(even) {background-color:rgb(235, 232, 232);}
 table.summary tr {border:1px solid rgb(185, 185, 185);text-align:left;}
@@ -255,6 +260,7 @@ table.summary th, table.summary td {padding:8px;}
     height:30px;
     outline:none;
     transition: transform var(--miliseconds) linear;
+    z-index:999;
 }
 #settings >svg {height:100%;width:100%;}
 svg g > path:nth-child(3) {fill:var(--plain);}

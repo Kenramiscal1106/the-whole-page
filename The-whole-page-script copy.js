@@ -4,10 +4,10 @@ function tabs (ui) {
     var tablinks = document.getElementsByClassName(ui.tabs), 
     tabcontent = document.getElementById(ui.targetElement), i, 
     alltabs = document.getElementsByClassName(ui.tabcontent), 
-    icon = document.getElementById('icon')    ;
+    icon = document.getElementById('icon');
     try {
         icon.href = event.currentTarget.childNodes[0].src;
-        document.title = ui.targetElement;        
+        document.title = event.currentTarget.textContent;        
     }
     catch {
         alert("no icon/text (mandatory)")

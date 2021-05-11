@@ -57,9 +57,14 @@
             <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'colors'})" id="colorstab">CSS Colors</button>
             <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'backgrounds'})" id="backgroundstab">CSS Backgrounds</button>
             <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'borders'})" id="borderstab">home</button>
-            <button class="CSSlink link">home</button>
-            <button class="CSSlink link">home</button>
+            <button class="CSSlink link" id="dimensionstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'dimensions'})">CSS Dimensions</button>
+            <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'margin'})" id="margintab">CSS Margin</button>
+            <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'padding'})" id="paddingtab">CSS Padding and Box Model</button>
+            <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'outline'})" id="outlinetab">CSS Outline</button>
+            <button class="CSSlink link" id="texttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'text'})">CSS Text</button>
+
         </div>
+        <a href="The-whole-page copy.html">Update to new webpage</a>
     </div>
     <div class="tabs" id="html">
         <div class="tabcontent" id="introduction">
@@ -2716,7 +2721,7 @@
                     <p style="border:3px black;border-style:dotted dashed solid double;">A mixed border.</p>
                 </div>
             </div>
-            <p class="note"><b>Note:</b> None of the OTHER CSS border properties (which you will learn more about in the next chapters) will have ANY effect unless the <span class="p-h
+            <p class="note"><b>Note:</b> None of the OTHER CSS border properties (which you will learn more about in the next chapters) will have ANY effect unless the <span class="p-high">border-style</span> property is set!</p>   
             <hr>
             <h2>CSS Border Width</h2>
             <p><span class="p-high">border-width</span> property specifies the width of the four borders.</p>
@@ -2993,6 +2998,430 @@
                 </tr>
             </table>
         </div>
+        <div class="tabcontent" id="margin">
+            <h1>CSS Margins</h1>
+            <p>The CSS <span class="p-high">margin</span> properties are used to create space around elements, outside of any defined borders.</p>
+            <p>With CSS, you can have full control over the margins. There are properties for setting the margin for each side of an element (top,right,bottom,left).</p>
+            <h2>Margin - Individual Sides</h2>
+            <p>CSS has properties for specifying the margin for each side of an element:</p>
+            <ul>
+                <li><span class="p-high">margin-top</span></li>
+                <li><span class="p-high">margin-right</span></li>
+                <li><span class="p-high">margin-bottom</span></li>
+                <li><span class="p-high">margin-left</span></li>
+            </ul>
+            <p>All the margin properties can have the following values</p>
+            <ul>
+                <li>auto - the browser calculates the margin</li>
+                <li><ins>length</ins> - specifies a margin in px, pt, cm, etc.</li>
+                <li>% - specifies a marginn in % of the width of the containing element</li>
+                <li>inherit - specifies that the margin should be inherited from the parent element</li>
+            </ul>
+            <p class="note"><b>Note:</b> Negative values are allowed</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="class">p</span> {</div>
+                    <div class="codeline second-level"><span class="property">margin</span>:<span class="p-value">50px 34px 98px 76px</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <p style="margin:50px 34px 98px 78px;background-color:var(--theme-blue);">This has 50px top margin, 34px right margin, 98px bottom margin, 76px left margin</p>
+                </div>
+            </div>
+            <hr>
+            <h2>Margin - Shorthand Property</h2>
+            <p>To shorten the code, it is possible to specify all the margin properties in one property.</p>
+            <p>The <span>margin</span> property is a shorthand property for the following individual margin properties:</p>
+            <ul>
+                <li><span>margin-top</span></li>
+                <li><span>margin-right</span></li>
+                <li><span>margin-bottom</span></li>
+                <li><span>margin-left</span></li>
+            </ul>
+            <p>So, here's how it works:</p>
+            <p>If the <span class="p-high">margin</span> property has 4 values: Top, right, bottom, left</p>
+            <p>If the <span class="p-high">margin</span> property has 3 values: Top, right and left, then bottom</p>
+            <p>If the <span class="p-high">margin</span> property has 2 values: Top and bottom, then left and right</p>
+            <p>If the <span class="p-high">margin</span> property has one value: all sides has the same value</p>
+            <hr>
+            <h2>The auto Value</h2>
+            <p>You can set the margin property to <span class="p-high">auto</span> to horzontally center the element within its container.</p>
+            <p>The element will then take up the specified width, and the remaining space will be split equally between the left and right margins.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <div class="codeline"><span class="class">span</span> {</div>
+                    <div class="codeline second-level"><span class="property">margin</span>:<span class="p-value">auto</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <p style="width:max-content;margin:auto;background-color:var(--theme-blue);">This has auto margin</p>
+                </div>
+
+            </div>
+            <h2>The inherit Value</h2>
+            <p>This example lets the left margin of the class element be inherited from the parent element.</p>
+            <div>
+                <p class="mar4">This inherits the margin of the div element.</p>
+            </div>
+            <hr>
+            <h2>Margin Collapse</h2>
+            <p>Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.</p>
+            <p>This does not happen of left and right margins! Only top and bottom margins!</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="class">h4</span> {</div>
+                    <div class="codeline second-level"><span class="property">margin</span>:<span class="p-value">24px 0</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline">&nbsp;</div>
+                    <div class="codeline"><span class="class">h5</span> {</div>
+                    <div class="codeline second-level"><span class="property">margin</span>:<span class="p-value">48px 0</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <h4 style="margin:24px 0;">top and bottom margin 24px; left and right 0;</h4>
+                    <h5 style="margin:48px 0;">top and bottom margin 48px; left and right 0;</h5>
+                </div>
+            </div>
+            <table class="summary">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Values</th>
+                </tr>
+                <tr>
+                    <td>margin</td>
+                    <td>A shorthand property for setting the margin properties in one declaration</td>
+                    <td rowspan="5">px | em | rem | pc | pt | ch | cm | vh | vw | vmin | vmax | % | in | ex | mm</td>
+                </tr>
+                <tr>
+                    <td>margin-bottom</td>
+                    <td>Sets the bottom margin of an element</td>
+                </tr>
+                <tr>
+                    <td>margin-left</td>
+                    <td>Sets the left margin of an element</td>
+                </tr>
+                <tr>
+                    <td>margin-right</td>
+                    <td>Sets the right margin of an element</td>
+                </tr>
+                <tr>
+                    <td>margin-bottom</td>
+                    <td>Sets the bottom margin of an element</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tabcontent" id="dimensions">
+            <h1>CSS Height and Width</h1>
+            <hr>
+            <p>The CSS <span class="p-high">height</span> and <span class="p-high">width</span> properties are used to set the height and width of an element.</p>
+            <p>The CSS <span class="p-high">max-width</span> property is used to set the maximum width of an element.</p>
+            <hr>
+            <div style="border:1px solid var(--theme-blue);height:50px;width:100%;">This element has a height of 50 pixels and a width of 100%.</div>
+            <hr>
+            <h2>CSS Setting the <span class="p-high">height</span> and <span class="p-high">width</span></h2>
+            <p>The <span class="p-high">height</span> and <span class="p-high">width</span> properties are used to set the height and width of an element.</p>
+            <p>The height and width properties do not include padding, borders, or margins. It sets the height/width of the area inside the padding, border, and margin of the element.</p>
+            <hr>
+            <h2>CSS height and width values</h2>
+            <p>The <span class="p-high">height</span> and <span class="p-high">width</span> properties may have the following values:</p>
+            <ul>
+                <li><span class="p-high">auto</span></li>
+                <li><span class="p-high">length</span></li>
+                <li><span class="p-high">%</span></li>
+                <li><span class="p-high">initial</span></li>
+                <li><span class="p-high">inherit</span></li>
+            </ul>
+            <hr>
+            <h2>CSS height and width Examples</h2>
+            <div class="example">
+                <h3>Example</h3>
+                <p>Set the height and width of a <span><</span> element</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">div</span> {</div>
+                    <div class="codeline second-level"><span class="property">height</span>:<span class="p-value">200px</span>;</div>
+                    <div class="codeline second-level"><span class="property">width</span>:<span class="p-value">50%</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-color</span>:<span class="p-value">powderblue</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <div style="height:200px;width:50%;background-color:powderblue">This element has a height of 200 pixels and a width of 50% the parent element.</div>
+                </div>
+            </div>
+            <div class="example">
+                <h3>Example</h3>
+                <p>Set the height and width of a <span><</span> element</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">div</span> {</div>
+                    <div class="codeline second-level"><span class="property">height</span>:<span class="p-value">100px</span>;</div>
+                    <div class="codeline second-level"><span class="property">width</span>:<span class="p-value">500px</span>;</div>
+                    <div class="codeline second-level"><span class="property">background-color</span>:<span class="p-value">powderblue</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <div style="height:100px;width:500px;background-color:powderblue">This element has a height of 100 pixels and a width of 500 pixels.</div>
+                </div>
+            </div>
+            <p class="note"><b>Note:</b> Remember that the <span class="p-high">height</span> and <span class="p-high">width</span> properties do not include padding, borders, or margins! They set the height/width of the area inside the padding, border, and margin of the element!</p>
+            <h2>Setting max-width</h2>
+            <p>The <span class="p-high">max-width</span> property is used to set the maximum width of an element.</p>
+            <p>The <span class="p-high">max-width</span> can be specified in length values, like px, cm, etc., or in percent (%) of the containing block, or set to none (this is default. Means that there is no maximum width).</p>
+            <p>The problem width the <span class="p-high"><span><</span>div></span> above occurs when the browser window is smaller than the width of the element (500px). The browser then adds a horizontal scrollbar to the page.</p>
+            <p>Using <span class="p-high">max-width</span> instead, in this situation, will improve the browser's handling of small windows.</p>
+            <p class="note"><b>Note:</b> The value of <span class="p-high">max-width</span> property overrides <span class="p-high">width</span>.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>this <span><</span>div> element has a height of 100 pixels and a max-width of 500 pixels.</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">div</span> {</div>
+                    <div class="codeline second-level"><span class="property"></span>:<span class="p-value"></span>;</div>
+                    <div class="codeline second-level"><span class="property"></span>:<span class="p-value"></span>;</div>
+                    <div class="codeline second-level"><span class="property"></span>:<span class="p-value"></span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p></p>
+                <div class="result"></div>
+            </div>
+        </div>
+        <div class="tabcontent" id="padding">
+            <h1>CSS Padding</h1>
+            <hr>
+            <p>The CSS <span class="p-high">padding</span> properties are used to generate space around an element's content, inside of any defined borders.</p>
+            <p>With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element.</p>
+            <h2>Padding - Individual sides</h2>
+            <p>The margin and the padding have the same rules in styling CSS</p>
+            <hr>
+            <h2>CSS Box Model</h2>
+            <p>All HTML elements can be considered as boxes.</p>
+            <p>In CSS, the terms "box model" is used when talking about design and layout.</p>
+            <p>The CSS box model is essentially a obx that wraps around every HTML element. It consists of: margins, borders, padding and the actual content. The image below illustrates the box model:</p>
+            <div style="border:1px dashed #aaa;padding:0 20px 20px;text-align:center;background-color:#eee;">
+                Margin
+                <div style="background-color:var(--theme-blue);padding:0 20px 20px;">
+                    Border
+                    <div style="background-color:var(--background);padding:0 20px 20px;background-color:#eee;">
+                        Padding
+                        <div style="padding:20px;border:1px dashed #aaa;background-color: var(--background);">Content</div>
+                    </div>
+                </div>
+            </div>
+            <p>Explanation of the different parts:</p>
+            <ul>
+                <li><b>Content</b> - The content of the box, where text and images appear</li>
+                <li><b>Padding</b> - Clears an area around the content. The padding is transparent unless <span class="p-high">background</span> property is declared</li>
+                <li><b>Border</b> - A border that goes around the padding and content</li>
+                <li><b>Margin</b> - Clears an area outside the border. The margin is transparent</li>
+            </ul>
+            <p>The box model allows us to add a border around elements, and to define space between elements.</p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>Demonstration of the box model:</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">div</span></div>
+                    <div class="codeline second-level"><span class="property">width</span>:<span class="p-value">300px</span>;</div>
+                    <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">15px solid green</span>;</div>
+                    <div class="codeline second-level"><span class="property">padding</span>:<span class="p-value">50px</span>;</div>
+                    <div class="codeline second-level"><span class="property">margin</span>:<span class="p-value">20px</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <div style="width:300px;border:15px solid green;padding:15px;margin:20px;background-color:blue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, commodi.</div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="tabcontent" id="outline">
+            <h1>CSS Outline</h1>
+            <hr>
+            <p>An outline is a line drawn outside the element's border</p>
+            <hr>
+            <div>This element has a black border and a green outlien with a width of 10px.</div>
+            <hr>
+            <h2>CSS Outline</h2>
+            <p>An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".</p>
+            <p>CSS has the following outline properties:</p>
+            <ul>
+                <li><span class="p-high">outline-style</span></li>
+                <li><span class="p-high">outline-color</span></li>
+                <li><span class="p-high">outline-width</span></li>
+                <li><span class="p-high">outline-offset</span></li>
+                <li><span class="p-high">outline</span></li>
+            </ul>
+            <p class="note"><b>Note:</b> Outline differs from borders! Unlike border, the outline is drawn outside the element's border, and may overlap other content. Also, the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline.</p>
+            <hr>
+            <h2>CSS Outline Style</h2>
+            <p>The <span class="p-high">outline-style</span> property specifies the style of the outline, and can have one of the following values:</p>
+            <ul>
+                <li><span class="p-high">dotted</span> - Defines a dotted outline </li>
+                <li><span class="p-high">dashed</span> - Defines a dashed outline</li>
+                <li><span class="p-high">solid</span> - Defines a solid outline</li>
+                <li><span class="p-high">double</span> - Defines a double outline</li>
+                <li><span class="p-high">groove</span> - Defines a groove outline</li>
+                <li><span class="p-high">ridge</span> - Defines a ridged outline</li>
+                <li><span class="p-high">inset</span> - Defines a inset outline</li>
+                <li><span class="p-high">outset</span> - Defines a outset outline</li>
+                <li><span class="p-high">none</span> - Defines no outline</li>
+                <li><span class="p-high">hidden</span> - Defines a hidden outline</li>
+            </ul>
+            <p> The following example shows the different <span class="p-high">outline-style</span> values:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <p>Demonstration of the different outline styles:</p>
+                <div class="code">
+                    <div class="codeline"><span class="class"></span> {<span class="property">outline-style</span>:<span class="p-value">dotted</span>;}</div>
+                    <div class="codeline"><span class="class"></span> {<span class="property">outline-style</span>:<span class="p-value">dashed</span>;}</div>
+                    <div class="codeline"><span class="class"></span> {<span class="property">outline-style</span>:<span class="p-value">solid</span>;}</div>
+                    <div class="codeline"><span class="class"></span> {<span class="property">outline-style</span>:<span class="p-value">double</span>;}</div>
+                    <div class="codeline"><span class="class"></span> {<span class="property">outline-style</span>:<span class="p-value">groove</span>;}</div>
+                    <div class="codeline"><span class="class"></span> {<span class="property">outline-style</span>:<span class="p-value">ridge</span>;}</div>
+                    <div class="codeline"><span class="class"></span> {<span class="property">outline-style</span>:<span class="p-value">inset</span>;}</div>
+                    <div class="codeline"><span class="class"></span> {<span class="property">outline-style</span>:<span class="p-value">outset</span>;}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <p style="outline:2px dotted red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, fugit!</p>
+                    <p style="outline:2px dashed red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, fugit!</p>
+                    <p style="outline:2px solid red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, fugit!</p>
+                    <p style="outline:2px double red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, fugit!</p>
+                    <p style="outline:2px groove red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, fugit!</p>
+                    <p style="outline:2px ridge red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, fugit!</p>
+                    <p style="outline:2px inset red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, fugit!</p>
+                    <p style="outline:2px outset red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, fugit!</p>
+                </div>
+            </div>
+            <p class="note"><b>Note:</b> None of the other outline properties will have <b><i>ANY</i></b> effect unless <span class="p-high">outline-style</span> property is set!</p>
+            <hr>
+            <h2>CSS Outline Width</h2>
+            <p>The <span class="p-high">outline-width</span> property specifies the width of the outline, and can have one of the following values:</p>
+            <ul>
+                <li>thin (typically 1px)</li>
+                <li>medium (typically 3px)</li>
+                <li>thick (typically 5px)</li>
+                <li>A specific size (in px, pt, cm, em, etc)</li>
+            </ul>
+            <div class="example">
+                <h3>Exmaple</h3>
+                <p>The following example shows some outlines with different widhts:</p>
+                <div class="code">
+                    <div class="codeline"><span class="class">p.ex1</span> {</div>
+                    <div class="codeline second-level"><span class="property">border</span>;<span class="p-value">1px solid black</span></div>
+                    <div class="codeline second-level"><span class="property">outline-style</span>:<span class="p-value">solid</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-width</span>:<span class="p-value">thin</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline"><span class="class">p.ex2</span> {</div>
+                    <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">1px solid black</span></div>
+                    <div class="codeline second-level"><span class="property">outline-style</span>:<span class="p-value">solid</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-width</span>:<span class="p-value">medium</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline"><span class="class">p.ex3</span> {</div>
+                    <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">1px solid black</span></div>
+                    <div class="codeline second-level"><span class="property">outline-style</span>:<span class="p-value">solid</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-width</span>:<span class="p-value">thick</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline"><span class="class">p.ex4</span> {</div>
+                    <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">1px solid black</span></div>
+                    <div class="codeline second-level"><span class="property">outline-style</span>:<span class="p-value">solid</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-width</span>:<span class="p-value">4px</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <p style="border:1px solid black;outline-style:solid;outline-color:red;outline-width:thin;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, deserunt.</p>
+                    <p style="border:1px solid black;outline-style:solid;outline-color:red;outline-width:medium;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, deserunt.</p>
+                    <p style="border:1px solid black;outline-style:solid;outline-color:red;outline-width:thick;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, deserunt.</p>
+                    <p style="border:1px solid black;outline-style:solid;outline-color:red;outline-width:4px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, deserunt.</p>
+                </div>
+            </div>
+            <hr>
+            <h2>CSS Outline Color</h2>
+            <p>The <span class="p-high">outline-color</span> property is used to set the color of the outline</p>
+            <p>The color can be set by:</p>
+            <ul>
+                <li>name - specify a color name, like "red"</li>
+                <li>HEX - specify a hex value, like #ff0000</li>
+                <li>RGB - specify a RGB value, like "rgb(255, 0, 0)"</li>
+                <li>HSL - specify a HSL value, like "hsl(0, 100%, 50%)"</li>
+                <li>invert - peforms a color inversion (which ensures that the outline is visible, regardless of color background)</li>
+            </ul>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="class">p.ex1</span> {</div>
+                    <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">2px solid black</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-style</span>:<span class="p-value">solid</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-color</span>:<span class="p-value">red</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline"><span class="class">p.ex2</span> {</div>
+                    <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">2px solid black</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-style</span>:<span class="p-value">solid</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-color</span>:<span class="p-value">rgb(255, 0, 0)</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline"><span class="class">p.ex3</span> {</div>
+                    <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">2px solid black</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-style</span>:<span class="p-value">solid</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-color</span>:<span class="p-value">hsl(0, 100%, 50%)</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline"><span class="class">p.ex4</span> {</div>
+                    <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">2px solid black</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-style</span>:<span class="p-value">solid</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-color</span>:<span class="p-value">#ff0000</span>;</div>
+                    <div class="codeline">}</div>
+                    <div class="codeline"><span class="class">p.ex5</span> {</div>
+                    <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">2px solid red</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-style</span>:<span class="p-value">solid</span>;</div>
+                    <div class="codeline second-level"><span class="property">outline-color</span>:<span class="p-value">invert</span>;</div>
+                    <div class="codeline">}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <p style="border:2px solid black;outline:solid red;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, eum!</p>
+                    <p style="border:2px solid black;outline:solid red;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, eum!</p>
+                    <p style="border:2px solid black;outline:solid red;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, eum!</p>
+                    <p style="border:2px solid black;outline:solid red;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, eum!</p>
+                    <p style="border:2px solid red;outline-style:solid;outline-color:invert;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, eum!</p>
+                </div>
+            </div>
+            <hr>
+            <h2>CSS Outline Shorthand Property</h2>
+            <p>The <span class="p-high">outline</span> property is a shorthand property for setting the following individual outline properties:</p>
+            <ul>
+                <li><span class="p-high">outline-width</span></li>
+                <li><span class="p-high">outline-style</span> (required)</li>
+                <li><span class="p-high">outline-color</span></li>
+            </ul>
+            <p>The <span class="p-high">outline</span> property is specified as one, two, or three values from the list above. The order of the values does not matter.</p>
+            <p>The following example shows some outlines specified with the shorthand <span class="p-high">outline</span> property:</p>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="code">
+                    <div class="codeline"><span class="class">p.ex1</span> {<span class="property">outline</span>:<span class="p-value">dashed</span>;}</div>
+                    <div class="codeline"><span class="class">p.ex2</span> {<span class="property">outline</span>:<span class="p-value">dotted red</span>;}</div>
+                    <div class="codeline"><span class="class">p.ex3</span> {<span class="property">outline</span>:<span class="p-value">5px solid yellow</span>;}</div>
+                    <div class="codeline"><span class="class">p.ex4</span> {<span class="property">outline</span>:<span class="p-value">thick ridge pink</span>;}</div>
+                </div>
+                <p>Result:</p>
+                <div class="result">
+                    <p style="outline:dashed;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, facilis.</p>
+                    <p style="outline:dotted red;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, facilis.</p>
+                    <p style="outline:5px solid yellow;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, facilis.</p>
+                    <p style="outline:thick ridge pink;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, facilis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="tabcontent" id="text"></div>
     </div>
 
     </div>
