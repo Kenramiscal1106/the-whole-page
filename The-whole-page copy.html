@@ -44,13 +44,13 @@
                 <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-introduction'})" id="css-introductiontab"><img src="home.svg" alt="home">CSS Introduction</button>
                 <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'syntax'})" id="syntaxtab"><img src="semantics.svg" alt="semantics">CSS Syntax</button>
                 <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'selectors'})" id="selectorstab"><img src="selector.svg" alt="selector">CSS selectors</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-howto'})" id="css-howtotab">CSS How to</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'comments'})" id="commentstab">CSS Comments</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'colors'})" id="colorstab">CSS Colors</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'backgrounds'})" id="backgroundstab">CSS Backgrounds</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'borders'})" id="borderstab">CSS Borders</button>
-                <button class="CSSlink link" id="dimensionstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'dimensions'})">CSS Dimensions</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'margin'})" id="margintab">CSS Margin</button>
+                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-howto'})" id="css-howtotab"><img src="css.svg" alt="css">CSS How to</button>
+                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'comments'})" id="commentstab"><img src="css.svg" alt="css">CSS Comments</button>
+                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'colors'})" id="colorstab"><img src="css.svg" alt="css">CSS Colors</button>
+                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'backgrounds'})" id="backgroundstab"><img src="css.svg" alt="css">CSS Backgrounds</button>
+                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'borders'})" id="borderstab"><img src="css.svg" alt="css">CSS Borders</button>
+                <button class="CSSlink link" id="dimensionstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'dimensions'})"><img src="css.svg" alt="semantics">CSS Dimensions</button>
+                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'margin'})" id="margintab"><img src="css.svg" alt="semantics">CSS Margin</button>
                 <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'padding'})" id="paddingtab"><img src="boxmodel.svg" alt="box-model">CSS Padding and Box Model</button>
                 <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'outline'})" id="outlinetab"><img src="outline.svg" alt="outline">CSS Outline</button>
                 <button class="CSSlink link" id="texttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'text'})"><img src="text.svg" alt="text">CSS Text</button>
@@ -3635,15 +3635,148 @@
                         </div>
                     </div>
                     <hr>
+                    <h2>Text Indentation</h2>
+                    <p>The <span class="p-high">text-indent</span> property is used to specify the indentation of the first line of a text:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p</span>{</div>
+                            <div class="codeline second-level"><span class="property">text-indent</span>:<span class="p-value">50px</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="text-indent: 50px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quam quos minima accusantium aliquid fuga harum, doloribus maxime. Esse, nemo?</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Text Transformation</h2>
+                    <p>The <span class="p-high">text-transform</span>property is used to specify uppercase and lowercase letters in a text.</p>
+                    <p>It can be used to turn everything into uppercase or lowercase letters, or capitalize the first letter of each word:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p.uppercase</span> {</div>
+                            <div class="codeline second-level"><span class="property">text-transform</span>:<span class="p-value">uppercase</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">p.lowercase</span> {</div>
+                            <div class="codeline second-level"><span class="property">text-transform</span>:<span class="p-value">lowercase</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">p.capitalize</span> {</div>
+                            <div class="codeline second-level"><span class="property">text-transform</span>:<span class="p-value">capitalize</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="text-transform: uppercase;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, laudantium.</p>
+                            <p style="text-transform: lowercase;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, laudantium.</p>
+                            <p style="text-transform: capitalize;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, laudantium.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Text Shadow</h2>
+                    <p>The <span class="p-high">text-shadow</span> property adds shadow to text.</p>
+                    <p>In it simplest use, you only specify the horizontal shadow (2px) and the vertical shadow (2px):</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">h1</span> {</div>
+                            <div class="codeline second-level"><span class="property">text-shadow</span>:<span class="p-value">2px 2px</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <h1 style="text-shadow:2px 2px;">Text-shadow effect</h1>
+                        </div>
+                    </div>
+                    <p>Next, add a color (red) to the shadow:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">h1</span> {</div>
+                            <div class="codeline second-level"><span class="property">text-shadow</span>:<span class="p-value">2px 2px red</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <h1 style="text-shadow:2px 2px red;">Text-shadow effect</h1>
+                        </div>
+                    </div>
+                    <p>Then, add a blur effect (5px) to the shadow:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">h1</span> {</div>
+                            <div class="codeline second-level"><span class="property">text-shadow</span>:<span class="p-value">2px 2px 5px red</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <h1 style="text-shadow:2px 2px 5px red;">Text-shadow effect</h1>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Vertical Alignment</h2>
+                    <p>The property sets the vertical alignment of an element.</p>
+                    <p>This example demonstrates how to set the vertical alignment of an image in a text:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">img.top</span> {</div>
+                            <div class="codeline second-level"><span class="property">vertical align</span>:<span class="p-value">top</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline"><span class="class">img.middle</span> {</div>
+                            <div class="codeline second-level"><span class="property">vertical align</span>:<span class="p-value">middle</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline"><span class="class">img.bottom</span> {</div>
+                            <div class="codeline second-level"><span class="property">vertical align</span>:<span class="p-value">bottom</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p> An <img src="boxmodel.svg" alt="home"> image with a defaultalignment</p>
+                            <p> An <img src="boxmodel.svg" alt="home" style="vertical-align:top;"> image with a top alignment</p>
+                            <p> An <img src="boxmodel.svg" alt="home" style="vertical-align: middle;"> image with a middle alignment</p>
+                            <p> An <img src="boxmodel.svg" alt="home" style="vertical-align: bottom;"> image with a bottom alignment</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>White Space</h2>
+                    <p>The <span class="p-high">white-space</span> property specifies ho white-space inside a element is handled.</p>
+                    <p>This example demonstrates how to disable text wrapping inside an element:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p</span> {</div>
+                            <div class="codeline second-level"><span class="property">white-space</span>:<span class="p-value">nowrap</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="overflow:auto;">
+                            <p style="white-space:nowrap;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore labore voluptatem quaerat explicabo cum tenetur at repudiandae iure eos facilis illo ducimus quis officiis inventore nobis dignissimos, consectetur corporis.</p>
+                        </div>
+                    </div>
+                    <hr>    
                     <h2>Line Height</h2>
                     <p>The <span class="p-high">line-height</span> property is used to specify the space between lines:</p>
                     <div class="example">
                         <h3>Example</h3>
                         <div class="code">
-                            (div.cd)
+                            <div class="codeline"><span class="class">p.small</span> {</div>
+                            <div class="codeline second-level"><span class="property">line-height</span>:<span class="p-value">0.8</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">p.big</span> {</div>
+                            <div class="codeline second-level"><span class="property">line-height</span>:<span class="p-value">1.8</span>;</div>
+                            <div class="codeline">}</div>
                         </div>
-                        <p></p>
-                        <div class="result"></div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="line-height:0.8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, mollitia. Repellendus sint voluptatem nemo incidunt maiores id ratione ducimus vero. Nostrum est fuga assumenda voluptatum aliquam ea aperiam perspiciatis consectetur!</p>
+                            <p style="line-height:1.8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, mollitia. Repellendus sint voluptatem nemo incidunt maiores id ratione ducimus vero. Nostrum est fuga assumenda voluptatum aliquam ea aperiam perspiciatis consectetur!</p>
+                        </div>
                     </div>
                     <hr>
                 </div>
