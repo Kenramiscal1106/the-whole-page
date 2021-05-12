@@ -24,6 +24,7 @@ body:not(body.dark){
     --css-property: rgb(93, 0, 136);
     --css-property-value: rgb(0, 238, 255);
     --background:white;
+    --second-background:#eee;
 }
 :root {
     --plain:white;
@@ -70,6 +71,7 @@ body.dark{
     --css-property: rgb(174, 0, 255);
     --css-property-value: rgb(162, 255, 119);
     --background:black;
+    --second-background:#121212;
 }
 /* body.solarrize { 
 
@@ -186,14 +188,19 @@ div#csstab > .block {
 body:not(body.dark) .tabcontent  .code {background:white;}
 /* width of the border and ::before element (.codeline) */
 
-#css .code {border-left:var(--width) solid var(--theme-blue);}
-#html .code {border-left:var(--width) solid var(--theme-html);}
-.code {--width:1.375rem;padding:0.25rem 0.5rem;counter-reset:links code;}
+#css .codeline::before {border-right:3px solid var(--theme-blue);}
+#html .codeline::before {border-right:3px solid var(--theme-html);}
+.code {--width:3rem;counter-reset:links code;}
+.code > .codeline:nth-child(odd) {
+    background: var(--second-background);
+}
+.code > .codeline:nth-child(even) {
+    background: var(--background);
+}
 /* The lines of the code */
 .codeline *, .codeline {font-family:"Roboto Mono", monospace;}
-.codeline {counter-increment: code;position:relative;}
-.codeline:hover {outline:1px solid var(--color);}
-.codeline::before {content:counter(code);position: absolute;top: 0;left: -1.875rem;width:var(--width);text-align:center;}
+.codeline {counter-increment: code;position:relative;padding-left:calc(var(--width) + 3px);}
+.codeline::before {content:counter(code);position: absolute;top: 0;left: 0;width:var(--width);text-align:center;}
 /* The attribute of the element */
 .attribute, .attrhigh {color:var(--attribute);}
 .attrhigh {text-shadow: 0 0 2px var(--attribute);}
@@ -213,10 +220,10 @@ body:not(body.dark) .tabcontent  .code {background:white;}
 .p-value {color:var(--css-property-value);}
 .p-high {text-shadow:0 0 2px var(--css-property);}
 
-.codeline.second-level {padding-left:2rem;}
-.codeline.third-level {padding-left:4rem;}
-.codeline.fourth-level {padding-left:6rem;}
-.codeline.fifth-level {padding-left:8rem;}
+.codeline.second-level {padding-left:calc(2rem + var(--width));}
+.codeline.third-level {padding-left:calc(4rem + var(--width));}
+.codeline.fourth-level {padding-left:calc(6rem + var(--width));}
+.codeline.fifth-level {padding-left:calc(8rem + var(--width));}
 tab {flex:1 0 0;}
 /* The example element of the page */
 table {width:100%;}
@@ -225,7 +232,7 @@ table {width:100%;}
 [fourth], [fourth] th, [fourth] td {border:1px solid black;border-collapse:collapse;}
 [fourth] th, [fourth] td {padding:15px;}
 div[cities] {background-color:black;color:white;margin:20px;padding:20px;}
-.important {color:red;}
+.important {color:red;} 
 .city1 {color:#ffbb00;}
 .main2 {border:1px solid black;}
 .city {color:var(--theme-blue);}
@@ -261,12 +268,16 @@ table.summary th, table.summary td {padding:8px;}
     outline:none;
     transition: transform var(--miliseconds) linear;
     z-index:999;
+    background:none;
+    border:1px solid var(--color);
+    border-radius: 5px;
 }
+#settings:hover {box-shadow:0 0 12px 0 var(--color);}
 #settings >svg {height:100%;width:100%;}
-svg g > path:nth-child(3) {fill:var(--plain);}
-svg g > path:nth-child(2) {fill:var(--dark);}
-svg g > path:nth-child(4) {fill:var(--matrix);}
-svg g > path:nth-child(1) {fill:var(--theme-blue);}
+svg g > path:nth-child(2) {fill:var(--plain);}
+svg g > path:nth-child(1) {fill:var(--dark);}
+/* svg g > path:nth-child(4) {fill:var(--matrix);}
+svg g > path:nth-child(1) {fill:var(--theme-blue);} */
 .result {
     padding:3px;
     background-color:var(--background);

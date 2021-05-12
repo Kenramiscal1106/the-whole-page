@@ -37,22 +37,13 @@ function getcookie(cname) {
     return "";
 }
 var themebutton = document.getElementById("settings");
-themebutton.style.transform = "rotate(45deg)"
 function setRaC() {
     if (document.body.className == "") {
-        themebutton.style.transform = "rotate(135deg)"
-        document.body.className = "blue";
-    }
-    else if (document.body.className == "blue") {
-        themebutton.style.transform = "rotate(225deg)"
-        document.body.className = "matrix";
-    }
-    else if (document.body.className == "matrix") {
-        themebutton.style.transform = "rotate(315deg)"
+        themebutton.style.transform = "rotate(180deg)"
         document.body.className = "dark";
     }
     else if (document.body.className == "dark") {
-        themebutton.style.transform = "rotate(45deg)"
+        themebutton.style.transform = null
         document.body.className = "";
     }
 }
@@ -67,12 +58,11 @@ themebutton.addEventListener('click', function() {
 var lasttheme = getcookie("theme")
 switch(lasttheme) {
     case "dark":
+        themebutton.style.transform = "rotate(180deg)"
         document.body.className = "dark";
         break;
-    case "matrix":
-        document.body.className = "matrix";
-        break;
-    case "blue":
-        document.body.className = "blue";
+    case "":
+        themebutton.style.transform = null;
+        document.body.className = "";
         break;
 }

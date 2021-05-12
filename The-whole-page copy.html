@@ -51,23 +51,21 @@
                 <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'borders'})" id="borderstab">CSS Borders</button>
                 <button class="CSSlink link" id="dimensionstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'dimensions'})">CSS Dimensions</button>
                 <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'margin'})" id="margintab">CSS Margin</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'padding'})" id="paddingtab">CSS Padding and Box Model</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'outline'})" id="outlinetab">CSS Outline</button>
-                <button class="CSSlink link" id="texttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'text'})">CSS Text</button>
+                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'padding'})" id="paddingtab"><img src="boxmodel.svg" alt="box-model">CSS Padding and Box Model</button>
+                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'outline'})" id="outlinetab"><img src="outline.svg" alt="outline">CSS Outline</button>
+                <button class="CSSlink link" id="texttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'text'})"><img src="text.svg" alt="text">CSS Text</button>
             </div>
-            <a href="The-whole-page.html">Downdate to old webpage</a>
         </div>
         <div class="tab">
             <button id="settings">
                 <svg viewbox="0 0 24 24">
                     <g>
-                        <path stroke="black" stroke-width="5%" d="M12 12 V21 L3 12 z"/>
-                        <path stroke="black" stroke-width="5%" d="M12 12 H21 L12 3 z"/>
-                        <path stroke="black" stroke-width="5%"d="M12 12 V3 L3 12 z"/>
-                        <path stroke="black" stroke-width="5%" d="M12 12 V21 L21 12 z"/>
+                        <path d="M3 12 H21 L12 3 z"/>
+                        <path d="M3 12 H21 L12 21 z"/>
                     </g>
                 </svg>
             </button>
+            <a href="The-whole-page.html">Downdate to old webpage</a>
             <div class="tabs" id="html">
                 <div class="tabcontent" id="introduction">
                     <h1>HTML Introduction</h1>
@@ -3472,7 +3470,183 @@
                         </div>
                     </div>
                 </div>
-                <div class="tabcontent" id="text"></div>
+                <div class="tabcontent" id="text">
+                    <h1>CSS Text</h1>
+                    <hr>
+                    <p>CSS has a lot of properties for formatting text.</p>
+                    <hr>
+                    <div style="border:1px solid black;padding:0 0.5rem;">
+                        <h1 style="text-transform: capitalize;color:var(--theme-blue);text-align: center;">text formatting</h1>
+                        <p style="word-spacing: 4px;letter-spacing: 1px;">This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties. The paragraph is indented, aligned, and the space between characters is specified.</p>
+                    </div>
+                    <hr>
+                    <h2>Text properties</h2>
+                    <ul>
+                        <li><span class="p-high">color</span></li>
+                        <li><span class="p-high">text-align</span></li>
+                        <li><span class="p-high">letter-spacing</span></li>
+                        <li><span class="p-high">word-spacing</span></li>
+                        <li><span class="p-high">text-decoration</span></li>
+                        <li><span class="p-high">text-indent</span></li>
+                        <li><span class="p-high">text-transform</span></li>
+                        <li><span class="p-high">text-shadow</span></li>
+                        <li><span class="p-high">vertical-align</span></li>
+                        <li><span class="p-high">white-space</span></li>
+                        <li><span class="p-high">line-height</span></li>
+                        <li><span class="p-high">direction</span></li>
+                    </ul>
+                    <hr>
+                    <h2>Text Color</h2>
+                    <p>The <span class="p-hgih">color</span> property is used to set the color of the text.</p>
+                    <p>The default text color for a page is defined in the body selector.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">body</span> {</div>
+                            <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">blue</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">h1</span> {</div>
+                            <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">green</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="color:blue;">
+                            <h1 style="color:green">This is a heading</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe labore itaque velit. Eveniet dolore harum, quos accusantium aliquam vero a quas dolorem porro. Culpa eligendi illo laboriosam, ut non hic.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe labore itaque velit. Eveniet dolore harum, quos accusantium aliquam vero a quas dolorem porro. Culpa eligendi illo laboriosam, ut non hic.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe labore itaque velit. Eveniet dolore harum, quos accusantium aliquam vero a quas dolorem porro. Culpa eligendi illo laboriosam, ut non hic.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Text Alignment</h2>
+                    <p>The <span class="p-high">text-align</span> property is used to set the horizontal alignment of a text.</p>
+                    <p>A text can be left or right aligned, centered, or justified.</p>
+                    <p>The following example shows center aligned, and left and right aligned text (left alignment is default if text direction is left-to-right, and right alignment is default if text direction is right-to-left):</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">h1</span> {</div>
+                            <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">left</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">h2</span> {</div>
+                            <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">right</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">h3</span> {</div>
+                            <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">center</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">p</span> {</div>
+                            <div class="codeline second-level"><span class="property">text-align</span>:<span class="p-value">justify</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <h1 style="text-align:left;">I am left</h1>
+                            <h2 style="text-align:right;">I am right</h2>
+                            <h3 style="text-align:center;">I am center</h3>
+                            <p style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt veniam consectetur repudiandae distinctio, dicta suscipit illo provident officia natus voluptate exercitationem quam deleniti in voluptas culpa. Dicta dolorum nostrum quidem dolore tempora. Accusamus sit praesentium quidem beatae, hic iste ab.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Letter Spacing</h2>
+                    <p>The <span class="p-high">letter-spacing</span> property is used to specify the space between the characters in a text.</p>
+                    <p>The following example demonstrates how to increase or decrease the space between characters:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">h1</span> {</div>
+                            <div class="codeline second-level"><span class="property">letter-spacing</span>:<span class="p-value">3px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">h2</span> {</div>
+                            <div class="codeline second-level"><span class="property">letter-spacing</span>:<span class="p-value">-3px</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <h1 style="letter-spacing: 3px;">Lorem ipsum dolor sit.</h1>
+                            <h2 style="letter-spacing: -3px;">Lorem ipsum dolor sit.</h2>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Word Spacing</h2>
+                    <p>The <span class="p-high">word-spacing</span> property is used to spcify the space between the words in a text.</p>
+                    <p>The following example demonstrates how to increase or decrease the space between words:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">h1</span> {</div>
+                            <div class="codeline second-level"><span class="property">word-spacing</span>:<span class="p-value">10px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline"><span class="class">h2</span> {</div>
+                            <div class="codeline second-level"><span class="property">word-spacing</span>:<span class="p-value">-5px</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <h1 style="word-spacing: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, dolorem?</h1>
+                            <h2 style="word-spacing: -5px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, dolorem?</h2>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Text Decoration</h2>
+                    <p>The <span class="p-high">text-decoration</span> property is used to set or remove decorations from text.</p>
+                    <p>The value <span class="p-high">text-decoration:none;</span> is often used to remove underlines from links:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">a</span> {</div>
+                            <div class="codeline second-level"><span class="property">text-decoration</span>:<span class="p-value">none</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <h1>links without underline</h1>
+                            <a href="#" style="text-decoration:none;">Click me</a>
+                            <a href="#" style="text-decoration:none;">Click me</a>
+                            <a href="#" style="text-decoration:none;">Click me</a>
+                            <a href="#" style="text-decoration:none;">Click me</a>
+                        </div>
+                    </div>
+                    <p>The other <span class="p-high">text-decoration</span> values are used to decorate text:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">h1</span> {</div>
+                            <div class="codeline second-level"><span class="property">text-decoration</span>:<span class="p-value">overline</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">h2</span> {</div>
+                            <div class="codeline second-level"><span class="property">text-decoration</span>:<span class="p-value">line-through</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">h3</span> {</div>
+                            <div class="codeline second-level"><span class="property">text-decoration</span>:<span class="p-value">underline</span>;<span class="attrvalue">/* default value */</span></div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <h1 style="text-decoration: overline;">Heading 1</h1>
+                            <h2 style="text-decoration: line-through;">Heading 2</h2>
+                            <h3 style="text-decoration: underline;">Heading 3</h3>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Line Height</h2>
+                    <p>The <span class="p-high">line-height</span> property is used to specify the space between lines:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            (div.cd)
+                        </div>
+                        <p></p>
+                        <div class="result"></div>
+                    </div>
+                    <hr>
+                </div>
             </div>
         </div>
         </div>
