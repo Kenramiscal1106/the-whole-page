@@ -40,6 +40,7 @@ html, body {
     padding:0;
     margin:0;
 }
+h1, h2 {font-family:Georgia;}
 h1 {font-size:calc(1em * 2.5);}
 h2 {font-size:calc(1em * 2);}
 h3 {font-size:calc(1em * 1.6);}
@@ -71,7 +72,7 @@ body.dark{
     --css-property: rgb(174, 0, 255);
     --css-property-value: rgb(162, 255, 119);
     --background:black;
-    --second-background:#121212;
+    --second-background:#363636;
 }
 /* body.solarrize { 
 
@@ -81,7 +82,7 @@ body.dark, body.dark .code{
     background-color: black;
 }
 html, body, body * {transition:background-color var(--miliseconds), color var(--miliseconds);}
-*:not(pre) {font-family: "Open sans", sans-serif;box-sizing:border-box;}
+*:not(pre, h1, h2) {font-family: "Open sans", arial, sans-serif;box-sizing:border-box;}
 .note {border:1px solid var(--color);padding:3px 6px;}
 #css .note {box-shadow: 2px 2px 4px 0 var(--theme-dark-css);}
 #html .note {box-shadow:2px 2px 4px 0 var(--theme-dark-html);}
@@ -254,7 +255,7 @@ table.summary {
     :is(#csstab, #htmltab) > *{width:inherit;margin:0 6px;}
     .link > img, .link > svg {top:initial!important;}
 }
-table.summary tr:nth-child(even) {background-color:rgb(235, 232, 232);}
+table.summary tr:nth-child(even) {background-color:var(--second-background);}
 table.summary tr {border:1px solid rgb(185, 185, 185);text-align:left;}
 table.summary tr, table.summary {border-collapse:collapse;}
 table.summary th, table.summary td {padding:8px;}

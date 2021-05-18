@@ -54,6 +54,7 @@
                 <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'padding'})" id="paddingtab"><img src="boxmodel.svg" alt="box-model">CSS Padding and Box Model</button>
                 <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'outline'})" id="outlinetab"><img src="outline.svg" alt="outline">CSS Outline</button>
                 <button class="CSSlink link" id="texttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'text'})"><img src="text.svg" alt="text">CSS Text</button>
+                <button class="CSSlink link" id="fonttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'font'})"><img src="font.svg" alt="">CSS Font</button>
             </div>
         </div>
         <div class="tab">
@@ -3779,6 +3780,424 @@
                         </div>
                     </div>
                     <hr>
+                    <table class="summary">
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>color</td>
+                            <td>Sets the color of text</td>
+                        </tr>
+                        <tr>
+                            <td>direction</td>
+                            <td>Specifies the text direction/writing direction</td>
+                        </tr>
+                        <tr>
+                            <td>letter-spacing</td>
+                            <td>Increases or decreases the space between characters in a text</td>
+                        </tr>
+                        <tr>
+                            <td>line-height</td>
+                            <td>Sets the line height</td>
+                        </tr>
+                        <tr>
+                            <td>text-align</td>
+                            <td>Specfies the horizontal alignment of text</td>
+                        </tr>
+                        <tr>
+                            <td>text-decoration</td>
+                            <td>Specifies the decoration added to text</td>
+                        </tr>
+                        <tr>
+                            <td>text-indent</td>
+                            <td>Specifies the indentation of the first line in a text-book</td>
+                        </tr>
+                        <tr>
+                            <td>text-shadow</td>
+                            <td>Specifies the shadow effect added to text</td>
+                        </tr>
+                        <tr>
+                            <td>text-transform</td>
+                            <td>Controls the capitalization of text</td>
+                        </tr>
+                        <tr>
+                            <td>text-overflow</td>
+                            <td>Specifies how overflowed content that is not displayed should be signaled to the user</td>
+                        </tr>
+                        <tr>
+                            <td>unicode-bidi</td>
+                            <td>Used together with the <span class="p-high">direction</span> property to set or return whether the text should be overridden to support multiple languages in the same document</td>
+                        </tr>
+                        <tr>
+                            <td>vertical-align</td>
+                            <td>Sets the vertical alignment of an element</td>
+                        </tr>
+                        <tr>
+                            <td>white-space</td>
+                            <td>Specifies how white-space inside an element is handled</td>
+                        </tr>
+                        <tr>
+                            <td>word-spacing</td>
+                            <td>Increases or decreases the space between words in a text</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tabcontent" id="font">
+                    <h1>CSS Fonts</h1>
+                    <hr>
+                    <p>Choosing the right font for your website is important!</p>
+                    <hr>
+                    <h2>Font Selection is Important</h2>
+                    <p>Choosing the right font has a huge impact on how the readers experience a website.</p>
+                    <p>The right font can create a strong identity for your brand.</p>
+                    <p>Using a font that is easy to read is important. The font adds value to your text. It is also important to choose the correct color and text size for the font.</p>
+                    <hr>
+                    <h2>Generic Font Families</h2>
+                    <p>In CSS there are five generic font families:</p>
+                    <ol>
+                        <li><strong>Serif</strong> fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance.</li>
+                        <li><strong>Sans-serif</strong> fonts have clean lines (no small strokes attached). They create a modern and minimalistic look.</li>
+                        <li><strong>Monospace</strong> fonts - here all the letters have the same fixed width. They create a mechanical look.</li>
+                        <li><strong>Cursive</strong> fonts imitate human handwriting.</li>
+                        <li><strong>Fantasy</strong> fonts are decorative/playful fonts.</li>
+                    </ol>
+                    <p>All the different font names belong to one of the generic font families.</p>
+                    <hr>
+                    <h2>Difference Between Serif and Sans-serif Fonts</h2>
+                    <img src="static-images/difference.gif" alt="difference">
+                    <p class="note"><strong>Note:</strong> On computer screens, sans-serif fonts are considered easier to read than serif fonts.</p>
+                    <hr>
+                    <h2>Some Font Examples</h2>
+                    <table class="summary">
+                        <tr>
+                            <th>Generic Font Family</th>
+                            <th>Examples of Font Names</th>
+                        </tr>
+                        <tr>
+                            <td>Serif</td>
+                            <td><span style="font-family:'Times New Roman';">Times New Roman</span><br><span style="font-family:Georgia;">Georgia</span><br><span style="font-family:Garamond;">Garamond</span></td>
+                        </tr>
+                        <tr>
+                            <td>Sans-serif</td>
+                            <td><span style="font-family: Arial;">Arial</span><br><span style="font-family: Verdana;">Verdana</span><br><span style="font-family: Helvetica;">Helvetica</span></td>
+                        </tr>
+                        <tr>
+                            <td>Monospace</td>
+                            <td><span style="font-family:'Courier New' ;">Courier New</span><br><span style="font-family:'Lucida Console' ;">Lucida Console</span><br><span style="font-family: Monaco, monospace;">Monaco</span></td>
+                        </tr>
+                        <tr>
+                            <td>Cursive</td>
+                            <td><span style="font-family: 'Brush Script MT', cursive;">Brush Script MT</span><br><span style="font-family: 'Lucida Handwriting';">Lucida Handwritting</span></td>
+                        </tr>
+                        <tr>
+                            <td>Fantasy</td>
+                            <td><span style="font-family:copperplate, fantasy;">copperplate</span><br><span style="font-family:Papyrus ;">Papyrus</span></td>
+                        </tr>
+                    </table>
+                    <h2>The CSS font-family Property</h2>
+                    <p>In CSS, we use the <span class="p-high">font-family</span> property to specify the font of a text.</p>
+                    <p>The <span class="p-high">font-family</span> property should hold several font names as a "fallback" system, to ensure maximum compatibility between browsers/operating systems. Start with the font you want, and end with a generic family (to let the browser pick a similar font in the generic family, if no other fonts are available). The font names should be separated with comma.</p>
+                    <p class="note"><strong>Note:</strong> If the font name is more than one word, it must be in quotation marks, like: "Times New Roman".</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <p>Specify some different fonts for three paragraphs:</p>
+                        <div class="code">
+                            <div class="codeline"><span class="class">.p1</span> {</div>
+                            <div class="codeline second-level"><span class="property">font-family</span>:<span class="p-value">"Times New Roman", Times, serif</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline"><span class="class">.p2</span> {</div>
+                            <div class="codeline second-level"><span class="property">font-family</span>:<span class="p-value">Arial, Helvetica, sans-serif</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline"><span class="class">.p3</span> {</div>
+                            <div class="codeline second-level"><span class="property">font-family</span>:<span class="p-value">"Lucida Console", "Courier New", monospace</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="font-family:'Times New Roman', Times, serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, distinctio!</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif ;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, distinctio!</p>
+                            <p style="font-family: 'Lucida Console','Courier New', monosapce;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, distinctio!</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>CSS Web Safe Fonts</h2>
+                    <p>Web safe fonts are fonts that are universally installed across all browsers and devices.</p>
+                    <hr>
+                    <h2>Fallback Fonts</h2>
+                    <p>However, there are no 100% completely web safe fonts. There is always a chance that a font is not found or is not installed properly.</p>
+                    <p>Therefore, it is very important to always use fallback fonts.</p>
+                    <p>This means that you should add a list of similar "backup fonts" in the font-family property. If the first font does not work, the browser will try the next one, and the next one, and so on. Always end the list with a generic font family name.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <p>Here, there are three font types: Tahoma, Verdana, and sans-serif. The second and third fonts are backups, in case the first one is not found.</p>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p</span> {</div>
+                            <div class="codeline second-level"><span class="property">font-family</span>:<span class="p-value">Tahoma, Verdana, sans-serif</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="font-family:Tahoma, Geneva, Verdana, sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores earum sequi quibusdam, soluta quis dignissimos repudiandae iste itaque necessitatibus quidem alias nihil error temporibus, expedita suscipit placeat eveniet labore. Minus.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Best Web Safe Fonts for HTML and CSS</h2>
+                    <p>The following list are the best web safe fonts for HTML and CSS:</p>
+                    <ul>
+                        <li>Arial (sans-serif)</li>
+                        <li>Verdana (sans-serif)</li>
+                        <li>Helvetica (sans-serif)</li>
+                        <li>Tahoma (sans-serif)</li>
+                        <li>Trebuchet MS (sans-serif)</li>
+                        <li>Times New Roman (serif)</li>
+                        <li>Georgia (serif)</li>
+                        <li>Garamond (serif)</li>
+                        <li>Courier New (monospace)</li>
+                        <li>Brush Script MT (cursive)</li>
+                    </ul>
+                    <p class="note"><strong>Note:</strong> Before you publish your website, always check how your fonts appear on different browsers and devices, and always use fallback fonts!</p>
+                    <hr>
+                    <h2>Arial (sans-serif)</h2>
+                    <p>Arial is the most widely used font for both online and printed media. Arial is also the default font in Google Docs.</p>
+                    <p>Arial is one of the safest web fonts, and it is available on all major operating systems.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="result">
+                            <h1 style="font-family: Arial, sans-serif;">Lorem ipsum dolor sit amet.</h1>
+                            <p style="font-family: Arial, sans-serif;">Lorem ipsum dolor sit amet.</p>
+                            <p style="font-family: Arial, sans-serif;">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Verdana (sans-serif)</h2>
+                    <p>Verdana is a very popular font. Verdana is easily readable even for small font sizes.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="result" >
+                            <h1 style="font-family: Verdana, sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, suscipit?</h1>
+                            <p style="font-family: Verdana, sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quaerat!</p>
+                            <p style="font-family: Verdana, sans-serif;">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Helvetica (sans-serif)</h2>
+                    <p>The Helvetica font is loved by designers. It is suitable for many types of business.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="result">
+                            <h1 style="font-family: Helvetica, sans-serif;">Lorem ipsum dolor sit amet.</h1>
+                            <p style="font-family: Helvetica, sans-serif;">Lorem ipsum dolor sit amet.</p>
+                            <p style="font-family: Helvetica, sans-serif;">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Tahoma (sans-serif)</h2>
+                    <p>The Tahoma font has less space between the characters.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="result">
+                            <h1 style="font-family: Tahoma, sans-serif;">Lorem ipsum dolor sit amet.</h1>
+                            <p style="font-family: Tahoma, sans-serif;">Lorem ipsum dolor sit amet.</p>
+                            <p style="font-family: Tahoma, sans-serif;">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Trebuchet MS (sans-serif)</h2>
+                    <p>Trebuchet MS was designed by Microsoft in 1996. Use this font carefully. Not supported by all mobile operating systems.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="result">
+                            <h1 style="font-family: 'Trebuchet MS', sans-serif">Lorem ipsum dolor sit amet.</h1>
+                            <p style="font-family: 'Trebuchet MS', sans-serif">Lorem ipsum dolor sit amet.</p>
+                            <p style="font-family: 'Trebuchet MS', sans-serif">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Times New Roman (serif)</h2>
+                    <p>Times New Roman is one of the most recognizable fonts in the world. It looks professional and is used in many newspapers and "news" websites. It is also the primary font for Windows devices and applications.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="result">
+                            <h1 style="font-family: 'Times New Roman';">Lorem ipsum dolor sit amet.</h1>
+                            <p style="font-family: 'Times New Roman';">Lorem ipsum dolor sit amet.</p>
+                            <p style="font-family: 'Times New Roman';">0 1 2 3 4 5 6 7 8 9</p></div>
+                    </div>
+                    <hr>
+                    <h2>Georgia (serif)</h2>
+                    <p>Georgia is an elegant serif font. It is very readable at different font sizes, so it is a good candidate for mobile-responsive design.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="result">
+                            <h1 style="font-family: Georgia, serif;">Lorem ipsum dolor sit amet.</h1>
+                            <p style="font-family: Georgia, serif;">Lorem ipsum dolor sit amet.</p>
+                            <p style="font-family: Georgia, serif;">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Garamond (serif)</h2>
+                    <p>Garamond is a classical font used for many printed books. It has a timeless look and good readability.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="result">
+                            <h1 style="font-family: Garamond, serif;">Lorem ipsum dolor sit amet.</h1>
+                            <p style="font-family: Garamond, serif;">Lorem ipsum dolor sit amet.</p>
+                            <p style="font-family: Garamond, serif;">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Courier New (monospace)</h2>
+                    <p>Courier New is the most widely used monospace serif font. Courier New is often used with coding displays, and many email providers use it as their default font. Courier New is also the standard font for movie screenplays.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="result">
+                            <h1 style="font-family: 'Courier New', monospace;">Lorem ipsum dolor sit amet.</h1>
+                            <p style="font-family: 'Courier New', monospace;">Lorem ipsum dolor sit amet.</p>
+                            <p style="font-family: 'Courier New', monospace;">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Brush Scrpt MT (cursive)</h2>
+                    <p>The Brush Script MT font was designed to mimic handwriting. It is elegant and sophisticated, but can be hard to read. Use it carefully.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="result">
+                            <h1 style="font-family: 'Brush Script MT', cursive;">Lorem ipsum dolor sit amet.</h1>
+                            <p style="font-family: 'Brush Script MT', cursive;">Lorem ipsum dolor sit amet.</p>
+                            <p style="font-family: 'Brush Script MT', cursive;">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Font Style</h2>
+                    <p>The  property is mostly used to specify italic text.</p>
+                    <p>This property has three values</p>
+                    <ul>
+                        <li>normal - The text is shown normally</li>
+                        <li>italic - The text is shown in italics</li>
+                        <li>oblique - The text is "leaning" (oblique is very similar to italic, but less supported)</li>
+                    </ul>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p.normal</span> {</div>
+                            <div class="codeline second-level"><span class="property">font-style</span>:<span class="p-value">normal</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">p.italic</span> {</div>
+                            <div class="codeline second-level"><span class="property">font-style</span>:<span class="p-value">italic</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">p.oblique</span> {</div>
+                            <div class="codeline second-level"><span class="property">font-style</span>:<span class="p-value">oblique</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="font-family: normal;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, dolor.</p>
+                            <p style="font-family: italic;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, dolor.</p>
+                            <p style="font-family: oblique;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, dolor.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Font Weight</h2>
+                    <p>The <span class="p-high">font-weight</span> property specifies the weight of a font:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p.normal</span> {</div>
+                            <div class="codeline second-level"><span class="property">font-weight</span>:<span class="p-value">normal</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline"><span class="class">p.bold</span> {</div>
+                            <div class="codeline second-level"><span class="property">font-weight</span>:<span class="p-value">bold</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, reiciendis!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, reiciendis!</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Font Variant</h2>
+                    <p>The <span class="p-high">font-variant</span> property specifies whether or not a text should be displayed in a small-caps font.</p>
+                    <p>In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than the original uppercase letters in the text.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p.</span> {</div>
+                            <div class="codeline second-level"><span class="property">font-variant</span>:<span class="p-value">normal</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">p.</span> {</div>
+                            <div class="codeline second-level"><span class="property">font-variant</span>:<span class="p-value">small-caps</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, laborum?</p>
+                            <p style="font-variant: small-caps;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, laborum?</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>CSS Font Property</h2>
+                    <p>To shorten the code, it is also possible to specify all the individual font properties in one property.</p>
+                    <p>The <span class="p-high">font</span> property is a shorthand property for:</p>
+                    <ul>
+                        <li><span class="p-high">font-style</span></li>
+                        <li><span class="p-high">font-variant</span></li>
+                        <li><span class="p-high">font-weight</span></li>
+                        <li><span class="p-high">font-size/line-height</span></li>
+                        <li><span class="p-high">font-family</span></li>
+                    </ul>
+                    <p class="note"><strong>Note:</strong> The <span class="high">font-size</span> and <span class="high">font-family</span> values are required. If one of the oter values is missing, their default value are used.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <p>Use <span class="p-high">font</span> to set several font properties in oe delcaration:</p>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p.a</span> {</div>
+                            <div class="codeline second-level"><span class="property">font</span>:<span class="p-value">20px Arial, sans-serif</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline"><span class="class">p.b</span> {</div>
+                            <div class="codeline second-level"><span class="property">font</span>:<span class="p-value">italic small-caps bold 12/30px Georgia, serif</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p style="font:20px Arial, sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, fuga!</p>
+                            <p style="font:italic small-caps bold 12px/30px Georgia, serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, fuga!</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <table class="summary">
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>font</td>
+                            <td>Sets all the font properties in one declaration</td>
+                        </tr>
+                        <tr>
+                            <td>font-family</td>
+                            <td>Specifies the font family for text</td>
+                        </tr>
+                        <tr>
+                            <td>font-size</td>
+                            <td>Specifies the font size of text</td>
+                        </tr>
+                        <tr>
+                            <td>font-style</td>
+                            <td>Specifies the font style for text</td>
+                        </tr>
+                        <tr>
+                            <td>font-variant</td>
+                            <td>Specfies whether or not a text should be displayed in a small-caps font</td>
+                        </tr>
+                        <tr>
+                            <td>font-weight</td>
+                            <td>Specifies the weight of a font</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
