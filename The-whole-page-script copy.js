@@ -1,4 +1,17 @@
-
+function acc() {
+    var accordion = document.getElementsByClassName('accordion');
+    for (var i = 0; i < accordion.length;i++) {
+        accordion[i].addEventListener('click', function() {
+            this.classList.toggle('block');
+            if (this.classList[1]) {
+                this.nextElementSibling.style.height = 0;
+            } else {
+                this.nextElementSibling.style.height = null;
+            }
+        })
+    }
+}
+acc();
 function tabs (ui) {
     document.cookie = "lasttab =" + "'" + ui.targetElement + "'";
     var tablinks = document.getElementsByClassName(ui.tabs), 

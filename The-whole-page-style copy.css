@@ -26,13 +26,15 @@ body:not(body.dark){
     --background:white;
     --second-background:#eee;
 }
+html {
+    font-size:16px;
+}
 :root {
     --plain:white;
     --matrix:#0f0;
     --dark:#000;
     --miliseconds:0.3s;
     --note-shadow:#6200ff;  
-    font-size:15px;
 }
 html, body {
     width:100%;
@@ -40,13 +42,14 @@ html, body {
     padding:0;
     margin:0;
 }
+body {font-size:1rem;}
 h1, h2 {font-family:Georgia;}
-h1 {font-size:calc(1em * 2.5);}
-h2 {font-size:calc(1em * 2);}
-h3 {font-size:calc(1em * 1.6);}
-h4 {font-size:calc(1em * 1.3);}
-h5 {font-size:calc(1em * 1.1);}
-h6 {font-size:calc(1em);}
+h1 {font-size:2.5rem;}
+h2 {font-size:2rem;}
+h3 {font-size:1.6rem;}
+h4 {font-size:1.3rem;}
+h5 {font-size:1.1rem;}
+h6 {font-size:1rem;}
 h1, h2, h3, h4, h5, h6 {margin:10px 0;}
 body.dark{
     --theme-blue:#004cff;
@@ -74,16 +77,23 @@ body.dark{
     --background:black;
     --second-background:#363636;
 }
-/* body.solarrize { 
-
-}*/
 body.dark, body.dark .code{
     color:white;
     background-color: black;
 }
-html, body, body * {transition:background-color var(--miliseconds), color var(--miliseconds);}
+/* html, body, body * {transition:background-color var(--miliseconds), color var(--miliseconds);} */
 *:not(pre, h1, h2) {font-family: "Open sans", arial, sans-serif;box-sizing:border-box;}
-.note {border:1px solid var(--color);padding:3px 6px;}
+.note {border:1px solid var(--color);position:relative;margin:2.5rem 0 10px 0;padding:3px;border-radius:3px;}
+.note > :is(strong, b) {
+    position:absolute;
+    font-size: 1.2rem;
+    top:-1.8rem;
+    background:var(--background);
+    left:-1px;
+    border:1px solid var(--color);
+    padding:3px 6px;
+    border-radius:inherit;
+}
 #css .note {box-shadow: 2px 2px 4px 0 var(--theme-dark-css);}
 #html .note {box-shadow:2px 2px 4px 0 var(--theme-dark-html);}
 /*hover of the child of tablinks class.tablinks > *:hover, .block {
@@ -103,11 +113,11 @@ html, body, body * {transition:background-color var(--miliseconds), color var(--
     border:none;
     border-top:3px solid var(--theme-js);
 }
-:is(#html, #css) .example{padding: 1.2em;margin: 1em 0;}
-.example > * {margin:0.6em 0; }
+.tabcontent .example{padding: 1.2rem;margin: 1rem 0;}
+.example > * {margin:0.6rem 0;}
 #html .example {background-color: var(--example-back-html);}
 #css .example {background-color: var(--example-back-css);}
-/**/.tabcontent{padding-bottom:2em;}
+/**/.tabcontent{padding-bottom:2rem;}
 .tabs {padding:0 10px;}
 .tabcontent > h1:first-child {margin-block-start:0;}
 
@@ -136,20 +146,19 @@ html, body, body * {transition:background-color var(--miliseconds), color var(--
     background-color:inherit;
     border-radius:0;
 } */
-.tablinks > #htmltab {
+#html-acc {
     width:100%;
     background-color:var(--theme-html);
     padding:6px;
-
-}
-.tablinks > #csstab {
+}   
+#css-acc {
     width:100%;
     background-color:var(--theme-blue);
     padding:6px;
 }
-:is(#htmltab, #csstab) > :first-child {margin-top:0;}
-:is(#htmltab, #csstab) > :last-child {margin-bottom:0;}
-:is(#htmltab, #csstab) > * {
+:is(#html-acc, #css-acc) > div > :first-child {margin-top:0;}
+:is(#html-acc, #css-acc) > div > :last-child {margin-bottom:0;}
+:is(#html-acc, #css-acc) > div > *, :is(#html-acc, #css-acc) > .accordion {
     display:block;  
     text-align:left;
     margin:6px 0;
@@ -160,24 +169,27 @@ html, body, body * {transition:background-color var(--miliseconds), color var(--
     background-color:inherit;
     border-radius:4px;
     line-height:normal;
+    transition:0.5s ease;
 }
-#htmltab > *:hover {
+#html-acc > div > *:hover, #html-acc > .accordion:hover {
     background-color:var(--theme-dark-html);
+    transition:none;
 }
-#csstab > *:hover {
+#css-acc > div > *:hover, #css-acc > .accordion:hover {
     background-color:var(--theme-dark-css);
+    transition:none;
 }
 button {cursor:pointer;}
-div#htmltab > .block {
+div#html-acc > .block, .accordion.block {
     background-color:var(--theme-darker-html);
 }
-div#csstab > .block {
+div#css-acc > .block, .accordion.block {
     background-color:var(--theme-darker-css);
     color:var(--color);
 }
 .link > svg, .link > img {
-    width:1.2em;
-    height:1.2em;
+    width:1.2rem;
+    height:1.2rem;
     position:relative;
     top:50%;
     left:-5px;
@@ -213,7 +225,7 @@ body:not(body.dark) .tabcontent  .code {background:white;}
 .tagname, .elemhigh  {color: #f00;}
 .elemhigh {text-shadow: 0 0 2px #f00;}
 /* The innerHTML of the tag*/
-.innerHTML {padding-left:1em;color:var(--color);}
+.innerHTML {padding-left:1rem;color:var(--color);}
 /* The class of the html */
 .class {color:var(--css-class);}
 .id {color:var(--css-id);}
@@ -251,8 +263,8 @@ table.summary {
     .content {flex-wrap: wrap;}
     .tablinks {flex:1 0 425px;height:max-content;display:flex;}
     .tab {flex:1 0 425px;overflow-x:auto;}
-    :is(#csstab, #htmltab) {display:flex;width:max-content!important;height:inherit;}
-    :is(#csstab, #htmltab) > *{width:inherit;margin:0 6px;}
+    :is(#css-acc, #html-acc) {display:flex;width:max-content!important;height:inherit;}
+    :is(#css-acc, #html-acc) > *{width:inherit;margin:0 6px;}
     .link > img, .link > svg {top:initial!important;}
 }
 table.summary tr:nth-child(even) {background-color:var(--second-background);}
@@ -283,4 +295,9 @@ svg g > path:nth-child(1) {fill:var(--theme-blue);} */
     padding:3px;
     background-color:var(--background);
     color:var(--color);
+}
+.clear::before, .clear::after {
+    content:"";
+    clear:both;
+    display:table;
 }

@@ -12,49 +12,51 @@
 <body>
     <div class="content">
         <div class="tablinks">
-            <div id="htmltab">
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'introduction'})" id="default"><img src="home.svg" alt=""/>
-                    
-                    introduction
-                </button>
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'paragraphs'})" id="paragraphstab"><img src="Pilcrow.svg" alt=""/>
-                    Paragraph</button>
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'images'})" id="imagestab"><img src="images.svg" alt=""/>
-                    Images</button>
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'table'})" id="tabletab"><img src="table.svg" alt=""/>
-                    Table</button>
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'blocks'})" id="blockstab"><img src="block.svg" alt=""/>
-                    Blocks</button>
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'class'})" id="classtab"><img src="class.svg" alt=""/>
-                    Class</button>
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'id'})" id="idtab"><img src="hashtag.svg" alt=""/>
-                    Id</button>
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'iframe'})" id="iframetab"><img src="frame.svg" alt=""/>
-                    Iframe</button>
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'js'})" id="jstab"><img src="semantics.svg" alt="">Javascript</button>
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'head'})" id="headtab"><img src="semantics.svg" alt=""/>
-                    Head</button>
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'layout'})" id="layouttab"><img src="layout.svg" alt=""/>Layout</button>
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'computer-code'})" id="computer-codetab"><img src="computer.svg" alt=""/>Computer code</button>
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'semantics'})" id="semanticstab"><img src="semantics.svg" alt=""/>Semantics</button>
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'responsive'})" id="responsivetab"><img src="semantics.svg" alt="">Responsive</button>
-                <button class="HTMLlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'style-guide'})"id="style-guidetab"><img src="semantics.svg" alt="">Style Guide</button>    
+            <div id="html-acc">
+                <button class="accordion">click me</button>
+                <div>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'introduction'})" id="default"><img src="home.svg" alt=""/>HTML Introduction</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'paragraphs'})" id="paragraphstab"><img src="Pilcrow.svg" alt=""/>HTML Paragraph</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'images'})" id="imagestab"><img src="images.svg" alt=""/>HTML Images</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'table'})" id="tabletab"><img src="table.svg" alt=""/>HTML Table</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'blocks'})" id="blockstab"><img src="block.svg" alt=""/>HTML Blocks</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'class'})" id="classtab"><img src="class.svg" alt=""/>HTML Class</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'id'})" id="idtab"><img src="hashtag.svg" alt=""/>HTML Id</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'iframe'})" id="iframetab"><img src="frame.svg" alt=""/>HTML Iframe</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'head'})" id="headtab"><img src="semantics.svg" alt=""/>HTML Head</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'layout'})" id="layouttab"><img src="layout.svg" alt=""/>HTML Layout</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'computer-code'})" id="computer-codetab"><img src="computer.svg" alt=""/>HTML Computer code</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'semantics'})" id="semanticstab"><img src="semantics.svg" alt=""/>HTML Semantics</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'responsive'})" id="responsivetab"><img src="semantics.svg" alt="">HTML Responsive</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'style-guide'})"id="style-guidetab"><img src="semantics.svg" alt="">HTML Style Guide</button>    
+                </div>
             </div>
-            <div id="csstab">
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-introduction'})" id="css-introductiontab"><img src="home.svg" alt="home">CSS Introduction</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'syntax'})" id="syntaxtab"><img src="semantics.svg" alt="semantics">CSS Syntax</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'selectors'})" id="selectorstab"><img src="selector.svg" alt="selector">CSS selectors</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-howto'})" id="css-howtotab"><img src="css.svg" alt="css">CSS How to</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'comments'})" id="commentstab"><img src="css.svg" alt="css">CSS Comments</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'colors'})" id="colorstab"><img src="css.svg" alt="css">CSS Colors</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'backgrounds'})" id="backgroundstab"><img src="css.svg" alt="css">CSS Backgrounds</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'borders'})" id="borderstab"><img src="css.svg" alt="css">CSS Borders</button>
-                <button class="CSSlink link" id="dimensionstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'dimensions'})"><img src="css.svg" alt="semantics">CSS Dimensions</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'margin'})" id="margintab"><img src="css.svg" alt="semantics">CSS Margin</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'padding'})" id="paddingtab"><img src="boxmodel.svg" alt="box-model">CSS Padding and Box Model</button>
-                <button class="CSSlink link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'outline'})" id="outlinetab"><img src="outline.svg" alt="outline">CSS Outline</button>
-                <button class="CSSlink link" id="texttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'text'})"><img src="text.svg" alt="text">CSS Text</button>
-                <button class="CSSlink link" id="fonttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'font'})"><img src="font.svg" alt="">CSS Font</button>
+            <div id="css-acc">
+                <button class="accordion">click me</button>
+                <div>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-introduction'})" id="css-introductiontab"><img src="home.svg" alt="home">CSS Introduction</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'syntax'})" id="syntaxtab"><img src="semantics.svg" alt="semantics">CSS Syntax</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'selectors'})" id="selectorstab"><img src="selector.svg" alt="selector">CSS selectors</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-howto'})" id="css-howtotab"><img src="css.svg" alt="css">CSS How to</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'comments'})" id="commentstab"><img src="css.svg" alt="css">CSS Comments</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'colors'})" id="colorstab"><img src="css.svg" alt="css">CSS Colors</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'backgrounds'})" id="backgroundstab"><img src="css.svg" alt="css">CSS Backgrounds</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'borders'})" id="borderstab"><img src="css.svg" alt="css">CSS Borders</button>
+                    <button class="link" id="dimensionstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'dimensions'})"><img src="css.svg" alt="semantics">CSS Dimensions</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'margin'})" id="margintab"><img src="css.svg" alt="semantics">CSS Margin</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'padding'})" id="paddingtab"><img src="boxmodel.svg" alt="box-model">CSS Padding and Box Model</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'outline'})" id="outlinetab"><img src="outline.svg" alt="outline">CSS Outline</button>
+                    <button class="link" id="texttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'text'})"><img src="text.svg" alt="text">CSS Text</button>
+                    <button class="link" id="fonttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'font'})"><img src="font.svg" alt="">CSS Font</button>
+                    <button class="link" id="displaytab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'display'})">CSS Display</button>
+                    <button class="link" id="positiontab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'position'})">CSS Position</button>
+                    <button class="link" id="overflowtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'overflow'})">CSS Overflow</button>
+                    <button class="link" id="floattab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'float'})">CSS Float</button>
+                    <button class="link" id="opacitytab"  onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'opacity'})">CSS Opacity</button>
+                    <button class="link" id="p-classtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'p-class'})">CSS Pseudo-class</button>
+                    <button class="link" id="p-elementtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'p-element'})">CSS Pseudo-element</button>
+                    <button class="link" id="b-radiustab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'b-radius'})">CSS Border Radius</button>
+                </div>
             </div>
         </div>
         <div class="tab">
@@ -937,17 +939,6 @@
                     <h2>Iframe-Target for a link</h2>
                     <p>An iframe can be used as the target frame for a link.</p>
                     <p>The target attribute of the link must refer to the name attribute of the iframe:</p>
-                </div>
-                <div class="tabcontent" id="js">
-                    <h1>HTML JavaScript</h1>
-                    <p>JavaScript makes HTML pages more dynamic and interactive.</p>
-                    <h2>The HTML <span><</span>script> Tag</h2>
-                    <p>The <span><</span>script> tag is used to define a client-side script(javascript)</p>
-                    <p>The script element either contains script statements, or it points 
-                    to an external script file through the src attribute.</p>
-                    <p>Common uses for JavaScript are image manipulation, 
-                    form validation, and dynamic changes of content.</p>
-                    <p>To select an HTML element, JavaScript most often uses the document.getElementById() method.</p>`
                 </div>
                 <div class="tabcontent" id="head">
                     <h1>HTML head</h1>
@@ -4198,6 +4189,377 @@
                             <td>Specifies the weight of a font</td>
                         </tr>
                     </table>
+                </div>
+                <div class="tabcontent" id="display">
+
+                </div>
+                <div class="tabcontent" id="position">
+                    <h1>CSS Layout - The position Property</h1>
+                    <hr>
+                    <p>The <span class="p-high">position</span> property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).</p>
+                    <hr>
+                    <h2>The position Property</h2>
+                    <p>The <span class="p-high">position</span> property specifies the type of positioning method used for an element.</p>
+                    <p>There are five different position values:</p>
+                    <ul>
+                        <li><span class="p-high">static</span></li>
+                        <li><span class="p-high">relative</span></li>
+                        <li><span class="p-high">fixed</span></li>
+                        <li><span class="p-high">absolute</span></li>
+                        <li><span class="p-high">sticky</span></li>
+                    </ul>
+                    <p>Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the <span class="p-high">position</span> property is set first. They also work differently depending on the position value.</p>
+                    <hr>
+                    <h2>position:static;</h2>
+                    <p>HTML elements are positioned static by default.</p>
+                    <p>Static positioned elements are not affected by the top, bottom, left, and right properties.</p>
+                    <p>An element with <span class="p-high">position:static;</span> is not positioned in any special way; it is always positioned according to the normal flow of the page:</p>
+                    <div style="border:3px solid var(--theme-blue);">This <span><</span>div> element has position:static;</div>
+                    <p>Here is the CSS that is used:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">div.static</span> {</div>
+                            <div class="codeline second-level"><span class="property">position</span>:<span class="p-value">static</span>;</div>
+                            <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">3px solid #00acff</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>position:relative;</h2>
+                    <p>An element with <span class="p-high">position:relative;</span> is positioned relative to its normal position.</p>
+                    <p>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.</p>
+                    <div style="position:relative;left:30px;border:3px solid var(--theme-blue);">This <span class="p-high"><</span>div> element has position:relative;</div>
+                    <p>Here is the CSS that is used:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">div.relative</span> {</div>
+                            <div class="codeline second-level"><span class="property">position</span>:<span class="p-value">relative</span>;</div>
+                            <div class="codeline second-level"><span class="property">left</span>:<span class="p-value">30px</span>;</div>
+                            <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">3px solid #00acff</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>position: fixed;</h2>
+                    <p>An element with <span class="p-high">position:fixed;</span> is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.</p>
+                    <p>A fixed element does not leave a gap in the page where it would normally have been located.</p>
+                    <div style="position: fixed;bottom:0;right:0;width:300px;border:3px solid var(--theme-blue);">This <span><</span>div element has <span class="p-high">position:fixed</span></div>
+                    <p>Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">div.fixed</span> {</div>
+                            <div class="codeline second-level"><span class="property">position</span>:<span class="p-value">fixed</span>;</div>
+                            <div class="codeline second-level"><span class="property">bottom</span>:<span class="p-value">0</span>;</div>
+                            <div class="codeline second-level"><span class="property">right</span>:<span class="p-value">0</span>;</div>
+                            <div class="codeline second-level"><span class="property">width</span>:<span class="p-value">300px</span>;</div>
+                            <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">3px solid #00acff</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>position:absolute;</h2>
+                    <p>An element with <span class="p-high">position:absolute;</span> is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).</p>
+                    <p>However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.</p>
+                    <p class="note"><strong>Note:</strong> A "positioned" element is one whose position is anything except <span class="p-high">static</span></p>
+                    <p>Here is a simple example:</p>
+                    <div style="position:relative;width:400px;height:200px;border:3px solid var(--theme-blue);">
+                        This <span><</span>div> element has position:relative;
+                        <div style="position:absolute;bottom:20px;right:0;width:200px;height:100px;border:3px solid var(--theme-blue);">This <span><</span>div> element has position:absolute;</div>
+                    </div>
+                    <p>Here is the CSS that is used:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">div.relative</span> {</div>
+                            <div class="codeline second-level">position<span class="property"></span>:<span class="p-value">relative</span>;</div>
+                            <div class="codeline second-level">width<span class="property"></span>:<span class="p-value">400px</span>;</div>
+                            <div class="codeline second-level">height<span class="property"></span>:<span class="p-value">200px</span>;</div>
+                            <div class="codeline second-level">border<span class="property"></span>:<span class="p-value">3px solid #00acff</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline"><span class="class">div.absolute</span> {</div>
+                            <div class="codeline second-level">position<span class="property"></span>:<span class="p-value">absolute</span>;</div>
+                            <div class="codeline second-level">bottom<span class="property"></span>:<span class="p-value">20px</span>;</div>
+                            <div class="codeline second-level">right<span class="property"></span>:<span class="p-value">0</span>;</div>
+                            <div class="codeline second-level">width<span class="property"></span>:<span class="p-value">200px</span>;</div>
+                            <div class="codeline second-level">height<span class="property"></span>:<span class="p-value">100px</span>;</div>
+                            <div class="codeline second-level">border<span class="property"></span>:<span class="p-value">3px solid #00acff</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>position:sticky;</h2>
+                    <p>An element with <span class="p-high">position:sticky;</span> is positioned based on the user's scroll position.</p>
+                    <p>A sticky element toggles beteen <span class="p-high">relative</span> and <span class="p-high">fixed</span> , depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).</p>
+                    <div style="position: sticky;top:0;left:0;border: 3px solid var(--theme-blue);background:white;z-index:999;">I will stick to the top of the page</div>
+                    <p class="note"><strong>Note:</strong> Internet Explorer does not support sticky positioning. Safari requires a -webkit- prefix (see example below). You must also specify at least one of <span class="p-high">top</span>, <span class="p-high">right</span>, <span class="p-high">bottom</span> or <span class="p-high">left</span> for sticky positioning to work.</p>
+                    <p>In this example, the sticky element sticks to the top of the page (<span class="p-high">top:0</span>), when you reach its scroll position.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">div.sticky</span> {</div>
+                            <div class="codeline second-level"><span class="property">position</span>:<span class="p-value">-webkit-sticky</span>;</div>
+                            <div class="codeline second-level"><span class="property">position</span>:<span class="p-value">sticky</span>;</div>
+                            <div class="codeline second-level"><span class="property">top</span>:<span class="p-value">0</span>;</div>
+                            <div class="codeline second-level"><span class="property">left</span>:<span class="p-value">0</span>;</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">white</span>;</div>
+                            <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">2px solid var(--theme-blue)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Overapping Elements</h2>
+                    <p>When elements are positioned, they can overlap other elements.</p>
+                    <p>The  property spcifies the stack order of an elmeent (which element should be placed in front of, or behind, the others).</p>
+                    <p>An elmeent can have a positive or negative stack order:</p>
+                    <div style="position: relative;">
+                        <img src="static-images/img_mountains.jpg" alt="gradient" style="width:100%;height:auto;">
+                        <h1 style="color:white;position: absolute;bottom:0;left:0;z-index:1;">Mountains</h1>
+                    </div>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">img</span> {</div>
+                            <div class="codeline second-level"><span class="property">position</span>:<span class="p-value">absolute</span>;</div>
+                            <div class="codeline second-level"><span class="property">left</span>:<span class="p-value">0px</span>;</div>
+                            <div class="codeline second-level"><span class="property">top</span>:<span class="p-value">0px</span>;</div>
+                            <div class="codeline second-level"><span class="property">z-index</span>:<span class="p-value">-1</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <p>An element with greater stack order is always in front of an element with a lower stack order.</p>
+                    <p class="note"><strong>Note:</strong> If two positioned elments overlap without a <span class="p-high">z-index</span> specified, the element positioned last in the HTML code will be shown on top.</p>
+                    <hr>
+                    <table class="summary">
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>bottom</td>
+                            <td>Sets the bottom margin edge for a positioned box</td>
+                        </tr>
+                        <tr>
+                            <td>clip</td>
+                            <td>Clips an absolutely positioned element</td>
+                        </tr>
+                        <tr>
+                            <td>left</td>
+                            <td>Sets the left margin edge for a positioned box</td>
+                        </tr>
+                        <tr>
+                            <td>position</td>
+                            <td>Specifies the type of positioning for an element</td>
+                        </tr>
+                        <tr>
+                            <td>right</td>
+                            <td>Sets the right margin edge for a positioned box</td>
+                        </tr>
+                        <tr>
+                            <td>top</td>
+                            <td>Sets the top margin edge for a positioned box</td>
+                        </tr>
+                        <tr>
+                            <td>z-index</td>
+                            <td>Sets the stack order of an element</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tabcontent" id="overflow">
+                    <h1>CSS Layout - Overflow</h1>
+                    <p>The CSS <span class="p-high">overflow</span> property controls what happens to content that is too big to fit into an area.</p>
+                    <div style="height: 100px; overflow:auto; border: 1px solid black;padding:5px;">This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div>
+                    <hr>
+                    <h2>CSS Overflow</h2>
+                    <p>The <span class="p-high">overflow</span> property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.</p>
+                    <p>The <span class="p-hihg">overflow</span> property has the following values:</p>
+                    <ul>
+                        <li><span class="p-high">visible</span> - Default: The overflow is not clipped. The content renders outside the element's box</li>
+                        <li><span class="p-high">hidden</span> - The overflow is clipped, and the rest of the content will be invisible</li>
+                        <li><span class="p-high">scroll</span> - The overflow is clipped, and a scrollbar is added to see the rest of the content</li>
+                        <li><span class="p-high">auto</span> - Similar to <span class="p-high">scroll</span>, but it adds scrollbars only when necessary</li>
+                    </ul>
+                    <p class="note"><strong>Note:</strong> The <span class="p-high">overflow</span> property only works for block elements which its children elements exceed the height of its parent.</p>
+                    <p class="note"><strong>Note:</strong> In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set).</p>
+                    <hr>
+                    <h2>overflow:visible;</h2>
+                    <p>By default, the overflow is <span class="p-high">visible</span>, meanint that it is not clipped ad it renders outside the element's box:</p>
+                    <div style="width:200px;height:100px;background-color: #eee;color:black;">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">div</span>{</div>
+                            <div class="codeline second-level"><span class="property">width</span>:<span class="p-value">200px</span>;</div>
+                            <div class="codeline second-level"><span class="property">height</span>:<span class="p-value">5px</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-color/span>:<span class="p-value">#eee</span>;</div>
+                            <div class="codeline second-level"><span class="property">overflow</span>:<span class="p-value">visible</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>overflow: hidden</h2>
+                    <p>With the <span class="p-high">hidden</span> value, the overflow is clipped, and the rest of the content is hidden:</p>
+                    <div style="width:200px;height:100px;background-color: #eee;overflow: hidden;color:black;">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">div</span> {</div>
+                            <div class="codeline second-level"><span class="property">overflow</span>: <span class="p-value">hidden</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>overflow: scroll</h2>
+                    <p>Setting the value to <span class="p-high">scroll</span> , the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):</p>
+                    <div style="width:200px;height:100px;background-color: #eee;overflow: scroll;color:black;">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">div</span> {</div>
+                            <div class="codeline second-level"><span class="property">overflow</span>: <span class="p-value">scroll</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>overflow: auto</h2>
+                    <p>The <span class="p-high">auto</span> value is similar to <span class="p-high">scroll</span> , but it adds scrollbars only when necessary:</p>
+                    <div style="width:200px;height:100px;background-color: #eee;overflow: auto;color:black;">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">div</span> {</div>
+                            <div class="codeline second-level"><span class="property">overflow</span>:<span class="p-value">auto</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>overflow-x and overflow-y</h2>
+                    <p>The <span class="p-high">overflow-x</span> and <span class="p-high">overflow-y</span> properties specifies whether to change the overflow of content just horizontally or vertically (or both):</p>
+                    <p><span class="p-high">overflow-x</span> specifies what to do with the left/right edges of the content.</p>
+                    <p><span class="p-high">overflow-y</span> specifies what to do with the top/bottom edges of the content.</p>
+                    <div style="width:200px;height:100px;background-color: #eee;overflow: auto;color:black;">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+                    <div class="example">
+                        <h3>Exmaple</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">div</span> {</div>
+                            <div class="codeline second-level"><span class="property">overflow-x</span>: <span class="p-value">hidden</span>;</div>
+                            <div class="codeline second-level"><span class="property">overflow-y</span>: <span class="p-value">scroll</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <table class="summary">
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>overflow</td>
+                            <td>Specifies what happens if content overflows an element's box</td>
+                        </tr>
+                        <tr>
+                            <td>overflow-x</td>
+                            <td>Specifies what to do with the left/right edges of the content if it overflows the element's content area</td>
+                        </tr>
+                        <tr>
+                            <td>overflow-y</td>
+                            <td>Specifies what to do with the otp/bottom edges of the content if it overflows the element's content area</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tabcontent" id="float">
+                    <h1>CSS Layout - float and clear</h1>
+                    <hr>
+                    <p>The CSS <span class="p-high">float</span> property specifies how an element should float.</p>
+                    <p>The CSS <span class="p-high">clear</span> property specifies what elements can float beside the cleared element and on which side.</p>
+                    <div>Float Left</div>
+                    <div>Float Right</div>
+                    <hr>
+                    <h2>The float Property</h2>
+                    <p>The <span class="p-high">float</span> property is used for positioning and formatting content e.g. let an image float left to the text in a container.</p>
+                    <p>The <span class="p-high">float</span> property can have one of the foloowing values:</p>
+                    <ul>
+                        <li><span class="p-high">left</span> - The element floats to the left of its container</li>
+                        <li><span class="p-high">right</span> - The element floats to the right of its container</li>
+                        <li><span class="p-high">none</span> - The element does not float (will be displayed just where it occurs in the text). This is default</li>
+                        <li><span class="p-high">inherit</span> - The element inherits the float value of its parent</li>
+                    </ul>
+                    <p>In its simplest use, the <span class="p-high">float</span> property can be used to wrap text around images.</p>
+                    <hr>
+                    <h2>Example - float:right;</h2>
+                    <p>The following example specifies that an image should float to the <strong>right</strong> in a text:</p>
+                    <div style="padding:0 0.6rem;border:1px solid black;" class="clear">
+                        <p><img src="static-images/pineapple.jpg" alt="pineapple" style="float:right;margin:0 12px 12px 12px">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi similique cupiditate vitae magni accusamus voluptate, ipsum quas error fugiat deleniti debitis repellat architecto, blanditiis quos pariatur quisquam consectetur in nulla, fugit ipsam dolorum natus sed rem. Amet beatae vel rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate neque accusantium porro, aperiam totam nam quae sint tempore dolorem quidem, numquam ad et ea ratione quam earum beatae repellendus fugiat quisquam! Eum eius maiores aliquam sed ad dolores, nobis deleniti voluptates numquam accusantium voluptas officiis. Magnam sapiente dicta laudantium necessitatibus.</p>
+                    </div>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <p>CSS code:</p>
+                        <div class="code">
+                            <div class="codeline"><span class="class">img</span> {</div>
+                            <div class="codeline second-level"><span class="property">float</span>:<span class="p-value">right</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>HTML code:</p>
+                        <div class="code">
+                            <div class="codeline"><span class="bracket"><</span><span class="tagname">p</span><span class="bracket">></span><span class="bracket"><</span><span class="tagname">img</span> <span class="attribute">src</span>=<span class="attrvalue">"pineapple.jpg"</span> <span class="attribute">alt</span>=<span class="attrvalue">"Pineapple"</span> <span class="attribute">style</span>=<span class="attrvalue">"margin-left:15px;"</span><span class="bracket">></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi doloribus eos, similique doloremque itaque laudantium, eum totam esse saepe perferendis aspernatur ipsam atque quis rerum quo repellendus tenetur incidunt hic quas labore voluptatum earum maiores. Enim magni accusamus at ea maxime, expedita laudantium similique laborum pariatur molestiae iste, iure numquam aut provident distinctio dolor dignissimos! Quam maiores magni distinctio delectus rerum inventore, ipsam iste error, voluptas itaque cupiditate. Natus debitis cupiditate reprehenderit, labore minus quam nihil ad corporis voluptatum cumque, temporibus dicta delectus totam exercitationem, inventore ullam culpa nostrum aliquid.<span class="bracket"><</span><span class="tagname">/p</span><span class="bracket">></span></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Example - float:left;</h2>
+                    <p>The following example specifies that an image should float to the <strong>left</strong> in a text:</p>
+                    <div style="padding:0 0.6rem;border:1px solid black;" class="clear"><!--  -->
+                        <p><img src="static-images/pineapple.jpg" alt="Pineapple" style="float:left;clear:left;margin:0 12px 12px 12px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aliquam ut quo, officiis ea provident ipsam perferendis vero quidem officia nostrum totam saepe sit dolorem quos facilis pariatur? Adipisci totam asperiores dolores facilis laborum nulla qui rerum, eum molestiae magnam sed laboriosam ipsa ex dolor enim modi repudiandae provident! Sit distinctio in ea eveniet qui quaerat sed similique debitis nostrum enim reprehenderit dolor ullam recusandae nemo quos adipisci molestias ipsa non architecto, suscipit a? Incidunt odio voluptatibus iure dignissimos velit ducimus ex exercitationem nulla corrupti dolores eaque perspiciatis, et ipsum!</p>
+                    </div>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <p>CSS code:</p>
+                        <div class="code">
+                            <div class="codeline"><span class="class">img</span> {</div>
+                            <div class="codeline second-level"><span class="property">float</span>:<span class="p-value">left </span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>HTML code:</p>
+                        <div class="code">
+                            <div class="codeline"><span class="bracket"><</span><span class="tagname">p</span><span class="bracket">></span><span class="bracket"><</span><span class="tagname">img</span> <span class="attribute">src</span>=<span class="attrvalue">"pineapple.jpg"</span> <span class="attribute">alt</span>=<span class="attrvalue">"Pineapple"</span> <span class="attribute">style</span>=<span class="attrvalue">"margin-left:15px;"</span><span class="bracket">></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi doloribus eos, similique doloremque itaque laudantium, eum totam esse saepe perferendis aspernatur ipsam atque quis rerum quo repellendus tenetur incidunt hic quas labore voluptatum earum maiores. Enim magni accusamus at ea maxime, expedita laudantium similique laborum pariatur molestiae iste, iure numquam aut provident distinctio dolor dignissimos! Quam maiores magni distinctio delectus rerum inventore, ipsam iste error, voluptas itaque cupiditate. Natus debitis cupiditate reprehenderit, labore minus quam nihil ad corporis voluptatum cumque, temporibus dicta delectus totam exercitationem, inventore ullam culpa nostrum aliquid.<span class="bracket"><</span><span class="tagname">/p</span><span class="bracket">></span></div>
+                        </div>
+                    </div> 
+                    <hr>
+                    <h2>Example</h2>
+                    <p>In the following example the image will be displayed just where it occurs in the text (float: none;):</p>
+                    <div style="padding:0 0.6rem;border:1px solid black;">
+                        <p><img src="static-images/pineapple.jpg" alt="pineapple">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam possimus blanditiis tempora sint consequuntur nostrum harum. Excepturi, accusantium error asperiores cum tempore voluptate quibusdam mollitia quas, vel, eum assumenda! Distinctio dolorem minima iste est temporibus voluptas exercitationem doloremque recusandae nisi adipisci error enim dolor, necessitatibus ratione tenetur hic soluta! Qui, omnis impedit! Ut dolore quod quam aperiam excepturi eaque dolorum beatae praesentium sint eos laborum cum, odio sequi mollitia. Ipsum, iure nulla, eveniet officia quia minima voluptates labore repellendus sit, in delectus voluptate tempore perferendis odio neque enim. Corrupti, asperiores?</p>
+                    </div>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">img</span> {</div>
+                            <div class="codeline second-level"><span class="property">float</span>: <span class="p-value">none</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Example - Float Next To Each Other</h2>
+                    <p>Normally div elements will be displayed on top of each other. However, if we use float: <span class="p-high">left</span> we can let elements float next to each other:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="tabcontent" id="opacity">
+                    <h1>CSS Opacity / Transparency</h1>
+                </div>
+                <div class="tabcontent" id="p-class">
+                    <h1>CSS Pseudo-classes</h1>
+                </div>
+                <div class="tabcontent" id="p-element">
+                    <h1>CSS Pseudo-elements</h1>
+                </div>
+                <div class="tabcontent" id="b-radius">
+                    <h1>CSS Rounded Corners / Border Radius</h1>
                 </div>
             </div>
         </div>
