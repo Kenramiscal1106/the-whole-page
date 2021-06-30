@@ -1,12 +1,24 @@
 function acc() {
     var accordion = document.getElementsByClassName('accordion');
     for (var i = 0; i < accordion.length;i++) {
+        // accordion[i].className += " block"
+        console.log(accordion[i].classList)
+        if (accordion[i].classList[1] == "open") {
+            console.log(2)
+            accordion[i].nextElementSibling.style.height = accordion[i].nextElementSibling.scrollHeight + "px";
+        } else {
+            console.log(1)
+            accordion[i].nextElementSibling.style.height = 0;
+        }
         accordion[i].addEventListener('click', function() {
-            this.classList.toggle('block');
-            if (this.classList[1]) {
-                this.nextElementSibling.style.height = 0;
+            this.classList.toggle('open');
+            console.log(this.classList)
+            if (this.classList[1] == "open") {
+                console.log(2)
+                this.nextElementSibling.style.height = this.nextElementSibling.scrollHeight + "px";
             } else {
-                this.nextElementSibling.style.height = null;
+                console.log(1)
+                this.nextElementSibling.style.height = 0;
             }
         })
     }

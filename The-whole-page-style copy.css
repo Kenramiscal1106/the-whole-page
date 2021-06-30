@@ -25,11 +25,12 @@ body:not(body.dark){
     --css-property-value: rgb(0, 238, 255);
     --background:white;
     --second-background:#eee;
-}
-html {
-    font-size:16px;
+    --theme-settings:#00ffaa;
+    --theme-dark-settings:#00b97c;
+    --theme-darker-settings:#018b5d;
 }
 :root {
+    font-size:16px;
     --plain:white;
     --matrix:#0f0;
     --dark:#000;
@@ -76,13 +77,16 @@ body.dark{
     --css-property-value: rgb(162, 255, 119);
     --background:black;
     --second-background:#363636;
+    --theme-settings:#00b97c;
+    --theme-dark-settings:#018b5d;
+    --theme-darker-settings:#006845;
 }
 body.dark, body.dark .code{
     color:white;
     background-color: black;
 }
 /* html, body, body * {transition:background-color var(--miliseconds), color var(--miliseconds);} */
-*:not(pre, h1, h2) {font-family: "Open sans", arial, sans-serif;box-sizing:border-box;}
+*:not(pre, h1, h2) {font-family: "Open sans", Arial, sans-serif;box-sizing:border-box;word-spacing:1px;}
 .note {border:1px solid var(--color);position:relative;margin:2.5rem 0 10px 0;padding:3px;border-radius:3px;}
 .note > :is(strong, b) {
     position:absolute;
@@ -125,7 +129,7 @@ body.dark, body.dark .code{
 .tablinks {
     width:var(--sideBarWidth);
     height:var(--full);
-    box-shadow:1px 0 10px 1px #acacac;
+    /* box-shadow:1px 0 10px 1px #acacac; */
     overflow:auto;
     flex:0 0 var(--sideBarWidth);
 }
@@ -146,19 +150,21 @@ body.dark, body.dark .code{
     background-color:inherit;
     border-radius:0;
 } */
-#html-acc {
+#html-acc {background-color:var(--theme-html);}   
+#css-acc {background-color:var(--theme-blue);}
+#settings-acc {background-color: var(--theme-settings);}
+.tabcomponent {
     width:100%;
-    background-color:var(--theme-html);
-    padding:6px;
-}   
-#css-acc {
-    width:100%;
-    background-color:var(--theme-blue);
     padding:6px;
 }
+.accordion-container {
+    overflow:hidden;
+    transition:height 0.5s ease;
+}
+.accordion {width:100%;}
 :is(#html-acc, #css-acc) > div > :first-child {margin-top:0;}
 :is(#html-acc, #css-acc) > div > :last-child {margin-bottom:0;}
-:is(#html-acc, #css-acc) > div > *, :is(#html-acc, #css-acc) > .accordion {
+:is(#html-acc, #css-acc) > div > *, .tabcomponent > .accordion {
     display:block;  
     text-align:left;
     margin:6px 0;
@@ -171,22 +177,29 @@ body.dark, body.dark .code{
     line-height:normal;
     transition:0.5s ease;
 }
-#html-acc > div > *:hover, #html-acc > .accordion:hover {
-    background-color:var(--theme-dark-html);
-    transition:none;
+.tabcomponent > .accordion {
+    font-size: 1.5rem;
 }
-#css-acc > div > *:hover, #css-acc > .accordion:hover {
-    background-color:var(--theme-dark-css);
-    transition:none;
-}
+#html-acc > div > *:hover, #html-acc > .accordion:hover {background-color:var(--theme-dark-html);}
+#css-acc > div > *:hover, #css-acc > .accordion:hover {background-color:var(--theme-dark-css);}
+#settings-acc > div > *:hover, #settings-acc > .accordion:hover {background-color:var(--theme-dark-settings);}
+:is(#html-acc, #css-acc) > div > *:hover, :is(#html-acc, #css-acc) > .accordion:hover {transition:none;}
 button {cursor:pointer;}
-div#html-acc > .block, .accordion.block {
-    background-color:var(--theme-darker-html);
+div#html-acc > div > .block, div#html-acc > .accordion.open {background-color:var(--theme-darker-html);}
+div#css-acc > div > .block, div#css-acc > .accordion.open {background-color:var(--theme-darker-css);}
+div#settings-acc > div > .block, div#settings-acc > .accordion.open {background-color:var(--theme-darker-settings);}
+.tabcomponent > div > .block, .tabcomponent > .accordion.open {color:var(--color);}
+.accordion {position: relative;}
+.accordion::after {
+    content: url('arrow.svg');
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    right:0;
+    line-height:0;
+    transition:transform 0.3s ease;
 }
-div#css-acc > .block, .accordion.block {
-    background-color:var(--theme-darker-css);
-    color:var(--color);
-}
+.accordion.open::after {transform:translateY(-50%) rotate(90deg) ;}
 .link > svg, .link > img {
     width:1.2rem;
     height:1.2rem;
@@ -204,14 +217,10 @@ body:not(body.dark) .tabcontent  .code {background:white;}
 #css .codeline::before {border-right:3px solid var(--theme-blue);}
 #html .codeline::before {border-right:3px solid var(--theme-html);}
 .code {--width:3rem;counter-reset:links code;}
-.code > .codeline:nth-child(odd) {
-    background: var(--second-background);
-}
-.code > .codeline:nth-child(even) {
-    background: var(--background);
-}
+.code > .codeline:nth-child(odd) {background: var(--second-background);}
+.code > .codeline:nth-child(even) {background: var(--background);}
 /* The lines of the code */
-.codeline *, .codeline {font-family:"Roboto Mono", monospace;}
+.codeline *, .codeline {font-family:Consolas, "Roboto Mono", monospace;letter-spacing:-1px;}
 .codeline {counter-increment: code;position:relative;padding-left:calc(var(--width) + 3px);}
 .codeline::before {content:counter(code);position: absolute;top: 0;left: 0;width:var(--width);text-align:center;}
 /* The attribute of the element */
@@ -225,7 +234,6 @@ body:not(body.dark) .tabcontent  .code {background:white;}
 .tagname, .elemhigh  {color: #f00;}
 .elemhigh {text-shadow: 0 0 2px #f00;}
 /* The innerHTML of the tag*/
-.innerHTML {padding-left:1rem;color:var(--color);}
 /* The class of the html */
 .class {color:var(--css-class);}
 .id {color:var(--css-id);}
@@ -255,7 +263,8 @@ table.summary {
     font-family:Verdana;
     margin:20px auto;
     width:95%;
-    font-size: 15px;
+    font-size: 1rem;
+    word-spacing:1px;
 }
 .tab {flex:1 0 0;}
 @media screen and (max-width:426px) {
@@ -284,6 +293,7 @@ table.summary th, table.summary td {padding:8px;}
     background:none;
     border:1px solid var(--color);
     border-radius: 5px;
+    margin: 10px;
 }
 #settings:hover {box-shadow:0 0 12px 0 var(--color);}
 #settings >svg {height:100%;width:100%;}
@@ -295,6 +305,10 @@ svg g > path:nth-child(1) {fill:var(--theme-blue);} */
     padding:3px;
     background-color:var(--background);
     color:var(--color);
+}
+.result > img, .example > img {
+    width:100%;
+    height:auto;
 }
 .clear::before, .clear::after {
     content:"";

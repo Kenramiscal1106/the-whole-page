@@ -2,7 +2,7 @@
 
 
 <html lang="en">
-<head>
+<head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML</title>
@@ -10,11 +10,12 @@
     <link rel="shortcut icon" href="images.svg" type="image/x-icon" id="icon">
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="content">
         <div class="tablinks">
-            <div id="html-acc">
-                <button class="accordion">click me</button>
-                <div>
+            <div id="html-acc" class="tabcomponent">
+                <button class="accordion">HTML</button>
+                <div class="accordion-container">
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'introduction'})" id="default"><img src="home.svg" alt=""/>HTML Introduction</button>
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'paragraphs'})" id="paragraphstab"><img src="Pilcrow.svg" alt=""/>HTML Paragraph</button>
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'images'})" id="imagestab"><img src="images.svg" alt=""/>HTML Images</button>
@@ -31,9 +32,9 @@
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'style-guide'})"id="style-guidetab"><img src="semantics.svg" alt="">HTML Style Guide</button>    
                 </div>
             </div>
-            <div id="css-acc">
-                <button class="accordion">click me</button>
-                <div>
+            <div id="css-acc" class="tabcomponent">
+                <button class="accordion">CSS</button>
+                <div class="accordion-container">
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-introduction'})" id="css-introductiontab"><img src="home.svg" alt="home">CSS Introduction</button>
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'syntax'})" id="syntaxtab"><img src="semantics.svg" alt="semantics">CSS Syntax</button>
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'selectors'})" id="selectorstab"><img src="selector.svg" alt="selector">CSS selectors</button>
@@ -58,17 +59,22 @@
                     <button class="link" id="b-radiustab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'b-radius'})">CSS Border Radius</button>
                 </div>
             </div>
+            <div id="settings-acc" class="tabcomponent">
+                <button class="accordion">Settings</button>
+                <div class="accordion-container" >
+                    <button id="settings">
+                        <svg viewbox="0 0 24 24">
+                            <g>
+                                <path d="M3 12 H21 L12 3 z"/>
+                                <path d="M3 12 H21 L12 21 z"/>
+                            </g>
+                        </svg>
+                    </button>
+                    <a href="The-whole-page.html">Downdate to old webpage</a>
+                </div>
+            </div>
         </div>
         <div class="tab">
-            <button id="settings">
-                <svg viewbox="0 0 24 24">
-                    <g>
-                        <path d="M3 12 H21 L12 3 z"/>
-                        <path d="M3 12 H21 L12 21 z"/>
-                    </g>
-                </svg>
-            </button>
-            <a href="The-whole-page.html">Downdate to old webpage</a>
             <div class="tabs" id="html">
                 <div class="tabcontent" id="introduction">
                     <h1>HTML Introduction</h1>
@@ -4191,7 +4197,126 @@
                     </table>
                 </div>
                 <div class="tabcontent" id="display">
-
+                    <h1>CSS Layout - The display Property</h1>
+                    <hr>
+                    <p>The <span class="p-high">display</span> property is the most important CSS property for controlling layout.</p>
+                    <hr>
+                    <h2>The display Property</h2>
+                    <p>The <span class="p-high">display</span> property specifies if/how an element is displayed.</p>
+                    <p>Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is <span class="p-high">block</span> or inline.</p>
+                    <hr>
+                    <h2>Block-level Elements</h2>
+                    <p>A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).</p>
+                    <div style="border: 3px solid var(--theme-blue);">This <span><</span>div> element is a block-level element.</div>
+                    <p>Examples of block-level elements:</p>
+                    <ul>
+                        <li><span><</span>div></li>
+                        <li><span><</span>h1> - <span><</span>h6></li>
+                        <li><span><</span>p></li>
+                        <li><span><</span>form></li>
+                        <li><span><</span>header></li>
+                        <li><span><</span>footer></li>
+                        <li><span><</span>section></li>
+                    </ul>
+                    <hr>
+                    <h2>Inline Elements</h2>
+                    <p>An inline element does not start on a new line and only takes up as much width as necessary.</p>
+                    <div>This is <span style="border:3px solid var(--theme-blue);">an inline <span><</span>span> element inside</span> a paragraph.</div>
+                    <p>Examples of inline elements:</p>
+                    <ul>
+                        <li><span><</span>span></li>
+                        <li><span><</span>a></li>
+                        <li><span><</span>img></li>
+                    </ul>
+                    <hr>
+                    <h2>Display: none;</h2>
+                    <p><span class="p-high">display:none;</span> is commonly used with JavaScript to hide and show elements without deleting and recreating them. Take a look at our last example on this page if you want to know how this can be achieved.</p>
+                    <p>The <span><</span>script> element uses <span class="p-high">display: none;</span> as default. </p>
+                    <h2>Override The Default Display Value</h2>
+                    <p>As mentioned, every element has a default display value. However, you can override this.</p>
+                    <p>Changing an inline element to a block element, or vice versa, can be useful for making the page look a specific way, and still follow the web standards.</p>
+                    <p>A common example is making inline <span class="elem-high"><span><</span>li></span> elements for horizontal menus:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">li</span> {</div>
+                            <div class="codeline second-level"><span class="property">display</span>: <span class="p-value">inline</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <ul style="--display:inline;">
+                                <li style="display: var(--display);"><a href="#">HTML</a></li>
+                                <li style="display: var(--display);"><a href="#">CSS</a></li>
+                                <li style="display: var(--display);"><a href="#">JS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="note"><strong>Note:</strong> Setting the display property of an element only changes <em>how the element is displayed</em>, NOT what kind of element it is. So, an inline element with <span class="p-high">display:block;</span> is not allowed to have other block elements inside it.</p>
+                    <p>The following example displays <span><</span>span> elements as block elements:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">span</span> {</div>
+                            <div class="codeline second-level"><span class="property">display</span>:<span class="p-value">block</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <span style="display:block;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, sed.</span>
+                            <span style="display:block;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, sed.</span>
+                            <span style="display:block;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, sed.</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Other values</h2>
+                    <p>The <span class="p-high">display</span> property has other values like <span class="p-high">flex</span>, <span class="p-high">grid</span>, <span class="p-high">inline-flex</span>, <span class="p-high">inline-grid</span>, and <span class="p-high">table</span></p>
+                    <hr>
+                    <h2>Hide an Element - display:none or visibility:hidden?</h2>
+                    <p>Hiding an element can be done by setting the display property to none. The element will be hidden, and the page will be displayed as if the element is not there:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">h1.hidden</span> {</div>
+                            <div class="codeline second-level"><span class="property">display</span>:<span class="p-value">none</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <h1 style="display:none;">This is an hidden element</h1>
+                            <p>There is an element above</p>
+                        </div>
+                    </div>
+                    <p><span class="p-high">visibility:hidden;</span> also hides an element.</p>
+                    <p>However, the element will still take up the same space as before. The element will be hidden, but still affect the layout:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">h1.hidden</span> {</div>
+                            <div class="codeline second-level"><span class="property">visibility</span>:<span class="p-value">hidden</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <h1 style="visibility: hidden;">I am hidden</h1>
+                            <p>There is an element above</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <table class="summary">
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>display</td>
+                            <td>Specifies how an element should be displayed</td>
+                        </tr>
+                        <tr>
+                            <td>visibility</td>
+                            <td>Specifies whether or not an element should be visible</td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="tabcontent" id="position">
                     <h1>CSS Layout - The position Property</h1>
@@ -4545,18 +4670,399 @@
                     <div class="example">
                         <h3>Example</h3>
                         <div class="code">
-                            
+                            <div class="codeline"><span class="class">div</span> {</div>
+                            <div class="codeline second-level"><span class="property">float</span>:<span class="p-value">left</span>;</div>
+                            <div class="codeline second-level"><span class="property">padding</span>:<span class="p-value">15px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">.div1</span> {</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">red</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">.div2</span> {</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">yellow</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">.div3</span> {</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">green</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result clear">
+                            <div style="background:red;padding:15px;float:left;">1</div>
+                            <div style="background:yellow;padding:15px;float:left;">2</div>
+                            <div style="background:green;padding:15px;float:left;">3</div>
                         </div>
                     </div>
                 </div>
                 <div class="tabcontent" id="opacity">
                     <h1>CSS Opacity / Transparency</h1>
+                    <hr>
+                    <p>The <span class="p-high">opacity</span> property specifies the opacity/transparency of an element.</p>
+                    <hr>
+                    <h2>Transparent Image</h2>
+                    <p>The  property can take a value from 0.0 - 1.0. The lower values, the more transparent:</p>
+                    <div style="display:flex;">
+                        <div style="margin:0.5rem">
+                            <img src="static-images/img_forest.jpg" alt="forest" style="display:inherit;width:100%;height:auto;opacity:0.2;">
+                            <span style="text-align:center;display:inherit;">opacity:0.2</span>
+                        </div>
+                        <div style="margin:0.5rem">
+                            <img src="static-images/img_forest.jpg" alt="forest" style="display:inherit;width:100%;height:auto;opacity:0.5;">
+                            <span style="text-align:center;display:inherit;">opacity:0.5</span>
+                        </div>
+                        <div style="margin:0.5rem">
+                            <img src="static-images/img_forest.jpg" alt="forest" style="display:inherit;width:100%;height:auto;">
+                            <span style="text-align:center;display:inherit;">opacity:1 (default)</span>
+                        </div>
+                    </div>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">img</span> {</div>
+                            <div class="codeline second-level"><span class="property">opacity</span>:<span class="p-value">0.5</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <img src="static-images/img_forest.jpg" alt="forest" style="opacity:0.5;">
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Transparent Box</h2>
+                    <p>When using the  property to add transparency to the background of an element, all of its child elements inherit the same transparency. This can make the text inside a fully transparent element hard to read:</p>
+                    <div style="display: flex;">
+                        <div style="flex:1 0 0;padding:0.5rem;background-color:var(--theme-blue);">opacity 1</div>
+                        <div style="flex:1 0 0;padding:0.5rem;opacity:0.6;background-color:var(--theme-blue);">opacity 0.6</div>
+                        <div style="flex:1 0 0;padding:0.5rem;opacity:0.3;background-color:var(--theme-blue);">opacity 0.3</div>
+                        <div style="flex:1 0 0;padding:0.5rem;opacity:0.1;background-color:var(--theme-blue);">opacity 0.1</div>
+                    </div>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">div</span> {</div>
+                            <div class="codeline second-level"><span class="property">opacity</span>:<span class="p-value">0.3</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <div style="opacity:0.3;background-color:var(--theme-blue);">opacity 0.3</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="tabcontent" id="p-class">
                     <h1>CSS Pseudo-classes</h1>
+                    <hr>
+                    <h2>What are Pseudo-classes?</h2>
+                    <p>A pseudo-class (in a nutshell) is used to define the styling of the state of an element</p>
+                    <p>Examples of this is when you're hovering the mouse, clicking, holding the mouse, etc.</p>
+                    <hr>
+                    <h2>Syntax</h2>
+                    <p>The syntax of pseudo-classes:</p>
+                    <div class="example">
+                        <div class="code">
+                            <div class="codeline"><span class="class">selector:pseudo-class</span> {</div>
+                            <div class="codeline second-level"><span class="property">property</span>:<span class="p-value">value</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Some pseudo-classes</h2>
+                    <p>elements will be displayed in different styles in different states:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="attr-value">/* unvisited link */</span></div>
+                            <div class="codeline"><span class="class">selector:link</span>{<span class="property">property</span>:<span class="p-value">value</span>;}</div>
+                            <div class="codeline"><span class="attr-value">/* visited link */</span></div>
+                            <div class="codeline"><span class="class">selector:visited</span>{<span class="property">property</span>:<span class="p-value">value</span>;}</div>
+                            <div class="codeline"><span class="attr-value">/* moused over link */</span></div>
+                            <div class="codeline"><span class="class">selector:hover</span>{<span class="property">property</span>:<span class="p-value">value</span>;}</div>
+                            <div class="codeline"><span class="attr-value">/* clicked link */</span></div>
+                            <div class="codeline"><span class="class">selector:active</span>{<span class="property">property</span>:<span class="p-value">value</span>;}</div>
+                            <div class="codeline"><span class="attr-value">/* activated inside an element */</span></div>
+                            <div class="codeline"><span class="class">selector:focus-within</span>{<span class="property">property</span>:<span class="p-value">value</span>;}</div>
+                            <div class="codeline"><span class="attr-value">/* when the link is clicked */</span></div>
+                            <div class="codeline"><span class="class">selector:target</span>{<span class="property">property</span>:<span class="p-value">value</span>;}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>All CSS Pseudo Classes</h2>
+                    <table class="summary">
+                        <tr>
+                            <th>Selector</th>
+                            <th>Example</th>
+                            <th>Example description</th>
+                        </tr>
+                        <tr>
+                            <td>:active</td>
+                            <td>a:active</td>
+                            <td>Selects the active link</td>
+                        </tr>
+                        <tr>
+                            <td>:checked</td>
+                            <td>input:checked</td>
+                            <td>Selects every checked <span><</span>input> element</td>
+                        </tr>
+                        <tr>
+                            <td>:disabled</td>
+                            <td>input:disabled</td>
+                            <td>Selects every disabled <span><</span>input> element</td>
+                        </tr>
+                        <tr>
+                            <td>:empty</td>
+                            <td>p:empty</td>
+                            <td>Selects every <span><</span>p> element that has no children</td>
+                        </tr>
+                        <tr>
+                            <td>:enabled</td>
+                            <td>input:enabled</td>
+                            <td>Selects every enabled <span><</span>input> element</td>
+                        </tr>
+                        <tr>
+                            <td>:first-child</td>
+                            <td>p:first-child</td>
+                            <td>Selects the <span><</span>p> elements that are the first element of its parent</td>
+                        </tr>
+                        <tr>
+                            <td>:first-of-type</td>
+                            <td>p:first-of-type</td>
+                            <td>Same as :first-child</td>
+                        </tr>
+                        <tr>
+                            <td>:focus</td>
+                            <td>input:focus</td>
+                            <td>Selects the <span><</span>input> element that has focus</td>
+                        </tr>
+                        <tr>
+                            <td>:hover</td>
+                            <td>a:hover</td>
+                            <td>Selects elements on mouse over</td>
+                        </tr>
+                        <tr>
+                            <td>:in-range</td>
+                            <td>input:in-range</td>
+                            <td>Selects <span><</span>input> elements with a values within a specified range</td>
+                        </tr>
+                        <tr>
+                            <td>:invalid</td>
+                            <td>input:invalid</td>
+                            <td>Selects all <span><</span>input> elements with a value with an invalid value</td>
+                        </tr>
+                        <tr>
+                            <td>:lang(language)</td>
+                            <td>p:lang(this)</td>
+                            <td>Selects every p> element with a lang attribute values starting with "this"</td>
+                        </tr>
+                        <tr>
+                            <td>:last-child</td>
+                            <td>p:last-child</td>
+                            <td>Selects every <span><</span>p> elements that is the last chlid of its parent</td>
+                        </tr>
+                        <tr>
+                            <td>:last-of-type</td>
+                            <td>p:last-of-type</td>
+                            <td>Same as :last-child</td>
+                        </tr>
+                        <tr>
+                            <td>:link</td>
+                            <td>a:link</td>
+                            <td>Selects all unvisited links</td>
+                        </tr>
+                        <tr>
+                            <td>:not(selector)</td>
+                            <td>:not(p)</td>
+                            <td>Selects every element that is not a <span><</span>p> element</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-child(n)</td>
+                            <td>p:nth-child(2)</td>
+                            <td>Selects every <span><</span>p> element that is the second child of its parent, counting from the last child</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-last-child(n)</td>
+                            <td>p:nth-last-child(2)</td>
+                            <td>Selects every <span><</span>p> element that is the second child of its parent, counting from the last child</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-of-last-type(n)</td>
+                            <td>p:nth-of-last-type(2)</td>
+                            <td>same as :nth-last-child(n)</td>
+                        </tr>
+                        <tr>
+                            <td>;nth-of-type(n)</td>
+                            <td>p:nth-of-type(2)</td>
+                            <td>Same as :nth-child(n)</td>
+                        </tr>
+                        <tr>
+                            <td>:only-of-type</td>
+                            <td>p:only-of-type</td>
+                            <td>Selects every <span><</span>p> element that is the only child of its parent</td>
+                        </tr>
+                        <tr>
+                            <td>:only-child</td>
+                            <td>p:only-child</td>
+                            <td>Same as :only-of-type</td>
+                        </tr>
+                        <tr>
+                            <td>:optional</td>
+                            <td>input:optional</td>
+                            <td>Selects <span><</span>input> elements with no "required" attribute</td>
+                        </tr>
+                        <tr>
+                            <td>:out-of-range</td>
+                            <td>input:out-of-range</td>
+                            <td>Selects <span><</span>input> elements with a values outside a specified range</td>
+                        </tr>
+                        <tr>
+                            <td>:read-only</td>
+                            <td>input:read-only</td>
+                            <td>Selects <span><</span>input> elements with a "readonly" attribute specified</td>
+                        </tr>
+                        <tr>
+                            <td>:read-write</td>
+                            <td>input:read-write</td>
+                            <td>Selects <span><</span>input> elements with no "readonly attribute</td>
+                        </tr>
+                        <tr>
+                            <td>:required</td>
+                            <td>input:required</td>
+                            <td>Selects <span><</span>input> elements with a "required" attrbute specified</td>
+                        </tr>
+                        <tr>
+                            <td>:root</td>
+                            <td>root</td>
+                            <td>Selects the document's root element (in HTML is the html element)</td>
+                        </tr>
+                        <tr>
+                            <td>:target</td>
+                            <td>#news:target</td>
+                            <td>Selects the current active #news elements (clicked on a URL containing that anchor name)</td>
+                        </tr>
+                        <tr>
+                            <td>:valid</td>
+                            <td>input:valid</td>
+                            <td>Selects all <span><</span>input> elements with valid value</td>
+                        </tr>
+                        <tr>
+                            <td>:visited</td>
+                            <td>a:visited</td>
+                            <td>Selects all visited links</td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="tabcontent" id="p-element">
                     <h1>CSS Pseudo-elements</h1>
+                    <hr>
+                    <h2>What are Pseudo-Elements?</h2>
+                    <p>A CSS pseudo-element in a nutshell is used to style specified parts of an element.</p>
+                    <h2>Syntax</h2>
+                    <p>The syntax of pseudo-elements</p>
+                    <div class="example">
+                        <div class="code">
+                            <div class="codeline"><span class="class">selector::pseudo-element</span> {</div>
+                            <div class="codeline second-level"><span class="property">property</span>:<span class="p-value">value</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>The ::first-line Pseudo-element</h2>
+                    <p>The <span class="p-high">::first-line</span> pseudo-element is used to add a special style to the first line of a text.</p>
+                    <p>The following example formats the first line of the text in all <span><</span>p> elements:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p::first-line</span> {</div>
+                            <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">green</span>;</div>
+                            <div class="codeline second-level"><span class="property">font-variant</span>:<span class="p-value">small-caps</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <p class="note"><strong>Note:</strong> The <span class="p-high">::first-line</span> pseudo-element can only be applied to block-level elements.</p>
+                    <p>The following properties apply to the <span class="p-high">::first-line</span> pseudo-element</p>
+                    <ul>
+                        <li>font properties</li>
+                        <li>color properties</li>
+                        <li>background properties</li>
+                        <li>word-spacing</li>
+                        <li>letter-spacing</li>
+                        <li>text-decoration</li>
+                        <li>vertical-align</li>
+                        <li>text-transform</li>
+                        <li>line-height</li>
+                        <li>clear</li>
+                    </ul>
+                    <p class="note"> 
+                        <em>Notice the double coolon notation</em> - <span class="p-high">::first-line</span> versus <span class="p-high">:first-line</span>
+                        <p>The double colon replaced the single-colon notation for pseudo-elements in CSS3. This was an attempt from W3C to distinguish between <em>pseudo-classes</em> and <em>pseudo-elements</em>.</p>
+                        <p>The single-colon syntax was used for both pseudo-classes and pseudo-elements in CSS2 and CSS1.</p>
+                        <p>For backward compatibility, the single colon syntax is acceptable for CSS2 and CSS1 pseudo-elements.</p>
+                    </p>
+                    <hr>
+                    <h2>The ::first-letter Pseudo-element</h2>
+                    <p>The <span class="p-high">::first-letter</span> pseudo-element is used to add a special style to the first letter of a text.</p>
+                    <p>The following example formats the first letter of the text in all <span><</span>p> elements:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p::first-letter</span> {</div>
+                            <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">green</span>;</div>
+                            <div class="codeline second-level"><span class="property">font-size</span>:<span class="p-value">xx-large</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <p class="note"><strong>Note:</strong> The <span class="p-high">::first-letter</span> pseudo-element can only be applied to block-level elements.</p>
+                    <p>The following properties apply to the ::first-letter pseudo-element:</p>
+                    <ul>
+                        <li>font properties</li>
+                        <li>color properties</li>
+                        <li>background properties</li>
+                        <li>margin properties</li>
+                        <li>padding properties</li>
+                        <li>border properties</li>
+                        <li>text-decoration</li>
+                        <li>vertical-align (only if "float" is "none")</li>
+                        <li>text-transform</li>
+                        <li>line-height</li>
+                        <li>float</li>
+                        <li>clear</li>
+                    </ul>
+                    <hr>
+                    <h2>Pseudo-elements and CSS Classes</h2>
+                    <p>Pseudo-elements can be combined with CSS classes:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">.red::first-letter</span> {</div>
+                            <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">red</span>;</div>
+                            <div class="codeline second-level"><span class="property">font-size</span>:<span class="p-value">2rem</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>::before and ::after Pseudo-elements</h2>
+                    <p>The <span class="p-high">::before</span> is the content you want to put before the element while <span class="p-high">::after</span> pseudo-element is the content you want to put after the content</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">p::before</span> {</div>
+                            <div class="codeline second-level"><span class="property">content</span>:<span class="p-value">'"'</span>;</div>
+                            <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">red</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline"><span class="class">p::after</span> {</div>
+                            <div class="codeline second-level"><span class="property">content</span>:<span class="p-value">'"'</span>;</div>
+                            <div class="codeline second-level"><span class="property">color</span>:<span class="p-value">red</span>;</div>
+                            <div class="codeline">}</div>
+                            
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <p><span style="color:red;">"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, quam!<span style="color:red">"</span></p>
+                            <p><span style="color:red;">"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, quam!<span style="color:red">"</span></p>
+                            <p><span style="color:red;">"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, quam!<span style="color:red">"</span></p>
+                            <p><span style="color:red;">"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, quam!<span style="color:red">"</span></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="tabcontent" id="b-radius">
                     <h1>CSS Rounded Corners / Border Radius</h1>
@@ -4564,7 +5070,6 @@
             </div>
         </div>
         </div>
-
     </div>
     <div class="tabs" id="JS">
 
