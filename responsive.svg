@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 240 240" width="240" height="240">
+    <path id="phones" d="M0 110 H70 Q80,110 80,120 V230 Q80,240 70,240 H10 Q0,240 0,230 V120 Q0,110 10,110 z M5 120 H28 v5 q0,5 5,5 h15 q5,0 5,-5 v-5 H60 q10,0 10,10 V220 q0,10 -10,10 H20 q-10,0 -10,-10 V130 q0,-10 10,-10" fill-rule="evenodd"/>
+    <path id="tablet" d="M20 100 V80 q0,-10 10,-10 H140 q10,0 10,10 V230 q0,10 -10,10 H95 q-10,0 -10,-2.5 t3,-7 H130 q10,0 10,-10 V90 q0,-10 -10,-10 H40 q-10,0 -10,10 V110 h-5 z" fill-rule="evenodd"/>
+    <path id="computer" d="M30 70 V30 H230 V180 H150 v-10 H220 V40 H40 V70" fill-rule="evenodd"/>
+</svg>

@@ -10,16 +10,15 @@
     <link rel="shortcut icon" href="images.svg" type="image/x-icon" id="icon">
 </head>
 <body>
-    <div class="overlay"></div>
     <div class="content">
         <div class="tablinks">
             <div id="html-acc" class="tabcomponent">
-                <button class="accordion">HTML</button>
-                <div class="accordion-container">
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'introduction'})" id="default"><img src="home.svg" alt=""/>HTML Introduction</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'paragraphs'})" id="paragraphstab"><img src="Pilcrow.svg" alt=""/>HTML Paragraph</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'images'})" id="imagestab"><img src="images.svg" alt=""/>HTML Images</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'table'})" id="tabletab"><img src="table.svg" alt=""/>HTML Table</button>
+                <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'introduction'})" id="default"><img src="home.svg" alt=""/>HTML Introduction</button>
+                <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'paragraphs'})" id="paragraphstab"><img src="Pilcrow.svg" alt=""/>HTML Paragraph</button>
+                <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'images'})" id="imagestab"><img src="images.svg" alt=""/>HTML Images</button>
+                <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'table'})" id="tabletab"><img src="table.svg" alt=""/>HTML Table</button>
+                <button class="more">Show more</button>
+                <div class="more-container">
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'blocks'})" id="blockstab"><img src="block.svg" alt=""/>HTML Blocks</button>
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'class'})" id="classtab"><img src="class.svg" alt=""/>HTML Class</button>
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'id'})" id="idtab"><img src="hashtag.svg" alt=""/>HTML Id</button>
@@ -28,27 +27,27 @@
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'layout'})" id="layouttab"><img src="layout.svg" alt=""/>HTML Layout</button>
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'computer-code'})" id="computer-codetab"><img src="computer.svg" alt=""/>HTML Computer code</button>
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'semantics'})" id="semanticstab"><img src="semantics.svg" alt=""/>HTML Semantics</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'responsive'})" id="responsivetab"><img src="semantics.svg" alt="">HTML Responsive</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'responsive'})" id="responsivetab"><img src="responsive.svg" alt="">HTML Responsive</button>
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'style-guide'})"id="style-guidetab"><img src="semantics.svg" alt="">HTML Style Guide</button>    
                 </div>
             </div>
             <div id="css-acc" class="tabcomponent">
-                <button class="accordion">CSS</button>
-                <div class="accordion-container">
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-introduction'})" id="css-introductiontab"><img src="home.svg" alt="home">CSS Introduction</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'syntax'})" id="syntaxtab"><img src="semantics.svg" alt="semantics">CSS Syntax</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'selectors'})" id="selectorstab"><img src="selector.svg" alt="selector">CSS selectors</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-howto'})" id="css-howtotab"><img src="css.svg" alt="css">CSS How to</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'comments'})" id="commentstab"><img src="css.svg" alt="css">CSS Comments</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'colors'})" id="colorstab"><img src="css.svg" alt="css">CSS Colors</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'backgrounds'})" id="backgroundstab"><img src="css.svg" alt="css">CSS Backgrounds</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'borders'})" id="borderstab"><img src="css.svg" alt="css">CSS Borders</button>
-                    <button class="link" id="dimensionstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'dimensions'})"><img src="css.svg" alt="semantics">CSS Dimensions</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'margin'})" id="margintab"><img src="css.svg" alt="semantics">CSS Margin</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'padding'})" id="paddingtab"><img src="boxmodel.svg" alt="box-model">CSS Padding and Box Model</button>
+                <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-introduction'})" id="css-introductiontab"><img src="home.svg" alt="home">CSS Introduction</button>
+                <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'syntax'})" id="syntaxtab"><img src="semantics.svg" alt="semantics">CSS Syntax</button>
+                <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'selectors'})" id="selectorstab"><img src="selector.svg" alt="selector">CSS selectors</button>
+                <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-howto'})" id="css-howtotab"><img src="css.svg" alt="css">CSS How to</button>
+                <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'comments'})" id="commentstab"><img src="css.svg" alt="css">CSS Comments</button>
+                <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'colors'})" id="colorstab"><img src="css.svg" alt="css">CSS Colors</button>
+                <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'backgrounds'})" id="backgroundstab"><img src="css.svg" alt="css">CSS Backgrounds</button>
+                <button class="link" id="dimensionstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'dimensions'})"><img src="css.svg" alt="semantics">CSS Dimensions</button>
+                <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'margin'})" id="margintab"><img src="css.svg" alt="semantics">CSS Margin</button>
+                <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'padding'})" id="paddingtab"><img src="boxmodel.svg" alt="box-model">CSS Padding and Box Model</button>
+                <button class="more">Show more</button>
+                <div class="more-container">
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'outline'})" id="outlinetab"><img src="outline.svg" alt="outline">CSS Outline</button>
                     <button class="link" id="texttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'text'})"><img src="text.svg" alt="text">CSS Text</button>
                     <button class="link" id="fonttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'font'})"><img src="font.svg" alt="">CSS Font</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'borders'})" id="borderstab"><img src="css.svg" alt="css">CSS Borders</button>
                     <button class="link" id="displaytab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'display'})">CSS Display</button>
                     <button class="link" id="positiontab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'position'})">CSS Position</button>
                     <button class="link" id="overflowtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'overflow'})">CSS Overflow</button>
@@ -56,25 +55,40 @@
                     <button class="link" id="opacitytab"  onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'opacity'})">CSS Opacity</button>
                     <button class="link" id="p-classtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'p-class'})">CSS Pseudo-class</button>
                     <button class="link" id="p-elementtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'p-element'})">CSS Pseudo-element</button>
-                    <button class="link" id="b-radiustab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'b-radius'})">CSS Border Radius</button>
+                    <button class="link" id="counterstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'counters'})">CSS Counters</button>
+                    <button class="link" id="specificitytab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'specificity'})">CSS Specificity</button>
+                    <h2>Advanced CSS</h2>
+                    <button class="link " id="b-radiustab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'b-radius'})">CSS Border Radius</button>
+                    <button class="link" id="b-imagestab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'b-images'})">CSS Border Image</button>
+                    <button class="link" id="a-backgroundstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'a-backgrounds'})">CSS Backgrounds</button>
+                    <button class="link" id="gradientstab" oncl ick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'gradients'})">CSS Gradients</button>
+                    <button class="link" id="t-shadowtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'t-shadow'})">CSS Text Effects</button>
                 </div>
             </div>
             <div id="settings-acc" class="tabcomponent">
-                <button class="accordion">Settings</button>
-                <div class="accordion-container" >
-                    <button id="settings">
-                        <svg viewbox="0 0 24 24">
-                            <g>
-                                <path d="M3 12 H21 L12 3 z"/>
-                                <path d="M3 12 H21 L12 21 z"/>
-                            </g>
-                        </svg>
-                    </button>
+                <button id="settings" title="change to ">
+                    <svg viewbox="0 0 280 280">
+                        <g class="light-theme">
+                            <path fill-rule="evenodd" d="m45.14576,100.48789l-39.42805,39.49016l39.33535,40.00759l0.29154,55.05719l55.52932,0l39.35385,39.32766l39.63162,-39.26699l55.13072,-0.12351l-0.1359,-55.43904l39.42805,-39.49915l-39.29215,-38.32987l0.03542,-56.58503l-55.04502,0.06238l-40.20832,-39.55979l-38.95433,39.4415l-55.69402,-0.06357l0.02192,55.48047zm19.85652,39.14202c0.75188,38.34592 28.19554,76.40989 75.32907,75.79899c47.13353,-0.6109 74.10726,-36.88915 74.67117,-75.04711c0.56391,-38.15796 -30.16922,-74.81215 -73.82531,-75.799c-43.65609,-0.98685 -76.92681,36.7012 -76.17493,75.04712z" id="svg_6"/>
+                        </g>
+                        <circle cx="140" cy="140" r="60" class="moonOrSun"/>
+                    </svg>
+                </button>
+                <button class="more">Settings</button>
+                <div class="more-container" >
                     <a href="The-whole-page.html">Downdate to old webpage</a>
                 </div>
             </div>
         </div>
         <div class="tab">
+            
+            <button class="tablinks-toggle">
+                <svg viewbox="0 0 240 240">
+                     <rect class="blocks" height="40" width="240" y="1" x="1" />
+                     <rect class="blocks" height="40" width="240" y="100" x="1"/>
+                     <rect class="blocks" height="40" width="240" y="200" x="0"/>
+                </svg>
+            </button>
             <div class="tabs" id="html">
                 <div class="tabcontent" id="introduction">
                     <h1>HTML Introduction</h1>
@@ -506,7 +520,7 @@
                         </div>
                         <p>Result</p>
                         <img src="static-images/img_5terre.jpg" alt="Terre">
-                        <p class="note">Note: the <b>alt</b> attribute only works if the image can not be fetched, replaced, unavailable, or the URL does not exist.</p>
+                        <p class="note"><strong>Note:</strong> the <em>alt</em> attribute only works if the image can not be fetched, replaced, unavailable, or the URL does not exist.</p>
                     </div>
                 </div>
                 <div class="tabcontent" id="table">
@@ -3249,7 +3263,7 @@
                     <h2>CSS Box Model</h2>
                     <p>All HTML elements can be considered as boxes.</p>
                     <p>In CSS, the terms "box model" is used when talking about design and layout.</p>
-                    <p>The CSS box model is essentially a obx that wraps around every HTML element. It consists of: margins, borders, padding and the actual content. The image below illustrates the box model:</p>
+                    <p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding and the actual content. The image below illustrates the box model:</p>
                     <div style="border:1px dashed #aaa;padding:0 20px 20px;text-align:center;background-color:#eee;">
                         Margin
                         <div style="background-color:var(--theme-blue);padding:0 20px 20px;">
@@ -3272,7 +3286,7 @@
                         <h3>Example</h3>
                         <p>Demonstration of the box model:</p>
                         <div class="code">
-                            <div class="codeline"><span class="class">div</span></div>
+                            <div class="codeline"><span class="class">div</span> {</div>
                             <div class="codeline second-level"><span class="property">width</span>:<span class="p-value">300px</span>;</div>
                             <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">15px solid green</span>;</div>
                             <div class="codeline second-level"><span class="property">padding</span>:<span class="p-value">50px</span>;</div>
@@ -5064,8 +5078,289 @@
                         </div>
                     </div>
                 </div>
+                <div class="tabcontent" id="counters">
+                    <h2>CSS Counters</h2>
+                    <p>CSS counters are "variables" maintained by CSS whose values can be incremented by CSS rules (to track how many times they are used). Counters let you adjust the appearance of content based on its placement in the document.</p>
+                    <hr>
+                    <h2>Automatic NUmbering With Counters</h2>
+                    <p>CSS counters are like "variables". The variable values can be incremented by CSS rules (which will track how many time they are used).</p>
+                    <p>To work with CSS counters we will use the following properties</p>
+                    <ul>
+                        <li><span class="p-high">counter-reset</span> - Creates or resets a counter</li>
+                        <li><span class="p-high">counter-increment</span> - Increments a counter value</li>
+                        <li><span class="p-high">content</span> - Inserts generated content</li>
+                        <li><span class="p-high">counter()</span> function - Adds te values of a counter to an element</li>
+                    </ul>
+                    <p>To use a CSS counter, it must first be created with <span class="p-high">counter-reset</span></p>
+                    <p>The following eample creates a counter for the page (in the body selector), then increments the counter values for each <span><</span>h2> element and adds "Section <span><</span>value of the counter>:" to the beginning of each <span><</span>h2> element:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">body</span> {</div>
+                            <div class="codeline second-level"><span class="property">counter-reset</span>:<span class="p-value">section</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">h2::before</span> {</div>
+                            <div class="codeline second-level"><span class="property">counter-increment</span>:<span class="p-value">section</span>;</div>
+                            <div class="codeline second-level"><span class="property">content</span>:<span class="p-value">"Section " counter(section) ": "</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>CSS Counter Proeprties</h2>
+                    <table class="summary">
+                        <tr>
+                            <th>Proeprty</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>content</td>
+                            <td>Used with the ::before and ::after pseudo-elements, to insert generated content</td>
+                        </tr>
+                        <tr>
+                            <td>counter-increment</td>
+                            <td>Increments one or more counter values</td>
+                        </tr>
+                        <tr>
+                            <td>counter-reset</td>
+                            <td>Creates or resets one or more counters</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tabcontent" id="specificity">
+                    <h1>CSS Specificity</h1>
+                    <hr>
+                    <h2>What is Specificity?</h2>
+                    <p>If there are two ore more conlicting CSS rules that point to the same element, the browsers follows some rules to determine which one is most specfic and therefore wins out.</p>
+                    <p>Think of specificity as a score/rank that determines which style declarations are ultimately applied to an element.</p>
+                    <p>The universal selector (*) has low specificity, while ID selectors are highly specific!</p>
+                    <p class="note"><strong>Note</strong> Specificity is a comon reason why your CSS-rules don't apply to some elements, although you think they should.</p>
+                    <hr>
+                    <h2>Specificity Hierarchy</h2>
+                    <p>Every selector has its place in the specificity hierarchy. There are four categories which define the specificity level of a selector:</p>
+                    <p><strong>Inline styles</strong> - An inline style is attatched directly to the element to be styled. Example: <span><</span>h1 style="color:#ffffff;"></p>
+                    <p><strong>IDs</strong></p>
+                    <p><strong>Classes, attributes and pseudo-classes</strong></p>
+                    <p><strong>default styling and pseudo-elements</strong></p>
+                    <hr>
+                    <h2>How to Calculate Specificity?</h2>
+                    <p>Memorize how to calculate specificity!</p>
+                    <p>Start at 0, add 1000 for style attribute, add 100 for each ID, add 10 for each attribute, class or pseudo-class, add 1 for each element name or pseudo-element.</p>
+                    <p>Consider these three code fragments:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline">A: h1</div>
+                            <div class="codeline">B: #content h1</div>
+                            <div class="codeline">C: <span class="bracket"><</span><span class="tagname">div</span> <span class="attribute">id</span>=<span class="attrvalue">"content"</span><span class="bracket">></span><span class="bracket"><</span><span class="tagname">h1</span> <span class="attribute">style</span>=<span class="attrvalue">"color:#ffffff"</span><span class="bracket">></span>Heading<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span><span class="bracket"><</span><span class="tagname">/div</span><span class="bracket">></span></div>
+                        </div>
+                    </div>
+                    <p>The specificity of A is 1(one element)</p>
+                    <p>The specificity of B is 101(one ID reference and one element)</p>
+                    <p>The specificity of C is 1100(one ID reference and inline styling)</p>
+                    <p>Since 1 < 101 < 1100, the third rule (C) has a greater level of specificity, and therefore will be applied.</p>
+                    <hr>
+                    <h2>Specificity Rules</h2>
+                    <p><b>Equal specificity: the latest rule counts</b> - IF the same rule is written twice into the external style sheet, then the lower rule in the style sheet is closer to the element to be styled, and therefore will be applied:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"> <span class="class">h1</span> {<span class="property">background-color</span>:<span class="p-value">yellow</span>;}</div>
+                            <div class="codeline"> <span class="class">h1</span> {<span class="property">background-color</span>:<span class="p-value">red</span>;}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <h1 style="background-color:red;">Hello, world</h1>
+                        </div>
+                    </div>
+                    <hr>
+                    <p><b>ID selectors have a higher specificity than attribute selectors</b> - Look at the following three code lines:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">div#a</span> {<span class="property">background-color</span>:<span class="p-value">green;</span>}</div>
+                            <div class="codeline"><span class="class">#a</span> {<span class="property">background-color</span>:<span class="p-value">yellow;</span>}</div>
+                            <div class="codeline"><span class="class">div[id=a]</span> {<span class="property">background-color</span>:<span class="p-value">blue;</span>}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <div style="background-color:green">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, rerum.</div>
+                        </div>
+                    </div>
+                    <p>The first rule is more specific than the other two, and will be applied. </p>
+                    <hr>
+                    <p><strong>Contextual selectors are more specific than a single element selector</strong> - The embedded style sheet is closer to the element to be styled. So in the following situation</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class" style="font-weight:600">From external CSS file:</span></div>
+                            <div class="codeline"><span class="class">#content h1</span> {<span class="property">background-color</span>:<span class="p-value">red</span>;}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class" style="font-weight:600">In HTML file:</span></div>
+                            <div class="codeline"><span class="class"><span><</span>style></span></div>
+                            <div class="codeline"><span class="class">#content h1</span> {</div>
+                            <div class="codeline second-level"><span class="property">background-color</span>:<span class="p-value">yellow</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline"><span class="class"><span><</span>/style></span></div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <h1 style="background-color:yellow">Hello, world</h1>
+                        </div>
+                    </div>
+                    <hr>
+                    <p><strong><span class="p-high">!important</span> rule overrides everything</strong> - The important rule in style declaration overrides every specificity in the list including the inline style sheet.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                        <div class="codeline"><span class="class">h1</span> {<span class="property">color</span>:<span class="p-value">black</span>;}</div>
+                        <div class="codeline"><span class="class">.h1</span> <span class="property">color</span>:<span class="p-value">blue <span class="property">!important</span>;</span></div>
+                            <div class="codeline"><span class="class">#h1only</span> {<span class="property">color</span>:<span class="p-value">red</span>;}</div>
+                        </div>
+                        <p>Result;</p>
+                        <div class="result">
+                            <h1 style="color:blue;">Hello, world</h1>
+                        </div>
+                    </div>
+
+                </div>
                 <div class="tabcontent" id="b-radius">
-                    <h1>CSS Rounded Corners / Border Radius</h1>
+                    <h1>CSS Rounded Corners</h1>
+                    <hr>
+                    <div style="border-radius:12px;border:1px solid var(--theme-blue);padding:1rem;">
+                        <h2>CSS Rounded Corners</h2>
+                        <p>With the CSS <span class="p-high">border-radius</span> property, you can give any element "rounded corners".</p>
+                    </div>
+                    <hr>
+                    <h2>CSS border-radius Property</h2>
+                    <p>The CSS <span class="p-high">border-radius</span> property defines the radius of an element's corners.</p>
+                    <p class="note"><strong>Tip:</strong> This property allow you to add rounded corners to elements!</p>
+                    <ol>
+                        <li>Rounded corners for an element with a specified background color:</li>
+                        <div style="border-radius:1rem;margin:1rem;padding:1rem; background-color: var(--theme-blue);">Rounded corners!</div>
+                        <li>Rounded corners for an element with a border:</li>
+                        <div style="border-radius:1rem;margin:1rem;padding:1rem; border:1px solid var(--theme-blue)">Rounded corners!</div>
+                        <li>Rounded corners for an element with a background image:</li>
+                        <div style="border-radius:1rem;margin:1rem;padding:1rem; background:linear-gradient(to right, var(--theme-html), var(--theme-blue))">Rounded corners!</div>
+                    </ol>
+                    <hr>
+                    <h2>CSS border-radius - Specify Each Corner</h2>
+                    <p>The <span class="p-high">border-radius</span> property can have from one to four values. Here are the rules:</p>
+                    <p><strong>Four values - border-radius:15px 50px 30px 5px</strong> (first value applies to top-left corner, second value applies to top-right corner, third value applies to bottom-right corner, and fourth value applies to bottom-left cornder):</p>
+                    <div style="border-radius:15px 50px 30px 5px;max-width:150px;height:100px;background: #00acff;"></div>
+                    <p><strong>Three values - border-radius: 15px 50px 30px;</strong> (first value applies to top-left corner, second value applies to top-right and bottom-left corners, and third values applies to bottom-right corner):</p>
+                    <div style="border-radius:15px 50px 30px;max-width:150px;height:100px;background: #00acff;"></div>
+                    <p><strong>Two values - border-radius: 15px 50px;</strong> (first value applies to top-left and bottom-right corner, second value top-right and bottom-left corners):</p>
+                    <div style="border-radius:15px 50px;max-width:150px;height:100px;background: #00acff;"></div>
+                    <p><strong>One value - border-radius: 15px;</strong> (the value applies to all four corners, which are rounded equally):</p>
+                    <div style="border-radius:15px;max-width:150px;height:100px;background: #00acff;"></div>
+                    <p>Here is the code:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">#rcorners1</span> {</div>
+                            <div class="codeline second-level"><span class="property">border-radius</span>:<span class="p-value">15px 50px 30px 5px</span>;</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">#00acff</span>;</div>
+                            <div class="codeline second-level"><span class="property">width</span>:<span class="p-value">150px</span>;</div>
+                            <div class="codeline second-level"><span class="property">height</span>:<span class="p-value">100px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">#rcorners2</span> {</div>
+                            <div class="codeline second-level"><span class="property">border-radius</span>:<span class="p-value">15px 50px 30px</span>;</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">#00acff</span>;</div>
+                            <div class="codeline second-level"><span class="property">width</span>:<span class="p-value">150px</span>;</div>
+                            <div class="codeline second-level"><span class="property">height</span>:<span class="p-value">100px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">#rcorners3</span> {</div>
+                            <div class="codeline second-level"><span class="property">border-radius</span>:<span class="p-value">15px 50px</span>;</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">#00acff</span>;</div>
+                            <div class="codeline second-level"><span class="property">width</span>:<span class="p-value">150px</span>;</div>
+                            <div class="codeline second-level"><span class="property">height</span>:<span class="p-value">100px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">#rcorners4</span> {</div>
+                            <div class="codeline second-level"><span class="property">border-radius</span>:<span class="p-value">15px</span>;</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">#00acff</span>;</div>
+                            <div class="codeline second-level"><span class="property">width</span>:<span class="p-value">150px</span>;</div>
+                            <div class="codeline second-level"><span class="property">height</span>:<span class="p-value">100px</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <p>You could also create elliptical corners:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">#elliptical</span> {</div>
+                            <div class="codeline second-level"><span class="property">border-radius</span>:<span class="p-value">15px / 50px</span>;</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">#00acff</span>;</div>
+                            <div class="codeline second-level"><span class="property">width</span>:<span class="p-value">150px</span>;</div>
+                            <div class="codeline second-level"><span class="property">height</span>:<span class="p-value">100px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">#elliptical2</span> {</div>
+                            <div class="codeline second-level"><span class="property">border-radius</span>:<span class="p-value">50px / 15px</span>;</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">#00acff</span>;</div>
+                            <div class="codeline second-level"><span class="property">width</span>:<span class="p-value">150px</span>;</div>
+                            <div class="codeline second-level"><span class="property">height</span>:<span class="p-value">100px</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="class">#elliptical2</span> {</div>
+                            <div class="codeline second-level"><span class="property">border-radius</span>:<span class="p-value">50%</span>;</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">#00acff</span>;</div>
+                            <div class="codeline second-level"><span class="property">width</span>:<span class="p-value">150px</span>;</div>
+                            <div class="codeline second-level"><span class="property">height</span>:<span class="p-value">100px</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result;</p>
+                        <div class="result">
+                            <div style="border-radius:50px/15px;background:#00acff;max-width:150px;height:100px;margin:3px 0;"></div>
+                            <div style="border-radius:15px/50px;background:#00acff;max-width:150px;height:100px;margin:3px 0;"></div>
+                            <div style="border-radius:50%;background:#00acff;max-width:150px;height:100px;margin:3px 0;"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>CSS Rounded Corners Properties</h2>
+                    <table class="summary">
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>border-radius</td>
+                            <td>A shorthand property for etting all the four border-*-*-radius properties</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-left-radius</td>
+                            <td>Defines the radius of the border on the top-left corner</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-right-radius</td>
+                            <td>Defines the radius of the border on the top-right corner</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-left-radius</td>
+                            <td>Defines the radius of the border on the bottom-left corner</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-right-radius</td>
+                            <td>Defines the radius of the border on the bottom-right corner</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tabcontent" id="b-images">
+                    <h1>CSS Border Image</h1>
+                    <hr>
+                    <img src="test.svg" alt="test">
+                </div>
+                <div class="tabcontent" id="a-backgrounds">
+                    <h1>CSS Advanced Backgrounds</h1>
+                </div>
+                <div class="tabcontent" id="gradients">
+                    <h1>CSS Gradients</h1>
+                </div>
+                <div class="tabcontent" id="t-shadow">
+                    <h1>CSS Text shadow</h1>
                 </div>
             </div>
         </div>

@@ -1,8 +1,7 @@
-function acc() {
-    var accordion = document.getElementsByClassName('accordion');
+function show_more() {
+    var accordion = document.getElementsByClassName('more');
     for (var i = 0; i < accordion.length;i++) {
         // accordion[i].className += " block"
-        console.log(accordion[i].classList)
         if (accordion[i].classList[1] == "open") {
             console.log(2)
             accordion[i].nextElementSibling.style.height = accordion[i].nextElementSibling.scrollHeight + "px";
@@ -14,16 +13,28 @@ function acc() {
             this.classList.toggle('open');
             console.log(this.classList)
             if (this.classList[1] == "open") {
-                console.log(2)
+                this.innerHTML = "Show less"
                 this.nextElementSibling.style.height = this.nextElementSibling.scrollHeight + "px";
             } else {
-                console.log(1)
+                this.innerHTML = "Show more"
                 this.nextElementSibling.style.height = 0;
             }
         })
     }
 }
-acc();
+show_more();
+function side_bar(element, trigger) {
+    var button_trigger = document.querySelector(trigger);
+    var elem = document.querySelector(element.query_selector);
+    button_trigger.addEventListener('click', function() {
+        if (elem.className == (element.default + " enabled")) {
+            elem.className = element.default
+        } else {
+            elem.className = element.default + " enabled"
+        }
+    })
+}
+side_bar({query_selector:".tablinks", default:"tablinks"}, ".tablinks-toggle")
 function tabs (ui) {
     document.cookie = "lasttab =" + "'" + ui.targetElement + "'";
     var tablinks = document.getElementsByClassName(ui.tabs), 
@@ -62,32 +73,35 @@ function getcookie(cname) {
     return "";
 }
 var themebutton = document.getElementById("settings");
+var circle_toggle = themebutton.children[0].children[1];
 function setRaC() {
     if (document.body.className == "") {
-        themebutton.style.transform = "rotate(180deg)"
+        themebutton.children[0].style.transform = "rotate(180deg)"
         document.body.className = "dark";
+        themebutton.title="switch to light mode"
+        circle_toggle.style.transform = "translateX(0)" 
     }
     else if (document.body.className == "dark") {
-        themebutton.style.transform = null
+        themebutton.children[0].style.transform = null
         document.body.className = "";
+        themebutton.title="switch to dark mode"
+        circle_toggle.style.transform = "translateX(-15%)"
     }
 }
 themebutton.addEventListener('click', function() {
     setRaC()
     document.cookie = "theme =" + "'" + document.body.className + "'";
-    console.log({
-        classNameOfBody:document.body.className,
-        transform: themebutton.style.transform
-    })
 })
 var lasttheme = getcookie("theme")
 switch(lasttheme) {
     case "dark":
-        themebutton.style.transform = "rotate(180deg)"
+        themebutton.children[0].style.transform = "rotate(180deg)"
         document.body.className = "dark";
+        circle_toggle.style.transform = "translateX(0)" 
         break;
-    case "":
-        themebutton.style.transform = null;
-        document.body.className = "";
+        case "":
+            themebutton.children[0].style.transform = null;
+            document.body.className = "";
+            circle_toggle.style.transform = "translateX(-15%)"
         break;
 }

@@ -44,14 +44,14 @@ html, body {
     margin:0;
 }
 body {font-size:1rem;}
-h1, h2 {font-family:Georgia;}
-h1 {font-size:2.5rem;}
-h2 {font-size:2rem;}
-h3 {font-size:1.6rem;}
+h1, h2 {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+h1 {font-size:42px;}
+h2 {font-size:1.6rem;}
+h3 {font-size:1.4rem;}
 h4 {font-size:1.3rem;}
 h5 {font-size:1.1rem;}
 h6 {font-size:1rem;}
-h1, h2, h3, h4, h5, h6 {margin:10px 0;}
+h1, h2, h3, h4, h5, h6 {margin:10px 0;font-weight:500;}
 body.dark{
     --theme-blue:#004cff;
     --theme-html:#da5700;
@@ -76,7 +76,7 @@ body.dark{
     --css-property: rgb(174, 0, 255);
     --css-property-value: rgb(162, 255, 119);
     --background:black;
-    --second-background:#363636;
+    --second-background:#161616;
     --theme-settings:#00b97c;
     --theme-dark-settings:#018b5d;
     --theme-darker-settings:#006845;
@@ -98,114 +98,66 @@ body.dark, body.dark .code{
     padding:3px 6px;
     border-radius:inherit;
 }
+.content {display:flex;width:var(--full);height:var(--full);}
+.content > * {overflow:auto;}
 #css .note {box-shadow: 2px 2px 4px 0 var(--theme-dark-css);}
 #html .note {box-shadow:2px 2px 4px 0 var(--theme-dark-html);}
-/*hover of the child of tablinks class.tablinks > *:hover, .block {
-    border:1px solid transparent;
-    border:1px solid black;
-    transform:scale(1.1);
-}*/
-#html hr {
-    border:none;
-    border-top:3px solid var(--theme-html);
-}
-#css hr {
-    border:none;
-    border-top:3px solid var(--theme-dark-css);
-}
-#JS hr {
-    border:none;
-    border-top:3px solid var(--theme-js);
-}
-.tabcontent .example{padding: 1.2rem;margin: 1rem 0;}
+#html hr {border:none;border-top:3px solid var(--theme-html);}
+#css hr {border:none;border-top:3px solid var(--theme-dark-css);}
+#JS hr {border:none;border-top:3px solid var(--theme-js);}
+.tabcontent .example{padding: 1.2rem;margin: 1rem 0;border:15px solid transparent;border-image:url("static-images/border-image\(2\).png") 81 round;}
 .example > * {margin:0.6rem 0;}
 #html .example {background-color: var(--example-back-html);}
 #css .example {background-color: var(--example-back-css);}
-/**/.tabcontent{padding-bottom:2rem;}
+.tab {flex: 0 1 100%;}
 .tabs {padding:0 10px;}
+.tabcontent{padding:40px 0.5rem;letter-spacing: -1px;word-spacing:1px;}
 .tabcontent > h1:first-child {margin-block-start:0;}
-
 /* The side bar of the website*/
-.tablinks {
-    width:var(--sideBarWidth);
-    height:var(--full);
-    /* box-shadow:1px 0 10px 1px #acacac; */
-    overflow:auto;
-    flex:0 0 var(--sideBarWidth);
-}
-.content {display:flex;width:var(--full);height:var(--full);}
-.content > * {overflow:auto;}
+.tablinks {flex:0;padding-top:40px;}
+.tablinks.enabled {flex:0 0 var(--sideBarWidth);transition:flex-basis var(--miliseconds) ease;}
+.tablinks-toggle > svg {width:100%;height:auto;}
+.tablinks-toggle > svg > *  {fill:var(--color);}
 .tablinks::-webkit-scrollbar {width:5px;}
 .tablinks::-webkit-scrollbar-track {background:#ddd;border-radius:2px;}
 .tablinks::-webkit-scrollbar-thumb {background:#aaa;}
 .tablinks::-webkit-scrollbar-thumb:hover {background:#777;}
 .tablinks::-webkit-scrollbar-thumb:active {background:#444;}
-/* all the child of tablinks class.tablinks > * {
-    display:block;  
+
+
+.tablinks button.link {
+    border:none;
+    padding:6px 12px;
+    display:block;
     width:100%;
     text-align:left;
-    padding:10px 10px 10px 30px;
-    outline:none;
-    border:none;
-    background-color:inherit;
-    border-radius:0;
-} */
-#html-acc {background-color:var(--theme-html);}   
-#css-acc {background-color:var(--theme-blue);}
-#settings-acc {background-color: var(--theme-settings);}
+    /* letter-spacing: -1px; */
+}
+#html-acc, #html-acc button{background-color:var(--theme-html);} 
+#html-acc button.link:hover {background-color: var(--theme-dark-html);}  
+#html-acc button.link.block {background-color:var(--theme-darker-html);}
+#css-acc, #css-acc button{background-color:var(--theme-blue);}
+#css-acc button.link:hover {background-color:var(--theme-dark-css);}
+#css-acc button.link.block {background-color:var(--theme-darker-css);}
+/* #settings-acc {background-color: var(--theme-settings);} */
 .tabcomponent {
     width:100%;
-    padding:6px;
+    padding:0.4rem;
 }
-.accordion-container {
+.more-container {
     overflow:hidden;
     transition:height 0.5s ease;
 }
-.accordion {width:100%;}
-:is(#html-acc, #css-acc) > div > :first-child {margin-top:0;}
-:is(#html-acc, #css-acc) > div > :last-child {margin-bottom:0;}
-:is(#html-acc, #css-acc) > div > *, .tabcomponent > .accordion {
-    display:block;  
-    text-align:left;
-    margin:6px 0;
-    width:100%;
-    outline:none;
-    border:none;
-    padding:6px 12px;
-    background-color:inherit;
-    border-radius:4px;
-    line-height:normal;
-    transition:0.5s ease;
-}
-.tabcomponent > .accordion {
-    font-size: 1.5rem;
-}
-#html-acc > div > *:hover, #html-acc > .accordion:hover {background-color:var(--theme-dark-html);}
-#css-acc > div > *:hover, #css-acc > .accordion:hover {background-color:var(--theme-dark-css);}
-#settings-acc > div > *:hover, #settings-acc > .accordion:hover {background-color:var(--theme-dark-settings);}
-:is(#html-acc, #css-acc) > div > *:hover, :is(#html-acc, #css-acc) > .accordion:hover {transition:none;}
+.more {width:100%;padding:6px 12px;border:none;}
+
 button {cursor:pointer;}
-div#html-acc > div > .block, div#html-acc > .accordion.open {background-color:var(--theme-darker-html);}
-div#css-acc > div > .block, div#css-acc > .accordion.open {background-color:var(--theme-darker-css);}
-div#settings-acc > div > .block, div#settings-acc > .accordion.open {background-color:var(--theme-darker-settings);}
-.tabcomponent > div > .block, .tabcomponent > .accordion.open {color:var(--color);}
-.accordion {position: relative;}
-.accordion::after {
-    content: url('arrow.svg');
-    position: absolute;
-    top:50%;
-    transform:translateY(-50%);
-    right:0;
-    line-height:0;
-    transition:transform 0.3s ease;
-}
-.accordion.open::after {transform:translateY(-50%) rotate(90deg) ;}
+.tabcomponent > div > .block, .tabcomponent > .more.open {color:var(--color);}
 .link > svg, .link > img {
     width:1.2rem;
-    height:1.2rem;
+    height:1.2rem;  
     position:relative;
     top:50%;
-    left:-5px;
+    margin-right:12px;
     transform:translateY(25%);
     overflow:visible;
 }
@@ -245,7 +197,6 @@ body:not(body.dark) .tabcontent  .code {background:white;}
 .codeline.third-level {padding-left:calc(4rem + var(--width));}
 .codeline.fourth-level {padding-left:calc(6rem + var(--width));}
 .codeline.fifth-level {padding-left:calc(8rem + var(--width));}
-tab {flex:1 0 0;}
 /* The example element of the page */
 table {width:100%;}
 [second], [second] th, [second] td {border:1px solid black;}
@@ -266,28 +217,22 @@ table.summary {
     font-size: 1rem;
     word-spacing:1px;
 }
-.tab {flex:1 0 0;}
 @media screen and (max-width:426px) {
-    body {font-size:17px;}
-    .content {flex-wrap: wrap;}
-    .tablinks {flex:1 0 425px;height:max-content;display:flex;}
-    .tab {flex:1 0 425px;overflow-x:auto;}
-    :is(#css-acc, #html-acc) {display:flex;width:max-content!important;height:inherit;}
-    :is(#css-acc, #html-acc) > *{width:inherit;margin:0 6px;}
-    .link > img, .link > svg {top:initial!important;}
+    .link {white-space: nowrap;}
 }
 table.summary tr:nth-child(even) {background-color:var(--second-background);}
 table.summary tr {border:1px solid rgb(185, 185, 185);text-align:left;}
 table.summary tr, table.summary {border-collapse:collapse;}
 table.summary th, table.summary td {padding:8px;}
 
-#settings {
+div#settings-acc > #settings, .tablinks-toggle {
     padding:0;
     line-height:0;
     border:none;
-    width:30px;
-    height:30px;
+    width:40px;
+    height:40px;
     outline:none;
+    padding:0.3rem;
     transition: transform var(--miliseconds) linear;
     z-index:999;
     background:none;
@@ -295,10 +240,17 @@ table.summary th, table.summary td {padding:8px;}
     border-radius: 5px;
     margin: 10px;
 }
+.tablinks-toggle {
+    position:absolute;
+    top:0;
+    left:0;
+    overflow:hidden;
+    margin:0;
+    background-color: var(--background);
+}
 #settings:hover {box-shadow:0 0 12px 0 var(--color);}
-#settings >svg {height:100%;width:100%;}
-svg g > path:nth-child(2) {fill:var(--plain);}
-svg g > path:nth-child(1) {fill:var(--dark);}
+#settings >svg, #settings > svg > .moonOrSun {height:100%;width:auto;transition:transform .5s cubic-bezier(.25,.34,.62,1.26);}
+#settings > svg > * {fill:var(--color);}
 /* svg g > path:nth-child(4) {fill:var(--matrix);}
 svg g > path:nth-child(1) {fill:var(--theme-blue);} */
 .result {
