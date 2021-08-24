@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 240 240" width="240" height="240">
+  <path d="M20,20 H220 V220 H20 V20 M30,30 H210 V210 H30 V30" fill-rule="evenodd"/>
+  <text font-family="Segoe UI" font-size="6rem" x="95" y="150" >P</text>
+  <path d="M35,120 H90" id="width" stroke="black" stroke-width="5"/>
+  <path d="M40,100 V140" id="bars" stroke="black" stroke-width="5"/>
+  <path d="M120,35 V75" id="height" stroke="black" stroke-width="5" />
+  <path d="M100,40 H140" id="hbars" stroke="black" stroke-width="5" />
+  <use href="#height" x="0" y="120"/>
+  <use href="#width" x="115" y="0"/>
+  <use href="#bars" x="50" y="0"/>
+  <use href="#bars" x="115" y="0"/>
+  <use href="#bars" x="160" y="0"/>
+  <use href="#hbars" x="0" y="35"/>
+  <use href="#hbars" x="0" y="120"/>
+  <use href="#hbars" x="0" y="160"/>
+</svg>

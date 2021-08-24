@@ -1,13 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24">
-    <!-- <path stroke="black" stroke-width=".2" d="M0 0 V24"/>
-    <path stroke="black" stroke-width=".2" d="M6 0 V24"/>
-    <path stroke="black" stroke-width=".2" d="M12 0 V24"/>
-    <path stroke="black" stroke-width=".2" d="M18 0 V24"/>
-    <path stroke="black" stroke-width=".2" d="M24 0 V24"/>
-    <path stroke="black" stroke-width=".2" d="M0 0 H24"/>
-    <path stroke="black" stroke-width=".2" d="M0 6 H24"/>
-    <path stroke="black" stroke-width=".2" d="M0 12 H24"/>
-    <path stroke="black" stroke-width=".2" d="M0 18 H24"/>
-    <path stroke="black" stroke-width=".2" d="M0 24 H24"/> -->
-    <path stroke="white" stroke-width="1" d="M0 0 L15 18.5 H6.5 L0 24 z"/>
+    <text x="50%" y="50%" font-size="100%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" letter-spacing="1">?{}</text>
 </svg>
