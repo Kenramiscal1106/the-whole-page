@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 240 240" width="240" height="240">
+  <g id="content">
+    <path d="M10 230 V120 H120 V230 z M20,220 V130 H110 V220 z" fill-rule="evenodd"/>
+    <text x="20" y="220" font-size="8rem" font-family="Segoe UI">C</text>
+  </g>
+  <g id="padding">
+    <path d="M40 120 V90 H170 V210 H120 v-10 H160 V100 H50 V120 z"/>
+    <text y="200" x="120" font-size="4rem" font-family="Segoe UI">P</text>
+  </g>
+  <g id="margin">
+    <path d="M175,120 H240 v10 H175 z"/>
+    <path id="extend" d="M175,145 h10 V130 h-10 z M175,105 h10 V120 h-10 z"/>
+    <use href="#extend" x="55"/>
+    <path d="M120,85 V0 h10 V85 z "/>
+    <path d="M90,85 H155 v-10 H90 z" id="extend2"/>
+    <use href="#extend2" y="-75"/>
+    <text y="180" x="170" font-size="3rem" font-family="Segoe UI">M</text>
+  </g>
+</svg>
