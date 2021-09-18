@@ -195,8 +195,8 @@ button.link:hover::before, button.link:hover::after, button.link.block::before, 
 
 /* #theme-toggle-acc {background-color: var(--theme-settings);} */
 .tablinks.enabled > * {padding:0.4rem;}
-.tablinks h2 {display:none;}
-.tablinks.enabled h2 {display:block;}
+.sidebar.enabled h2 {display:block; font-size:1.4rem;}
+.sidebar h2 {display:none;}
 .more-container {
     overflow:hidden;
     transition:height 0.5s ease;
