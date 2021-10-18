@@ -5348,9 +5348,27 @@
                     </table>
                 </div>
                 <div class="tabcontent" id="b-images">
-                    <h1>CSS Border Image</h1>
+                    <h1>CSS Border Images</h1>
                     <hr>
-                    <img src="test.svg" alt="test">
+                    <div style="border:10px solid transparent;border-image:url(border.svg) 16.66% round;padding:1rem;">
+                        <h2>CSS Border Images</h2>
+                        <p>With the CSS <span class="p-high">border-image</span> property, you can set an image to be used as the border around an element.</p>
+                    </div>
+                    <hr>
+                    <h2>CSS border-image Property</h2>
+                    <p>The CSS <span class="p-high">border-image</span> property allows you to specify an image to be used instead of normal border around an element.</p>
+                    <p>The property has three parts:</p>
+                    <ul>
+                        <li>The image to use as the border</li>
+                        <li>Where to slice the image </li>
+                        <li>Define whether the middle sections should be repeated or stretched</li>
+                    </ul>
+                    <p>We will use the following image (called "border.svg"):</p>
+                    <img src="border.svg" alt="test">
+                    <p>The <span class="p-high">border-image</span> property takes the image and slices it into nine sections, like a tic-tac-toe board. It places the corners at the corners, and the middle sectoins are repeated or stretched as you specify.</p>
+                    <p class="note"><strong>Note:</strong>For <span class="p-high">border-image</span> to work, the element also needs the transparent <span class="p-high">border</span> property set!</p>
+                    <p>Here, the middle sections of the image are repeated to create the border:</p>
+                    <div></div>
                 </div>
                 <div class="tabcontent" id="a-backgrounds">
                     <h1>CSS Advanced Backgrounds</h1>
@@ -5374,7 +5392,7 @@
             var lasttab = getcookie("lasttab"), lastTabId = lasttab + "tab"
         }
         catch {
-            alert("no existing cookie")
+            console.log("no existing cookie")
         }
         if (lasttab && lastTabId != "introductiontab") {
             document.getElementById(lastTabId).click();
