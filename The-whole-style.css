@@ -1,41 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-body:not(body.dark){
-    --theme-blue:#00acff;
-    --theme-html:#ff6600;
-    --theme-dark-html: #da5700;
-    --theme-darker-html:#a83500;
-    --theme-dark-css:dodgerblue;
-    --theme-darker-css:#004cff;
-    --theme-js:yellow;
-    --theme-dark-js:#aa0;
-    --sideBarWidth:200px;
-    --full:100%;
-    --transparent-border:1px solid transparent;
-    --example-back-html:#fff4ec;
-    --example-back-css:#e7f7ff;
-    --color:black;
-    --attribute:maroon;
-    --attribute-value:green;
-    --bracket:#00f;
-    --tagname:#f00;
-    --css-class:rgb(0, 2, 133);
-    --css-id:rgb(87, 133, 0);
-    --css-property: rgb(93, 0, 136);
-    --css-property-value: rgb(0, 238, 255);
-    --background:white;
-    --second-background:#eee;
-    --theme-settings:#00ffaa;
-    --theme-dark-settings:#00b97c;
-    --theme-darker-settings:#018b5d;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+body:not(body.dark) {
+  --theme-blue: #00acff;
+  --theme-html: #ff6600;
+  --theme-dark-html: #da5700;
+  --theme-darker-html: #a83500;
+  --theme-dark-css: dodgerblue;
+  --theme-darker-css: #004cff;
+  --theme-js: yellow;
+  --theme-dark-js: #aa0;
+  --sideBarWidth: 200px;
+  --full: 100%;
+  --transparent-border: 1px solid transparent;
+  --example-back-html: #fff4ec;
+  --example-back-css: #e7f7ff;
+  --color: black;
+  --attribute: maroon;
+  --attribute-value: green;
+  --bracket: #00f;
+  --tagname: #f00;
+  --css-class: rgb(0, 2, 133);
+  --css-id: rgb(87, 133, 0);
+  --css-property: rgb(93, 0, 136);
+  --css-property-value: rgb(0, 238, 255);
+  --background: white;
+  --second-background: #eee;
+  --theme-settings: #00ffaa;
+  --theme-dark-settings: #00b97c;
+  --theme-darker-settings: #018b5d;
 }
 :root {
-    font-size:16px;
-    --plain:white;
-    --matrix:#0f0;
-    --dark:#000;
-    --miliseconds:0.3s;
-    --note-shadow:#6200ff;  
+  font-size: 16px;
+  --plain: white;
+  --matrix: #0f0;
+  --dark: #000;
+  --miliseconds: 0.3s;
+  --note-shadow: #6200ff;
 }
 html, body {
     width:100%;
@@ -115,6 +115,7 @@ body.dark, body.dark .code{
     margin: 1rem 0;
     border:15px solid transparent;
     border-image:url("static-images/border-image\(2\).png") 81 round;
+  word-spacing: 1px;
 }
 .example > * {margin:0.6rem 0;}
 #html .example {background-color: var(--example-back-html);}
@@ -131,6 +132,7 @@ body.dark, body.dark .code{
     overflow:hidden;
     flex:0 0 45px;
     transition:flex-basis var(--miliseconds) ease, white-space 0.5s ease var(--miliseconds);
+  border-radius: inherit;
 }
 .sidebar.enabled {
     flex:0 0 var(--sideBarWidth);
@@ -152,6 +154,7 @@ body.dark, body.dark .code{
 
 button {
     display:block;
+  border-top: 3px solid var(--theme-dark-css);
 }
 .tablinks :is(button.link, .more) {
     border:none;
@@ -299,6 +302,7 @@ table.summary th, table.summary td {padding:8px;}
 }
 .settings > * {
     flex-shrink:0;
+  background-color: var(--theme-darker-html);
 }
 #theme-toggle >svg, #theme-toggle > svg > .moonOrSun {height:100%;width:auto;transition:transform .5s cubic-bezier(.25,.34,.62,1.26);}
 #theme-toggle > svg > * {fill:var(--color);}
@@ -326,3 +330,257 @@ svg g > path:nth-child(1) {fill:var(--theme-blue);} */
     top:100%;
     display:none;
 }
+  transition: height 0.5s ease;
+}
+.more {
+  width: 100%;
+  padding: 6px 12px;
+  border: none;
+  text-align: left;
+}
+.more > img {
+  width: 1.2rem;
+  height: 1.2rem;
+  left: 0;
+  margin-right: 12px;
+}
+button {
+  cursor: pointer;
+}
+.tabcomponent > div > .block,
+.tabcomponent > .more.open {
+  color: var(--color);
+}
+.link > svg,
+.link > img {
+  width: 1.2rem;
+  height: 100%;
+  position: relative;
+  top: 50%;
+  margin-right: 17px;
+  transform: translateY(25%);
+  overflow: visible;
+}
+/* The sample code of the page */
+/* The code container of the sample code*/
+body:not(body.dark) .tabcontent .code {
+  background: white;
+}
+/* width of the border and ::before element (.codeline) */
+
+#css .codeline::before {
+  border-right: 3px solid var(--theme-blue);
+}
+#html .codeline::before {
+  border-right: 3px solid var(--theme-html);
+}
+.code {
+  --width: 3rem;
+  counter-reset: links code;
+}
+.code > .codeline:nth-child(odd) {
+  background: var(--second-background);
+}
+.code > .codeline:nth-child(even) {
+  background: var(--background);
+}
+/* The lines of the code */
+.codeline *,
+.codeline {
+  font-family: Consolas, "Roboto Mono", monospace;
+  letter-spacing: -1px;
+}
+.codeline {
+  counter-increment: code;
+  position: relative;
+  padding-left: calc(var(--width) + 3px);
+}
+.codeline::before {
+  content: counter(code);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--width);
+  text-align: center;
+}
+/* The attribute of the element */
+.attribute,
+.attrhigh {
+  color: var(--attribute);
+}
+.attrhigh {
+  text-shadow: 0 0 2px var(--attribute);
+}
+/* The value of the attribute */
+.attrvalue {
+  color: var(--attribute-value);
+}
+/* The brackets of the element */
+.bracket {
+  color: var(--bracket);
+}
+/* The tagname of the element*/
+.tagname,
+.elemhigh {
+  color: #f00;
+}
+.elemhigh {
+  text-shadow: 0 0 2px #f00;
+}
+/* The innerHTML of the tag*/
+/* The class of the html */
+.class {
+  color: var(--css-class);
+}
+.id {
+  color: var(--css-id);
+}
+.property,
+.p-high {
+  color: var(--css-property);
+}
+.p-value {
+  color: var(--css-property-value);
+}
+.p-high {
+  text-shadow: 0 0 2px var(--css-property);
+}
+
+.codeline.second-level {
+  padding-left: calc(2rem + var(--width));
+}
+.codeline.third-level {
+  padding-left: calc(4rem + var(--width));
+}
+.codeline.fourth-level {
+  padding-left: calc(6rem + var(--width));
+}
+.codeline.fifth-level {
+  padding-left: calc(8rem + var(--width));
+}
+/* The example element of the page */
+table {
+  width: 100%;
+}
+[second],
+[second] th,
+[second] td {
+  border: 1px solid black;
+}
+[third],
+[third] th,
+[third] td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+[fourth],
+[fourth] th,
+[fourth] td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+[fourth] th,
+[fourth] td {
+  padding: 15px;
+}
+div[cities] {
+  background-color: black;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+}
+.important {
+  color: red;
+}
+.city1 {
+  color: #ffbb00;
+}
+.main2 {
+  border: 1px solid black;
+}
+.city {
+  color: var(--theme-blue);
+}
+/* Styling of summary table of each chapters */
+table.summary {
+  border: 1px solid #ccc;
+  font-family: Verdana;
+  margin: 20px auto;
+  width: 95%;
+  font-size: 1rem;
+  word-spacing: 1px;
+}
+@media screen and (max-width: 426px) {
+  .link {
+    white-space: nowrap;
+  }
+}
+table.summary tr:nth-child(even) {
+  background-color: var(--second-background);
+}
+table.summary tr {
+  border: 1px solid rgb(185, 185, 185);
+  text-align: left;
+}
+table.summary tr,
+table.summary {
+  border-collapse: collapse;
+}
+table.summary th,
+table.summary td {
+  padding: 8px;
+}
+
+#theme-toggle,
+.tablinks-toggle {
+  padding: 0;
+  line-height: 0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  outline: none;
+  padding: 0.3rem;
+  transition: transform var(--miliseconds) linear;
+  z-index: 999;
+  background: none;
+  border: 1px solid var(--color);
+  border-radius: 5px;
+}
+.settings {
+  display: flex;
+  margin: 0;
+  background-color: var(--background);
+}
+.settings > * {
+  flex-shrink: 0;
+}
+#theme-toggle > svg,
+#theme-toggle > svg > .moonOrSun {
+  height: 100%;
+  width: auto;
+  transition: transform 0.5s cubic-bezier(0.25, 0.34, 0.62, 1.26);
+}
+#theme-toggle > svg > * {
+  fill: var(--color);
+}
+/* svg g > path:nth-child(4) {fill:var(--matrix);}
+svg g > path:nth-child(1) {fill:var(--theme-blue);} */
+.result {
+  padding: 3px;
+  background-color: var(--background);
+  color: var(--color);
+}
+.result > img,
+.example > img {
+  width: 100%;
+  height: auto;
+}
+.clear::before,
+.clear::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.tool-tip {
+  position: relative;
+} 
