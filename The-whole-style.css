@@ -330,8 +330,6 @@ svg g > path:nth-child(1) {fill:var(--theme-blue);} */
     top:100%;
     display:none;
 }
-  transition: height 0.5s ease;
-}
 .more {
   width: 100%;
   padding: 6px 12px;
