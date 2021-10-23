@@ -301,7 +301,6 @@ table.summary th, table.summary td {padding:8px;}
 }
 .settings > * {
   flex-shrink:0;
-  background: var(--theme-darker-html);
 }
 #theme-toggle >svg, #theme-toggle > svg > .moonOrSun {height:100%;width:auto;transition:transform .5s cubic-bezier(.25,.34,.62,1.26);}
 #theme-toggle > svg > * {fill:var(--color);}
