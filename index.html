@@ -848,93 +848,33 @@
                     to perform certain tasks for the element with the specific id value.</p>
                     <p>In CSS, to select an element with a specific 
                     id, write a hash (#) character, followed by the id of the element:</p>
-                    <h3 id="idheader">Example</h3>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="bracket"><</span><span class="tagname">!DOCTYPE html</span><span class="bracket">></span></div>
+                            <div class="codeline"><span class="bracket"><</span><span class="tagname">html</span><span class="bracket">></span></div>
+                            <div class="codeline"><span class="bracket"><</span><span class="tagname">head</span><span class="bracket">></span></div>
+                            <div class="codeline"><span class="bracket"><</span><span class="tagname">style</span><span class="bracket">></span></div>
+                            <div class="codeline second-level"><span class="id">#myHeader</span> {</div>
+                            <div class="codeline third-level"><span class="property">background-color</span>:<span class="p-value">lightblue</span>;</div>
+                            <div class="codeline third-level"><span class="property">color</span>:<span class="p-value">black</span>;</div>
+                            <div class="codeline third-level"><span class="property">padding</span>:<span class="p-value">40px</span>;</div>
+                            <div class="codeline third-level"><span class="property">text-align</span>:<span class="p-value">center</span>;</div>
+                            <div class="codeline second-level">}</div>
+                            <div class="codeline"><span class="bracket"><</span><span class="tagname">/head</span><span class="bracket">></span></div>
+                            <div class="codeline"><span class="bracket"><</span><span class="tagname">/style</span><span class="bracket">></span></div>
+                            <div class="codeline"><span class="bracket"><</span><span class="tagname">body</span><span class="bracket">></span></div>
+                            <div class="codeline second-level"><span class="bracket"><</span><span class="tagname">h1</span> <span class="attribute">id</span>=<span class="attrvalue">"myHeader"</span><span class="bracket">></span>My Header<span class="bracket"><</span><span class="tagname">/h1</span><span class="bracket">></span></div>
+                            <div class="codeline"><span class="bracket"><</span><span class="tagname">/body</span><span class="bracket">></span></div>
+                            <div class="codeline"><span class="bracket"><</span><span class="tagname">/html</span><span class="bracket">></span></div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <h1 style="background-color:lightblue;color:black;padding:40px;text-align:center;">My Header</h1>
+                        </div>
+                    </div>
                     <h2>Difference Between Class and ID</h2>
-                    <p>An HTML element can only have one unique id that belongs to that 
-                    single element, while a class name can be used by multiple elements:</p>
-            
-                    <!-- A unique element -->
-                    <h3 id="idheader">I am different</h3>
-        
-                    <!-- multiple similar elements -->
-                    <h3 class="classes">We're the same</h3>
-                    <h3 class="classes">We're the same</h3>
-                    <h3 class="classes">We're the same</h3>
-                    <h3 class="classes">We're the same</h3>
-                    <h3 class="classes">We're the same</h3>
-                    <h2>Bookmarks with id and links</h2>
-                    <h3>This is an example of bookmarks</h3>
-                    <p><a href="#C4">Jump to Chapter 4</a></p>
-                    <p><a href="#C10">Jump to Chapter 10</a></p>
-            
-                    <h2>Chapter 1</h2>
-                    <p>This chapter explains ba bla bla</p>
-            
-                    <h2>Chapter 2</h2>	
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 3</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2 id="C4">Chapter 4</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 5</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 6</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 7</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 8</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 9</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2 id="C10">Chapter 10</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 11</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 12</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 13</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 14</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 15</h2>
-                    <p>This chapter explains ba bla bla</p>
-                    
-                    <h2>Chapter 16</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 17</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 18</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 19</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 20</h2>
-                    <p>This chapter explains ba bla bla</p>
-            
-                    <h2>Chapter 21</h2>
-                    <p>This chapter explains ba bla bla</p>
-        
-                    <h2>Chapter 22</h2>
-                    <p>This chapter explains ba bla bla</p>
-            
-                    <h2>Chapter 23</h2>
-                    <p>This chapter explains ba bla bla</p>
+                    <p>An HTML element can only have one unique id that belongs to that single element, while a class name can be used by multiple elements</p>
                 </div>
                 <div class="tabcontent" id="iframe">
                     <h1>HTML Iframes</h1>
@@ -989,7 +929,6 @@
                 
                     <p>A simple HTML document:</p>
                 
-                    <h2>The HTML <span class="elemhigh"><span><</span>style></span></span></h2>
                     <div class="example">
                         <h4>Example</h4>
                         <div class="code">
