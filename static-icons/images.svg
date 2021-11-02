@@ -1,7 +1,6 @@
 <svg viewbox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" width="240" height="240">
     <rect x="5" y="5" width="230" height="230" fill="none" stroke="black" stroke-width="10"></rect>
-    <path stroke="black" stroke-width="1" fill="none" d="M0 150 L90 60 240 180 "/>
-    <path stroke="black" stroke-width="1" fill="none" d="M0 150 L80 70  L240 180 "/>
-    <path stroke="black" stroke-width="1" fill="none" d="M180 130 L190 116.5 Q210, 90 230, 110 L240 120"/>
+    <path stroke="black" stroke-width="10" fill="none" d="M0 150 L70 80 Q90 60 115 80 L240 180 "/>
+    <path stroke="black" stroke-width="10" fill="none" d="M180 130 L190 116.5 Q210, 90 230, 110 L240 120"/>
     <circle cx="180" cy="30" r="20"/>
 </svg>
