@@ -146,6 +146,7 @@ body.dark, body.dark .code{
 .tablinks > * {white-space: nowrap;overflow-x:hidden;padding:0;width:100%;}
 .tablinks-toggle > svg {width:100%;height:auto;}
 .tablinks-toggle > svg > *  {fill:var(--color);}
+.tablinks * {font-weight:700;}
 :is(.sidebar, .tablinks)::-webkit-scrollbar {width:5px;}
 :is(.sidebar, .tablinks)::-webkit-scrollbar-track {background:#ddd;border-radius:2px;}
 :is(.sidebar, .tablinks)::-webkit-scrollbar-thumb {background:#aaa;}
