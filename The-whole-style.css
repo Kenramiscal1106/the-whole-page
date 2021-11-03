@@ -85,7 +85,7 @@ body.dark, body.dark .code{
   color:white;
   background-color: black;
 }
-*:not(pre, h1, h2) {font-family: "Raleway", Arial, sans-serif;box-sizing:border-box;font-weight:700;}
+*:not(pre, h1, h2) {font-family: "Raleway", Arial, sans-serif;box-sizing:border-box;font-weight:600;}
 .note {
   border:1px solid var(--color);
   position:relative;
@@ -144,6 +144,7 @@ body.dark, body.dark .code{
 }
 .tablinks.enabled {flex:0 0 100%;padding:auto;}
 .tablinks > * {white-space: nowrap;overflow-x:hidden;padding:0;width:100%;}
+.tablinks * {font-weight:600;}
 .tablinks-toggle > svg {width:100%;height:auto;}
 .tablinks-toggle > svg > *  {fill:var(--color);}
 :is(.sidebar, .tablinks)::-webkit-scrollbar {width:5px;}
