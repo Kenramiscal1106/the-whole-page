@@ -227,7 +227,7 @@ body:not(body.dark) .tabcontent  .code {background:white;}
 .code > .codeline:nth-child(odd) {background: var(--second-background);}
 .code > .codeline:nth-child(even) {background: var(--background);}
 /* The lines of the code */
-.codeline *, .codeline {font-family:Consolas, "Roboto Mono", monospace;letter-spacing:-1px;}
+.codeline *, .codeline {font-family:Consolas, "Roboto Mono", monospace;letter-spacing:-1px;font-weight:normal;}
 .codeline {counter-increment: code;position:relative;padding-left:calc(var(--width) + 3px);}
 .codeline::before {content:counter(code);position: absolute;top: 0;left: 0;width:var(--width);text-align:center;}
 /* The attribute of the element */
