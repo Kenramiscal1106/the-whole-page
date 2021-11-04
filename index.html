@@ -5368,10 +5368,125 @@
                     <p>The <span class="p-high">border-image</span> property takes the image and slices it into nine sections, like a tic-tac-toe board. It places the corners at the corners, and the middle sectoins are repeated or stretched as you specify.</p>
                     <p class="note"><strong>Note:</strong>For <span class="p-high">border-image</span> to work, the element also needs the transparent <span class="p-high">border</span> property set!</p>
                     <p>Here, the middle sections of the image are repeated to create the border:</p>
-                    <div></div>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">#borderimg</span><span> {</span></div>
+                            <div class="codeline second-level"><span class="property">border</span><span>:</span><span class="p-value">10px solid transparent</span><span>;</span></div>
+                            <div class="codeline second-level"><span class="property">padding</span>:<span class="p-value">15px</span>;</div>
+                            <div class="codeline second-level"><span class="property">border-image</span><span>:</span><span class="p-value">url(border.svg) 30 round</span><span>;</span></div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="border:10px solid transparent;padding:15px;border-image:url(border.svg) 33% round;">
+                            An image as a border
+                        </div>
+                    </div>
+                    <p>Here, the middle sections of the image are stretched to create the border:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">#borderimg</span><span> {</span></div>
+                            <div class="codeline second-level"><span class="property">border</span><span>:</span><span class="p-value">10px solid transparent</span><span>;</span></div>
+                            <div class="codeline second-level"><span class="property">padding</span><span>:</span><span class="p-value">15px</span><span>;</span></div>
+                            <div class="codeline second-level"><span class="property">border-image</span><span>:</span><span class="p-value">url(border.svg) 30 stretch</span><span>;</span></div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="border:10px solid transparent;padding:15px;border-image:url(border.svg) 33% stretch;">
+                            stretched image as a border!
+                        </div>
+                    </div>
+                    <p class="note"><strong>Tip:</strong><span>The <span class="p-high">border-image</span> property is actually a shorthand property for the <span class="p-high">border-image-source</span><span>, </span><span class="p-high">border-image-slice</span><span>, </span><span class="p-high">border-image-width</span><span>, </span><span class="p-high">border-image-outset</span><span> and </span><span class="p-high">border-image-repeat</span><span> properties.</span></span></p>
+                    <hr>
+                    <h2>CSS border-image - Different Slice Values</h2>
+                    <p>Different slice values completely changes the look of the border:</p>
+                    <p>Example 1:</p>
+                    <div style="border:10px solid transparent;padding:15px 0; border-image:url(border.svg) 50 round;">border-image:url(border.svg) 50 round;</div>
+                    <p>Example 2:</p>
+                    <div style="border:10px solid transparent;padding:15px 0; border-image:url(border.svg) 20% round;">border-image url(border.svg) 20% round;</div>
+                    <p>Example 3:</p>
+                    <div style="border:10px solid transparent;padding:15px 0; border-image:url(border.svg) 30% round;">border-image: url(border.svg) 30 round;</div>
+                    <p>Here is the code;</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="class">#borderimg1</span><span> {</span></div>
+                            <div class="codeline second-level"><span class="property">border</span><span>:</span><span class="p-value">10px solid transparent</span><span>;</span></div>
+                            <div class="codeline second-level"><span class="property">padding</span><span>:</span><span class="p-value">15px</span><span>;</span></div>
+                            <div class="codeline second-level"><span class="property">border-image</span><span>:</span><span class="p-value">url(border.svg) 50 round</span><span>;</span></div>
+                            <div class="codeline">}</div>
+                            <div class="codeline"><span class="class">#borderimg2</span><span> {</span></div>
+                            <div class="codeline second-level"><span class="property">border</span><span>:</span><span class="p-value">10px solid transparent</span><span>;</span></div>
+                            <div class="codeline second-level"><span class="property">padding</span><span>:</span><span class="p-value">15px</span><span>;</span></div>
+                            <div class="codeline second-level"><span class="property">border-image</span><span>:</span><span class="p-value">url(border.svg) 20% round</span><span>;</span></div>
+                            <div class="codeline">}</div>
+                            <div class="codeline"><span class="class">#borderimg3</span><span> {</span></div>
+                            <div class="codeline second-level"><span class="property">border</span><span>:</span><span class="p-value">10px solid transparent</span><span>;</span></div>
+                            <div class="codeline second-level"><span class="property">padding</span><span>:</span><span class="p-value">15px</span><span>;</span></div>
+                            <div class="codeline second-level"><span class="property">border-image</span><span>:</span><span class="p-value">url(border.svg) 30% round</span><span>;</span></div>
+                            <div class="codeline">}</div>
+                        </div>
+                    </div>
+                    <table class="summary">
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>border-image</td>
+                            <td>A shorthand property for setting all the border-image* properties</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-source</td>
+                            <td>Specifies the path to the image to be used as a border</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-slice</td>
+                            <td>Specifies where to slice the image to be used as border</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-width</td>
+                            <td>Specifies the widths of the border image</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-outset</td>
+                            <td>Specifies the amount by which the border image area extend beyond the border box</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-repeat</td>
+                            <td>Specifies how to repeat the border or make it stretched or rounded</td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="tabcontent" id="a-backgrounds">
-                    <h1>CSS Advanced Backgrounds</h1>
+                    <h1>CSS Advanced/Multiple Backgrounds</h1>
+                    <hr>
+                    <div>
+                        <p>In this part, you will learn how to add multiple background images to one element.</p>
+                        <p>You will also learn about the following properties:</p>
+                        <ul>
+                            <li><span class="p-high">background-size</span></li>
+                            <li><span class="p-high">background-origin</span></li>
+                            <li><span class="p-high">background-clip</span></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <h2>CSS Multiple Backgrounds</h2>
+                    <p>CSS allows you to add multiple background images for an element, through the <span class="p-high">background-image</span> property</p>
+                    <p>The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer.</p>
+                    <p>The following exmaple has two background images, the first image is a flower (aligned to the bottom and right) and the second image is a paper background (aligned to the top-left corner):</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#example1</span></div> 
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">url()</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-position</span>:<span class="p-value">right bottom, left top</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">no-repeat, repeat</span>;</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result"></div>
+                    </div>
                 </div>
                 <div class="tabcontent" id="gradients">
                     <h1>CSS Gradients</h1>
