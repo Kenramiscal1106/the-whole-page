@@ -2320,7 +2320,7 @@
                     </p>
                     <hr>
                     <h2>Transparency using RGBA</h2>
-                    <p>If you do not want to apply opacity to child element, like in our example above, use <b>RGBA</b> color values. The following exmaple sets the opacity for the background color and not the text:</p>
+                    <p>If you do not want to apply opacity to child element, like in our example above, use <b>RGBA</b> color values. The following example sets the opacity for the background color and not the text:</p>
                     <div style="background-color: rgba(0, 172, 255, 1);">100% opacity</div>
                     <div style="background-color: rgba(0, 172, 255, 0.6);">60% opacity</div>
                     <div style="background-color: rgba(0, 172, 255, 0.3);">30% opacity</div>
@@ -3308,7 +3308,7 @@
                         <li>A specific size (in px, pt, cm, em, etc)</li>
                     </ul>
                     <div class="example">
-                        <h3>Exmaple</h3>
+                        <h3>example</h3>
                         <p>The following example shows some outlines with different widhts:</p>
                         <div class="code">
                             <div class="codeline"><span class="class">p.ex1</span> {</div>
@@ -4518,7 +4518,7 @@
                     <p><span class="p-high">overflow-y</span> specifies what to do with the top/bottom edges of the content.</p>
                     <div style="width:200px;height:100px;background-color: #eee;overflow: auto;color:black;">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
                     <div class="example">
-                        <h3>Exmaple</h3>
+                        <h3>example</h3>
                         <div class="code">
                             <div class="codeline"><span class="class">div</span> {</div>
                             <div class="codeline second-level"><span class="property">overflow-x</span>: <span class="p-value">hidden</span>;</div>
@@ -5414,18 +5414,130 @@
                     <h2>CSS Multiple Backgrounds</h2>
                     <p>CSS allows you to add multiple background images for an element, through the <span class="p-high">background-image</span> property</p>
                     <p>The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer.</p>
-                    <p>The following exmaple has two background images, the first image is a flower (aligned to the bottom and right) and the second image is a paper background (aligned to the top-left corner):</p>
+                    <p>The following example has two background images, the first image is a flower (aligned to the bottom and right) and the second image is a paper background (aligned to the top-left corner):</p>
                     <div class="example">
                         <h3>Example</h3>
                         <div class="code">
-                            <div class="codeline"><span class="id">#example1</span></div> 
-                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">url()</span>;</div>
-                            <div class="codeline second-level"><span class="property">background-position</span>:<span class="p-value">right bottom, left top</span>;</div>
-                            <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">no-repeat, repeat</span>;</div>
+                            <div class="codeline"><span class="id">#example1</span> {</div> 
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value"> url(mountain.png), url(img_mountains.jpg)</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-position</span>:<span class="p-value">left top, right bottom</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value"> no-repeat, no-repeat</span>;</div>
+                            <div class="codeline">}</div>
                         </div>
                         <p>Result:</p>
-                        <div class="result"></div>
+                        <div class="result">
+                            <div style="background-image: url(static-images/mountain.png), url(static-images/img_mountains.jpg);background-size:contain, cover;background-position:left bottom, right bottom;background-repeat: no-repeat, no-repeat;color:white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cum voluptatibus numquam enim error nam ea veniam voluptate vel, totam perspiciatis harum. Exercitationem, numquam. Quidem asperiores accusamus corrupti quas accusantium nemo modi sed corporis excepturi perferendis eum dolorem ipsum velit consequatur eius, error est distinctio. Vitae, impedit nihil itaque voluptate ex non cupiditate totam perferendis repudiandae ullam nulla quo sint accusamus, dolor consequuntur magni voluptas natus iusto doloribus id voluptatem. Quam sed sunt harum debitis eius consequatur quasi ex natus vero recusandae quaerat perferendis tempora sit, odit optio porro inventore. Non quas id cumque atque ex vel quam, laboriosam laudantium.</div>
+                        </div>
                     </div>
+                    <p>Multiple background images can be specified using either the individual background properties (as above) or the <span class="p-high">background</span> shorthand property.</p>
+                    <p>The following example uses the <span class="p-high">background</span> shorthand property (same result as example above):</p>
+                    <hr>
+                    <h2>CSS Background size</h2>
+                    <p>The CSS <span class="p-high">background-size</span> property allows you to specify the size of background images.</p>
+                    <p>The size can be specified in lengths, percentages, or by using one of the two keywords: contain or cover.</p>
+                    <p>The following example resizes a background image to much smaller than the original image (using pixels):</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#div1</span> {</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">url(mountain.png)</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-size</span>:<span class="p-value"></span>;</div>
+                            <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">no-repeat</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <div style="color:white;background:url(static-images/mountain.png);background-size:100% 100%;background-repeat:no-repeat;background-position:right bottom;"><br><h2 style="text-shadow:0 0 12px black;">Background-size</h2>
+                            <p style="text-shadow:0 0 5px black;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum adipisci architecto voluptates officiis esse aliquam, debitis praesentium vero nihil accusamus asperiores quidem dolorem ad harum maiores quod consequatur unde officia quo temporibus minus! Sunt, dolore assumenda facere rem doloribus ea nemo earum possimus est laboriosam labore, adipisci aspernatur asperiores distinctio?</p></div>
+                        </div>
+                    </div>
+                    <p>The two other possible values for <span class="p-high">background-size</span> are <span class="p-high">contain</span> and <span class="p-high">cover</span>.</p>
+                    <p>The <span class="p-high">contain</span> keyword scales the background image to be as large as possible (but both its width and its height must fit inside the content area). As such, depending on the proportions of the background image and the background positioning area, there may be some areas of the background which are not covered by the background image.</p>
+                    <p>The <span class="p-high">cover</span> keyword scales the background image so that the content area is completely covered by the background image (both its width and height are equal to or exceed the content area). As such, some parts of the background image may not be visible in the background positioning area.</p>
+                    <p>The following example illustrates the use of <span class="p-high">contain</span> and <span class="p-high">cover</span>:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#div1</span> {</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">url(mountain.png)</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-size</span>:<span class="p-value">contain</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">no-repeat</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="id">#div2</span> {</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">url(mountain.png)</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-size</span>:<span class="p-value">cover</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">no-repeat</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p></p>
+                        <div class="result">
+                            <div style="background:url(static-images/mountain.png);background-size:contain;background-repeat:no-repeat;text-shadow:0 0 5px black;color:white;"><h2>background-size:contain</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In soluta aspernatur quisquam accusantium dolorum delectus consectetur consequuntur, animi, quae facere deleniti laborum? Amet quasi ut sequi voluptatum modi cumque exercitationem?</p></div>
+                            <div style="background:url(static-images/mountain.png);background-size:cover;background-repeat:no-repeat;text-shadow:0 0 5px black;color:white;"><h2>background-size:cover</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In soluta aspernatur quisquam accusantium dolorum delectus consectetur consequuntur, animi, quae facere deleniti laborum? Amet quasi ut sequi voluptatum modi cumque exercitationem?</p></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>CSS background-origin Property</h2>
+                    <p>The CSS <span class="p-high">backgrond-origin</span> property specifies where the background image is positioned.</p>
+                    <p>The property takes three different values:</p>
+                    <ul>
+                        <li>border-box - the background image starts from the upper left corner of the border</li>
+                        <li>padding-box - (default) the background image starts from the upper left corner of the padding edge</li>
+                        <li>content-box - the background image starts from the upper left corner of the content</li>
+                    </ul>
+                    <p>The following example illustrates the <span class="p-high">background-origin</span> property:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#example1</span> {</div>
+                            <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">10px dotted black</span>;</div>
+                            <div class="codeline second-level"><span class="property">padding</span>:<span class="p-value">35px</span>;</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">url(img_flwr.gif)</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">no-repeat</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-origin</span>:<span class="p-value">content-box</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="id">#example2</span> {</div>
+                            <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">10px dotted black;</span>;</div>
+                            <div class="codeline second-level"><span class="property">padding</span>:<span class="p-value">35px</span>;</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">url(img_flwr.gif)</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">no-repeat</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-origin</span>:<span class="p-value">padding-box</span>;</div>
+                            <div class="codeline">}</div>
+                            <div class="codeline">&nbsp;</div>
+                            <div class="codeline"><span class="id">#example3</span> {</div>
+                            <div class="codeline second-level"><span class="property">border</span>:<span class="p-value">10px dotted black;</span>;</div>
+                            <div class="codeline second-level"><span class="property">padding</span>:<span class="p-value">35px</span>;</div>
+                            <div class="codeline second-level"><span class="property">background</span>:<span class="p-value">url(img_flwr.gif)</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-repeat</span>:<span class="p-value">no-repeat</span>;</div>
+                            <div class="codeline second-level"><span class="property">background-origin</span>:<span class="p-value">border-box</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result">
+                            <h2>Inside the content box</h2>
+                            <div style="border:10px dotted black;padding:35px;background:url(static-images/img_mountains.jpg) no-repeat;height:200px;margin:1rem;background-origin:content-box;"></div>
+                            <h2>Inside the padding box</h2>
+                            <div style="border:10px dotted black;padding:35px;background:url(static-images/img_mountains.jpg) no-repeat;height:200px;margin:1rem;background-origin:padding-box;"></div>
+                            <h2>Inside the border box</h2>
+                            <div style="border:10px dotted black;padding:35px;background:url(static-images/img_mountains.jpg) no-repeat;height:200px;margin:1rem;background-origin:border-box;"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>CSS background-clip Property</h2>
+                    <p>The CSS <span class="p-high">background-clip</span> property specifies the painting area of the background.</p>
+                    <p>the property takes sthree different values:</p>
+                    <ul>
+                        <li>border-box - (default) the background is painted to the outside edge of the border</li>
+                        <li>padding-box - the background is painted to the outside edge of the padding</li>
+                        <li>content-box - the background is painted within the content box</li>
+                    </ul>
+                    <p>The following example illustrates the <span class="p-high">background-clip</span> property:                    </p>
+                    <div class="example"></div>
+                    <hr>
+                    <table class="summary"></table>
                 </div>
                 <div class="tabcontent" id="gradients">
                     <h1>CSS Gradients</h1>
