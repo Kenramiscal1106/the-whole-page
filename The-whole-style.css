@@ -20,7 +20,7 @@ body:not(body.dark){
   --bracket:#00f;
   --tagname:#f00;
   --css-class:rgb(0, 2, 133);
-  --css-id:rgb(87, 133, 0);
+  --css-id:rgb(255, 103, 1);
   --css-property: rgb(93, 0, 136);
   --css-property-value: rgb(0, 238, 255);
   --background:white;
@@ -72,7 +72,7 @@ body.dark{
   --bracket:rgb(74, 74, 255);
   --tagname:#f55;
   --css-class:rgb(128, 130, 255);
-  --css-id:rgb(166, 255, 0);
+  --css-id:rgb(255, 103, 1);
   --css-property: rgb(174, 0, 255);
   --css-property-value: rgb(162, 255, 119);
   --background:black;
@@ -81,9 +81,8 @@ body.dark{
   --theme-dark-settings:#018b5d;
   --theme-darker-settings:#006845;
 }
-body.dark, body.dark .code{
-  color:white;
-  background-color: black;
+body.dark *:not(.tablinks, h1, h2, h3) {
+  font-weight:normal;
 }
 *:not(pre, h1, h2) {font-family: "Raleway", "Segoe UI", Arial, sans-serif;box-sizing:border-box;font-weight:600;}
 .note {
@@ -146,6 +145,7 @@ body.dark, body.dark .code{
 .tablinks > * {white-space: nowrap;overflow-x:hidden;padding:0;width:100%;}
 .tablinks-toggle > svg {width:100%;height:auto;}
 .tablinks-toggle > svg > *  {fill:var(--color);}
+.tablinks * {color:var(--color);}
 :is(.sidebar, .tablinks)::-webkit-scrollbar {width:5px;}
 :is(.sidebar, .tablinks)::-webkit-scrollbar-track {background:#ddd;border-radius:2px;}
 :is(.sidebar, .tablinks)::-webkit-scrollbar-thumb {background:#aaa;}
@@ -218,7 +218,7 @@ button {cursor:pointer;}
 }
 /* The sample code of the page */
 /* The code container of the sample code*/
-body:not(body.dark) .tabcontent  .code {background:white;}
+body {background:var(--background);color:var(--color);}
 /* width of the border and ::before element (.codeline) */
 
 #css .codeline::before {border-right:3px solid var(--theme-blue);}
