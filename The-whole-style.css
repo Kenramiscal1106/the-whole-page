@@ -31,11 +31,7 @@ body:not(body.dark){
 }
 :root {
   font-size:16px;
-  --plain:white;
-  --matrix:#0f0;
-  --dark:#000;
   --miliseconds:0.3s;
-  --note-shadow:#6200ff;  
 }
 html, body {
   width:100%;
@@ -75,8 +71,8 @@ body.dark{
   --css-id:rgb(255, 103, 1);
   --css-property: rgb(174, 0, 255);
   --css-property-value: rgb(162, 255, 119);
-  --background:black;
-  --second-background:#161616;
+  --background:rgb(22, 22, 22);
+  --second-background:rgb(32, 32, 32);
   --theme-settings:#00b97c;
   --theme-dark-settings:#018b5d;
   --theme-darker-settings:#006845;
