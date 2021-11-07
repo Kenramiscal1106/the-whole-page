@@ -34,6 +34,7 @@ function side_bar(element, trigger) {
         }
     })
 }
+side_bar({query_selector:".morphing-navigation", default:"morphing-navigation"}, ".tablinks-toggle")
 side_bar({query_selector:".sidebar", default:"sidebar"}, ".tablinks-toggle")
 function tabs (ui) {
     document.cookie = "lasttab =" + "'" + ui.targetElement + "'";
