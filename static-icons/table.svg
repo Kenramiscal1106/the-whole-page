@@ -1,9 +1,8 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-    <rect x="0.5" y="0.5" stroke="black" stroke-width="1" fill="none" width="23" height="23"/>
+    <rect x="0.5" y="0.5" rx="5" ry="5" stroke="black" stroke-width="1" fill="none" width="23" height="23"/>
     <path stroke="black" stroke-width="1" d="M6 6 V24" />
     <path stroke="black" stroke-width="1" d="M12 6 V24" />
     <path stroke="black" stroke-width="1" d="M18 6 V24" />
-    <path stroke="black" stroke-width="1" d="M0.5 0.5 H24" />
     <path stroke="black" stroke-width="1" d="M0 6 H24" />
     <path stroke="black" stroke-width="1" d="M0 12 H24" />
     <path stroke="black" stroke-width="1" d="M0 18 H24" />
