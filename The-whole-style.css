@@ -147,11 +147,11 @@ body.dark, body.dark .code{
 .tablinks > * {white-space: nowrap;overflow-x:hidden;padding:0;width:100%;}
 .tablinks-toggle > svg {width:100%;height:auto;}
 .tablinks-toggle > svg > *  {fill:var(--color);}
-:is(.tablinks > *, .tab)::-webkit-scrollbar {width:5px;}
-:is(.tablinks > *, .tab)::-webkit-scrollbar-track {background:#ddd;border-radius:2px;}
-:is(.tablinks > *, .tab)::-webkit-scrollbar-thumb {background:#aaa;}
-:is(.tablinks > *, .tab)::-webkit-scrollbar-thumb:hover {background:#777;}
-:is(.tablinks > *, .tab)::-webkit-scrollbar-thumb:active {background:#444;}
+.morphing-navigation, .morphing-navigation *::-webkit-scrollbar {width:5px;}
+.morphing-navigation, .morphing-navigation *::-webkit-scrollbar-track {background:#ddd;border-radius:2px;}
+.morphing-navigation, .morphing-navigation *::-webkit-scrollbar-thumb {background:#aaa;}
+.morphing-navigation, .morphing-navigation *::-webkit-scrollbar-thumb:hover {background:#777;}
+.morphing-navigation, .morphing-navigation *::-webkit-scrollbar-thumb:active {background:#444;}
 
 button {
   display:block;
