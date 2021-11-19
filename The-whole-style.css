@@ -125,7 +125,7 @@ body.dark, body.dark .code{
 .tabcontent{padding:40px 0.5rem;letter-spacing: -1px;word-spacing:1px;}
 .tabcontent > h1:first-child {margin-block-start:0;}
 /* The side bar of the website*/
-:is(.sidebar, .morphing-navigation) {
+.morphing-navigation {
   display:flex;
   flex-flow:column nowrap;
   max-height:100%;
@@ -133,13 +133,13 @@ body.dark, body.dark .code{
   flex:0 0 45px;
   transition:flex-basis var(--miliseconds) ease, white-space 0.5s ease var(--miliseconds);
   border-radius:inherit;
+  box-shadow:1px 0 5px 1px rgb(143, 143, 143);
 }
-:is(.sidebar, .morphing-navigation).enabled {
+.morphing-navigation.enabled {
     flex:0 0 var(--sideBarWidth);
 }
 .tablinks {
   flex:1 0 0;
-  padding-top:5px;
   overflow-y:auto;
   display:flex;
   flex-flow: column nowrap;
@@ -147,11 +147,11 @@ body.dark, body.dark .code{
 .tablinks > * {white-space: nowrap;overflow-x:hidden;padding:0;width:100%;}
 .tablinks-toggle > svg {width:100%;height:auto;}
 .tablinks-toggle > svg > *  {fill:var(--color);}
-.morphing-navigation, .morphing-navigation > *::-webkit-scrollbar {width:5px;}
-.morphing-navigation, .morphing-navigation > *::-webkit-scrollbar-track {background:#ddd;border-radius:2px;}
-.morphing-navigation, .morphing-navigation > *::-webkit-scrollbar-thumb {background:#aaa;}
-.morphing-navigation, .morphing-navigation > *::-webkit-scrollbar-thumb:hover {background:#777;}
-.morphing-navigation, .morphing-navigation > *::-webkit-scrollbar-thumb:active {background:#444;}
+.morphing-navigation, .morphing-navigation *::-webkit-scrollbar {width:5px;}
+.morphing-navigation, .morphing-navigation *::-webkit-scrollbar-track {background:#ddd;border-radius:2px;}
+.morphing-navigation, .morphing-navigation *::-webkit-scrollbar-thumb {background:#aaa;}
+.morphing-navigation, .morphing-navigation *::-webkit-scrollbar-thumb:hover {background:#777;}
+.morphing-navigation, .morphing-navigation *::-webkit-scrollbar-thumb:active {background:#444;}
 
 button {
   display:block;
