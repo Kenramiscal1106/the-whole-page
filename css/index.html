@@ -4337,6 +4337,78 @@
                 </div>
                 <div class="tabcontent" id="gradients">
                     <h1>CSS Gradients</h1>
+                    <hr>
+                    <div></div>
+                    <p>CSS gradients let you display smooth transitions between two or more specified colors.</p>
+                    <p>CSS defines three types of gradients:</p>
+                    <ul>
+                        <li><strong>Linear Gradients (goes in a straight line)</strong></li>
+                        <li><strong>Radial Gradients (goes radially inside an element)</strong></li>
+                        <li><strong>Conic Gradients (a linear gradient rotated around a center point)</strong></li>
+                    </ul>
+                    <hr>
+                    <h2>CSS Linear Gradients</h2>
+                    <p>To create a linear gradient, you must define at least two color stops. Color stops are the colors you want to render smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient effect</p>
+                    <h3>Syntax</h3>
+                    <div class="example">
+                        background-image: linear-gradient( <i>direction</i>, <i>color-stop1</i>, <i>color-stop2</i>, <i>....</i> )
+                    </div>
+                    <h4><strong>Direction - Top to Botttom (this is the default)</strong></h4>
+                    <p>The following example shows a linear gradient that starts at the top. It satrts red, transitioning to yellow:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#grad</span> {</div>
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">linear-gradient(red, yellow)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="background-image:linear-gradient(red, yellow);height:150px;"></div>
+                    </div>
+                    <h4>Direction - Left to Right</h4>
+                    <p>The following example shows a linear gradient that starts form the left. It starts red, transitioning to yellow:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#grad</span> {</div>
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">linear-gradient(to right, red, yellow)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="background-image:linear-gradient(to right, red, yellow);height:150px;"></div>
+                    </div>
+                    <h4>Direction - Diagonal</h4>
+                    <p>You can make a gradient diagonally by specifying both the horizontal and vertical starting positions.</p>
+                    <p>The following example shows a linear gradient that starts at top left (and goes to bottom right). It starts red, transitioning to yellow:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#grad</span> {</div>
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">linear-gradient(to bottom right, red, yellow)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="background-image:linear-gradient(to bottom right, red, yellow);height:150px;"></div>
+                    </div>
+                    <h4>Using Angles</h4>
+                    <p>If you want more control over the direction of the gradient, you can define an angle, instead of the declarative directions(to bottom, to top, to right, to left, to bottom right, etc.). A value of 0deg is equivaluent to "to top". A value of 90deg is equivalent to "to right". A value of 180deg is equivalent to "to bottom".</p>
+                    <h3>Syntax</h3>
+                    <div class="example">
+                        background-image: linear-gradient( <i>angle</i>, <i>color-stop1</i>, <i>color-stop2</i>, <i>....</i> )
+                    </div>
+                    <hr>
+                    <h2>Using Multiple Color Stops</h2>
+                    <p>The following example shows a linear gradient (from top to bottom) with multiple color stops:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#grad</span> {</div>
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">linear-gradient(red, yellow, green)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="background-image:linear-gradient(red, yellow, green);height:150px;"></div>
+                    </div>
                 </div>
                 <div class="tabcontent" id="t-shadow">
                     <h1>CSS Text shadow</h1>
