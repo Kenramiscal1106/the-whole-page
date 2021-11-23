@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@520');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 body:not(body.dark){
   --theme-blue:#00acff;
   --theme-html:#ff6600;
@@ -40,14 +40,13 @@ html, body {
   margin:0;
 }
 body {font-size:1rem;transition:var(--miliseconds) ease;}
-h1, h2 {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 h1 {font-size:42px;}
 h2 {font-size:1.6rem;}
 h3 {font-size:1.4rem;}
 h4 {font-size:1.3rem;}
 h5 {font-size:1.1rem;}
 h6 {font-size:1rem;}
-h1, h2, h3, h4, h5, h6 {margin:10px 0;font-weight:500;}
+h1, h2, h3, h4, h5, h6 {margin:10px 0;font-family:"Roboto Slab", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 body.dark{
   --theme-blue:#004cff;
   --theme-html:#da5700;
@@ -117,7 +116,7 @@ body.dark *:not(.tablinks, h1, h2, h3) {
 #css .example {background-color: var(--example-back-css);}
 .tab {flex: 0 1 100%;}
 .tabs {padding:0 10px;}
-.tabcontent{padding:40px 0.5rem;letter-spacing: -1px;word-spacing:1px;}
+.tabcontent{padding:40px 0.5rem;}
 .tabcontent > h1:first-child {margin-block-start:0;}
 /* The side bar of the website*/
 .sidebar {
