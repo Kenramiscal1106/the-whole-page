@@ -4406,6 +4406,66 @@
                         <p>Result:</p>
                         <div class="result" style="background-image:linear-gradient(red, yellow, green);height:150px;"></div>
                     </div>
+                    <hr>
+                    <h2>Repeating a linear-gradient</h2>
+                    <p>The repeating-linear-gradient() function is used to repeat linear gradients:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#grad</span>{</div>
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">repeating-linear-gradient(red, yellow, green)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="background-image:repeating-linear-gradient(red, yellow 10%, green 15%);height:250px;"></div>
+                    </div>
+                    <hr>
+                    <h1>CSS Radial Gradients</h1>
+                    <p>To create a radial gradient, you must define the radiating color stops. </p>
+                    <h3>Syntax</h3>
+                    <div class="example">background-image: radial-gradient(<i>shape size</i> at <i>position, start-color, ...., last-color</i>);</div>
+                    <p>By default, shape is ellipse, size i farthest-corner, and position is center.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#grad</span>{</div>
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">radial-gradient(red, yellow)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="background-image: radial-gradient(red, yellow);height:150px;">
+
+                        </div>
+                    </div>
+                    <p>This example shows a radial gradient with differently spaced color stops:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#grad</span>{</div>
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">radial-gradient(red 5%, yellow 15%, green 60%)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result</p>
+                        <div class="result" style="background-image:radial-gradient(red 5%, yellow 15%, green 60%);height:150px;">
+
+                        </div>
+                    </div>
+                    <hr>
+                    <h1>CSS Conic Gradients</h1>
+                    <hr>
+                    <h2>CSS Conic Gradients</h2>
+                    <p>A conic gradient is a gradient which the color stops revolves around a point instead of radially or linearly </p>
+                    <h3>Syntax</h3>
+                    <div class="example">
+                        background-image: conic-gradient([from angle], [at <i>position</i>], color [<i>degree</i>], color [<i>degree</i>], ...);
+                    </div>
+                    <p>By default, angle is 0deg and position is center.</p>
+                    <p>If no degree is specified, the colors will be spread equally around the center point.</p>
+                    <hr>
+                    <p>Here are some examples of conic gradients.</p>
+                    <div class="example">
+                        <div class="code"></div>
+                    </div>
                 </div>
                 <div class="tabcontent" id="t-shadow">
                     <h1>CSS Text shadow</h1>
