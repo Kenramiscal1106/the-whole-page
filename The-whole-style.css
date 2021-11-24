@@ -109,7 +109,6 @@ body.dark *:not(.tablinks, h1, h2, h3) {
   margin: 1rem 0;
   border:15px solid transparent;
   border-image:url("static-images/border-image\(2\).png") 81 round;
-  word-spacing:1px;
   }
 .example > * {margin:0.6rem 0;}
 #html .example {background-color: var(--example-back-html);}
