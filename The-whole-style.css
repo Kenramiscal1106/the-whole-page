@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 body:not(body.dark){
   --theme-blue:#00acff;
   --theme-html:#ff6600;
@@ -40,14 +40,13 @@ html, body {
   margin:0;
 }
 body {font-size:1rem;transition:var(--miliseconds) ease;}
-h1, h2 {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 h1 {font-size:42px;}
 h2 {font-size:1.6rem;}
 h3 {font-size:1.4rem;}
 h4 {font-size:1.3rem;}
 h5 {font-size:1.1rem;}
 h6 {font-size:1rem;}
-h1, h2, h3, h4, h5, h6 {margin:10px 0;font-weight:500;}
+h1, h2, h3, h4, h5, h6 {margin:10px 0;font-family:"Roboto Slab", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 body.dark{
   --theme-blue:#004cff;
   --theme-html:#da5700;
@@ -110,14 +109,13 @@ body.dark *:not(.tablinks, h1, h2, h3) {
   margin: 1rem 0;
   border:15px solid transparent;
   border-image:url("static-images/border-image\(2\).png") 81 round;
-  word-spacing:1px;
   }
 .example > * {margin:0.6rem 0;}
 #html .example {background-color: var(--example-back-html);}
 #css .example {background-color: var(--example-back-css);}
 .tab {flex: 0 1 100%;}
 .tabs {padding:0 10px;}
-.tabcontent{padding:40px 0.5rem;letter-spacing: -1px;word-spacing:1px;}
+.tabcontent{padding:40px 0.5rem;}
 .tabcontent > h1:first-child {margin-block-start:0;}
 /* The side bar of the website*/
 .sidebar {
@@ -125,10 +123,11 @@ body.dark *:not(.tablinks, h1, h2, h3) {
   flex-flow:column nowrap;
   max-height:100%;
   overflow:hidden;
-  flex:0 0 45px;
+  flex:0 0 40px;
   transition:flex-basis var(--miliseconds) ease, white-space 0.5s ease var(--miliseconds);
   border-radius:inherit;
 }
+
 .sidebar.enabled {
     flex:0 0 var(--sideBarWidth);
 }
@@ -142,11 +141,12 @@ body.dark *:not(.tablinks, h1, h2, h3) {
 .tablinks-toggle > svg {width:100%;height:auto;}
 .tablinks-toggle > svg > *  {fill:var(--color);}
 .tablinks * {color:var(--color);}
-:is(.sidebar, .tablinks)::-webkit-scrollbar {width:5px;}
-:is(.sidebar, .tablinks)::-webkit-scrollbar-track {background:#ddd;border-radius:2px;}
-:is(.sidebar, .tablinks)::-webkit-scrollbar-thumb {background:#aaa;}
-:is(.sidebar, .tablinks)::-webkit-scrollbar-thumb:hover {background:#777;}
-:is(.sidebar, .tablinks)::-webkit-scrollbar-thumb:active {background:#444;}
+.sidebar .tablinks::-webkit-scrollbar {width:0;}
+.sidebar.enabled .tablinks::-webkit-scrollbar {width:5px;}
+.sidebar.enabled .tablinks::-webkit-scrollbar-track {background:#ddd;border-radius:2px;}
+.sidebar.enabled .tablinks::-webkit-scrollbar-thumb {background:#aaa;}
+.sidebar.enabled .tablinks::-webkit-scrollbar-thumb:hover {background:#777;}
+.sidebar.enabled .tablinks::-webkit-scrollbar-thumb:active {background:#444;}
 
 button {
   display:block;
