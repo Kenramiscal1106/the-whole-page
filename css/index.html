@@ -29,41 +29,38 @@
                     </svg>
                 </button>
             </div>
-            <div class="tablinks">
-                <div id="css-acc">
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-introduction'})" id="css-introductiontab"><img src="static-icons/home.svg" alt="home">CSS Introduction</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'syntax'})" id="syntaxtab"><img src="static-icons/syntax.svg" alt="semantics">CSS Syntax</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'selectors'})" id="selectorstab"><img src="static-icons/selector.svg" alt="selector">CSS selectors</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-howto'})" id="css-howtotab"><img src="static-icons/how-to.svg" alt="css">CSS How to</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'comments'})" id="commentstab"><img src="static-icons/comments.svg" alt="css">CSS Comments</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'colors'})" id="colorstab"><img src="static-icons/css.svg" alt="css">CSS Colors</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'backgrounds'})" id="backgroundstab"><img src="static-icons/css.svg" alt="css">CSS Backgrounds</button>
-                    <button class="link" id="dimensionstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'dimensions'})"><img src="static-icons/css.svg" alt="semantics">CSS Dimensions</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'margin'})" id="margintab"><img src="static-icons/css.svg" alt="semantics">CSS Margin</button>
-                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'padding'})" id="paddingtab"><img src="static-icons/padding.svg" alt="box-model">CSS Padding</button>
-                    <button class="link" id="box-modeltab" onclick="tabs({tabs:'link',tabcontent:'tabcontent',targetElement:'box-model'})"><img src="static-icons/box-model.svg" alt="">CSS Box Model</button>
-                    <button class="more"><img src="static-icons/open-icon.svg" alt="">Show more</button>
-                    <div class="more-container">
-                        <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'outline'})" id="outlinetab"><img src="static-icons/outline.svg" alt="outline">CSS Outline</button>
-                        <button class="link" id="texttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'text'})"><img src="static-icons/text.svg" alt="text">CSS Text</button>
-                        <button class="link" id="fonttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'font'})"><img src="static-icons/font.svg" alt="">CSS Font</button>
-                        <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'borders'})" id="borderstab"><img src="static-icons/border.svg" alt="css">CSS Borders</button>
-                        <button class="link" id="displaytab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'display'})"><img src="static-icons/how-to.svg" alt="">CSS Display</button>
-                        <button class="link" id="positiontab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'position'})"><img src="static-icons/how-to.svg" alt="">CSS Position</button>
-                        <button class="link" id="overflowtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'overflow'})"><img src="static-icons/overflow.svg" alt="overflow">CSS Overflow</button>
-                        <button class="link" id="floattab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'float'})"><img src="static-icons/how-to.svg" alt="">CSS Float</button>
-                        <button class="link" id="opacitytab"  onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'opacity'})"><img src="static-icons/opacity.svg" alt="opacity">CSS Opacity</button>
-                        <button class="link" id="p-classtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'p-class'})"><img src="static-icons/p-class.svg" alt="">CSS Pseudo-class</button>
-                        <button class="link" id="p-elementtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'p-element'})"><img src="static-icons/p-elem.svg" alt="">Pseudo-element</button>
-                        <button class="link" id="counterstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'counters'})"><img src="static-icons/how-to.svg" alt="">CSS Counters</button>
-                        <button class="link" id="specificitytab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'specificity'})"><img src="static-icons/how-to.svg" alt="">CSS Specificity</button>
-                        <h2>Advanced CSS</h2>
-                        <button class="link " id="b-radiustab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'b-radius'})"><img src="static-icons/b-radius.svg" alt="">CSS Border Radius</button>
-                        <button class="link" id="b-imagestab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'b-images'})"><img src="static-icons/how-to.svg" alt="">CSS Border Image</button>
-                        <button class="link" id="a-backgroundstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'a-backgrounds'})"><img src="static-icons/how-to.svg" alt="">CSS Backgrounds</button>
-                        <button class="link" id="gradientstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'gradients'})"><img src="static-icons/how-to.svg" alt="">CSS Gradients</button>
-                        <button class="link" id="t-shadowtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'t-shadow'})"><img src="static-icons/how-to.svg" alt="">CSS Text Effects</button>
-                    </div>
+            <div class="tablinks" id="css-acc">
+                <div>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-introduction'})" id="css-introductiontab"><img src="../static-icons/home.svg" alt="home">CSS Introduction</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'syntax'})" id="syntaxtab"><img src="../static-icons/syntax.svg" alt="semantics">CSS Syntax</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'selectors'})" id="selectorstab"><img src="../static-icons/selector.svg" alt="selector">CSS selectors</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-howto'})" id="css-howtotab"><img src="../static-icons/how-to.svg" alt="css">CSS How to</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'comments'})" id="commentstab"><img src="../static-icons/comments.svg" alt="css">CSS Comments</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'colors'})" id="colorstab"><img src="../static-icons/css.svg" alt="css">CSS Colors</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'backgrounds'})" id="backgroundstab"><img src="../static-icons/css.svg" alt="css">CSS Backgrounds</button>
+                    <button class="link" id="dimensionstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'dimensions'})"><img src="../static-icons/css.svg" alt="semantics">CSS Dimensions</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'margin'})" id="margintab"><img src="../static-icons/css.svg" alt="semantics">CSS Margin</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'padding'})" id="paddingtab"><img src="../static-icons/padding.svg" alt="box-model">CSS Padding</button>
+                    <button class="link" id="box-modeltab" onclick="tabs({tabs:'link',tabcontent:'tabcontent',targetElement:'box-model'})"><img src="../static-icons/box-model.svg" alt="">CSS Box Model</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'outline'})" id="outlinetab"><img src="../static-icons/outline.svg" alt="outline">CSS Outline</button>
+                    <button class="link" id="texttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'text'})"><img src="../static-icons/text.svg" alt="text">CSS Text</button>
+                    <button class="link" id="fonttab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'font'})"><img src="../static-icons/font.svg" alt="">CSS Font</button>
+                    <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'borders'})" id="borderstab"><img src="../static-icons/border.svg" alt="css">CSS Borders</button>
+                    <button class="link" id="displaytab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'display'})"><img src="../static-icons/how-to.svg" alt="">CSS Display</button>
+                    <button class="link" id="positiontab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'position'})"><img src="../static-icons/how-to.svg" alt="">CSS Position</button>
+                    <button class="link" id="overflowtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'overflow'})"><img src="../static-icons/overflow.svg" alt="overflow">CSS Overflow</button>
+                    <button class="link" id="floattab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'float'})"><img src="../static-icons/how-to.svg" alt="">CSS Float</button>
+                    <button class="link" id="opacitytab"  onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'opacity'})"><img src="../static-icons/opacity.svg" alt="opacity">CSS Opacity</button>
+                    <button class="link" id="p-classtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'p-class'})"><img src="../static-icons/p-class.svg" alt="">CSS Pseudo-class</button>
+                    <button class="link" id="p-elementtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'p-element'})"><img src="../static-icons/p-elem.svg" alt="">Pseudo-element</button>
+                    <button class="link" id="counterstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'counters'})"><img src="../static-icons/how-to.svg" alt="">CSS Counters</button>
+                    <button class="link" id="specificitytab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'specificity'})"><img src="../static-icons/how-to.svg" alt="">CSS Specificity</button>
+                    <h2>Advanced CSS</h2>
+                    <button class="link " id="b-radiustab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'b-radius'})"><img src="../static-icons/b-radius.svg" alt="">CSS Border Radius</button>
+                    <button class="link" id="b-imagestab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'b-images'})"><img src="../static-icons/how-to.svg" alt="">CSS Border Image</button>
+                    <button class="link" id="a-backgroundstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'a-backgrounds'})"><img src="../static-icons/how-to.svg" alt="">CSS Backgrounds</button>
+                    <button class="link" id="gradientstab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'gradients'})"><img src="../static-icons/how-to.svg" alt="">CSS Gradients</button>
+                    <button class="link" id="t-shadowtab" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'t-shadow'})"><img src="../static-icons/how-to.svg" alt="">CSS Text Effects</button>
                 </div>
             </div>
         </div>
@@ -4337,6 +4334,138 @@
                 </div>
                 <div class="tabcontent" id="gradients">
                     <h1>CSS Gradients</h1>
+                    <hr>
+                    <div></div>
+                    <p>CSS gradients let you display smooth transitions between two or more specified colors.</p>
+                    <p>CSS defines three types of gradients:</p>
+                    <ul>
+                        <li><strong>Linear Gradients (goes in a straight line)</strong></li>
+                        <li><strong>Radial Gradients (goes radially inside an element)</strong></li>
+                        <li><strong>Conic Gradients (a linear gradient rotated around a center point)</strong></li>
+                    </ul>
+                    <hr>
+                    <h2>CSS Linear Gradients</h2>
+                    <p>To create a linear gradient, you must define at least two color stops. Color stops are the colors you want to render smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient effect</p>
+                    <h3>Syntax</h3>
+                    <div class="example">
+                        background-image: linear-gradient( <i>direction</i>, <i>color-stop1</i>, <i>color-stop2</i>, <i>....</i> )
+                    </div>
+                    <h4><strong>Direction - Top to Botttom (this is the default)</strong></h4>
+                    <p>The following example shows a linear gradient that starts at the top. It satrts red, transitioning to yellow:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#grad</span> {</div>
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">linear-gradient(red, yellow)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="background-image:linear-gradient(red, yellow);height:150px;"></div>
+                    </div>
+                    <h4>Direction - Left to Right</h4>
+                    <p>The following example shows a linear gradient that starts form the left. It starts red, transitioning to yellow:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#grad</span> {</div>
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">linear-gradient(to right, red, yellow)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="background-image:linear-gradient(to right, red, yellow);height:150px;"></div>
+                    </div>
+                    <h4>Direction - Diagonal</h4>
+                    <p>You can make a gradient diagonally by specifying both the horizontal and vertical starting positions.</p>
+                    <p>The following example shows a linear gradient that starts at top left (and goes to bottom right). It starts red, transitioning to yellow:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#grad</span> {</div>
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">linear-gradient(to bottom right, red, yellow)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="background-image:linear-gradient(to bottom right, red, yellow);height:150px;"></div>
+                    </div>
+                    <h4>Using Angles</h4>
+                    <p>If you want more control over the direction of the gradient, you can define an angle, instead of the declarative directions(to bottom, to top, to right, to left, to bottom right, etc.). A value of 0deg is equivaluent to "to top". A value of 90deg is equivalent to "to right". A value of 180deg is equivalent to "to bottom".</p>
+                    <h3>Syntax</h3>
+                    <div class="example">
+                        background-image: linear-gradient( <i>angle</i>, <i>color-stop1</i>, <i>color-stop2</i>, <i>....</i> )
+                    </div>
+                    <hr>
+                    <h2>Using Multiple Color Stops</h2>
+                    <p>The following example shows a linear gradient (from top to bottom) with multiple color stops:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#grad</span> {</div>
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">linear-gradient(red, yellow, green)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="background-image:linear-gradient(red, yellow, green);height:150px;"></div>
+                    </div>
+                    <hr>
+                    <h2>Repeating a linear-gradient</h2>
+                    <p>The repeating-linear-gradient() function is used to repeat linear gradients:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#grad</span>{</div>
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">repeating-linear-gradient(red, yellow, green)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="background-image:repeating-linear-gradient(red, yellow 10%, green 15%);height:250px;"></div>
+                    </div>
+                    <hr>
+                    <h1>CSS Radial Gradients</h1>
+                    <p>To create a radial gradient, you must define the radiating color stops. </p>
+                    <h3>Syntax</h3>
+                    <div class="example">background-image: radial-gradient(<i>shape size</i> at <i>position, start-color, ...., last-color</i>);</div>
+                    <p>By default, shape is ellipse, size i farthest-corner, and position is center.</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#grad</span>{</div>
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">radial-gradient(red, yellow)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result:</p>
+                        <div class="result" style="background-image: radial-gradient(red, yellow);height:150px;">
+
+                        </div>
+                    </div>
+                    <p>This example shows a radial gradient with differently spaced color stops:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <div class="code">
+                            <div class="codeline"><span class="id">#grad</span>{</div>
+                            <div class="codeline second-level"><span class="property">background-image</span>:<span class="p-value">radial-gradient(red 5%, yellow 15%, green 60%)</span>;</div>
+                            <div class="codeline">}</div>
+                        </div>
+                        <p>Result</p>
+                        <div class="result" style="background-image:radial-gradient(red 5%, yellow 15%, green 60%);height:150px;">
+
+                        </div>
+                    </div>
+                    <hr>
+                    <h1>CSS Conic Gradients</h1>
+                    <hr>
+                    <h2>CSS Conic Gradients</h2>
+                    <p>A conic gradient is a gradient which the color stops revolves around a point instead of radially or linearly </p>
+                    <h3>Syntax</h3>
+                    <div class="example">
+                        background-image: conic-gradient([from angle], [at <i>position</i>], color [<i>degree</i>], color [<i>degree</i>], ...);
+                    </div>
+                    <p>By default, angle is 0deg and position is center.</p>
+                    <p>If no degree is specified, the colors will be spread equally around the center point.</p>
+                    <hr>
+                    <p>Here are some examples of conic gradients.</p>
+                    <div class="example">
+                        <div class="code"></div>
+                    </div>
                 </div>
                 <div class="tabcontent" id="t-shadow">
                     <h1>CSS Text shadow</h1>
@@ -4344,9 +4473,6 @@
             </div>
         </div>
         </div>
-    </div>
-    <div class="tabs" id="JS">
-
     </div>
     <script src="../The-whole-script.js"></script>
     <script>
