@@ -159,7 +159,6 @@ button {
   position:relative;
   z-index:2;
   overflow:hidden;
-  /* letter-spacing: -1px; */
 }
 .tablinks.enabled button.link {
   padding:6px 12px;
@@ -269,7 +268,9 @@ table.summary {
   word-spacing:1px;
 }
 @media screen and (max-width:426px) {
-    .link {white-space: nowrap;}
+    /* .link {white-space: nowrap;} */
+    .content {flex-direction:column;}
+    .sidebar.enabled {flex: 1 0 100%;}
 }
 table.summary tr:nth-child(even) {background-color:var(--second-background);}
 table.summary tr {border:1px solid rgb(185, 185, 185);text-align:left;}
