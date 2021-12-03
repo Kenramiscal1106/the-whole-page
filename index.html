@@ -10,14 +10,7 @@
   h1{hello}
   <script>
     var prompting = prompt("What is the location?");
-    switch (prompting) {
-      case "css":
-        window.location = "/css"
-        break;
-      case "html":
-        window.location = "/html"
-        break;
-    }
+    window.location = prompting
   </script>
 </body>
 </html>
