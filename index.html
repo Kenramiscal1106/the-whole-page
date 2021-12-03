@@ -7,8 +7,17 @@
   <title>Document</title>
 </head>
 <body>
+  h1{hello}
   <script>
-    window.location = "/html"
+    var prompting = prompt("What is the location?");
+    switch (prompting) {
+      case "css":
+        window.location = "/css"
+        break;
+      case "html":
+        window.location = "/html"
+        break;
+    }
   </script>
 </body>
 </html>
