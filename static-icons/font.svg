@@ -1,4 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24">
-    <text x="55%" y="50%" font-size="105%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" letter-spacing="1">A</text>
-    <text x="25%" y="65%" font-size="70%" text-anchor="middle" font-family="sans-serif" letter-spacing="1">A</text>
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 206.5L43.75 129M96 206.5L77.75 129M77.75 129C77.75 129 67.5 67 60.5 67C53.5 67 43.75 129 43.75 129M77.75 129H43.75M106.5 217L126.871 135.907M207 217L188 135.907M188 135.907C188 135.907 166.5 31 158.5 31C150.5 31 126.871 135.907 126.871 135.907M188 135.907H126.871" stroke="black" stroke-width="10" stroke-linecap="round"/>
 </svg>
