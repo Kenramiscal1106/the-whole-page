@@ -13,10 +13,10 @@ function show_more() {
             this.classList.toggle('open');
             console.log(this.classList)
             if (this.classList[1] == "open") {
-                this.innerHTML = "<img src='static-icons/close-icon.svg' alt='close'>Show less"
+                this.innerHTML = "<img src='../static-icons/close-icon.svg' alt='close'>Show less"
                 this.nextElementSibling.style.height = this.nextElementSibling.scrollHeight + "px";
             } else {
-                this.innerHTML = "<img src='static-icons/open-icon.svg' alt='close'>Show more"
+                this.innerHTML = "<img src='../static-icons/open-icon.svg' alt='close'>Show more"
                 this.nextElementSibling.style.height = 0;
             }
         })

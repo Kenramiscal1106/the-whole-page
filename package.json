@@ -1,0 +1,26 @@
+{
+  "name": "the-whole-page",
+  "version": "1.0.0",
+  "description": "index.html is the file where all tabs, links are all compiled. The file itself is like an array of tabs that can be only 1 (singularity)\r ### About\r -The html acts like a link but it never really leaves the website and thus, it uses cookies to record where you went and goes back to where you left of.\r #### CSS\r -The css is styled to create a seamless experience when browsing through lessons in html and css.\r #### Javascript\r -The script is created to make a link clicking tabs.",
+  "main": "The-whole-script.js",
+  "scripts": {
+    "build": " postcss The-whole-style.css -o out.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kenramiscal1106/the-whole-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kenramiscal1106/the-whole-page/issues"
+  },
+  "homepage": "https://github.com/Kenramiscal1106/the-whole-page#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.6",
+    "postcss": "^8.4.13",
+    "postcss-cli": "^9.1.0",
+    "postcss-nested": "^5.0.6"
+  }
+}

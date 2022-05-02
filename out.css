@@ -101,10 +101,10 @@ body.dark *:not(.tablinks, h1, h2, h3) {
   display:flex;
   width:var(--full);
   height:var(--full);
-  > * {
+}
+.content > * {
     overflow:auto;
   }
-}
 #css .note {box-shadow: 2px 2px 4px 0 var(--theme-dark-css);}
 #html .note {box-shadow:2px 2px 4px 0 var(--theme-dark-html);}
 #html hr {border:none;border-top:3px solid var(--theme-html);}
@@ -114,7 +114,8 @@ body.dark *:not(.tablinks, h1, h2, h3) {
   padding: 1.2rem;
   margin: 1rem 0;
   border:15px solid transparent;
-  border-image:url("static-images/border-image\(2\).png") 81 round;
+  -o-border-image:url("static-images/border-image\(2\).png") 81 round;
+     border-image:url("static-images/border-image\(2\).png") 81 round;
   }
 .example > * {margin:0.6rem 0;}
 #html .example {background-color: var(--example-back-html);}
@@ -122,7 +123,7 @@ body.dark *:not(.tablinks, h1, h2, h3) {
 .tab {flex: 0 1 100%;}
 .tabs {padding:0 10px;}
 .tabcontent{padding:40px 0.5rem;}
-.tabcontent > h1:first-child {margin-block-start:0;}
+.tabcontent > h1:first-child {-webkit-margin-before:0;margin-block-start:0;}
 /* The side bar of the website*/
 .sidebar {
   display:flex;
