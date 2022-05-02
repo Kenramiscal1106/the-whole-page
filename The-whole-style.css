@@ -97,8 +97,14 @@ body.dark *:not(.tablinks, h1, h2, h3) {
   padding:3px 6px;
   border-radius:inherit;
 }
-.content {display:flex;width:var(--full);height:var(--full);}
-.content > * {overflow:auto;}
+.content {
+  display:flex;
+  width:var(--full);
+  height:var(--full);
+  > * {
+    overflow:auto;
+  }
+}
 #css .note {box-shadow: 2px 2px 4px 0 var(--theme-dark-css);}
 #html .note {box-shadow:2px 2px 4px 0 var(--theme-dark-html);}
 #html hr {border:none;border-top:3px solid var(--theme-html);}
@@ -164,7 +170,21 @@ button {
   padding:6px 12px;
 }
 
-button.link::before{
+#theme-toggle, .tablinks-toggle {
+  padding:0;
+  line-height:0;
+  border:none;
+  width:40px;
+  height:40px;
+  outline:none;
+  padding:0.3rem;
+  transition: transform var(--miliseconds) linear;
+  z-index:999;
+  background:none;
+  position:relative;
+  overflow:hidden;
+}
+button.link::before, .tablinks-toggle::before, #theme-toggle::before {
   content:"";
   position:absolute;
   z-index:-1;
@@ -173,7 +193,7 @@ button.link::before{
   border-radius: 50% 50% 0 0;
   width:100%;height:0;
 }
-button.link::after{
+button.link::after, .tablinks-toggle::after, #theme-toggle::after {
   content:"";
   position:absolute;
   z-index:-1;
@@ -182,13 +202,29 @@ button.link::after{
   border-radius:0 0 50% 50%;
   width:100%;height:0;
 }
-button.link:hover::before, button.link:hover::after, button.link.block::before, button.link.block::after {height: 85%;}
+button.link:hover::before,  button.link:hover::after,
+.tablinks-toggle:hover::before, .tablinks-toggle:hover::after,
+#theme-toggle:hover::before, #theme-toggle:hover::after,
+ button.link.block::before, button.link.block::after {height: 85%;}
+
 #html-acc, #html-acc button{background-color:var(--theme-html);}
-#html-acc button.link::before, #html-acc button.link::after{background-color:var(--theme-dark-html);}
+
+#html-acc button.link::before, #html-acc button.link::after, 
+#html-acc .tablinks-toggle::before, #html-acc .tablinks-toggle::after
+#html-acc #theme-toggle::before, #html-acc #theme-toggle::after {background-color:var(--theme-dark-html);}
+
 #html-acc button.link.block::before, #html-acc button.link.block::after {background-color:var(--theme-darker-html);}
+
 #css-acc, #css-acc button{background-color:var(--theme-blue);}
-#css-acc button.link::before, #css-acc button.link::after {background-color:var(--theme-dark-css);}
-#css-acc button.link.block::before, #css-acc button.link.block::after {background-color:var(--theme-darker-css);}
+
+#css-acc button.link::before, #css-acc button.link::after, 
+#css-acc .tablinks-toggle::before,  #css-acc .tablinks-toggle::after,
+#css-acc #theme-toggle::before, #css-acc #theme-toggle::after{background-color:var(--theme-dark-css);}
+
+
+#css-acc button.link.block::before,#css-acc button.link.block::after, 
+#css-acc .tablinks-toggle:active::before, #css-acc .tablinks-toggle:active::after,
+#css-acc #theme-toggle[title~="dark"]{background-color:var(--theme-darker-css);}
 
 /* #theme-toggle-acc {background-color: var(--theme-settings);} */
 .tablinks.enabled > * {padding:0.4rem;}
@@ -277,20 +313,6 @@ table.summary tr {border:1px solid rgb(185, 185, 185);text-align:left;}
 table.summary tr, table.summary {border-collapse:collapse;}
 table.summary th, table.summary td {padding:8px;}
 
-#theme-toggle, .tablinks-toggle {
-  padding:0;
-  line-height:0;
-  border:none;
-  width:40px;
-  height:40px;
-  outline:none;
-  padding:0.3rem;
-  transition: transform var(--miliseconds) linear;
-  z-index:999;
-  background:none;
-  border:1px solid var(--color);
-  border-radius: 5px;
-}
 .settings {
   display:flex;
   margin:0; 
