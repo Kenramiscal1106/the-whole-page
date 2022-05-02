@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML</title>
-    <link rel="stylesheet" href="../The-whole-style.css">
+    <link rel="stylesheet" href="../out.css">
     <link rel="shortcut icon" href="images.svg" type="image/x-icon" id="icon">
 </head>
 <body>
     <div class="content">
-        <div class="sidebar">
+        <div class="sidebar" id="css-acc">
             <div class="settings">
                 <button class="tablinks-toggle">
                     <svg viewbox="0 0 240 240">
@@ -29,7 +29,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="tablinks" id="css-acc">
+            <div class="tablinks">
                 <div>
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'css-introduction'})" id="css-introductiontab"><img src="../static-icons/home.svg" alt="home">CSS Introduction</button>
                     <button class="link" onclick="tabs({tabs:'link', tabcontent:'tabcontent', targetElement:'syntax'})" id="syntaxtab"><img src="../static-icons/syntax.svg" alt="semantics">CSS Syntax</button>
@@ -123,7 +123,7 @@
                     <p>A CSS rule consists of a selector and a declaration block.</p>
                     <hr>
                     <h2>CSS Syntax</h2>
-                    <img src="static-images/selector.gif" alt="selector">
+                    <img src="../static-images/selector.gif" alt="selector">
                     <p>The selector points to the HTML element you want to style</p>
                     <p>The declaration block contains one or more declarations separated by semicolons.</p>
                     <p>Each declaration includes CSS property name and a value, separataed by a colon.</p>
@@ -1074,7 +1074,7 @@
                             <div class="codeline">}</div>
                         </div>
                         <p>Result:</p>
-                        <div class="result" style="background-image: url(table.svg);">
+                        <div class="result" style="background-image: url(../static-icons/table.svg);">
                             <p style="background-color: rgba(255, 255, 255, 0.8);">This is a paragraph</p>
                         </div>
                     </div>
@@ -1087,7 +1087,7 @@
                             <div class="codeline">}</div>
                         </div>
                         <p>Result:</p>
-                        <div class="result" style="background-image: url(home.svg);">
+                        <div class="result" style="background-image: url(../static-icons/home.svg);">
                             <p>This is a paragraph</p>
                         </div>
                     </div>
@@ -1102,10 +1102,10 @@
                         </div>
                         <p>Result:</p>
                         <div class="result">
-                            <p style="background-image:url(static-images/img_5terre.jpg);">This is a paragraph</p>
-                            <p style="background-image:url(static-images/img_5terre.jpg);">This is a paragraph</p>
-                            <p style="background-image:url(static-images/img_5terre.jpg);">This is a paragraph</p>
-                            <p style="background-image:url(static-images/img_5terre.jpg);">This is a paragraph</p>
+                            <p style="background-image:url(../static-images/img_5terre.jpg);">This is a paragraph</p>
+                            <p style="background-image:url(../static-images/img_5terre.jpg);">This is a paragraph</p>
+                            <p style="background-image:url(../static-images/img_5terre.jpg);">This is a paragraph</p>
+                            <p style="background-image:url(../static-images/img_5terre.jpg);">This is a paragraph</p>
                         </div>
                     </div>
                     <hr>
@@ -1122,7 +1122,7 @@
                             <div class="codeline">}</div>
                         </div>
                         <p>Result:</p>
-                        <div class="result" style="background-image: url(static-images/gradient\ bg.png);">
+                        <div class="result" style="background-image: url(../static-images/gradient\ bg.png);">
                             <p>This is a paragraph</p>
                             <p>This is a paragraph</p>
                             <p>This is a paragraph</p>
@@ -1143,7 +1143,7 @@
                             <div class="codeline">}</div>
                         </div>
                         <p>Result:</p>
-                        <div class="result" style="background-image:url(static-images/gradient\ bg.png);background-repeat: repeat-x;">
+                        <div class="result" style="background-image:url(../static-images/gradient\ bg.png);background-repeat: repeat-x;">
                             <p>This is a paragraph</p>
                             <p>This is a paragraph</p>
                             <p>This is a paragraph</p>
@@ -1168,7 +1168,7 @@
                             <div class="codeline">}</div>
                         </div>
                         <p>Result:</p>
-                        <div class="result" style="background-image:url(static-images/img_5terre.jpg);height:300px;color:white;background-repeat:no-repeat;">
+                        <div class="result" style="background-image:url(../static-images/img_5terre.jpg);height:300px;color:white;background-repeat:no-repeat;">
                             <p>This is a paragraph</p>
                             <p>This is a paragraph</p>
                             <p>This is a paragraph</p>
@@ -1191,7 +1191,7 @@
                             <div class="codeline">}</div>
                         </div>
                         <p>Result:</p>
-                        <div class="result" style="background:url(static-images/img_5terre.jpg) no-repeat right top; color:gray;">
+                        <div class="result" style="background:url(../static-images/img_5terre.jpg) no-repeat right top; color:gray;">
                             <p>This is a paragraph</p>
                             <p>This is a paragraph</p>
                             <p>This is a paragraph</p>
@@ -1221,7 +1221,7 @@
                             <div class="codeline">}</div>
                         </div>
                         <p>Result:</p>
-                        <div class="result" style="background:url('static-images/img_5terre.jpg') no-repeat right top scroll;">
+                        <div class="result" style="background:url('../static-images/img_5terre.jpg') no-repeat right top scroll;">
                             <p>This is a paragraph.</p>
                             <p>This is a paragraph.</p>
                             <p>This is a paragraph.</p>
@@ -1246,7 +1246,7 @@
                             <div class="codeline">}</div>
                         </div>
                         <p>Result:</p>
-                        <div class="result" style="background:url('static-images/img_5terre.jpg') no-repeat fixed bottom right;">
+                        <div class="result" style="background:url('../static-images/img_5terre.jpg') no-repeat fixed bottom right;">
                             <p>This is a paragraph.</p>
                             <p>This is a paragraph.</p>
                             <p>This is a paragraph.</p>
@@ -1272,7 +1272,7 @@
                             <div class="codeline">}</div>
                         </div>
                         <p>Result:</p>
-                        <div class="result" style="background:url('static-images/img_5terre.jpg') no-repeat;background-size: auto;">
+                        <div class="result" style="background:url('../static-images/img_5terre.jpg') no-repeat;background-size: auto;">
                             <p>This is a paragraph.</p>
                             <p>This is a paragraph.</p>
                             <p>This is a paragraph.</p>
@@ -1309,7 +1309,7 @@
                             <div class="codeline">}</div>
                         </div>
                         <p>Result:</p>
-                        <div class="result" style="background: #ffffff url('static-images/img_5terre.jpg') no-repeat right top;">
+                        <div class="result" style="background: #ffffff url('../static-images/img_5terre.jpg') no-repeat right top;">
                             <p>This is a paragraph.</p>
                             <p>This is a paragraph.</p>
                             <p>This is a paragraph.</p>
@@ -2409,10 +2409,10 @@
                         </div>
                         <p>Result:</p>
                         <div class="result">
-                            <p> An <img src="boxmodel.svg" alt="home"> image with a defaultalignment</p>
-                            <p> An <img src="boxmodel.svg" alt="home" style="vertical-align:top;"> image with a top alignment</p>
-                            <p> An <img src="boxmodel.svg" alt="home" style="vertical-align: middle;"> image with a middle alignment</p>
-                            <p> An <img src="boxmodel.svg" alt="home" style="vertical-align: bottom;"> image with a bottom alignment</p>
+                            <p> An <img src="../static-icons/box-model.svg" alt="home"> image with a defaultalignment</p>
+                            <p> An <img src="../static-icons/box-model.svg" alt="home" style="vertical-align:top;"> image with a top alignment</p>
+                            <p> An <img src="../static-icons/box-model.svg" alt="home" style="vertical-align: middle;"> image with a middle alignment</p>
+                            <p> An <img src="../static-icons/box-model.svg" alt="home" style="vertical-align: bottom;"> image with a bottom alignment</p>
                         </div>
                     </div>
                     <hr>
@@ -2537,7 +2537,7 @@
                     <p>All the different font names belong to one of the generic font families.</p>
                     <hr>
                     <h2>Difference Between Serif and Sans-serif Fonts</h2>
-                    <img src="static-images/difference.gif" alt="difference">
+                    <img src="../static-images/difference.gif" alt="difference">
                     <p class="note"><strong>Note:</strong> On computer screens, sans-serif fonts are considered easier to read than serif fonts.</p>
                     <hr>
                     <h2>Some Font Examples</h2>
@@ -3115,7 +3115,7 @@
                     <p>The  property spcifies the stack order of an elmeent (which element should be placed in front of, or behind, the others).</p>
                     <p>An elmeent can have a positive or negative stack order:</p>
                     <div style="position: relative;">
-                        <img src="static-images/img_mountains.jpg" alt="gradient" style="width:100%;height:auto;">
+                        <img src="../static-images/img_mountains.jpg" alt="gradient" style="width:100%;height:auto;">
                         <h1 style="color:white;position: absolute;bottom:0;left:0;z-index:1;">Mountains</h1>
                     </div>
                     <div class="example">
@@ -3291,7 +3291,7 @@
                     <h2>Example - float:right;</h2>
                     <p>The following example specifies that an image should float to the <strong>right</strong> in a text:</p>
                     <div style="padding:0 0.6rem;border:1px solid black;" class="clear">
-                        <p><img src="static-images/pineapple.jpg" alt="pineapple" style="float:right;margin:0 12px 12px 12px">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi similique cupiditate vitae magni accusamus voluptate, ipsum quas error fugiat deleniti debitis repellat architecto, blanditiis quos pariatur quisquam consectetur in nulla, fugit ipsam dolorum natus sed rem. Amet beatae vel rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate neque accusantium porro, aperiam totam nam quae sint tempore dolorem quidem, numquam ad et ea ratione quam earum beatae repellendus fugiat quisquam! Eum eius maiores aliquam sed ad dolores, nobis deleniti voluptates numquam accusantium voluptas officiis. Magnam sapiente dicta laudantium necessitatibus.</p>
+                        <p><img src="../static-images/pineapple.jpg" alt="pineapple" style="float:right;margin:0 12px 12px 12px">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi similique cupiditate vitae magni accusamus voluptate, ipsum quas error fugiat deleniti debitis repellat architecto, blanditiis quos pariatur quisquam consectetur in nulla, fugit ipsam dolorum natus sed rem. Amet beatae vel rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate neque accusantium porro, aperiam totam nam quae sint tempore dolorem quidem, numquam ad et ea ratione quam earum beatae repellendus fugiat quisquam! Eum eius maiores aliquam sed ad dolores, nobis deleniti voluptates numquam accusantium voluptas officiis. Magnam sapiente dicta laudantium necessitatibus.</p>
                     </div>
                     <div class="example">
                         <h3>Example</h3>
@@ -3310,7 +3310,7 @@
                     <h2>Example - float:left;</h2>
                     <p>The following example specifies that an image should float to the <strong>left</strong> in a text:</p>
                     <div style="padding:0 0.6rem;border:1px solid black;" class="clear"><!--  -->
-                        <p><img src="static-images/pineapple.jpg" alt="Pineapple" style="float:left;clear:left;margin:0 12px 12px 12px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aliquam ut quo, officiis ea provident ipsam perferendis vero quidem officia nostrum totam saepe sit dolorem quos facilis pariatur? Adipisci totam asperiores dolores facilis laborum nulla qui rerum, eum molestiae magnam sed laboriosam ipsa ex dolor enim modi repudiandae provident! Sit distinctio in ea eveniet qui quaerat sed similique debitis nostrum enim reprehenderit dolor ullam recusandae nemo quos adipisci molestias ipsa non architecto, suscipit a? Incidunt odio voluptatibus iure dignissimos velit ducimus ex exercitationem nulla corrupti dolores eaque perspiciatis, et ipsum!</p>
+                        <p><img src="../static-images/pineapple.jpg" alt="Pineapple" style="float:left;clear:left;margin:0 12px 12px 12px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aliquam ut quo, officiis ea provident ipsam perferendis vero quidem officia nostrum totam saepe sit dolorem quos facilis pariatur? Adipisci totam asperiores dolores facilis laborum nulla qui rerum, eum molestiae magnam sed laboriosam ipsa ex dolor enim modi repudiandae provident! Sit distinctio in ea eveniet qui quaerat sed similique debitis nostrum enim reprehenderit dolor ullam recusandae nemo quos adipisci molestias ipsa non architecto, suscipit a? Incidunt odio voluptatibus iure dignissimos velit ducimus ex exercitationem nulla corrupti dolores eaque perspiciatis, et ipsum!</p>
                     </div>
                     <div class="example">
                         <h3>Example</h3>
@@ -3329,7 +3329,7 @@
                     <h2>Example</h2>
                     <p>In the following example the image will be displayed just where it occurs in the text (float: none;):</p>
                     <div style="padding:0 0.6rem;border:1px solid black;">
-                        <p><img src="static-images/pineapple.jpg" alt="pineapple">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam possimus blanditiis tempora sint consequuntur nostrum harum. Excepturi, accusantium error asperiores cum tempore voluptate quibusdam mollitia quas, vel, eum assumenda! Distinctio dolorem minima iste est temporibus voluptas exercitationem doloremque recusandae nisi adipisci error enim dolor, necessitatibus ratione tenetur hic soluta! Qui, omnis impedit! Ut dolore quod quam aperiam excepturi eaque dolorum beatae praesentium sint eos laborum cum, odio sequi mollitia. Ipsum, iure nulla, eveniet officia quia minima voluptates labore repellendus sit, in delectus voluptate tempore perferendis odio neque enim. Corrupti, asperiores?</p>
+                        <p><img src="../static-images/pineapple.jpg" alt="pineapple">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam possimus blanditiis tempora sint consequuntur nostrum harum. Excepturi, accusantium error asperiores cum tempore voluptate quibusdam mollitia quas, vel, eum assumenda! Distinctio dolorem minima iste est temporibus voluptas exercitationem doloremque recusandae nisi adipisci error enim dolor, necessitatibus ratione tenetur hic soluta! Qui, omnis impedit! Ut dolore quod quam aperiam excepturi eaque dolorum beatae praesentium sint eos laborum cum, odio sequi mollitia. Ipsum, iure nulla, eveniet officia quia minima voluptates labore repellendus sit, in delectus voluptate tempore perferendis odio neque enim. Corrupti, asperiores?</p>
                     </div>
                     <div class="example">
                         <h3>Example</h3>
@@ -3379,15 +3379,15 @@
                     <p>The  property can take a value from 0.0 - 1.0. The lower values, the more transparent:</p>
                     <div style="display:flex;">
                         <div style="margin:0.5rem">
-                            <img src="static-images/img_forest.jpg" alt="forest" style="display:inherit;width:100%;height:auto;opacity:0.2;">
+                            <img src="../static-images/img_forest.jpg" alt="forest" style="display:inherit;width:100%;height:auto;opacity:0.2;">
                             <span style="text-align:center;display:inherit;">opacity:0.2</span>
                         </div>
                         <div style="margin:0.5rem">
-                            <img src="static-images/img_forest.jpg" alt="forest" style="display:inherit;width:100%;height:auto;opacity:0.5;">
+                            <img src="../static-images/img_forest.jpg" alt="forest" style="display:inherit;width:100%;height:auto;opacity:0.5;">
                             <span style="text-align:center;display:inherit;">opacity:0.5</span>
                         </div>
                         <div style="margin:0.5rem">
-                            <img src="static-images/img_forest.jpg" alt="forest" style="display:inherit;width:100%;height:auto;">
+                            <img src="../static-images/img_forest.jpg" alt="forest" style="display:inherit;width:100%;height:auto;">
                             <span style="text-align:center;display:inherit;">opacity:1 (default)</span>
                         </div>
                     </div>
@@ -3400,7 +3400,7 @@
                         </div>
                         <p>Result:</p>
                         <div class="result">
-                            <img src="static-images/img_forest.jpg" alt="forest" style="opacity:0.5;">
+                            <img src="../static-images/img_forest.jpg" alt="forest" style="opacity:0.5;">
                         </div>
                     </div>
                     <hr>
@@ -4012,7 +4012,7 @@
                 <div class="tabcontent" id="b-images">
                     <h1>CSS Border Images</h1>
                     <hr>
-                    <div style="border:10px solid transparent;border-image:url(border.svg) 16.66% round;padding:1rem;">
+                    <div style="border:10px solid transparent;border-image:url(../border.) 16.66% round;padding:1rem;">
                         <h2>CSS Border Images</h2>
                         <p>With the CSS <span class="p-high">border-image</span> property, you can set an image to be used as the border around an element.</p>
                     </div>
@@ -4026,7 +4026,7 @@
                         <li>Define whether the middle sections should be repeated or stretched</li>
                     </ul>
                     <p>We will use the following image (called "border.svg"):</p>
-                    <img src="border.svg" alt="test">
+                    <img src="../border.svg" alt="test">
                     <p>The <span class="p-high">border-image</span> property takes the image and slices it into nine sections, like a tic-tac-toe board. It places the corners at the corners, and the middle sectoins are repeated or stretched as you specify.</p>
                     <p class="note"><strong>Note:</strong>For <span class="p-high">border-image</span> to work, the element also needs the transparent <span class="p-high">border</span> property set!</p>
                     <p>Here, the middle sections of the image are repeated to create the border:</p>
@@ -4040,7 +4040,7 @@
                             <div class="codeline">}</div>
                         </div>
                         <p>Result:</p>
-                        <div class="result" style="border:10px solid transparent;padding:15px;border-image:url(border.svg) 33% round;">
+                        <div class="result" style="border:10px solid transparent;padding:15px;border-image:url(../border.svg) 33% round;">
                             An image as a border
                         </div>
                     </div>
@@ -4055,7 +4055,7 @@
                             <div class="codeline">}</div>
                         </div>
                         <p>Result:</p>
-                        <div class="result" style="border:10px solid transparent;padding:15px;border-image:url(border.svg) 33% stretch;">
+                        <div class="result" style="border:10px solid transparent;padding:15px;border-image:url(../border.svg) 33% stretch;">
                             stretched image as a border!
                         </div>
                     </div>
@@ -4064,11 +4064,11 @@
                     <h2>CSS border-image - Different Slice Values</h2>
                     <p>Different slice values completely changes the look of the border:</p>
                     <p>Example 1:</p>
-                    <div style="border:10px solid transparent;padding:15px 0; border-image:url(border.svg) 50 round;">border-image:url(border.svg) 50 round;</div>
+                    <div style="border:10px solid transparent;padding:15px 0; border-image:url(../border.svg) 50 round;">border-image:url(../border.svg) 50 round;</div>
                     <p>Example 2:</p>
-                    <div style="border:10px solid transparent;padding:15px 0; border-image:url(border.svg) 20% round;">border-image url(border.svg) 20% round;</div>
+                    <div style="border:10px solid transparent;padding:15px 0; border-image:url(../border.svg) 20% round;">border-image url(border.svg) 20% round;</div>
                     <p>Example 3:</p>
-                    <div style="border:10px solid transparent;padding:15px 0; border-image:url(border.svg) 30% round;">border-image: url(border.svg) 30 round;</div>
+                    <div style="border:10px solid transparent;padding:15px 0; border-image:url(../border.svg) 30% round;">border-image: url(border.svg) 30 round;</div>
                     <p>Here is the code;</p>
                     <div class="example">
                         <h3>Example</h3>
@@ -4149,7 +4149,7 @@
                         </div>
                         <p>Result:</p>
                         <div class="result">
-                            <div style="background-image: url(static-images/mountain.png), url(static-images/img_mountains.jpg);background-size:contain, cover;background-position:left bottom, right bottom;background-repeat: no-repeat, no-repeat;color:white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cum voluptatibus numquam enim error nam ea veniam voluptate vel, totam perspiciatis harum. Exercitationem, numquam. Quidem asperiores accusamus corrupti quas accusantium nemo modi sed corporis excepturi perferendis eum dolorem ipsum velit consequatur eius, error est distinctio. Vitae, impedit nihil itaque voluptate ex non cupiditate totam perferendis repudiandae ullam nulla quo sint accusamus, dolor consequuntur magni voluptas natus iusto doloribus id voluptatem. Quam sed sunt harum debitis eius consequatur quasi ex natus vero recusandae quaerat perferendis tempora sit, odit optio porro inventore. Non quas id cumque atque ex vel quam, laboriosam laudantium.</div>
+                            <div style="background-image: url(../static-images/mountain.png), url(../static-images/img_mountains.jpg);background-size:contain, cover;background-position:left bottom, right bottom;background-repeat: no-repeat, no-repeat;color:white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cum voluptatibus numquam enim error nam ea veniam voluptate vel, totam perspiciatis harum. Exercitationem, numquam. Quidem asperiores accusamus corrupti quas accusantium nemo modi sed corporis excepturi perferendis eum dolorem ipsum velit consequatur eius, error est distinctio. Vitae, impedit nihil itaque voluptate ex non cupiditate totam perferendis repudiandae ullam nulla quo sint accusamus, dolor consequuntur magni voluptas natus iusto doloribus id voluptatem. Quam sed sunt harum debitis eius consequatur quasi ex natus vero recusandae quaerat perferendis tempora sit, odit optio porro inventore. Non quas id cumque atque ex vel quam, laboriosam laudantium.</div>
                         </div>
                     </div>
                     <p>Multiple background images can be specified using either the individual background properties (as above) or the <span class="p-high">background</span> shorthand property.</p>
@@ -4170,7 +4170,7 @@
                         </div>
                         <p>Result:</p>
                         <div class="result">
-                            <div style="color:white;background:url(static-images/mountain.png);background-size:100% 100%;background-repeat:no-repeat;background-position:right bottom;"><br><h2 style="text-shadow:0 0 12px black;">Background-size</h2>
+                            <div style="color:white;background:url(../static-images/mountain.png);background-size:100% 100%;background-repeat:no-repeat;background-position:right bottom;"><br><h2 style="text-shadow:0 0 12px black;">Background-size</h2>
                             <p style="text-shadow:0 0 5px black;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum adipisci architecto voluptates officiis esse aliquam, debitis praesentium vero nihil accusamus asperiores quidem dolorem ad harum maiores quod consequatur unde officia quo temporibus minus! Sunt, dolore assumenda facere rem doloribus ea nemo earum possimus est laboriosam labore, adipisci aspernatur asperiores distinctio?</p></div>
                         </div>
                     </div>
@@ -4195,9 +4195,9 @@
                         </div>
                         <p></p>
                         <div class="result">
-                            <div style="background:url(static-images/mountain.png);background-size:contain;background-repeat:no-repeat;text-shadow:0 0 5px black;color:white;"><h2>background-size:contain</h2>
+                            <div style="background:url(../static-images/mountain.png);background-size:contain;background-repeat:no-repeat;text-shadow:0 0 5px black;color:white;"><h2>background-size:contain</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In soluta aspernatur quisquam accusantium dolorum delectus consectetur consequuntur, animi, quae facere deleniti laborum? Amet quasi ut sequi voluptatum modi cumque exercitationem?</p></div>
-                            <div style="background:url(static-images/mountain.png);background-size:cover;background-repeat:no-repeat;text-shadow:0 0 5px black;color:white;"><h2>background-size:cover</h2>
+                            <div style="background:url(../static-images/mountain.png);background-size:cover;background-repeat:no-repeat;text-shadow:0 0 5px black;color:white;"><h2>background-size:cover</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In soluta aspernatur quisquam accusantium dolorum delectus consectetur consequuntur, animi, quae facere deleniti laborum? Amet quasi ut sequi voluptatum modi cumque exercitationem?</p></div>
                         </div>
                     </div>
@@ -4241,11 +4241,11 @@
                         <p>Result:</p>
                         <div class="result">
                             <h2>Inside the content box</h2>
-                            <div style="border:10px dotted black;padding:35px;background:url(static-images/img_mountains.jpg) no-repeat;height:200px;margin:1rem;background-origin:content-box;"></div>
+                            <div style="border:10px dotted black;padding:35px;background:url(../static-images/img_mountains.jpg) no-repeat;height:200px;margin:1rem;background-origin:content-box;"></div>
                             <h2>Inside the padding box</h2>
-                            <div style="border:10px dotted black;padding:35px;background:url(static-images/img_mountains.jpg) no-repeat;height:200px;margin:1rem;background-origin:padding-box;"></div>
+                            <div style="border:10px dotted black;padding:35px;background:url(../static-images/img_mountains.jpg) no-repeat;height:200px;margin:1rem;background-origin:padding-box;"></div>
                             <h2>Inside the border box</h2>
-                            <div style="border:10px dotted black;padding:35px;background:url(static-images/img_mountains.jpg) no-repeat;height:200px;margin:1rem;background-origin:border-box;"></div>
+                            <div style="border:10px dotted black;padding:35px;background:url(../static-images/img_mountains.jpg) no-repeat;height:200px;margin:1rem;background-origin:border-box;"></div>
                         </div>
                     </div>
                     <hr>
